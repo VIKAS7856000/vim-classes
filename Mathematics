@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIM CLASSES - Class 10 VVI Questions & Test Portal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 pb-12">
+
+    <!-- हेडर -->
+    <header class="bg-gradient-to-r from-purple-800 to-indigo-900 text-white text-center py-6 px-4 shadow-md">
+        <h1 class="text-3xl font-extrabold tracking-wide">VIM CLASSES</h1>
+        <p class="text-sm md:text-base mt-1 text-purple-200">सपनों को सच करने की उड़ान! | कक्षा 10वीं बोर्ड परीक्षा VVI प्रश्न व टेस्ट</p>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 mt-6 space-y-6">
+
+        <!-- त्वरित महत्वपूर्ण सूत्र व नोट्स -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-purple-700">
+            <h2 class="text-xl font-bold text-purple-900 mb-3 border-b pb-2 flex items-center gap-2">
+                <span>📚</span> त्वरित रिवीजन नोट्स (Quick Revision)
+            </h2>
+            <ul class="space-y-2 text-sm md:text-base text-slate-700 list-disc list-inside">
+                <li><strong class="text-slate-900">प्रकाश का परावर्तन:</strong> आपतन कोण हमेशा परावर्तन कोण के बराबर होता है ($\angle i = \angle r$)।</li>
+                <li><strong class="text-slate-900">ओम का नियम:</strong> $V = I \times R$ (विभवांतर = विद्युत धारा $\times$ प्रतिरोध)।</li>
+                <li><strong class="text-slate-900">द्विघात समीकरण:</strong> मानक रूप $ax^2 + bx + c = 0$, जहाँ विविक्तकर $D = b^2 - 4ac$।</li>
+                <li><strong class="text-slate-900">त्रिकोणमिति सर्वसमिका:</strong> $\sin^2\theta + \cos^2\theta = 1$</li>
+            </ul>
+        </section>
+
+        <!-- ऑनलाइन VVI टेस्ट पोर्टल -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-indigo-600">
+            <div class="flex justify-between items-center border-b pb-3 mb-4">
+                <h2 class="text-xl font-bold text-indigo-950 flex items-center gap-2">
+                    <span>📝</span> कक्षा 10वीं VVI ऑनलाइन टेस्ट
+                </h2>
+                <span class="text-xs bg-indigo-100 text-indigo-800 font-semibold px-2.5 py-1 rounded-full">कुल प्रश्न: 5</span>
+            </div>
+
+            <form id="quizForm" class="space-y-6">
+
+                <!-- प्रश्न 1 -->
+                <div class="p-4 rounded-lg border border-slate-200 bg-slate-50/50">
+                    <p class="font-semibold text-slate-900 mb-3">1. किसी वस्तु का अवतल दर्पण द्वारा बना प्रतिबिंब आभासी, सीधा तथा बड़ा पाया गया। वस्तु की स्थिति कहाँ होनी चाहिए?</p>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q1" value="0" class="text-purple-600 focus:ring-purple-500">
+                            <span>(A) मुख्य फोकस तथा वक्रता केंद्र के बीच</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q1" value="0" class="text-purple-600 focus:ring-purple-500">
+                            <span>(B) वक्रता केंद्र पर</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q1" value="0" class="text-purple-600 focus:ring-purple-500">
+                            <span>(C) वक्रता केंद्र से परे</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q1" value="1" class="text-purple-600 focus:ring-purple-500">
+                            <span>(D) दर्पण के ध्रुव तथा मुख्य फोकस के बीच</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- प्रश्न 2 -->
+                <div class="p-4 rounded-lg border border-slate-200 bg-slate-50/50">
+                    <p class="font-semibold text-slate-900 mb-3">2. रासायनिक अभिक्रिया $\text{Fe}_2\text{O}_3 + 2\text{Al} \rightarrow \text{Al}_2\text{O}_3 + 2\text{Fe}$ किस प्रकार की अभिक्रिया है?</p>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q2" value="0" class="text-purple-600 focus:ring-purple-500">
+                            <span>(A) संयोजन अभिक्रिया</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q2" value="0" class="text-purple-600 focus:ring-purple-500">
+                            <span>(B) द्विविस्थापन अभिक्रिया</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q2" value="1" class="text-purple-600 focus:ring-purple-500">
+                            <span>(C) विस्थापन अभिक्रिया</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q2" value="0" class="text-purple-600 focus:ring-purple-500">
+                            <span>(D) वियोजन अभिक्रिया</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- प्रश्न 3 -->
+                <div class="p-4 rounded-lg border border-slate-200 bg-slate-50/50">
+                    <p class="font-semibold text-slate-900 mb-3">3. समांतर श्रेढ़ी $10, 7, 4, \dots$ का 30वाँ पद क्या होगा?</p>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q3" value="0" class="text-purple-600 focus:ring-purple-500">
+                            <span>(A) 97</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q3" value="1" class="text-purple-600 focus:ring-purple-500">
+                            <span>(B) -77</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q3" value="0" class="text-purple-600 focus:ring-purple-500">
+                            <span>(C) -87</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q3" value="0" class="text-purple-600 focus:ring-purple-500">
+                            <span>(D) 77</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- प्रश्न 4 -->
+                <div class="p-4 rounded-lg border border-slate-200 bg-slate-50/50">
+                    <p class="font-semibold text-slate-900 mb-3">4. मानव नेत्र के किस भाग पर किसी वस्तु का प्रतिबिंब बनता है?</p>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q4" value="0" class="text-purple-600 focus:ring-purple-500">
+                            <span>(A) कॉर्निया</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q4" value="0" class="text-purple-600 focus:ring-purple-500">
+                            <span>(B) परितारिका</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q4" value="1" class="text-purple-600 focus:ring-purple-500">
+                            <span>(C) दृष्टिपटल (रेटिना)</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q4" value="0" class="text-purple-600 focus:ring-purple-500">
+                            <span>(D) पुतली</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- प्रश्न 5 -->
+                <div class="p-4 rounded-lg border border-slate-200 bg-slate-50/50">
+                    <p class="font-semibold text-slate-900 mb-3">5. निम्न में से कौन सा पद विद्युत परिपथ में विद्युत शक्ति को निरूपित नहीं करता?</p>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q5" value="0" class="text-purple-600 focus:ring-purple-500">
+                            <span>(A) $I^2R$</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q5" value="1" class="text-purple-600 focus:ring-purple-500">
+                            <span>(B) $IR^2$</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q5" value="0" class="text-purple-600 focus:ring-purple-500">
+                            <span>(C) $VI$</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-slate-100">
+                            <input type="radio" name="q5" value="0" class="text-purple-600 focus:ring-purple-500">
+                            <span>(D) $V^2/R$</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- सबमिट बटन -->
+                <button type="button" onclick="calculateScore()" class="w-full bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 px-4 rounded-lg transition duration-200 shadow-md text-base">
+                    उत्तर जाँचें और स्कोर देखें
+                </button>
+            </form>
+
+            <!-- स्कोर डिस्प्ले कार्ड -->
+            <div id="resultBox" class="mt-6 p-4 rounded-lg text-center hidden">
+                <h3 class="text-xl font-bold mb-1" id="scoreText"></h3>
+                <p class="text-sm font-medium" id="feedbackText"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center text-slate-500 text-sm mt-8">
+        &copy; VIM CLASSES - मेहनत, लगन और सही मार्गदर्शन से हर लक्ष्य आसान बनता है।
+    </footer>
+
+    <!-- स्कोर कैलकुलेशन स्क्रिप्ट -->
+    <script>
+        function calculateScore() {
+            let totalQuestions = 5;
+            let score = 0;
+            let attempted = 0;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                let options = document.getElementsByName('q' + i);
+                for (let option of options) {
+                    if (option.checked) {
+                        attempted++;
+                        score += parseInt(option.value);
+                    }
+                }
+            }
+
+            let resultBox = document.getElementById('resultBox');
+            let scoreText = document.getElementById('scoreText');
+            let feedbackText = document.getElementById('feedbackText');
+
+            resultBox.classList.remove('hidden');
+
+            if (score >= 4) {
+                resultBox.className = "mt-6 p-4 rounded-lg text-center bg-emerald-100 border border-emerald-300 text-emerald-900";
+                scoreText.innerText = "शानदार प्रदर्शन! आपका स्कोर: " + score + " / " + totalQuestions;
+                feedbackText.innerText = "आपकी तैयारी बहुत अच्छी है, ऐसे ही निरंतर अभ्यास करते रहें!";
+            } else if (score >= 2) {
+                resultBox.className = "mt-6 p-4 rounded-lg text-center bg-amber-100 border border-amber-300 text-amber-900";
+                scoreText.innerText = "अच्छा प्रयास! आपका स्कोर: " + score + " / " + totalQuestions;
+                feedbackText.innerText = "थोड़े और रिवीजन की आवश्यकता है। महत्वपूर्ण सूत्रों को दोबारा पढ़ें।";
+            } else {
+                resultBox.className = "mt-6 p-4 rounded-lg text-center bg-rose-100 border border-rose-300 text-rose-900";
+                scoreText.innerText = "आपका स्कोर: " + score + " / " + totalQuestions;
+                feedbackText.innerText = "आपको मूल सिद्धांतों और सूत्रों का अधिक अभ्यास करने की आवश्यकता है।";
+            }
+        }
+    </script>
+</body>
+</html>
