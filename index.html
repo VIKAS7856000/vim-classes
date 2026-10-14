@@ -362,4 +362,46 @@ function showQuestions() {
             font-weight:bold;">
     Start Test
   </a>
-</div>
+</div><section id="gallery">
+    <h2>📸 VIM CLASSES की झलकियाँ</h2>
+    <p>हमारी कोचिंग में पढ़ाई और टेस्ट की कुछ तस्वीरें।</p>
+
+    <div class="gallery">
+        <img src="images/test1.jpg" alt="बच्चे टेस्ट देते हुए">
+        <img src="images/test2.jpg" alt="बच्चे कॉपी में लिखते हुए">
+        <img src="images/class1.jpg" alt="क्लास में पढ़ाई करते हुए">
+        <img src="images/class2.jpg" alt="कोचिंग की तस्वीर">
+    </div>
+</section>
+
+<style>
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
+
+#gallery {
+    padding: 15px;
+    text-align: center;
+}
+
+#gallery h2 {
+    color: #16803d;
+}
+
+@media (max-width: 500px) {
+    .gallery img {
+        height: 140px;
+    }
+}
+</style>
