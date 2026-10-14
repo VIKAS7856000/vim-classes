@@ -1,0 +1,127 @@
+<!-- VIM CLASSES BOARD PRACTICE QUESTIONS -->
+
+<section id="board-questions" style="
+padding:25px;
+background:#f1f5f9;
+font-family:Arial,sans-serif;
+">
+
+<h2 style="text-align:center;color:#123b70;">
+📚 VIM CLASSES BELBATHAN
+</h2>
+
+<h3 style="text-align:center;">
+कक्षा 9वीं एवं 10वीं बोर्ड अभ्यास प्रश्न
+</h3>
+
+<div style="text-align:center;margin:20px;">
+<select id="boardClass" style="padding:12px;">
+<option value="">कक्षा चुनें</option>
+<option value="9">कक्षा 9वीं</option>
+<option value="10">कक्षा 10वीं</option>
+</select>
+
+<select id="boardSubject" style="padding:12px;">
+<option value="">विषय चुनें</option>
+<option value="math">गणित</option>
+</select>
+
+<button onclick="loadQuestions()" style="
+padding:12px;
+background:#123b70;
+color:white;
+border:0;
+border-radius:5px;
+">
+प्रश्न देखें
+</button>
+</div>
+
+<div id="boardResult"></div>
+
+</section>
+
+<script>
+const questionBank = {
+
+"9": {
+math: [
+"1. संख्या  √2 को अपरिमेय सिद्ध कीजिए।",
+"2. बहुपद x² - 5x + 6 के शून्यक ज्ञात कीजिए।",
+"3. बिंदु (2, 3) और (4, 7) को निर्देशांक तल पर दर्शाइए।",
+"4. सिद्ध कीजिए कि त्रिभुज के तीनों कोणों का योग 180° होता है।",
+"5. 7 cm त्रिज्या वाले वृत्त का क्षेत्रफल ज्ञात कीजिए।",
+"6. समीकरण 2x + 3 = 11 को हल कीजिए।",
+"7. यदि किसी त्रिभुज के दो कोण 50° और 60° हैं, तो तीसरा कोण ज्ञात कीजिए।",
+"8. आँकड़ों 2, 4, 6, 8, 10 का माध्य ज्ञात कीजिए।",
+"9. 3x + 2y = 12 के कोई दो हल ज्ञात कीजिए।",
+"10. हीरोन के सूत्र की सहायता से 3 cm, 4 cm और 5 cm भुजाओं वाले त्रिभुज का क्षेत्रफल ज्ञात कीजिए।"
+]
+},
+
+"10": {
+math: [
+"1. यूक्लिड विभाजन एल्गोरिथ्म से 135 और 225 का HCF ज्ञात कीजिए।",
+"2. बहुपद x² - 7x + 12 के शून्यक ज्ञात कीजिए।",
+"3. समीकरण x² - 5x + 6 = 0 को हल कीजिए।",
+"4. समांतर श्रेणी 2, 5, 8, 11, ... का 20वाँ पद ज्ञात कीजिए।",
+"5. बिंदुओं (1, 2) और (4, 6) के बीच की दूरी ज्ञात कीजिए।",
+"6. सिद्ध कीजिए कि tan²θ + 1 = sec²θ।",
+"7. 7 cm त्रिज्या वाले वृत्त की परिधि ज्ञात कीजिए।",
+"8. 3, 5, 7, 9, 11 का माध्य ज्ञात कीजिए।",
+"9. दो पासों को एक साथ फेंकने पर योग 7 आने की प्रायिकता ज्ञात कीजिए।",
+"10. एक मीनार की ऊँचाई ज्ञात कीजिए, यदि उससे 20 m दूर स्थित बिंदु पर उन्नयन कोण 45° है।"
+]
+}
+
+};
+
+function loadQuestions() {
+  const selectedClass =
+    document.getElementById("boardClass").value;
+
+  const selectedSubject =
+    document.getElementById("boardSubject").value;
+
+  const result =
+    document.getElementById("boardResult");
+
+  if (!selectedClass || !selectedSubject) {
+    result.innerHTML =
+      "<p style='text-align:center;'>कृपया कक्षा और विषय चुनें।</p>";
+    return;
+  }
+
+  const questions =
+    questionBank[selectedClass][selectedSubject];
+
+  result.innerHTML = `
+    <div style="
+      background:white;
+      padding:20px;
+      border-radius:10px;
+      margin-top:20px;
+    ">
+      <h3 style="color:#16803d;">
+        कक्षा ${selectedClass}वीं — गणित
+      </h3>
+
+      ${questions.map(q => `
+        <p style="
+          padding:10px;
+          background:#f8fafc;
+          border-radius:5px;
+          line-height:1.7;
+        ">${q}</p>
+      `).join("")}
+
+      <p style="color:#b45309;">
+        नोट: ये अभ्यास के लिए तैयार किए गए प्रश्न हैं,
+        आधिकारिक बोर्ड प्रश्नपत्र नहीं।
+      </p>
+    </div>
+  `;
+}
+</script>
+
+<!-- END VIM CLASSES BOARD QUESTIONS -->
