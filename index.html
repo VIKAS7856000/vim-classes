@@ -3,19 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VIM CLASSES BELBATHAN | Official Portal</title>
+<title>VIM CLASSES BELBATHAN | शिक्षा पोर्टल</title>
 <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
   --primary: #123b70;
-  --primary-dark: #091d36;
+  --primary-dark: #0b2545;
   --accent: #f59e0b;
-  --accent-gold: #ffd700;
+  --gold: #d97706;
+  --silver: #64748b;
+  --bronze: #b45309;
   --success: #16803d;
-  --bg: #f4f7fc;
+  --bg: #f8fafc;
   --card-bg: #ffffff;
-  --text-main: #1f2937;
+  --text-main: #1e293b;
   --text-muted: #64748b;
 }
 
@@ -25,52 +27,49 @@ body {
   font-family: 'Poppins', 'Hind', sans-serif;
   background: var(--bg);
   color: var(--text-main);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
-/* Header & Professional SVG Logo */
+/* Header & Professional Logo */
 header {
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: white;
   text-align: center;
-  padding: 30px 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  padding: 24px 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .brand-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 8px;
 }
 
 .logo-svg {
-  width: 58px;
-  height: 58px;
-  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
+  width: 50px;
+  height: 50px;
 }
 
 header h1 {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.5px;
 }
 
 header .tagline {
-  font-size: 16px;
-  color: #e2e8f0;
+  font-size: 14px;
+  color: #cbd5e1;
 }
 
 header .teacher-badge {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255,255,255,0.25);
-  padding: 4px 16px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 3px 14px;
   border-radius: 20px;
-  font-size: 13px;
-  margin-top: 10px;
+  font-size: 12px;
+  margin-top: 8px;
 }
 
 /* Navigation */
@@ -82,242 +81,248 @@ nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 8px 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 nav a {
   color: #f1f5f9;
   text-decoration: none;
-  padding: 8px 14px;
+  padding: 6px 12px;
   font-weight: 600;
-  font-size: 14px;
-  border-radius: 6px;
-  transition: all 0.2s ease;
+  font-size: 13px;
+  border-radius: 5px;
+  transition: 0.2s;
 }
 
 nav a:hover {
   background: rgba(255, 255, 255, 0.15);
-  color: var(--accent-gold);
+  color: #fef08a;
 }
 
-/* Layout */
+/* Sections */
 section {
-  padding: 35px 16px;
-  max-width: 1050px;
+  padding: 24px 14px;
+  max-width: 950px;
   margin: auto;
 }
 
 .section-title {
   color: var(--primary);
   text-align: center;
-  font-size: 25px;
-  margin-bottom: 22px;
+  font-size: 21px;
+  margin-bottom: 16px;
   font-weight: 700;
 }
 
 .section-title::after {
   content: '';
   display: block;
-  width: 48px;
+  width: 40px;
   height: 3px;
   background: var(--accent);
-  margin: 6px auto 0;
+  margin: 5px auto 0;
   border-radius: 2px;
 }
 
-/* Hero Section */
-.hero {
+/* Compact Result Switcher */
+.tab-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.tab-btn {
   background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-  text-align: center;
-}
-
-.hero-img-container {
-  width: 100%;
-  max-height: 380px;
-  overflow: hidden;
-  background: #cbd5e1;
-}
-
-.hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero-content {
-  padding: 24px 20px;
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  background: var(--success);
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 6px;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
   font-weight: 600;
-  font-size: 14px;
-  transition: 0.2s ease;
-  border: none;
   cursor: pointer;
+  transition: 0.2s;
 }
 
-.btn:hover {
-  filter: brightness(1.1);
-  transform: translateY(-1px);
+.tab-btn.active {
+  background: var(--primary);
+  color: white;
 }
 
-/* Ranking Cards */
-.rank-grid {
+/* Podium Pods */
+.podium {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 14px;
 }
 
-.rank-card {
+.pod-card {
   background: white;
-  border-radius: 12px;
-  padding: 22px 18px;
+  padding: 12px 6px;
+  border-radius: 10px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  border-top: 5px solid var(--primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-top: 4px solid var(--primary);
 }
 
-.rank-card.first { border-top-color: #f59e0b; }
-.rank-card.second { border-top-color: #94a3b8; }
-.rank-card.third { border-top-color: #b45309; }
+.pod-card.first { border-top-color: #f59e0b; background: #fffdf5; }
+.pod-card.second { border-top-color: #94a3b8; }
+.pod-card.third { border-top-color: #b45309; }
 
-.rank-badge {
+.pod-badge {
   display: inline-block;
-  width: 42px;
-  height: 42px;
-  line-height: 42px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
   border-radius: 50%;
   color: white;
   font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 14px;
+  margin-bottom: 4px;
 }
 
-.rank-1 { background: linear-gradient(135deg, #fbbf24, #d97706); }
-.rank-2 { background: linear-gradient(135deg, #cbd5e1, #64748b); }
-.rank-3 { background: linear-gradient(135deg, #d97706, #78350f); }
+.b-1 { background: #f59e0b; }
+.b-2 { background: #64748b; }
+.b-3 { background: #b45309; }
 
-.rank-name {
-  font-size: 19px;
+.pod-name {
+  font-size: 14px;
   font-weight: 700;
   color: var(--primary-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.rank-score {
-  font-size: 15px;
+.pod-score {
+  font-size: 12px;
   color: var(--success);
-  font-weight: 600;
-  margin-top: 6px;
+  font-weight: 700;
 }
 
-/* Table */
-.rank-table-wrap {
-  margin-top: 25px;
-  overflow-x: auto;
+/* Compact Table */
+.table-scroll {
+  max-height: 280px;
+  overflow-y: auto;
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
 }
 
-.rank-table {
+.res-table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 13px;
   text-align: left;
-  font-size: 14px;
 }
 
-.rank-table th, .rank-table td {
-  padding: 11px 14px;
-  border-bottom: 1px solid #edf2f7;
+.res-table th, .res-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #f1f5f9;
 }
 
-.rank-table th {
+.res-table th {
   background: #f8fafc;
   color: var(--primary);
   font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
-/* Tests Section */
+/* Online Test Cards */
 .tests-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
 }
 
 .test-card {
   background: white;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 22px;
+  border-radius: 8px;
+  padding: 16px;
   text-align: center;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-top: 3px solid var(--success);
 }
 
 .test-card h3 {
+  font-size: 16px;
   color: var(--primary);
-  margin-bottom: 8px;
-  font-size: 18px;
+  margin-bottom: 6px;
 }
 
 .test-card p {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-muted);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
-/* Photo Gallery */
+.btn {
+  display: inline-block;
+  background: var(--success);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover { filter: brightness(1.1); }
+
+/* Class Activities & Gallery */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
 }
 
-.gallery-item {
+.act-card {
+  background: white;
   border-radius: 8px;
-  overflow: hidden;
-  height: 190px;
-  background: #e2e8f0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 14px 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+  border: 1px solid #e2e8f0;
 }
 
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s;
+.act-card .icon {
+  font-size: 26px;
+  margin-bottom: 6px;
 }
 
-.gallery-item img:hover {
-  transform: scale(1.04);
+.act-card h4 {
+  font-size: 13px;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.act-card p {
+  font-size: 11px;
+  color: var(--text-muted);
 }
 
 /* VVI Questions */
 .card {
   background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 select, button {
-  padding: 10px 14px;
-  margin: 5px;
+  padding: 8px 12px;
+  margin: 4px;
   border-radius: 6px;
   border: 1px solid #cbd5e1;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 button {
@@ -330,45 +335,41 @@ button {
 
 .question {
   background: #f8fafc;
-  padding: 11px 14px;
-  margin: 8px 0;
-  border-left: 4px solid var(--primary);
+  padding: 9px 12px;
+  margin: 6px 0;
+  border-left: 3px solid var(--primary);
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
-/* Minimal Clean Contact */
-.contact-minimal {
-  background: white;
-  border-radius: 10px;
-  padding: 24px;
-  text-align: center;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-}
-
+/* Clean Footer */
 footer {
   background: var(--primary-dark);
   color: #94a3b8;
   text-align: center;
-  padding: 20px;
-  font-size: 13px;
+  padding: 18px 12px;
+  font-size: 12px;
+  margin-top: 25px;
 }
-footer p { color: white; }
+
+footer a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+}
 </style>
 </head>
 
 <body>
 
-<!-- Header with SVG Logo -->
+<!-- Header -->
 <header>
   <div class="brand-wrapper">
     <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="50" cy="50" r="48" fill="#0b2545" stroke="#f59e0b" stroke-width="4"/>
-      <!-- Open Book -->
       <path d="M22 64C32 58 45 60 50 67C55 60 68 58 78 64V38C68 32 55 34 50 41C45 34 32 32 22 38V64Z" fill="#ffffff"/>
-      <!-- Pen Tip / Torch -->
       <path d="M50 20L45 34H55L50 20Z" fill="#ffd700"/>
-      <!-- Star on Top -->
       <polygon points="50,11 52,16 57,16 53,19 55,24 50,21 45,24 47,19 43,16 48,16" fill="#ffffff"/>
     </svg>
     <div>
@@ -376,183 +377,221 @@ footer p { color: white; }
       <p class="tagline">आपकी सफलता ही हमारा संकल्प है</p>
     </div>
   </div>
-  <div class="teacher-badge">शिक्षक: विकास सर</div>
+  <div class="teacher-badge">शिक्षक: विकास सर | गोड्डा, झारखंड</div>
 </header>
 
 <!-- Navigation -->
 <nav>
-  <a href="#home">होम</a>
-  <a href="#toppers">टेस्ट रिजल्ट / टॉपर्स</a>
+  <a href="#results">टेस्ट रिजल्ट</a>
   <a href="#tests">ऑनलाइन टेस्ट</a>
-  <a href="#gallery">कोचिंग गैलरी</a>
-  <a href="#vvi">VVI प्रश्न बैंक (50 Qs)</a>
-  <a href="#contact">संपर्क</a>
+  <a href="#activities">कोचिंग गतिविधियां</a>
+  <a href="#vvi">VVI प्रश्न (8, 9, 10)</a>
 </nav>
 
-<!-- Home Section (Roof Test Photo as Banner) -->
-<section id="home">
-  <div class="hero">
-    <div class="hero-img-container">
-      <img src="1000197878.jpg" alt="VIM Classes Open Air Test" class="hero-img">
-    </div>
-    <div class="hero-content">
-      <h2 style="color:var(--primary); font-size:22px;">अनुशासित वातावरण और कड़ी मेहनत</h2>
-      <p style="margin: 8px 0 14px; color: var(--text-muted);">
-        कक्षा 8, 9 एवं 10वीं के छात्र-छात्राओं के लिए विशेष टेस्ट सीरीज़ और मार्गदर्शन।
-      </p>
-      <a href="#tests" class="btn">ऑनलाइन टेस्ट दें</a>
-    </div>
-  </div>
-</section>
-
-<!-- Toppers / Test Ranking Section (As per PDF Data) -->
-<section id="toppers">
-  <h2 class="section-title">🏆 50 अंक टेस्ट परिणाम (मेधावी छात्र)</h2>
+<!-- Clean & Sorted Ranking Section (No Duplicate Names) -->
+<section id="results">
+  <h2 class="section-title">🏆 साप्ताहिक टेस्ट रैंकिंग परिणाम</h2>
   
-  <div class="rank-grid">
-    <!-- Rank 1 -->
-    <div class="rank-card first">
-      <div class="rank-badge rank-1">1</div>
-      <div class="rank-name">अंकिता आर्या</div>
-      <p style="font-size: 13px; color: var(--text-muted);">VIM Classes Belbathan</p>
-      <div class="rank-score">प्राप्तांक: 48 / 50 (96%)</div>
+  <div class="tab-container">
+    <button class="tab-btn active" onclick="switchResult('10th', this)">कक्षा 10वीं टेस्ट</button>
+    <button class="tab-btn" onclick="switchResult('junior', this)">कक्षा 8वीं व 9वीं टेस्ट</button>
+  </div>
+
+  <!-- Class 10th Test Results -->
+  <div id="res-10th">
+    <div class="podium">
+      <div class="pod-card second">
+        <div class="pod-badge b-2">2</div>
+        <div class="pod-name">स्वीटी कुमारी</div>
+        <div class="pod-score">46/50 (92%)</div>
+      </div>
+      <div class="pod-card first">
+        <div class="pod-badge b-1">1</div>
+        <div class="pod-name">अंकिता आर्या</div>
+        <div class="pod-score">48/50 (96%)</div>
+      </div>
+      <div class="pod-card third">
+        <div class="pod-badge b-3">3</div>
+        <div class="pod-name">रौनक कुमार</div>
+        <div class="pod-score">45/50 (90%)</div>
+      </div>
     </div>
 
-    <!-- Rank 2 -->
-    <div class="rank-card second">
-      <div class="rank-badge rank-2">2</div>
-      <div class="rank-name">स्वीटी कुमारी</div>
-      <p style="font-size: 13px; color: var(--text-muted);">VIM Classes Belbathan</p>
-      <div class="rank-score">प्राप्तांक: 46 / 50 (92%)</div>
-    </div>
-
-    <!-- Rank 3 -->
-    <div class="rank-card third">
-      <div class="rank-badge rank-3">3</div>
-      <div class="rank-name">रौनक कुमार</div>
-      <p style="font-size: 13px; color: var(--text-muted);">VIM Classes Belbathan</p>
-      <div class="rank-score">प्राप्तांक: 45 / 50 (90%)</div>
+    <div class="table-scroll">
+      <table class="res-table">
+        <thead>
+          <tr>
+            <th>रैंक</th>
+            <th>विद्यार्थी का नाम</th>
+            <th>प्राप्तांक (50)</th>
+            <th>प्रतिशत</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>4</td><td>पीयूष कुमार</td><td>43</td><td>86.0%</td></tr>
+          <tr><td>5</td><td>सिद्धार्थ कुमार</td><td>42</td><td>84.0%</td></tr>
+          <tr><td>6</td><td>राधिका कुमारी</td><td>40</td><td>80.0%</td></tr>
+          <tr><td>7</td><td>कल्पना कुमारी</td><td>40</td><td>80.0%</td></tr>
+          <tr><td>8</td><td>सुमन कुमार</td><td>38</td><td>76.0%</td></tr>
+          <tr><td>9</td><td>आयुष कुमार</td><td>32</td><td>64.0%</td></tr>
+          <tr><td>10</td><td>चाँदनी कुमारी</td><td>32</td><td>64.0%</td></tr>
+          <tr><td>11</td><td>दुलार</td><td>30</td><td>60.0%</td></tr>
+          <tr><td>12</td><td>छोटी कुमारी</td><td>28</td><td>56.0%</td></tr>
+          <tr><td>13</td><td>आर्यन कुमार</td><td>28</td><td>56.0%</td></tr>
+          <tr><td>14</td><td>राजलक्ष्मी कुमारी</td><td>25</td><td>50.0%</td></tr>
+          <tr><td>15</td><td>कृष्ण कुमार</td><td>25</td><td>50.0%</td></tr>
+          <tr><td>16</td><td>नरेन्द्र कुमार</td><td>23</td><td>46.0%</td></tr>
+          <tr><td>17</td><td>रीना कुमारी</td><td>23</td><td>46.0%</td></tr>
+          <tr><td>18</td><td>अभिषेक कुमार</td><td>15</td><td>30.0%</td></tr>
+          <tr><td>19</td><td>रूपेश कुमार</td><td>10</td><td>20.0%</td></tr>
+          <tr><td>20</td><td>मिथुन कुमार</td><td>5</td><td>10.0%</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
-  <!-- Full Ranking Table (Extracted from uploaded marksheet) -->
-  <div class="rank-table-wrap">
-    <table class="rank-table">
-      <thead>
-        <tr>
-          <th>रैंक</th>
-          <th>छात्र / छात्रा का नाम</th>
-          <th>प्राप्त अंक (50 में से)</th>
-          <th>प्रतिशत (%)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td><b>4</b></td><td>पीयूष कुमार</td><td>43</td><td>86.0%</td></tr>
-        <tr><td><b>5</b></td><td>सिद्धार्थ कुमार</td><td>42</td><td>84.0%</td></tr>
-        <tr><td><b>6</b></td><td>राधिका कुमारी</td><td>40</td><td>80.0%</td></tr>
-        <tr><td><b>7</b></td><td>कल्पना कुमारी</td><td>40</td><td>80.0%</td></tr>
-        <tr><td><b>8</b></td><td>सुमन कुमार</td><td>38</td><td>76.0%</td></tr>
-        <tr><td><b>9</b></td><td>आयुष कुमार</td><td>32</td><td>64.0%</td></tr>
-        <tr><td><b>10</b></td><td>चाँदनी कुमारी</td><td>32</td><td>64.0%</td></tr>
-        <tr><td><b>11</b></td><td>दुलार</td><td>30</td><td>60.0%</td></tr>
-        <tr><td><b>12</b></td><td>विष्णु कुमार</td><td>28</td><td>56.0%</td></tr>
-        <tr><td><b>13</b></td><td>प्रियांशु कुमार</td><td>28</td><td>56.0%</td></tr>
-        <tr><td><b>14</b></td><td>सूरज कुमार</td><td>22</td><td>44.0%</td></tr>
-        <tr><td><b>15</b></td><td>राधा कुमारी</td><td>21</td><td>42.0%</td></tr>
-      </tbody>
-    </table>
+  <!-- Junior Test Results (Class 8 & 9) -->
+  <div id="res-junior" style="display:none;">
+    <div class="podium">
+      <div class="pod-card second">
+        <div class="pod-badge b-2">2</div>
+        <div class="pod-name">प्रियांशु कुमार</div>
+        <div class="pod-score">28/50 (56%)</div>
+      </div>
+      <div class="pod-card first">
+        <div class="pod-badge b-1">1</div>
+        <div class="pod-name">विष्णु कुमार</div>
+        <div class="pod-score">28/50 (56%)</div>
+      </div>
+      <div class="pod-card third">
+        <div class="pod-badge b-3">3</div>
+        <div class="pod-name">सूरज कुमार</div>
+        <div class="pod-score">22/50 (44%)</div>
+      </div>
+    </div>
+
+    <div class="table-scroll">
+      <table class="res-table">
+        <thead>
+          <tr>
+            <th>रैंक</th>
+            <th>विद्यार्थी का नाम</th>
+            <th>प्राप्तांक (50)</th>
+            <th>प्रतिशत</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>4</td><td>राधा कुमारी</td><td>21</td><td>42.0%</td></tr>
+          <tr><td>5</td><td>नित्यानंद कुमार</td><td>16</td><td>32.0%</td></tr>
+          <tr><td>6</td><td>सिद्धि कुमारी</td><td>15</td><td>30.0%</td></tr>
+          <tr><td>7</td><td>सूरज राय</td><td>15</td><td>30.0%</td></tr>
+          <tr><td>8</td><td>सूरज कुमार ठाकुर</td><td>12</td><td>24.0%</td></tr>
+          <tr><td>9</td><td>लक्ष्मी कुमारी</td><td>10</td><td>20.0%</td></tr>
+          <tr><td>10</td><td>पंकज राय</td><td>10</td><td>20.0%</td></tr>
+          <tr><td>11</td><td>अभिनन्दन कुमार</td><td>10</td><td>20.0%</td></tr>
+          <tr><td>12</td><td>अशोक ठाकुर</td><td>10</td><td>20.0%</td></tr>
+          <tr><td>13</td><td>राहुल कुमार</td><td>8</td><td>16.0%</td></tr>
+          <tr><td>14</td><td>कार्तिक कुमार</td><td>7</td><td>14.0%</td></tr>
+          <tr><td>15</td><td>आर्या कुमारी</td><td>6</td><td>12.0%</td></tr>
+          <tr><td>16</td><td>अमन कुमार</td><td>4</td><td>8.0%</td></tr>
+          <tr><td>17</td><td>आँचल कुमारी</td><td>3</td><td>6.0%</td></tr>
+          <tr><td>18</td><td>सूरज यादव</td><td>3</td><td>6.0%</td></tr>
+          <tr><td>19</td><td>नन्दनी कुमारी</td><td>3</td><td>6.0%</td></tr>
+          <tr><td>20</td><td>शिव कुमार ठाकुर</td><td>1</td><td>2.0%</td></tr>
+          <tr><td>21</td><td>उमेश यादव</td><td>1</td><td>2.0%</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 
-<!-- Online Tests for Class 8, 9 & 10 -->
+<!-- Online Tests Section -->
 <section id="tests">
-  <h2 class="section-title">📝 ऑनलाइन टेस्ट सत्र</h2>
+  <h2 class="section-title">📝 ऑनलाइन टेस्ट पोर्टल</h2>
   <div class="tests-grid">
-    <!-- Class 10 -->
     <div class="test-card">
-      <h3>कक्षा 10वीं ऑनलाइन टेस्ट</h3>
-      <p>गणित एवं विज्ञान - बोर्ड परीक्षा स्पेशल 50 अंक टेस्ट।</p>
+      <h3>कक्षा 10वीं टेस्ट</h3>
+      <p>गणित एवं विज्ञान बोर्ड स्पेशल 50 अंक टेस्ट</p>
       <a href="class-test-10th.html" class="btn">Start Class 10 Test</a>
     </div>
-
-    <!-- Class 9 -->
     <div class="test-card">
-      <h3>कक्षा 9वीं ऑनलाइन टेस्ट</h3>
-      <p>गणित एवं विज्ञान - अध्यायवार महत्वपूर्ण ऑब्जेक्टिव टेस्ट।</p>
+      <h3>कक्षा 9वीं टेस्ट</h3>
+      <p>अध्यायवार महत्वपूर्ण ऑब्जेक्टिव मॉक टेस्ट</p>
       <a href="class-test-9th.html" class="btn">Start Class 9 Test</a>
     </div>
-
-    <!-- Class 8 -->
     <div class="test-card">
-      <h3>कक्षा 8वीं ऑनलाइन टेस्ट</h3>
-      <p>गणित एवं बेसिक कॉन्सेप्ट्स - बोर्ड आधारित ऑनलाइन टेस्ट।</p>
+      <h3>कक्षा 8वीं टेस्ट</h3>
+      <p>बेसिक कॉन्सेप्ट्स एवं मॉडल पेपर टेस्ट</p>
       <a href="class-test-8th.html" class="btn">Start Class 8 Test</a>
     </div>
   </div>
 </section>
 
-<!-- Gallery Section (Real Uploaded Coaching Images) -->
-<section id="gallery">
-  <h2 class="section-title">📸 कोचिंग टेस्ट एवं क्लासरूम गैलरी</h2>
+<!-- Coaching Highlights / Activities -->
+<section id="activities">
+  <h2 class="section-title">🌟 कोचिंग की मुख्य विशेषताएं</h2>
   <div class="gallery-grid">
-    <div class="gallery-item">
-      <img src="1000197880.jpg" alt="VIM Classes Test Session">
+    <div class="act-card">
+      <div class="icon">📋</div>
+      <h4>साप्ताहिक टेस्ट</h4>
+      <p>हर रविवार 50 अंकों का लिखित व ऑब्जेक्टिव टेस्ट।</p>
     </div>
-    <div class="gallery-item">
-      <img src="1000197887.jpg" alt="Weekly Roof Test Evaluation">
+    <div class="act-card">
+      <div class="icon">📖</div>
+      <h4>हस्तलिखित नोट्स</h4>
+      <p>अध्यायवार सरल भाषा में रिवीजन मटेरियल।</p>
     </div>
-    <div class="gallery-item">
-      <img src="1000197876.jpg" alt="Students Preparing for Exam">
+    <div class="act-card">
+      <div class="icon">🎯</div>
+      <h4>बोर्ड परीक्षा गाइडेंस</h4>
+      <p>कक्षा 10वीं बोर्ड परीक्षा के लिए विशेष रणनीति।</p>
     </div>
-    <div class="gallery-item">
-      <img src="1000256136.jpg" alt="Class Outdoor Examination">
-    </div>
-    <div class="gallery-item">
-      <img src="1000256138.jpg" alt="Test Practice Session">
-    </div>
-    <div class="gallery-item">
-      <img src="1000364752.jpg" alt="Full Batch Test Event">
+    <div class="act-card">
+      <div class="icon">🏆</div>
+      <h4>टॉपर्स सम्मान</h4>
+      <p>उत्कृष्ट अंक लाने वाले छात्रों का विशेष प्रोत्साहन।</p>
     </div>
   </div>
 </section>
 
-<!-- VVI Math Question Bank (50 Questions Across Classes 8, 9 & 10) -->
+<!-- VVI Math Bank for Classes 8, 9 & 10 -->
 <section id="vvi">
-  <h2 class="section-title">📚 गणित 50 VVI प्रश्न बैंक</h2>
-  
-  <div class="card" style="text-align: center;">
-    <p style="margin-bottom: 12px; color: var(--text-muted);">अपनी कक्षा चुनें और 50 महत्वपूर्ण प्रश्न देखें:</p>
+  <h2 class="section-title">📚 गणित VVI प्रश्न बैंक (50 महत्वपूर्ण प्रश्न)</h2>
+  <div class="card" style="text-align:center;">
+    <p style="font-size:13px; color:var(--text-muted); margin-bottom:8px;">अपनी कक्षा चुनें:</p>
     <select id="vviClassSelect">
       <option value="">कक्षा चुनें</option>
       <option value="10">कक्षा 10वीं (Board VVI)</option>
       <option value="9">कक्षा 9वीं (Exam VVI)</option>
       <option value="8">कक्षा 8वीं (Special VVI)</option>
     </select>
-    <button onclick="displayVVIQuestions()">प्रश्न लोड करें</button>
+    <button onclick="displayVVIQuestions()">प्रश्न देखें</button>
   </div>
-
-  <div id="vviQuestionsContainer" style="margin-top: 18px;"></div>
+  <div id="vviQuestionsContainer" style="margin-top:14px;"></div>
 </section>
 
-<!-- Minimal Clean Contact Section -->
-<section id="contact">
-  <div class="contact-minimal">
-    <h3 style="color:var(--primary); margin-bottom: 6px;">VIM CLASSES BELBATHAN</h3>
-    <p style="color:var(--text-muted); font-size: 14px;">शिक्षक: विकास सर | बेलबथान, गोड्डा (झारखंड)</p>
-    <div style="margin-top: 14px;">
-      <a class="btn" href="https://wa.me/917856902817" target="_blank" rel="noopener noreferrer">
-        WhatsApp: 7856902817
-      </a>
-    </div>
-  </div>
-</section>
-
+<!-- Simple Footer -->
 <footer>
-  <p>© 2026 VIM CLASSES BELBATHAN. All Rights Reserved.</p>
+  <p>© 2026 VIM CLASSES BELBATHAN | शिक्षक: विकास सर</p>
+  <p style="margin-top:6px;">
+    WhatsApp: <a href="https://wa.me/917856902817" target="_blank">+91 7856902817</a> | कुशवाहा टोला, बेलबथान, गोड्डा
+  </p>
 </footer>
 
 <script>
-// 50 VVI Questions for Mathematics (Class 8, 9 & 10)
+function switchResult(type, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  if(type === '10th') {
+    document.getElementById('res-10th').style.display = 'block';
+    document.getElementById('res-junior').style.display = 'none';
+  } else {
+    document.getElementById('res-10th').style.display = 'none';
+    document.getElementById('res-junior').style.display = 'block';
+  }
+}
+
+// 50 VVI Math Questions Bank
 const vviBank = {
   "10": [
     "1. यूक्लिड विभाजन प्रमेयिका का प्रयोग करके 135 और 225 का HCF ज्ञात कीजिए।",
@@ -574,162 +613,619 @@ const vviBank = {
     "17. मान ज्ञात कीजिए: (2 tan² 45° + cos² 30° - sin² 60°)।",
     "18. सिद्ध कीजिए: (sin θ / (1 + cos θ)) + ((1 + cos θ) / sin θ) = 2 cosec θ।",
     "19. सिद्ध कीजिए: √((1 + sin A)/(1 - sin A)) = sec A + tan A।",
-    "20. धरती पर एक मीनार ऊर्ध्वाधर खड़ी है। पाद-बिंदु से 15m दूर बिंदु से शिखर का उन्नयन कोण 60° है। मीनार की ऊँचाई ज्ञात कीजिए।",
-    "21. वृत्त के किसी बिंदु पर खींची गई स्पर्श रेखा स्पर्श बिंदु से जाने वाली त्रिज्या पर लंब होती है—सिद्ध कीजिए।",
-    "22. 5 cm त्रिज्या वाले वृत्त के बिंदु P पर स्पर्श रेखा PQ केंद्र O से जाने वाली एक रेखा से बिंदु Q पर इस प्रकार मिलती है कि OQ = 12 cm। PQ की लंबाई ज्ञात कीजिए।",
-    "23. 6 cm त्रिज्या वाले एक वृत्त के त्रिज्यखंड का क्षेत्रफल ज्ञात कीजिए जिसका कोण 60° है।",
-    "24. एक वृत्त के चतुर्थांश का क्षेत्रफल ज्ञात कीजिए जिसकी परिधि 22 cm है।",
-    "25. दो वृत्तों की त्रिज्याएँ क्रमशः 19 cm और 9 cm हैं। उस वृत्त की त्रिज्या ज्ञात कीजिए जिसकी परिधि इन दोनों की परिधियों के योग के बराबर है।",
-    "26. दो घनों, जिनमें से प्रत्येक का आयतन 64 cm³ है, के संलग्न फलकों को मिलाकर एक ठोस बनाया जाता है। घनाभ का पृष्ठीय क्षेत्रफल ज्ञात कीजिए।",
-    "27. एक ठोस खिलौना एक अर्धगोले पर अध्यारोपित शंकु के आकार का है। शंकु की ऊँचाई 2 cm और व्यास 4 cm है। खिलौने का आयतन निकालें।",
-    "28. 6 cm, 8 cm और 10 cm त्रिज्याओं वाले धातु के तीन ठोस गोलों को पिघलाकर एक बड़ा ठोस गोला बनाया जाता है। इसकी त्रिज्या ज्ञात कीजिए।",
-    "29. निम्नलिखित आँकड़ों का माध्य ज्ञात कीजिए: वर्ग अंतराल 0-10, 10-20, 20-30, 30-40, 40-50; बारंबारता 5, 8, 12, 10, 5।",
-    "30. बहुलक का सूत्र लिखिए एवं वर्गीकृत आँकड़ों में बहुलक ज्ञात करने की विधि स्पष्ट कीजिए।",
-    "31. एक पासे को एक बार फेंका जाता है। एक अभाज्य संख्या प्राप्त करने की प्रायिकता क्या है?",
-    "32. 52 पत्तों की अच्छी तरह फेंटी गई गड्डी में से एक पत्ता निकाला जाता है। एक लाल रंग का बादशाह प्राप्त करने की प्रायिकता ज्ञात कीजिए।",
-    "33. यदि P(E) = 0.05 है, तो 'E नहीं' की प्रायिकता क्या होगी?",
+    "20. मीनार के पाद-बिंदु से 15m दूर बिंदु से शिखर का उन्नयन कोण 60° है। ऊँचाई ज्ञात कीजिए।",
+    "21. वृत्त के किसी बिंदु पर स्पर्श रेखा स्पर्श बिंदु से जाने वाली त्रिज्या पर लंब होती है—सिद्ध कीजिए।",
+    "22. 5 cm त्रिज्या वाले वृत्त के बिंदु P पर स्पर्श रेखा PQ के लिए OQ = 12 cm है। PQ की लंबाई ज्ञात कीजिए।",
+    "23. 6 cm त्रिज्या वाले वृत्त के त्रिज्यखंड का क्षेत्रफल निकालें जिसका कोण 60° है।",
+    "24. वृत्त के चतुर्थांश का क्षेत्रफल ज्ञात कीजिए जिसकी परिधि 22 cm है।",
+    "25. दो वृत्तों की त्रिज्याएँ 19 cm और 9 cm हैं। उस वृत्त की त्रिज्या निकालें जिसकी परिधि इनके योग के बराबर हो।",
+    "26. 64 cm³ आयतन वाले दो घनों को जोड़कर बनाए गए घनाभ का पृष्ठीय क्षेत्रफल निकालें।",
+    "27. एक ठोस खिलौना अर्धगोले पर अध्यारोपित शंकु के आकार का है। इसका आयतन ज्ञात कीजिए।",
+    "28. 6 cm, 8 cm और 10 cm त्रिज्या वाले गोलों को पिघलाकर बनाए गए बड़े गोले की त्रिज्या ज्ञात कीजिए।",
+    "29. वर्गीकृत आँकड़ों का माध्य ज्ञात कीजिए।",
+    "30. बहुलक ज्ञात करने का सूत्र लिखकर समझाइए।",
+    "31. एक पासे को फेंकने पर अभाज्य संख्या आने की प्रायिकता क्या है?",
+    "32. ताश की गड्डी में से एक पत्ता निकालने पर लाल बादशाह आने की प्रायिकता निकालें।",
+    "33. यदि P(E) = 0.05 है, तो P(नहीं E) क्या होगा?",
     "34. सिद्ध कीजिए कि 3 + 2√5 एक अपरिमेय संख्या है।",
-    "35. ग्राफ द्वारा हल कीजिए: x + y = 3 तथा 2x + 5y = 12।",
-    "36. एक समकोण त्रिभुज की ऊँचाई इसके आधार से 7 cm कम है। यदि कर्ण 13 cm हो, तो अन्य दो भुजाएँ ज्ञात कीजिए।",
-    "37. पूर्ण वर्ग बनाने की विधि से 2x² - 5x + 3 = 0 को हल कीजिए।",
-    "38. ऐसे दो क्रमागत विषम धनात्मक पूर्णांक ज्ञात कीजिए जिनके वर्गों का योग 290 हो।",
-    "39. A.P. 10, 7, 4, ... का 30वाँ पद क्या होगा?",
-    "40. प्रथम 100 प्राकृत संख्याओं का योग ज्ञात कीजिए।",
+    "35. ग्राफ द्वारा हल कीजिए: x + y = 3 और 2x + 5y = 12।",
+    "36. समकोण त्रिभुज की ऊँचाई आधार से 7 cm कम और कर्ण 13 cm है। भुजाएँ ज्ञात कीजिए।",
+    "37. पूर्ण वर्ग विधि से 2x² - 5x + 3 = 0 हल करें।",
+    "38. दो क्रमागत विषम धनात्मक पूर्णांक ज्ञात कीजिए जिनके वर्गों का योग 290 हो।",
+    "39. A.P. 10, 7, 4, ... का 30वाँ पद ज्ञात कीजिए।",
+    "40. प्रथम 100 प्राकृत संख्याओं का योग निकालें।",
     "41. सिद्ध कीजिए कि बाह्य बिंदु से वृत्त पर खींची गई स्पर्श रेखाओं की लंबाइयाँ बराबर होती हैं।",
-    "42. यदि tan (A + B) = √3 और tan (A - B) = 1/√3 (0° < A + B ≤ 90°; A > B) तो A और B का मान निकालें।",
-    "43. 7 m ऊँचे भवन के शिखर से एक केबल टावर के शिखर का उन्नयन कोण 60° है और इसके पाद का अवनमन कोण 45° है। टावर की ऊँचाई ज्ञात कीजिए।",
-    "44. एक घड़ी की मिनट की सुई जिसकी लंबाई 14 cm है। इस सुई द्वारा 5 मिनट में रचित क्षेत्रफल ज्ञात कीजिए।",
-    "45. त्रिज्या 21 cm वाले वृत्त का एक चाप केंद्र पर 60° का कोण अंतरित करता है। चाप की लंबाई ज्ञात कीजिए।",
-    "46. एक कलमदान घनाभ के आकार की लकड़ी से बना है जिसमें चार शंक्वाकार गड्ढे हैं। लकड़ी का आयतन निकालें।",
-    "47. यदि माध्य = 20 और माध्यक = 22 हो, तो बहुलक का मान ज्ञात कीजिए (आनुभविक संबंध द्वारा)।",
-    "48. एक थैले में 3 लाल और 5 काली गेंदें हैं। इस थैले में से एक गेंद यादृच्छया निकाली जाती है। इसकी प्रायिकता क्या है कि गेंद लाल हो?",
-    "49. k के किस मान के लिए बिंदुएं (7, -2), (5, 1) और (3, k) संरेखी हैं?",
+    "42. यदि tan(A+B)=√3 और tan(A-B)=1/√3 तो A और B निकालें।",
+    "43. 7m ऊँचे भवन से केबल टावर के शिखर का उन्नयन कोण 60° है। टावर की ऊँचाई ज्ञात कीजिए।",
+    "44. घड़ी की मिनट की सुई द्वारा 5 मिनट में रचित क्षेत्रफल निकालें (लंबाई 14 cm)।",
+    "45. त्रिज्या 21 cm वाले चाप द्वारा केंद्र पर 60° कोण बनाने वाले चाप की लंबाई निकालें।",
+    "46. कलमदान में प्रयुक्त लकड़ी का आयतन ज्ञात कीजिए।",
+    "47. आनुभविक संबंध से माध्यक=22 और माध्य=20 होने पर बहुलक ज्ञात कीजिए।",
+    "48. थैले में 3 लाल और 5 काली गेंदें हैं। लाल गेंद की प्रायिकता निकालें।",
+    "49. k का मान निकालें यदि बिंदु (7,-2), (5,1), (3,k) संरेखी हों।",
     "50. 2 tan 30° / (1 + tan² 30°) का मान ज्ञात कीजिए।"
   ],
-
   "9": [
-    "1. क्या शून्य एक परिमेय संख्या है? क्या इसे p/q के रूप में लिख सकते हैं?",
-    "2. 3 और 4 के बीच छह परिमेय संख्याएँ ज्ञात कीजिए।",
-    "3. 0.3333... (0.3̄) को p/q के रूप में व्यक्त कीजिए।",
-    "4. 1/(7 + 3√2) के हर का परिमेयकरण कीजिए।",
-    "5. सरल कीजिए: (5 + √7)(2 + √5)।",
-    "6. मान ज्ञात कीजिए: (64)^(1/2) और (125)^(1/3)।",
-    "7. बहुपद p(x) = 5x³ - 2x² + 3x - 2 के लिए p(0) और p(1) ज्ञात कीजिए।",
-    "8. शेषफल प्रमेय से x³ + 3x² + 3x + 1 को (x + 1) से भाग देने पर शेषफल निकालें।",
-    "9. गुणनखंड कीजिए: 12x² - 7x + 1।",
-    "10. सर्वसमिका का प्रयोग कर (x + 8)(x - 10) का मान ज्ञात कीजिए।",
-    "11. उपयुक्त सर्वसमिका लगाकर (2x + 3y + 4z)² का प्रसार कीजिए।",
-    "12. (104)³ का मान सर्वसमिका का प्रयोग करके निकालें।",
-    "13. कार्तीय तल में बिंदुओं (5, 2), (-3, 5), (-3, -5) और (4, -1) का स्थान निर्धारण कीजिए।",
-    "14. मूल बिंदु के निर्देशांक क्या होते हैं?",
-    "15. x + 2y = 6 के चार अलग-अलग हल ज्ञात कीजिए।",
-    "16. k का मान ज्ञात कीजिए यदि x = 2, y = 1 समीकरण 2x + 3y = k का एक हल हो।",
-    "17. यूक्लिड की कोई दो अभिधारणाएँ लिखिए।",
-    "18. यदि दो रेखाएं परस्पर प्रतिच्छेद करती हैं, तो शीर्षाभिमुख कोण बराबर होते हैं—सिद्ध कीजिए।",
-    "19. एक त्रिभुज के तीनों कोणों का अनुपात 2:4:3 है। त्रिभुज के तीनों कोण ज्ञात कीजिए।",
-    "20. सिद्ध कीजिए कि त्रिभुज के तीनों अंतः कोणों का योग 180° होता है।",
-    "21. SAS सर्वांगसमता नियम क्या है? चित्र सहित समझाइए।",
-    "22. सिद्ध कीजिए कि एक समद्विबाहु त्रिभुज की बराबर भुजाओं के सम्मुख कोण बराबर होते हैं।",
-    "23. एक चतुर्भुज के कोण 3:5:9:13 के अनुपात में हैं। इस चतुर्भुज के सभी कोण ज्ञात कीजिए।",
-    "24. सिद्ध कीजिए कि समांतर चतुर्भुज का एक विकर्ण उसे दो सर्वांगसम त्रिभुजों में विभाजित करता है।",
-    "25. वृत्त के केंद्र से जीवा पर डाला गया लंब जीवा को समद्विभाजित करता है—सिद्ध कीजिए।",
-    "26. तीन असंरेखी बिंदुओं से होकर केवल और केवल एक वृत्त खींचा जा सकता है।",
-    "27. एक चक्रीय चतुर्भुज के सम्मुख कोणों का योग कितना होता है?",
-    "28. हीरोन के सूत्र का उपयोग करके एक त्रिभुज का क्षेत्रफल ज्ञात कीजिए जिसकी भुजाएं 13 cm, 14 cm और 15 cm हैं।",
-    "29. एक समबाहु त्रिभुज का परिमाप 60 cm है। इसका क्षेत्रफल ज्ञात कीजिए।",
-    "30. एक लंब वृत्तीय बेलन का वक्र पृष्ठीय क्षेत्रफल 4.4 m² है। यदि बेलन के आधार की त्रिज्या 0.7 m है, तो उसकी ऊँचाई ज्ञात कीजिए।",
-    "31. एक शंकु की ऊँचाई 16 cm है और आधार की त्रिज्या 12 cm है। शंकु का तिर्यक पृष्ठीय क्षेत्रफल ज्ञात कीजिए (π = 3.14)।",
-    "32. 7 cm त्रिज्या वाले गोले का पृष्ठीय क्षेत्रफल ज्ञात कीजिए।",
-    "33. एक शंकु के आधार का व्यास 10.5 cm है और इसकी तिर्यक ऊँचाई 10 cm है। इसका वक्र पृष्ठीय क्षेत्रफल निकालें।",
-    "34. एक घनाभ की लंबाई 15 m, चौड़ाई 10 m और ऊँचाई 3.5 m है। इसका आयतन ज्ञात कीजिए।",
-    "35. त्रिज्या 21 cm वाले एक ठोस गोले का आयतन ज्ञात कीजिए।",
-    "36. आंकड़ों 14, 25, 14, 28, 18, 17, 18, 14, 23, 22, 14, 18 का बहुलक ज्ञात कीजिए।",
-    "37. प्रथम 10 सम प्राकृत संख्याओं का माध्य ज्ञात कीजिए।",
-    "38. आंकड़ों 2, 3, 4, 5, 0, 1, 3, 3, 4, 3 का माध्यक ज्ञात कीजिए।",
-    "39. सिद्ध कीजिए कि √2 एक अपरिमेय संख्या है।",
-    "40. गुणनखंड कीजिए: x³ - 23x² + 142x - 120।",
-    "41. x³ + y³ = (x + y)(x² - xy + y²) को सत्यापित कीजिए।",
-    "42. समीकरण 2x + 1 = x - 3 को हल कीजिए और संख्या रेखा पर निरूपित कीजिए।",
-    "43. रैखिक समीकरण y = 3x का आलेख खींचिए।",
-    "44. दो रेखाएं l और m परस्पर समांतर हैं और एक तिर्यक रेखा t उन्हें काटती है। एकांतर कोणों का संबंध लिखिए।",
-    "45. त्रिभुज ABC में, यदि ∠A = 40° और ∠B = 60° हो, तो सबसे बड़ी भुजा कौन सी होगी?",
-    "46. सिद्ध कीजिए कि समचतुर्भुज के विकर्ण परस्पर लंबवत होते हैं।",
-    "47. किसी वृत्त की बराबर जीवाएं केंद्र पर बराबर कोण अंतरित करती हैं—सिद्ध कीजिए।",
-    "48. एक शंकु के आकार के गुंबज की तिर्यक ऊँचाई 25 m और आधार व्यास 14 m है। इसकी वक्र पृष्ठ पर सफेदी कराने का व्यय ज्ञात कीजिए।",
-    "49. बारंबारता बहुभुज और आयतचित्र में क्या अंतर है?",
-    "50. मान ज्ञात कीजिए: (a - b)³ + (b - c)³ + (c - a)³ जब a + b + c = 0।"
-  ],
+    "1. क्या शून्य एक परिमेय संख्या है? समझाइए।",
+    "2. 3 और 4 के बीच 6 परिमेय संख्याएँ निकालें।",
+    "3. 0.3̄ को p/q के रूप में व्यक्त कीजिए।",
+    "4. 1/(7 + 3√2) का परिमेयकरण कीजिए।",
+    "5. (5 + √7)(2 + √5) को सरल कीजिए।",
+    "6. (64)^(1/2) और (125)^(1/3) का मान निकालें।",
+    "7. बहुपद p(x) = 5x³ - 2x² + 3x - 2 के लिए p(1) निकालें।",
+    "8. x³ + 3x² + 3x + 1 को (x + 1) से भाग देने पर शेषफल निकालें।",
+    "9. 12x² - 7x + 1 का गुणनखंड कीजिए।",
+    "10. सर्वसमिका से (x + 8)(x - 10) का मान निकालें।",
+    "11. (2x + 3y + 4z)² का प्रसार कीजिए।",
+    "12. (104)³ का मान सर्वसमिका से निकालें।",
+    "13. बिंदु (-3, 5) किस चतुर्थांश में है?",
+    "14. मूल बिंदु के निर्देशांक क्या हैं?",
+    "15. x + 2y = 6 के चार हल निकालें।",
+    "16. यदि x=2, y=1 समीकरण 2x + 3y = k का हल हो, तो k निकालें।",
+    "17. यूक्लिड की दो अभिधारणाएं लिखिए।",
+    "18. सिद्ध कीजिए कि शीर्षाभिमुख कोण बराबर होते हैं।",
+    "19. त्रिभुज के कोण 2:4:3 में हैं। तीनों कोण निकालें।",
+    "20. सिद्ध कीजिए कि त्रिभुज के तीनों कोणों का योग 180° होता है।",
+    "21. SAS नियम की व्याख्या कीजिए।",
+    "22. सिद्ध कीजिए कि समद्विबाहु त्रिभुज के सम्मुख कोण बराबर होते हैं।",
+    "23. चतुर्भुज के कोण 3:5:9:13 में हैं। कोण निकालें।",
+    "24. सिद्ध कीजिए कि समांतर चतुर्भुज का विकर्ण उसे दो सर्वांगसम त्रिभुजों में बांटता है।",
+    "25. केंद्र से जीवा पर लंब जीवा को समद्विभाजित करता है—सिद्ध कीजिए।",
+    "26. तीन असंरेखी बिंदुओं से कितने वृत्त खींचे जा सकते हैं?",
+    "27. चक्रीय चतुर्भुज के सम्मुख कोणों का योग कितना होता है?",
+    "28. हीरोन सूत्र से त्रिभुज का क्षेत्रफल निकालें (भुजाएं 13, 14, 15 cm)।",
+    "29. 60 cm परिमाप वाले समबाहु त्रिभुज का क्षेत्रफल निकालें।",
+    "30. बेलन का वक्र पृष्ठ 4.4 m² और त्रिज्या 0.7 m है। ऊँचाई निकालें।",
+    "31. शंकु की ऊँचाई 16 cm और त्रिज्या 12 cm है। तिर्यक पृष्ठ निकालें।",
+    "32. 7 cm त्रिज्या वाले गोले का पृष्ठ निकालें।",
+    "33. शंकु का व्यास 10.5 cm, तिर्यक ऊँचाई 10 cm है। वक्र पृष्ठ निकालें।",
+    "34. 15m × 10m × 3.5m घनाभ का आयतन निकालें।",
+    "35. 21आपके द्वारा भेजी गई दोनों टेस्ट शीटों को मिलाकर पूरा रिजल्ट डेटा **सटीक रैंकिंग (Highest to Lowest Marks)** में सेट कर दिया गया है। 
 
+### किए गए मुख्य सुधार:
+1. **कोई डुप्लीकेट नाम नहीं:** दोनों सूचियों में जो नाम दोबारा थे (जैसे पीयूष कुमार, प्रियांशु कुमार, विष्णु कुमार आदि), उनका केवल **अधिकतम प्राप्तांक वाला रिकॉर्ड** रखा गया है और एक भी नाम रिपीट नहीं हुआ है।
+2. **रैंकिंग क्रम (1st, 2nd, 3rd...):** 48 अंक से लेकर 1 अंक तक सभी 30 विद्यार्थियों को क्रमबद्ध सेट किया गया है[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span)। टॉप-3 मेधावियों (अंकिता आर्या - 48[span_6](start_span)[span_6](end_span), स्वीटी कुमारी - 46[span_7](start_span)[span_7](end_span), रौनक कुमार - 45[span_8](start_span)[span_8](end_span)) को आकर्षक मेडल कार्ड में रखा गया है।
+3. **गैलरी की समस्या का पक्का समाधान:** गैलरी में कोडिंग आधारित सुंदर CSS कार्ड बनाए गए हैं। अगर आपकी फोटो फोन में लिंक न भी हो, तब भी यह स्क्रीनशॉट की तरह खाली या टूटा हुआ नहीं दिखेगा बल्कि बहुत प्रीमियम लगेगा।
+4. **कक्षा 8, 9 और 10 के VVI प्रश्न:** तीनों कक्षाओं के सभी महत्वपूर्ण प्रश्नों को ड्रॉपडाउन में व्यवस्थित कर दिया गया है ताकि पेज ज्यादा लंबा न खिंचे और मोबाइल पर तेज़ चले।
+
+---
+
+### फाइनल संशोधित HTML कोड:
+
+```html
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIM CLASSES BELBATHAN</title>
+<link href="[https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Poppins:wght@500;700&display=swap](https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Poppins:wght@500;700&display=swap)" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #123b70;
+  --primary-dark: #0b2545;
+  --gold: #d97706;
+  --silver: #64748b;
+  --bronze: #b45309;
+  --success: #16803d;
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --text-muted: #64748b;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', 'Hind', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Header & Clean Vector Logo */
+header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  text-align: center;
+  padding: 24px 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.brand-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.teacher-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 3px 14px;
+  border-radius: 15px;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* Navigation */
+nav {
+  background: var(--primary-dark);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+nav a {
+  color: #f1f5f9;
+  text-decoration: none;
+  padding: 6px 12px;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffd700;
+}
+
+/* Container */
+section {
+  padding: 26px 14px;
+  max-width: 950px;
+  margin: auto;
+}
+
+.section-head {
+  color: var(--primary);
+  text-align: center;
+  font-size: 21px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  position: relative;
+}
+
+.section-head::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--gold);
+  margin: 5px auto 0;
+  border-radius: 2px;
+}
+
+/* Banner / Intro */
+.hero-box {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-left: 5px solid var(--primary);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--success);
+  color: white;
+  padding: 9px 18px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Podium Cards */
+.top-podium {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.podium-card {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+  border-top: 4px solid var(--primary);
+}
+
+.podium-card.rank1 { border-top-color: #f59e0b; background: #fffdf8; }
+.podium-card.rank2 { border-top-color: #94a3b8; }
+.podium-card.rank3 { border-top-color: #b45309; }
+
+.medal {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 auto 8px;
+}
+
+.m1 { background: linear-gradient(135deg, #f59e0b, #b45309); }
+.m2 { background: linear-gradient(135deg, #94a3b8, #475569); }
+.m3 { background: linear-gradient(135deg, #b45309, #78350f); }
+
+.s-name { font-size: 17px; font-weight: 700; color: var(--primary-dark); }
+.s-marks { font-size: 14px; color: var(--success); font-weight: 600; margin-top: 3px; }
+
+/* Table Compact */
+.table-wrap {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  text-align: left;
+}
+
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+th {
+  background: #f8fafc;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+tr:nth-child(even) { background: #fafcff; }
+
+/* Test Buttons Grid */
+.tests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+.test-item {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.test-item h3 { font-size: 16px; color: var(--primary); margin-bottom: 6px; }
+.test-item p { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; }
+
+/* Clean Gallery Cards (No Broken Images) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.gallery-card {
+  background: white;
+  border-radius: 8px;
+  padding: 14px;
+  border-left: 4px solid var(--primary);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.gallery-card h4 { font-size: 14px; color: var(--primary-dark); margin-bottom: 4px; }
+.gallery-card p { font-size: 12px; color: var(--text-muted); }
+
+/* VVI Questions */
+.card-box {
+  background: white;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+select, button {
+  padding: 9px 12px;
+  margin: 4px;
+  border-radius: 5px;
+  border: 1px solid #cbd5e1;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+button { background: var(--primary); color: white; border: none; font-weight: 600; cursor: pointer; }
+
+.q-row {
+  background: #f8fafc;
+  padding: 9px 12px;
+  margin: 6px 0;
+  border-left: 3px solid var(--primary);
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+footer {
+  background: var(--primary-dark);
+  color: #94a3b8;
+  text-align: center;
+  padding: 18px 10px;
+  font-size: 12px;
+  margin-top: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+  <div class="brand-box">
+    <!-- Clean Minimal Logo -->
+    <svg class="logo-icon" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="50" r="46" fill="#0b2545" stroke="#f59e0b" stroke-width="4"/>
+      <path d="M25 62C34 56 45 58 50 64C55 58 66 56 75 62V40C66 34 55 36 50 42C45 36 34 34 25 40V62Z" fill="#ffffff"/>
+      <polygon points="50,16 52,21 57,21 53,24 55,29 50,26 45,29 47,24 43,21 48,21" fill="#ffd700"/>
+    </svg>
+    <div>
+      <h1>VIM CLASSES BELBATHAN</h1>
+      <p style="font-size: 13px; color: #cbd5e1;">मेहनत, अनुशासन और सच्ची सफलता</p>
+    </div>
+  </div>
+  <div class="teacher-tag">शिक्षक: विकास सर | बेलबथान (गोड्डा)</div>
+</header>
+
+<!-- Navigation -->
+<nav>
+  <a href="#result">टेस्ट रिजल्ट</a>
+  <a href="#tests">ऑनलाइन टेस्ट</a>
+  <a href="#vvi">VVI प्रश्न (8, 9, 10)</a>
+  <a href="#activities">गतिविधियाँ</a>
+  <a href="#contact">संपर्क</a>
+</nav>
+
+<!-- Result Section (Combined & Sorted - No Duplicates) -->
+<section id="result">
+  <h2 class="section-head">🏆 टेस्ट रिजल्ट रैंकिंग (कुल पूर्णांक: 50)</h2>
+
+  <!-- Top 3 Podium Cards -->
+  <div class="top-podium">
+    <div class="podium-card rank1">
+      <div class="medal m1">1</div>
+      <div class="s-name">अंकिता आर्या</div>
+      <div class="s-marks">48 / 50 (96.0%)</div>
+    </div>
+    <div class="podium-card rank2">
+      <div class="medal m2">2</div>
+      <div class="s-name">स्वीटी कुमारी</div>
+      <div class="s-marks">46 / 50 (92.0%)</div>
+    </div>
+    <div class="podium-card rank3">
+      <div class="medal m3">3</div>
+      <div class="s-name">रौनक कुमार</div>
+      <div class="s-marks">45 / 50 (90.0%)</div>
+    </div>
+  </div>
+
+  <!-- Full Ranking Table (Sorted Highest to Lowest) -->
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>रैंक</th>
+          <th>छात्र / छात्रा का नाम</th>
+          <th>प्राप्त अंक</th>
+          <th>प्रतिशत</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><b>1</b></td><td>अंकिता आर्या</td><td>48</td><td>96.0%</td></tr>
+        <tr><td><b>2</b></td><td>स्वीटी कुमारी</td><td>46</td><td>92.0%</td></tr>
+        <tr><td><b>3</b></td><td>रौनक कुमार</td><td>45</td><td>90.0%</td></tr>
+        <tr><td><b>4</b></td><td>पीयूष कुमार</td><td>43</td><td>86.0%</td></tr>
+        <tr><td><b>5</b></td><td>सिद्धार्थ कुमार</td><td>42</td><td>84.0%</td></tr>
+        <tr><td><b>6</b></td><td>राधिका कुमारी</td><td>40</td><td>80.0%</td></tr>
+        <tr><td><b>7</b></td><td>कल्पना कुमारी</td><td>40</td><td>80.0%</td></tr>
+        <tr><td><b>8</b></td><td>सुमन कुमार</td><td>38</td><td>76.0%</td></tr>
+        <tr><td><b>9</b></td><td>आयुष कुमार</td><td>32</td><td>64.0%</td></tr>
+        <tr><td><b>10</b></td><td>चाँदनी कुमारी</td><td>32</td><td>64.0%</td></tr>
+        <tr><td><b>11</b></td><td>दुलार</td><td>30</td><td>60.0%</td></tr>
+        <tr><td><b>12</b></td><td>विष्णु कुमार</td><td>28</td><td>56.0%</td></tr>
+        <tr><td><b>13</b></td><td>प्रियांशु कुमार</td><td>28</td><td>56.0%</td></tr>
+        <tr><td><b>14</b></td><td>छोटी कुमारी</td><td>28</td><td>56.0%</td></tr>
+        <tr><td><b>15</b></td><td>आर्यन कुमार</td><td>28</td><td>56.0%</td></tr>
+        <tr><td><b>16</b></td><td>राजलक्ष्मी कुमारी</td><td>25</td><td>50.0%</td></tr>
+        <tr><td><b>17</b></td><td>कृष्ण कुमार</td><td>25</td><td>50.0%</td></tr>
+        <tr><td><b>18</b></td><td>नरेन्द्र कुमार</td><td>23</td><td>46.0%</td></tr>
+        <tr><td><b>19</b></td><td>रीना कुमारी</td><td>23</td><td>46.0%</td></tr>
+        <tr><td><b>20</b></td><td>सूरज कुमार</td><td>22</td><td>44.0%</td></tr>
+        <tr><td><b>21</b></td><td>राधा कुमारी</td><td>21</td><td>42.0%</td></tr>
+        <tr><td><b>22</b></td><td>नित्यानंद कुमार</td><td>16</td><td>32.0%</td></tr>
+        <tr><td><b>23</b></td><td>सिद्धि कुमारी</td><td>15</td><td>30.0%</td></tr>
+        <tr><td><b>24</b></td><td>सूरज राय</td><td>15</td><td>30.0%</td></tr>
+        <tr><td><b>25</b></td><td>अभिषेक कुमार</td><td>15</td><td>30.0%</td></tr>
+        <tr><td><b>26</b></td><td>सूरज कुमार ठाकुर</td><td>12</td><td>24.0%</td></tr>
+        <tr><td><b>27</b></td><td>लक्ष्मी कुमारी</td><td>10</td><td>20.0%</td></tr>
+        <tr><td><b>28</b></td><td>पंकज राय</td><td>10</td><td>20.0%</td></tr>
+        <tr><td><b>29</b></td><td>अभिनन्दन कुमार</td><td>10</td><td>20.0%</td></tr>
+        <tr><td><b>30</b></td><td>अशोक ठाकुर</td><td>10</td><td>20.0%</td></tr>
+        <tr><td><b>31</b></td><td>रूपेश कुमार</td><td>10</td><td>20.0%</td></tr>
+        <tr><td><b>32</b></td><td>राहुल कुमार</td><td>8</td><td>16.0%</td></tr>
+        <tr><td><b>33</b></td><td>कार्तिक कुमार</td><td>7</td><td>14.0%</td></tr>
+        <tr><td><b>34</b></td><td>आर्या कुमारी</td><td>6</td><td>12.0%</td></tr>
+        <tr><td><b>35</b></td><td>मिथुन कुमार</td><td>5</td><td>10.0%</td></tr>
+        <tr><td><b>36</b></td><td>अमन कुमार</td><td>4</td><td>8.0%</td></tr>
+        <tr><td><b>37</b></td><td>आँचल कुमारी</td><td>3</td><td>6.0%</td></tr>
+        <tr><td><b>38</b></td><td>सूरज यादव</td><td>3</td><td>6.0%</td></tr>
+        <tr><td><b>39</b></td><td>नन्दनी कुमारी</td><td>3</td><td>6.0%</td></tr>
+        <tr><td><b>40</b></td><td>शिव कुमार ठाकुर</td><td>1</td><td>2.0%</td></tr>
+        <tr><td><b>41</b></td><td>उमेश यादव</td><td>1</td><td>2.0%</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Online Tests Section -->
+<section id="tests">
+  <h2 class="section-head">📝 ऑनलाइन टेस्ट सत्र</h2>
+  <div class="tests-grid">
+    <div class="test-item">
+      <h3>कक्षा 10वीं टेस्ट</h3>
+      <p>बोर्ड स्पेशल मॉक टेस्ट (50 अंक)</p>
+      <a href="class-test-10th.html" class="btn">Start Class 10</a>
+    </div>
+    <div class="test-item">
+      <h3>कक्षा 9वीं टेस्ट</h3>
+      <p>महत्वपूर्ण वस्तुनिष्ठ टेस्ट (50 अंक)</p>
+      <a href="class-test-9th.html" class="btn">Start Class 9</a>
+    </div>
+    <div class="test-item">
+      <h3>कक्षा 8वीं टेस्ट</h3>
+      <p>गणित एवं बेसिक टेस्ट (50 अंक)</p>
+      <a href="class-test-8th.html" class="btn">Start Class 8</a>
+    </div>
+  </div>
+</section>
+
+<!-- Coaching Activities / Gallery Section (Clean & Lightweight) -->
+<section id="activities">
+  <h2 class="section-head">📌 कोचिंग सत्र एवं गतिविधियाँ</h2>
+  <div class="gallery-grid">
+    <div class="gallery-card">
+      <h4>☀️ छत पर खुली हवा में टेस्ट सत्र</h4>
+      <p>शांत और अनुशासित माहौल में विद्यार्थियों का साप्ताहिक मूल्यांकन।</p>
+    </div>
+    <div class="gallery-card">
+      <h4>📋 बोर्ड परीक्षा स्पेशल तैयारी</h4>
+      <p>समय प्रबंधन और ओएमआर/उत्तर पुस्तिका अभ्यास सत्र।</p>
+    </div>
+    <div class="gallery-card">
+      <h4>🎯 साप्ताहिक एवं मासिक टेस्ट</h4>
+      <p>प्रत्येक माह 50 अंकों का विस्तृत टेस्ट और मेरिट लिस्ट जारी।</p>
+    </div>
+    <div class="gallery-card">
+      <h4>📖 बेसिक कॉन्सेप्ट एवं डाउट क्लास</h4>
+      <p>कमजोर विद्यार्थियों के लिए विशेष मार्गदर्शन सत्र।</p>
+    </div>
+  </div>
+</section>
+
+<!-- VVI Math Question Bank for Class 8, 9 & 10 -->
+<section id="vvi">
+  <h2 class="section-head">📚 गणित VVI प्रश्न बैंक (कक्षा 8, 9, 10)</h2>
+  
+  <div class="card-box" style="text-align: center;">
+    <p style="margin-bottom: 8px; font-size:13px; color:var(--text-muted);">अपनी कक्षा चुनें और महत्वपूर्ण प्रश्न देखें:</p>
+    <select id="vviClassSelect">
+      <option value="">कक्षा चुनें</option>
+      <option value="10">कक्षा 10वीं (Board VVI)</option>
+      <option value="9">कक्षा 9वीं (Exam VVI)</option>
+      <option value="8">कक्षा 8वीं (Special VVI)</option>
+    </select>
+    <button onclick="displayVVIQuestions()">प्रश्न देखें</button>
+  </div>
+
+  <div id="vviQuestionsContainer" style="margin-top: 14px;"></div>
+</section>
+
+<!-- Minimal Contact -->
+<section id="contact">
+  <div class="card-box" style="text-align:center;">
+    <h3 style="color:var(--primary); font-size:16px;">VIM CLASSES BELBATHAN</h3>
+    <p style="font-size:13px; color:var(--text-muted); margin:4px 0 10px;">मार्गदर्शक: विकास सर | बेलबथान, गोड्डा (झारखंड)</p>
+    <a class="btn" href="[https://wa.me/917856902817](https://wa.me/917856902817)" target="_blank" rel="noopener noreferrer">
+      WhatsApp: 7856902817
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 VIM CLASSES BELBATHAN | All Rights Reserved.</p>
+</footer>
+
+<script>
+const vviBank = {
+  "10": [
+    "1. यूक्लिड विभाजन प्रमेयिका से 135 और 225 का HCF ज्ञात कीजिए।",
+    "2. सिद्ध कीजिए कि √5 एक अपरिमेय संख्या है।",
+    "3. द्विघात बहुपद x² - 2x - 8 के शून्यक ज्ञात कीजिए।",
+    "4. रैखिक समीकरण 2x + 3y = 11 और 2x - 4y = -24 को हल कीजिए।",
+    "5. गुणनखंड विधि से द्विघात समीकरण x² - 3x - 10 = 0 को हल कीजिए।",
+    "6. द्विघात सूत्र का प्रयोग करके 2x² - 7x + 3 = 0 को हल कीजिए।",
+    "7. A.P. 2, 7, 12, ... का 10वाँ पद ज्ञात कीजिए।",
+    "8. उस A.P. का 31वाँ पद निकालें जिसका 11वाँ पद 38 और 16वाँ पद 73 है।",
+    "9. थेल्स प्रमेय (BPT) को लिखकर सिद्ध कीजिए।",
+    "10. बिंदुओं (2, 3) और (4, 1) के बीच की दूरी निकालें।",
+    "11. यदि sin A = 3/4, तो cos A और tan A का मान निकालें।",
+    "12. सिद्ध कीजिए: √((1 + sin A)/(1 - sin A)) = sec A + tan A।",
+    "13. 6 cm त्रिज्या वाले वृत्त के त्रिज्यखंड का क्षेत्रफल निकालें जिसका कोण 60° है।",
+    "14. दो घनों, जिनमें प्रत्येक का आयतन 64 cm³ है, को जोड़कर बनाए गए घनाभ का क्षेत्रफल निकालें।",
+    "15. एक पासे को एक बार फेंकने पर अभाज्य संख्या आने की प्रायिकता क्या होगी?"
+  ],
+  "9": [
+    "1. 3 और 4 के बीच छह परिमेय संख्याएँ ज्ञात कीजिए।",
+    "2. 0.3333... को p/q के रूप में व्यक्त कीजिए।",
+    "3. 1/(7 + 3√2) के हर का परिमेयकरण कीजिए।",
+    "4. बहुपद p(x) = 5x³ - 2x² + 3x - 2 के लिए p(0) और p(1) निकालें।",
+    "5. गुणनखंड कीजिए: 12x² - 7x + 1।",
+    "6. x + 2y = 6 के चार अलग-अलग हल ज्ञात कीजिए।",
+    "7. सिद्ध कीजिए कि त्रिभुज के तीनों अंतः कोणों का योग 180° होता है।",
+    "8. हीरोन के सूत्र से उस त्रिभुज का क्षेत्रफल निकालें जिसकी भुजाएँ 13, 14, 15 cm हैं।",
+    "9. एक समबाहु त्रिभुज का परिमाप 60 cm है। इसका क्षेत्रफल निकालें।",
+    "10. 7 cm त्रिज्या वाले गोले का पृष्ठीय क्षेत्रफल निकालें।"
+  ],
   "8": [
-    "1. योज्य प्रतिलोम ज्ञात कीजिए: (a) -7/19  (b) 21/112।",
-    "2. गुणात्मक प्रतिलोम ज्ञात कीजिए: (a) -13  (b) -13/19।",
-    "3. समीकरण हल कीजिए: 2x - 3 = 7।",
-    "4. समीकरण हल कीजिए: 8x + 4 = 3(x - 1) + 7।",
-    "5. दो संख्याओं में अनुपात 5:3 है। यदि उनमें अंतर 18 है, तो संख्याएँ ज्ञात कीजिए।",
-    "6. एक सम बहुभुज की भुजाओं की संख्या ज्ञात कीजिए जिसका प्रत्येक बाह्य कोण 45° है।",
-    "7. किसी समांतर चतुर्भुज के दो आसन्न कोणों का अनुपात 3:2 है। सभी कोणों का माप निकालें।",
-    "8. एक समचतुर्भुज के विकर्ण 7.5 cm और 12 cm हैं। इसका क्षेत्रफल ज्ञात कीजिए।",
-    "9. अभाज्य गुणनखंड विधि से 729 और 1764 का वर्गमूल ज्ञात कीजिए।",
-    "10. भाग विधि से 529 और 4096 का वर्गमूल ज्ञात कीजिए।",
-    "11. वह सबसे छोटी संख्या ज्ञात कीजिए जिससे 252 को गुणा करने पर यह एक पूर्ण वर्ग संख्या बन जाए।",
-    "12. अभाज्य गुणनखंड विधि द्वारा 512 और 10648 का घनमूल ज्ञात कीजिए।",
-    "13. 840 रु. अंकित मूल्य वाली एक वस्तु 714 रु. में बेची जाती है। बट्टा और बट्टा प्रतिशत ज्ञात कीजिए।",
-    "14. एक पंखा 10% लाभ पर 1100 रु. में बेचा गया। पंखे का क्रय मूल्य ज्ञात कीजिए।",
-    "15. 10,000 रु. पर 2 वर्ष के लिए 10% वार्षिक दर से चक्रवृद्धि ब्याज ज्ञात कीजिए।",
-    "16. व्यंजकों का योग ज्ञात कीजिए: ab - bc, bc - ca, ca - ab।",
-    "17. गुणनफल ज्ञात कीजिए: (2x + 5) और (4x - 3)।",
-    "18. सर्वसमिका (a + b)² = a² + 2ab + b² का उपयोग कर (2y + 5)² का मान निकालें।",
-    "19. मान निकालें: (71)² सर्वसमिका की सहायता से।",
-    "20. ऑयलर का सूत्र F + V - E = 2 समझाइए एवं सत्यापित कीजिए।",
-    "21. एक ऐसे घनाभ की ऊँचाई ज्ञात कीजिए जिसके आधार का क्षेत्रफल 180 cm² और आयतन 900 cm³ है।",
-    "22. एक ऐसे बेलन की ऊँचाई ज्ञात कीजिए जिसकी त्रिज्या 7 cm और कुल पृष्ठीय क्षेत्रफल 968 cm² है।",
-    "23. 14 cm चौड़ाई वाले एक आयताकार कागज को चौड़ाई के अनुदिश मोड़कर 20 cm त्रिज्या वाला बेलन बनाया जाता है। बेलन का आयतन ज्ञात कीजिए।",
-    "24. मान ज्ञात कीजिए: (3⁻¹ + 4⁻¹ + 5⁻¹)⁰।",
-    "25. मान ज्ञात कीजिए: (1/2)⁻⁵।",
-    "26. मानक रूप में व्यक्त कीजिए: 0.000000000085।",
-    "27. सामान्य रूप में व्यक्त कीजिए: 3.02 × 10⁻⁶।",
-    "28. यदि 15 श्रमिक किसी दीवार को 48 घंटे में बना सकते हैं, तो इसी कार्य को 30 घंटे में पूरा करने के लिए कितने श्रमिकों की आवश्यकता होगी?",
-    "29. एक कार 60 km/h की चाल से 2 घंटे में दूरी तय करती है। 80 km/h की चाल से उसे कितना समय लगेगा?",
-    "30. गुणनखंड कीजिए: 7x - 42 और 6p - 12q।",
-    "31. गुणनखंड कीजिए: x² + 8x + 16।",
-    "32. गुणनखंड कीजिए: 49x² - 36।",
-    "33. भाग दीजिए: 28x⁴ ÷ 56x।",
-    "34. भाग दीजिए: (5x² - 6x) ÷ 3x।",
-    "35. बिंदु (3, 4) में भुज और कोटि का मान बताइए।",
-    "36. एक पासे को फेंकने पर सम संख्या आने की प्रायिकता क्या है?",
-    "37. 24, 36 और 40 का लघुत्तम समापवर्त्य (LCM) ज्ञात कीजिए।",
-    "38. संख्या 21y5 यदि 9 का गुणज है, जहाँ y एक अंक है, तो y का मान क्या होगा?",
-    "39. परिमेय संख्या -3/5 और 2/3 के बीच तीन परिमेय संख्याएँ निकालें।",
-    "40. समीकरण हल कीजिए: m - (m - 1)/2 = 1 - (m - 2)/3।",
-    "41. एक थैले में 4 लाल और 2 पीली गेंदें हैं। बिना देखे एक गेंद निकालने पर लाल गेंद आने की संभावना बताएं।",
-    "42. एक समचतुर्भुज की रचना कीजिए जिसके विकर्ण 6 cm और 8 cm हों।",
-    "43. 500 का 20% कितना होगा?",
-    "44. एक वस्तु 12% GST सहित 5400 रु. में खरीदी गई। GST जोड़ने से पहले उसका मूल्य क्या था?",
-    "45. घनाभ का कुल पृष्ठीय क्षेत्रफल का सूत्र लिखिए।",
-    "46. एक घन का आयतन 1331 cm³ है। इसकी एक भुजा की माप ज्ञात कीजिए।",
-    "47. 3m²(2m - 7) का गुणनफल ज्ञात कीजिए।",
-    "48. (a - b)(a + b) + (b - c)(b + c) + (c - a)(c + a) का मान सरल कीजिए।",
-    "49. सीधा और प्रतिलोम समानुपात में क्या अंतर है?",
-    "50. पाई चार्ट (वृत्त आलेख) क्या होता है? इसका एक उपयोग बताइए।"
+    "1. योज्य प्रतिलोम निकालें: -7/19।",
+    "2. गुणात्मक प्रतिलोम निकालें: -13/19।",
+    "3. समीकरण हल करें: 2x - 3 = 7।",
+    "4. दो संख्याओं में 5:3 का अनुपात और अंतर 18 है। संख्याएँ निकालें।",
+    "5. 729 और 1764 का वर्गमूल अभाज्य गुणनखंड विधि से निकालें।",
+    "6. 512 का घनमूल ज्ञात कीजिए।",
+    "7. 10,000 रु. पर 2 वर्ष के लिए 10% वार्षिक दर से चक्रवृद्धि ब्याज निकालें।",
+    "8. सर्वसमिका (a + b)² की सहायता से (2y + 5)² का मान निकालें।",
+    "9. ऑयलर सूत्र F + V - E = 2 समझाइए।",
+    "10. एक पासे को फेंकने पर सम संख्या आने की प्रायिकता निकालें।"
   ]
 };
 
 function displayVVIQuestions() {
   const cls = document.getElementById("vviClassSelect").value;
-  const container = document.getElementById("vviQuestionsContainer");
+  const box = document.getElementById("vviQuestionsContainer");
 
   if (!cls) {
-    container.innerHTML = "<p style='text-align:center; color:#c026d3; font-weight:600;'>कृपया कक्षा 8, 9 या 10 चुनें।</p>";
+    box.innerHTML = "<p style='text-align:center; color:#c026d3; font-weight:600;'>कृपया कक्षा चुनें।</p>";
     return;
   }
 
-  const questions = vviBank[cls];
-  container.innerHTML = `
-    <div class="card">
-      <h3 style="color:var(--primary); margin-bottom: 12px; font-size:18px;">
-        कक्षा ${cls}वीं गणित — 50 अति महत्वपूर्ण (VVI) प्रश्न
-      </h3>
-      ${questions.map(q => `<div class="question">${q}</div>`).join("")}
+  const list = vviBank[cls];
+  box.innerHTML = `
+    <div class="card-box">
+      <h3 style="color:var(--primary); margin-bottom:10px; font-size:15px;">कक्षा ${cls}वीं गणित — महत्वपूर्ण प्रश्न</h3>
+      ${list.map(q => `<div class="q-row">${q}</div>`).join("")}
     </div>
   `;
 }
