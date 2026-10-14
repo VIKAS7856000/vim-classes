@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>स्टडी मटेरियल एवं नोट्स पोर्टल | Shiksha Notes Hub</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts for Hindi (Hind & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            hindi: ['Hind', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Hind', 'Inter', sans-serif;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col font-hindi antialiased">
+
+  <!-- Top Navigation Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Brand Logo & Title -->
+        <div class="flex items-center space-x-3 rtl:space-x-reverse">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center text-white shadow-md shadow-emerald-500/20">
+            <i data-lucide="book-open-check" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h1 class="text-lg sm:text-xl font-bold tracking-tight text-slate-900 leading-tight">
+              विद्या संकलन पोर्टल
+            </h1>
+            <p class="text-xs text-slate-500 font-medium">मुफ़्त शिक्षा एवं परीक्षा उपयोगी हस्तलिखित नोट्स</p>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-3">
+          <button 
+            onclick="openUploadModal()"
+            class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all active:scale-95"
+            aria-label="नया नोट्स जोड़ें"
+          >
+            <i data-lucide="plus-circle" class="w-4 h-4"></i>
+            <span class="hidden sm:inline">नया नोट्स जोड़ें</span>
+            <span class="sm:hidden">जोड़ें</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero & Announcement Banner -->
+  <section class="bg-gradient-to-b from-emerald-50/70 via-white to-slate-50 border-b border-slate-100 py-8 sm:py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-100/80 text-emerald-800 text-xs font-semibold mb-4">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-600"></i>
+        <span>सत्र 2024-2026 के नवीनतम नोट्स उपलब्ध हैं</span>
+      </div>
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        अपनी परीक्षा की तैयारी को दें <span class="text-emerald-600">सर्वश्रेष्ठ मार्गदर्शन</span>
+      </h2>
+      <p class="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+        कक्षा 9वीं, 10वीं, 12वीं एवं सामान्य ज्ञान व प्रतियोगी परीक्षाओं के लिए विषयवार नोट्स यहाँ सरलता से पढ़ें और डाउनलोड करें।
+      </p>
+
+      <!-- Search Input Container -->
+      <div class="mt-8 max-w-3xl mx-auto">
+        <div class="relative flex items-center bg-white rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-200 focus-within:ring-2 focus-within:ring-emerald-500 focus-within:border-emerald-500 transition-all p-1.5">
+          <div class="pl-3.5 text-slate-400">
+            <i data-lucide="search" class="w-5 h-5"></i>
+          </div>
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="विषय, पाठ का नाम, या कीवर्ड खोजें (उदा. प्रकाश, त्रिकोणमिति, इतिहास)..." 
+            class="w-full bg-transparent border-0 px-3 py-2.5 text-slate-800 placeholder-slate-400 focus:outline-none text-sm sm:text-base font-normal"
+            oninput="handleSearchFilter()"
+          >
+          <button 
+            onclick="clearSearch()" 
+            id="clearSearchBtn" 
+            class="hidden text-slate-400 hover:text-slate-600 p-2 rounded-lg"
+            title="सर्च साफ़ करें"
+          >
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Section -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
+    
+    <!-- Filter Bar: Classes & Subjects -->
+    <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/80 shadow-sm mb-8 space-y-4">
+      
+      <!-- Class Filter Chips -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-3">
+        <div class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-700">
+          <i data-lucide="graduation-cap" class="w-4 h-4 text-emerald-600"></i>
+          <span>वर्ग / श्रेणी चुनें:</span>
+        </div>
+        <div class="flex flex-wrap gap-1.5" id="classFilters">
+          <button onclick="setClassFilter('all')" data-class="all" class="class-chip px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-emerald-600 text-white shadow-sm transition">
+            सभी (All)
+          </button>
+          <button onclick="setClassFilter('कक्षा 9')" data-class="कक्षा 9" class="class-chip px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+            कक्षा 9वीं
+          </button>
+          <button onclick="setClassFilter('कक्षा 10')" data-class="कक्षा 10" class="class-chip px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+            कक्षा 10वीं
+          </button>
+          <button onclick="setClassFilter('कक्षा 12')" data-class="कक्षा 12" class="class-chip px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+            कक्षा 12वीं
+          </button>
+          <button onclick="setClassFilter('प्रतियोगी परीक्षा')" data-class="प्रतियोगी परीक्षा" class="class-chip px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+            सामान्य ज्ञान / प्रतियोगी
+          </button>
+        </div>
+      </div>
+
+      <!-- Subject Filter Chips -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
+        <div class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-700">
+          <i data-lucide="layers" class="w-4 h-4 text-emerald-600"></i>
+          <span>विषय फ़िल्टर:</span>
+        </div>
+        <div class="flex flex-wrap gap-1.5" id="subjectFilters">
+          <button onclick="setSubjectFilter('all')" data-subject="all" class="subject-chip px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-emerald-600 text-white shadow-sm transition">
+            सभी विषय
+          </button>
+          <button onclick="setSubjectFilter('गणित')" data-subject="गणित" class="subject-chip px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+            गणित (Math)
+          </button>
+          <button onclick="setSubjectFilter('विज्ञान')" data-subject="विज्ञान" class="subject-chip px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+            विज्ञान (Science)
+          </button>
+          <button onclick="setSubjectFilter('सामाजिक विज्ञान')" data-subject="सामाजिक विज्ञान" class="subject-chip px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+            सामाजिक विज्ञान
+          </button>
+          <button onclick="setSubjectFilter('सामान्य ज्ञान')" data-subject="सामान्य ज्ञान" class="subject-chip px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+            सामान्य ज्ञान (GK)
+          </button>
+          <button onclick="setSubjectFilter('हिंदी')" data-subject="हिंदी" class="subject-chip px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+            हिंदी व्याकरण
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notes Header with Counter -->
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-2">
+        <h3 class="text-lg font-bold text-slate-900">उपलब्ध नोट्स</h3>
+        <span id="notesCount" class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-semibold">0 नोट्स</span>
+      </div>
+      <div class="text-xs text-slate-500">
+        दिखाया जा रहा है: <span id="activeFilterLabel" class="font-medium text-slate-700">सभी नोट्स</span>
+      </div>
+    </div>
+
+    <!-- Notes Cards Grid -->
+    <div id="notesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Cards dynamically generated via JavaScript -->
+    </div>
+
+    <!-- Empty State (When no results found) -->
+    <div id="noResultsState" class="hidden text-center py-16 bg-white rounded-2xl border border-dashed border-slate-300 p-8">
+      <div class="w-16 h-16 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-4">
+        <i data-lucide="file-question" class="w-8 h-8"></i>
+      </div>
+      <h3 class="text-lg font-bold text-slate-800">कोई नोट्स नहीं मिले</h3>
+      <p class="text-sm text-slate-500 mt-1 max-w-sm mx-auto">
+        आपके खोजे गए विषय या फ़िल्टर के अनुसार कोई नोट्स उपलब्ध नहीं है। कृपया दूसरा कीवर्ड खोजें या नया नोट्स जोड़ें।
+      </p>
+      <button onclick="resetFilters()" class="mt-4 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-xl transition">
+        फ़िल्टर रीसेट करें
+      </button>
+    </div>
+  </main>
+
+  <!-- Online Reader Modal (मोडल व्यूअर) -->
+  <div id="readModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm overflow-y-auto flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-3xl rounded-2xl shadow-2xl border border-slate-100 overflow-hidden flex flex-col max-h-[90vh] animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-6 border-b border-slate-100 flex items-start justify-between bg-slate-50/70">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <span id="modalSubject" class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800">विषय</span>
+            <span id="modalClass" class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700">कक्षा</span>
+          </div>
+          <h2 id="modalTitle" class="text-xl sm:text-2xl font-bold text-slate-900">पाठ का शीर्षक</h2>
+          <p id="modalChapter" class="text-xs sm:text-sm text-slate-500 font-medium">अध्याय विवरण</p>
+        </div>
+        <button onclick="closeReadModal()" class="text-slate-400 hover:text-slate-700 p-2 rounded-xl hover:bg-white transition" aria-label="बंद करें">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Content Body -->
+      <div class="p-6 overflow-y-auto space-y-4 custom-scrollbar text-slate-700 text-sm sm:text-base leading-relaxed">
+        <div id="modalSummaryBox" class="bg-amber-50/80 border-l-4 border-amber-500 p-3.5 rounded-r-xl text-xs sm:text-sm text-amber-900">
+          <strong class="font-bold">संक्षिप्त सारांश:</strong>
+          <span id="modalSummary" class="block mt-1">सारांश यहाँ दिखेगा...</span>
+        </div>
+
+        <div class="prose max-w-none">
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-slate-400">विस्तृत अध्ययन सामग्री</h4>
+          <div id="modalFullContent" class="mt-3 whitespace-pre-line text-slate-800 font-hindi">
+            <!-- Full notes loaded here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 sm:p-5 border-t border-slate-100 bg-slate-50 flex items-center justify-between gap-3">
+        <div class="text-xs text-slate-400 flex items-center gap-1.5">
+          <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+          <span id="modalDate">दिनांक</span>
+        </div>
+        <div class="flex gap-2">
+          <button onclick="downloadNoteAsText()" class="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs sm:text-sm font-semibold transition shadow-sm">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            <span>डाउनलोड (टेक्स्ट / PDF)</span>
+          </button>
+          <button onclick="closeReadModal()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-xl text-xs sm:text-sm font-semibold transition">
+            बंद करें
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add New Note Modal (नया नोट्स जोड़ें) -->
+  <div id="uploadModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm overflow-y-auto flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-100 overflow-hidden flex flex-col max-h-[92vh]">
+      
+      <!-- Modal Header -->
+      <div class="p-4 sm:p-6 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+        <div>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900">नया स्टडी नोट्स जोड़ें</h3>
+          <p class="text-xs text-slate-500">विद्यार्थियों के अध्ययन के लिए नया पाठ व सामग्री अपलोड करें</p>
+        </div>
+        <button onclick="closeUploadModal()" class="text-slate-400 hover:text-slate-700 p-2 rounded-xl hover:bg-white transition">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Form Body -->
+      <form id="addNoteForm" onsubmit="handleFormSubmit(event)" class="p-6 overflow-y-auto space-y-4 custom-scrollbar">
+        
+        <div>
+          <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">नोट्स का शीर्षक (Topic Title) *</label>
+          <input 
+            type="text" 
+            id="formTitle" 
+            required
+            placeholder="उदा. गुरुत्वाकर्षण के नियम एवं सूत्र" 
+            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+          >
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">वर्ग / कक्षा (Class) *</label>
+            <select 
+              id="formClass" 
+              required
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            >
+              <option value="कक्षा 9">कक्षा 9वीं</option>
+              <option value="कक्षा 10" selected>कक्षा 10वीं</option>
+              <option value="कक्षा 12">कक्षा 12वीं</option>
+              <option value="प्रतियोगी परीक्षा">सामान्य ज्ञान / प्रतियोगी परीक्षा</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">विषय (Subject) *</label>
+            <select 
+              id="formSubject" 
+              required
+              class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            >
+              <option value="विज्ञान" selected>विज्ञान (Science)</option>
+              <option value="गणित">गणित (Mathematics)</option>
+              <option value="सामाजिक विज्ञान">सामाजिक विज्ञान (Social Studies)</option>
+              <option value="सामान्य ज्ञान">सामान्य ज्ञान (General Knowledge)</option>
+              <option value="हिंदी">हिंदी (Hindi Grammar/Literature)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">अध्याय संख्या या नाम (Chapter) *</label>
+          <input 
+            type="text" 
+            id="formChapter" 
+            required
+            placeholder="उदा. अध्याय 10 : गुरुत्वाकर्षण" 
+            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          >
+        </div>
+
+        <div>
+          <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">संक्षिप्त सारांश (Short Summary) *</label>
+          <input 
+            type="text" 
+            id="formSummary" 
+            required
+            placeholder="2 पंक्तियों में मुख्य बिंदु जो कार्ड पर दिखेगा" 
+            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          >
+        </div>
+
+        <div>
+          <label class="block text-xs sm:text-sm font-semibold text-slate-700 mb-1">विस्तृत नोट्स सामग्री (Content/Notes Text) *</label>
+          <textarea 
+            id="formContent" 
+            rows="6" 
+            required
+            placeholder="यहाँ नोट्स का पूरा विवरण, मुख्य परिभाषाएं, फॉर्मूले या प्रश्नोत्तर लिखें..." 
+            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          ></textarea>
+        </div>
+
+        <!-- Form Action -->
+        <div class="flex items-center justify-end gap-3 pt-3 border-t border-slate-100">
+          <button 
+            type="button" 
+            onclick="closeUploadModal()" 
+            class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold rounded-xl transition"
+          >
+            रद्द करें
+          </button>
+          <button 
+            type="submit" 
+            class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-xl shadow-sm transition active:scale-95"
+          >
+            सुरक्षित करें (Save Note)
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden bg-slate-900 text-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-2.5 text-sm transition-all transform duration-300">
+    <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400"></i>
+    <span id="toastMessage">सफलतापूर्वक सेव हो गया!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <p>© 2026 विद्या संकलन - सभी अधिकार सुरक्षित। शिक्षा को सुलभ और सरल बनाने का एक प्रयास।</p>
+    </div>
+  </footer>
+
+  <script>
+    // Initial Seed Data (कक्षा 9, 10, 12, सामान्य ज्ञान इत्यादि के नोट्स)
+    const initialNotes = [
+      {
+        id: "note-1",
+        title: "प्रकाश का परावर्तन तथा अपवर्तन के नियम",
+        chapter: "अध्याय 10 : भौतिक विज्ञान",
+        subject: "विज्ञान",
+        classCategory: "कक्षा 10",
+        date: "12 Oct 2026",
+        summary: "समतल तथा गोलीय दर्पणों द्वारा प्रकाश का परावर्तन, अपवर्तनांक तथा लेंस के सूत्र की संपूर्ण व्याख्या।",
+        content: `1. परावर्तन के नियम:\n• आपतन कोण (i) सदैव परावर्तन कोण (r) के बराबर होता है: ∠i = ∠r\n• आपतित किरण, दर्पण के आपतन बिंदु पर अभिलंब तथा परावर्तित किरण, सभी एक ही तल में होते हैं।\n\n2. गोलीय दर्पण:\n• अवतल दर्पण (Concave Mirror): इसका परावर्तक पृष्ठ अंदर की ओर दबा होता है। मुख्य उपयोग - शेविंग दर्पण, टॉर्च, हेडलाइट।\n• उत्तल दर्पण (Convex Mirror): इसका परावर्तक पृष्ठ बाहर की ओर उभरा होता है। मुख्य उपयोग - वाहनों के साइड मिरर (रियर व्यू मिरर)।\n\n3. दर्पण सूत्र (Mirror Formula):\n1/v + 1/u = 1/f\nजहाँ, v = प्रतिबिंब की दूरी, u = वस्तु की दूरी, f = फोकस दूरी।`
+      },
+      {
+        id: "note-2",
+        title: "द्विघात समीकरण एवं श्रीधराचार्य सूत्र",
+        chapter: "अध्याय 04 : बीजगणित",
+        subject: "गणित",
+        classCategory: "कक्षा 10",
+        date: "08 Oct 2026",
+        summary: "ax² + bx + c = 0 का हल, मूलों की प्रकृति और विविक्तकर (Discriminant D) के नियम।",
+        content: `1. द्विघात समीकरण का मानक रूप:\nax² + bx + c = 0 (जहाँ a ≠ 0)\n\n2. विविक्तकर (Discriminant D):\nD = b² - 4ac\n\n3. मूलों (Roots) की प्रकृति:\n• यदि D > 0: दो भिन्न वास्तविक मूल होते हैं।\n• यदि D = 0: दो समान वास्तविक मूल होते हैं। (-b/2a)\n• यदि D < 0: कोई वास्तविक मूल नहीं होता (काल्पनिक मूल)।\n\n4. श्रीधराचार्य द्विघाती सूत्र:\nx = [-b ± √(b² - 4ac)] / (2a)`
+      },
+      {
+        id: "note-3",
+        title: "भारत का स्वतंत्रता आंदोलन एवं प्रमुख घटनाएं",
+        chapter: "इतिहास : आधुनिक भारत",
+        subject: "सामान्य ज्ञान",
+        classCategory: "प्रतियोगी परीक्षा",
+        date: "01 Oct 2026",
+        summary: "1857 की क्रांति से लेकर 1947 तक के महत्वपूर्ण आंदोलन, गोलमेज सम्मेलन एवं स्वतंत्रता की समयरेखा।",
+        content: `1. 1857 की क्रांति: भारत का पहला स्वतंत्रता संग्राम, मंगल पांडे द्वारा शुरुआत (बैरकपुर)।\n\n2. गांधीजी के प्रमुख आंदोलन:\n• चंपारण सत्याग्रह (1917) - नील किसानों के लिए।\n• असहयोग आंदोलन (1920-1922) - चौरी-चौरा कांड के बाद स्थगित।\n• सविनय अवज्ञा आंदोलन (1930) - दांडी मार्च (नमक कानून तोड़ना)।\n• भारत छोड़ो आंदोलन (1942) - "करो या मरो" का नारा दिया गया।\n\n3. महत्वपूर्ण तिथियां:\n• 13 अप्रैल 1919: जलियांवाला बाग हत्याकांड (अमृतसर)।\n• 15 अगस्त 1947: भारत को स्वतंत्रता प्राप्त हुई।`
+      },
+      {
+        id: "note-4",
+        title: "गुरुत्वाकर्षण तथा गति के तीन नियम",
+        chapter: "अध्याय 09 : बल तथा गति",
+        subject: "विज्ञान",
+        classCategory: "कक्षा 9",
+        date: "25 Sep 2026",
+        summary: "न्यूटन के गति के नियम, जड़त्व, संवेग संरक्षण और सार्वत्रिक गुरुत्वाकर्षण नियतांक G का मान।",
+        content: `1. न्यूटन का प्रथम नियम (जड़त्व का नियम):\nप्रत्येक वस्तु अपनी विराम अवस्था या एक समान सीधी रेखा में गति की अवस्था में तब तक बनी रहती है जब तक उस पर कोई बाहरी असंतुलित बल न लगाया जाए।\n\n2. द्वितीय नियम:\nकिसी वस्तु के संवेग में परिवर्तन की दर उस पर लगाए गए बल के समानुपाती होती है: F = ma\n\n3. तृतीय नियम (क्रिया-प्रतिक्रिया का नियम):\nप्रत्येक क्रिया के बराबर और विपरीत दिशा में प्रतिक्रिया होती है।\n\n4. सार्वत्रिक गुरुत्वाकर्षण नियम:\nF = G · (m₁ · m₂) / r²\nजहाँ G = 6.67 × 10⁻¹¹ N m²/kg²`
+      },
+      {
+        id: "note-5",
+        title: "संधि और समास के भेद व उदाहरण",
+        chapter: "व्याकरण खंड",
+        subject: "हिंदी",
+        classCategory: "कक्षा 10",
+        date: "18 Sep 2026",
+        summary: "स्वर संधि, व्यंजन संधि तथा विसर्ग संधि के नियम व तत्पुरुष, कर्मधारय, बहुव्रीहि समास के उदाहरण।",
+        content: `1. संधि की परिभाषा:\nदो निकटवर्ती वर्णों के परस्पर मेल से जो विकार (परिवर्तन) होता है, उसे संधि कहते हैं।\n• स्वर संधि: जैसे - विद्या + आलय = विद्यालय (दीर्घ संधि)\n• व्यंजन संधि: जैसे - दिक् + गज = दिग्गज\n• विसर्ग संधि: जैसे - नमः + ते = नमस्ते\n\n2. समास की परिभाषा:\nदो या दो से अधिक शब्दों के मेल से बने नए सार्थक शब्द को समास कहते हैं।\n• अव्ययीभाव: यथाशक्ति (शक्ति के अनुसार)\n• तत्पुरुष: राजपुत्र (राजा का पुत्र)\n• कर्मधारय: नीलगगन (नीला है जो गगन)\n• द्वंद्व: माता-पिता (माता और पिता)\n• बहुव्रीहि: दशानन (दस हैं आनन जिसके अर्थात रावण)`
+      },
+      {
+        id: "note-6",
+        title: "विद्युत धारा, प्रतिरोध तथा ओम का नियम",
+        chapter: "अध्याय 12 : विद्युत",
+        subject: "विज्ञान",
+        classCategory: "कक्षा 10",
+        date: "10 Sep 2026",
+        summary: "V = IR का सत्यापन, श्रेणीक्रम और पार्श्वक्रम (समानांतर) में संयोजित प्रतिरोधकों के तुल्य प्रतिरोध सूत्र।",
+        content: `1. विद्युत धारा (Electric Current):\nआवेश के प्रवाह की दर को विद्युत धारा कहते हैं। I = Q / t (इकाई: एम्पीयर A)\n\n2. ओम का नियम (Ohm's Law):\nयदि किसी चालक की भौतिक अवस्थाएं (ताप आदि) स्थिर रहें, तो चालक में प्रवाहित होने वाली धारा उसके सिरों के बीच लगाए गए विभवांतर के समानुपाती होती है: V ∝ I ⇒ V = I·R\n\n3. प्रतिरोधों का संयोजन:\n• श्रेणीक्रम संयोजन (Series): R = R₁ + R₂ + R₃\n• पार्श्वक्रम/समानांतर संयोजन (Parallel): 1/R = 1/R₁ + 1/R₂ + 1/R₃`
+      }
+    ];
+
+    // Local Storage or Fallback
+    let notesData = [];
+    try {
+      const saved = localStorage.getItem('shiksha_notes_store');
+      if (saved) {
+        notesData = JSON.parse(saved);
+      } else {
+        notesData = [...initialNotes];
+        localStorage.setItem('shiksha_notes_store', JSON.stringify(notesData));
+      }
+    } catch (e) {
+      notesData = [...initialNotes];
+    }
+
+    // Filter states
+    let currentClassFilter = 'all';
+    let currentSubjectFilter = 'all';
+    let currentSearchTerm = '';
+    let currentActiveNote = null;
+
+    // Subject Color Badges helper
+    function getSubjectBadgeColor(subject) {
+      switch(subject) {
+        case 'विज्ञान': return 'bg-blue-100 text-blue-800 border-blue-200';
+        case 'गणित': return 'bg-amber-100 text-amber-800 border-amber-200';
+        case 'सामान्य ज्ञान': return 'bg-purple-100 text-purple-800 border-purple-200';
+        case 'हिंदी': return 'bg-rose-100 text-rose-800 border-rose-200';
+        case 'सामाजिक विज्ञान': return 'bg-teal-100 text-teal-800 border-teal-200';
+        default: return 'bg-emerald-100 text-emerald-800 border-emerald-200';
+      }
+    }
+
+    // Render Notes Cards
+    function renderNotes() {
+      const container = document.getElementById('notesContainer');
+      const noResults = document.getElementById('noResultsState');
+      const counter = document.getElementById('notesCount');
+      const activeLabel = document.getElementById('activeFilterLabel');
+
+      // Filter Logic
+      const filtered = notesData.filter(note => {
+        const matchesClass = (currentClassFilter === 'all') || (note.classCategory === currentClassFilter);
+        const matchesSubject = (currentSubjectFilter === 'all') || (note.subject === currentSubjectFilter);
+        const searchLow = currentSearchTerm.toLowerCase().trim();
+        const matchesSearch = !searchLow || 
+          note.title.toLowerCase().includes(searchLow) ||
+          note.chapter.toLowerCase().includes(searchLow) ||
+          note.summary.toLowerCase().includes(searchLow) ||
+          note.subject.toLowerCase().includes(searchLow);
+
+        return matchesClass && matchesSubject && matchesSearch;
+      });
+
+      counter.textContent = `${filtered.length} नोट्स`;
+      
+      let labelParts = [];
+      if (currentClassFilter !== 'all') labelParts.push(currentClassFilter);
+      if (currentSubjectFilter !== 'all') labelParts.push(currentSubjectFilter);
+      if (currentSearchTerm) labelParts.push(`"${currentSearchTerm}"`);
+      activeLabel.textContent = labelParts.length > 0 ? labelParts.join(' • ') : 'सभी नोट्स';
+
+      if (filtered.length === 0) {
+        container.innerHTML = '';
+        noResults.classList.remove('hidden');
+        return;
+      }
+
+      noResults.classList.add('hidden');
+
+      container.innerHTML = filtered.map(note => `
+        <div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md transition duration-200 flex flex-col justify-between p-5 group hover:border-emerald-300">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-md border ${getSubjectBadgeColor(note.subject)}">
+                ${note.subject}
+              </span>
+              <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded-full">
+                ${note.classCategory}
+              </span>
+            </div>
+
+            <h4 class="text-base font-bold text-slate-900 group-hover:text-emerald-700 transition leading-snug line-clamp-2">
+              ${note.title}
+            </h4>
+
+            <div class="flex items-center gap-1.5 text-xs text-slate-500 mt-1.5 font-medium">
+              <i data-lucide="bookmark" class="w-3.5 h-3.5 text-emerald-600"></i>
+              <span>${note.chapter}</span>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-600 mt-3 line-clamp-3 leading-relaxed">
+              ${note.summary}
+            </p>
+          </div>
+
+          <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[11px] text-slate-400 font-medium flex items-center gap-1">
+              <i data-lucide="calendar" class="w-3 h-3"></i>
+              ${note.date}
+            </span>
+
+            <div class="flex items-center gap-2">
+              <button 
+                onclick="openReadModal('${note.id}')"
+                class="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-600 hover:text-white transition"
+              >
+                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                <span>पढ़ें</span>
+              </button>
+              <button 
+                onclick="downloadSingleNote('${note.id}')"
+                class="p-1.5 text-slate-400 hover:text-emerald-600 hover:bg-slate-100 rounded-lg transition" 
+                title="टेक्स्ट डाउनलोड करें"
+              >
+                <i data-lucide="arrow-down-to-line" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Refresh icons
+      lucide.createIcons();
+    }
+
+    // Filter handling
+    function setClassFilter(cls) {
+      currentClassFilter = cls;
+      document.querySelectorAll('.class-chip').forEach(btn => {
+        if (btn.getAttribute('data-class') === cls) {
+          btn.className = 'class-chip px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-emerald-600 text-white shadow-sm transition';
+        } else {
+          btn.className = 'class-chip px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition';
+        }
+      });
+      renderNotes();
+    }
+
+    function setSubjectFilter(subj) {
+      currentSubjectFilter = subj;
+      document.querySelectorAll('.subject-chip').forEach(btn => {
+        if (btn.getAttribute('data-subject') === subj) {
+          btn.className = 'subject-chip px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-emerald-600 text-white shadow-sm transition';
+        } else {
+          btn.className = 'subject-chip px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition';
+        }
+      });
+      renderNotes();
+    }
+
+    function handleSearchFilter() {
+      const input = document.getElementById('searchInput');
+      const clearBtn = document.getElementById('clearSearchBtn');
+      currentSearchTerm = input.value;
+      if (currentSearchTerm.length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+      renderNotes();
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('searchInput');
+      input.value = '';
+      currentSearchTerm = '';
+      document.getElementById('clearSearchBtn').classList.add('hidden');
+      renderNotes();
+    }
+
+    function resetFilters() {
+      clearSearch();
+      setClassFilter('all');
+      setSubjectFilter('all');
+    }
+
+    // Modal Operations
+    function openReadModal(id) {
+      const note = notesData.find(n => n.id === id);
+      if (!note) return;
+
+      currentActiveNote = note;
+      document.getElementById('modalTitle').textContent = note.title;
+      document.getElementById('modalChapter').textContent = note.chapter;
+      document.getElementById('modalSubject').textContent = note.subject;
+      document.getElementById('modalClass').textContent = note.classCategory;
+      document.getElementById('modalSummary').textContent = note.summary;
+      document.getElementById('modalDate').textContent = `अपलोड तिथि: ${note.date}`;
+      document.getElementById('modalFullContent').textContent = note.content;
+
+      document.getElementById('readModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeReadModal() {
+      document.getElementById('readModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+      currentActiveNote = null;
+    }
+
+    function openUploadModal() {
+      document.getElementById('uploadModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeUploadModal() {
+      document.getElementById('uploadModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+      document.getElementById('addNoteForm').reset();
+    }
+
+    // Add Note Form Submission
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      
+      const title = document.getElementById('formTitle').value.trim();
+      const classCategory = document.getElementById('formClass').value;
+      const subject = document.getElementById('formSubject').value;
+      const chapter = document.getElementById('formChapter').value.trim();
+      const summary = document.getElementById('formSummary').value.trim();
+      const content = document.getElementById('formContent').value.trim();
+
+      if (!title || !chapter || !summary || !content) {
+        showToast("कृपया सभी आवश्यक फ़ील्ड भरें!");
+        return;
+      }
+
+      // Generate current date string in Hindi format
+      const today = new Date();
+      const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      const dateStr = `${today.getDate()} ${months[today.getMonth()]} ${today.getFullYear()}`;
+
+      const newNote = {
+        id: "note-" + Date.now(),
+        title,
+        chapter,
+        subject,
+        classCategory,
+        date: dateStr,
+        summary,
+        content
+      };
+
+      // Add to beginning of array
+      notesData.unshift(newNote);
+      
+      // Save in LocalStorage
+      try {
+        localStorage.setItem('shiksha_notes_store', JSON.stringify(notesData));
+      } catch (err) {
+        console.error("Storage error:", err);
+      }
+
+      closeUploadModal();
+      showToast("नया नोट्स सफलतापूर्वक पोर्टल पर जुड़ गया!");
+      renderNotes();
+    }
+
+    // Download text file feature
+    function downloadSingleNote(id) {
+      const note = notesData.find(n => n.id === id);
+      if (!note) return;
+      saveTextFile(`${note.title}.txt`, `शीर्षक: ${note.title}\nकक्षा: ${note.classCategory} | विषय: ${note.subject}\nअध्याय: ${note.chapter}\nदिनांक: ${note.date}\n\n[सारांश]\n${note.summary}\n\n=======================\n[विस्तृत अध्ययन सामग्री]\n=======================\n${note.content}\n\n-- विद्या संकलन पोर्टल`);
+    }
+
+    function downloadNoteAsText() {
+      if (!currentActiveNote) return;
+      downloadSingleNote(currentActiveNote.id);
+    }
+
+    function saveTextFile(filename, text) {
+      const element = document.createElement('a');
+      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+      element.setAttribute('download', filename);
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+      showToast("नोट्स फ़ाइल डाउनलोड हो गई!");
+    }
+
+    // Toast Notification helper
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const text = document.getElementById('toastMessage');
+      text.textContent = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3000);
+    }
+
+    // Close modals on clicking outside / Esc key
+    window.addEventListener('click', (e) => {
+      const readModal = document.getElementById('readModal');
+      const uploadModal = document.getElementById('uploadModal');
+      if (e.target === readModal) closeReadModal();
+      if (e.target === uploadModal) closeUploadModal();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeReadModal();
+        closeUploadModal();
+      }
+    });
+
+    // Initialize on page load
+    window.onload = function() {
+      renderNotes();
+      lucide.createIcons();
+    };
+  </script>
+</body>
+</html>
