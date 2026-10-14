@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="VIM Classes Belbathan — कक्षा 1 से 10 तक पढ़ाई, गणित, विज्ञान, सामाजिक विज्ञान और हिंदी।">
+<title>VIM CLASSES BELBATHAN | गुणवत्तापूर्ण शिक्षा</title>
+<style>
+:root{--navy:#10244d;--blue:#2457d6;--gold:#ffca55;--light:#f4f7ff;--ink:#17233d;--muted:#62708a;--white:#fff;--green:#16834a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Noto Sans Devanagari",sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+a{color:inherit;text-decoration:none}.topbar{background:#0a1735;color:#fff;text-align:center;padding:8px 14px;font-size:14px}
+header{background:var(--navy);color:#fff;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:14px;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-size:20px;font-weight:900}
+.brand h1{font-size:19px;line-height:1.2;margin:0;letter-spacing:.3px}.brand small{color:#d6e0ff}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}nav a:hover{color:var(--gold)}
+.hero{background:linear-gradient(120deg,#10244d 0%,#2457d6 100%);color:#fff;padding:72px 5% 78px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:300px;height:300px;border:45px solid #ffffff12;border-radius:50%;right:-60px;top:-90px}
+.hero-inner{max-width:1100px;margin:auto;position:relative;z-index:1;display:grid;grid-template-columns:1.4fr .8fr;gap:34px;align-items:center}
+.tag{display:inline-block;background:#ffffff18;border:1px solid #ffffff40;border-radius:30px;padding:6px 13px;font-size:13px}
+.hero h2{font-size:clamp(32px,5vw,52px);line-height:1.15;margin:18px 0}.hero p{color:#e2e9ff;max-width:620px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:700}.btn-gold{background:var(--gold);color:#17233d}.btn-outline{border:1px solid #ffffff90;color:#fff}
+.hero-card{background:#fff;color:var(--ink);border-radius:20px;padding:25px;box-shadow:0 18px 45px #07163835}.hero-card h3{margin:0 0 12px;color:var(--blue)}.hero-card p{color:var(--muted);margin:7px 0}.hero-card .big{font-size:30px;font-weight:900;color:var(--navy)}
+section{padding:62px 5%}.container{max-width:1100px;margin:auto}.section-head{text-align:center;margin-bottom:30px}.section-head .eyebrow{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:1px;font-size:12px}.section-head h2{font-size:clamp(25px,4vw,36px);margin:7px 0}.section-head p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:23px;border:1px solid #e5eaf5;border-radius:16px;background:#fff;box-shadow:0 8px 25px #122d5c08}.icon{width:45px;height:45px;display:grid;place-items:center;background:#eaf0ff;border-radius:12px;font-size:22px}.card h3{margin:13px 0 7px}.card p{margin:0;color:var(--muted);font-size:15px}
+.soft{background:var(--light)}.about{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}.about-box{background:var(--navy);color:#fff;padding:28px;border-radius:20px}.about-box h3{margin-top:0}.about-box li{margin:9px 0}.about-copy p{color:var(--muted)}
+.course{border-top:4px solid var(--blue)}.course span{display:inline-block;background:#eaf0ff;color:var(--blue);font-size:12px;padding:4px 9px;border-radius:20px;font-weight:700}
+.notice{background:#fff8e7;border:1px solid #ffe2a1;padding:18px;border-radius:14px;color:#684c13}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-info{background:var(--navy);color:#fff;border-radius:18px;padding:26px}.contact-info p{color:#e0e8ff}.contact-info a{color:var(--gold);font-weight:700}.form{border:1px solid #e5eaf5;border-radius:18px;padding:25px}.form label{display:block;font-weight:700;margin:10px 0 5px}.form input,.form select,.form textarea{width:100%;padding:12px;border:1px solid #ccd5e7;border-radius:9px;font:inherit}.form button{border:0;cursor:pointer;margin-top:15px;width:100%;font:inherit}
+footer{background:#09152f;color:#dbe4ff;text-align:center;padding:25px 5%;font-size:14px}footer strong{color:#fff}
+.float{position:fixed;right:16px;bottom:16px;background:#16834a;color:#fff;border-radius:30px;padding:12px 16px;font-weight:800;box-shadow:0 6px 18px #0002;z-index:5}
+@media(max-width:760px){header{padding:14px 5%}.hero-inner,.about,.contact-grid{grid-template-columns:1fr}.hero{padding:48px 5%}.grid{grid-template-columns:1fr}.hero-card{max-width:440px}nav{gap:12px}.brand h1{font-size:16px}section{padding:48px 5%}}
+</style>
+</head>
+<body>
+<div class="topbar">📚 नए सत्र और एडमिशन की जानकारी के लिए संपर्क करें</div>
+<header>
+  <a class="brand" href="#home"><div class="logo">VIM</div><div><h1>VIM CLASSES BELBATHAN</h1><small>सीखें • समझें • आगे बढ़ें</small></div></a>
+  <nav aria-label="मुख्य मेनू">
+    <a href="#home">होम</a><a href="#about">हमारे बारे में</a><a href="#courses">कक्षाएँ</a><a href="#resources">स्टडी मटेरियल</a><a href="#contact">संपर्क</a>
+  </nav>
+</header>
+<main>
+<section class="hero" id="home"><div class="hero-inner">
+  <div><span class="tag">आपकी पढ़ाई, हमारा मार्गदर्शन</span>
+    <h2>मजबूत तैयारी के साथ<br>अपने लक्ष्य की ओर बढ़ें।</h2>
+    <p>VIM CLASSES BELBATHAN में विद्यार्थियों को आसान तरीके से समझने, नियमित अभ्यास करने और परीक्षा की बेहतर तैयारी करने के लिए मार्गदर्शन दिया जाता है।</p>
+    <div class="buttons"><a class="btn btn-gold" href="#contact">एडमिशन की जानकारी</a><a class="btn btn-outline" href="#courses">कक्षाएँ देखें</a></div>
+  </div>
+  <div class="hero-card"><h3>VIM CLASSES</h3><div class="big">कक्षा 1–10</div><p>📍 कुशवाहा टोला, बेलबथान</p><p>👨‍🏫 शिक्षक: विकास सर</p><p>📘 गणित • विज्ञान • सामाजिक विज्ञान • हिंदी</p><a class="btn btn-gold" href="https://wa.me/917856902817?text=Namaste%20VIM%20Classes%2C%20mujhe%20admission%20ki%20jankari%20chahiye." target="_blank" rel="noopener">WhatsApp पर संपर्क करें</a></div>
+</div></section>
+<section id="about"><div class="container about">
+  <div class="about-copy"><div class="section-head" style="text-align:left;margin-bottom:12px"><span class="eyebrow">हमारे बारे में</span><h2>हर विद्यार्थी की प्रगति हमारी प्राथमिकता</h2></div>
+  <p>VIM CLASSES BELBATHAN का उद्देश्य विद्यार्थियों को विषयों की बुनियादी समझ, नियमित अभ्यास और परीक्षा की तैयारी में सहायता देना है। हमारा प्रयास है कि विद्यार्थी सवालों को रटने के बजाय समझकर हल करना सीखें।</p>
+  <p>यह वेबसाइट विद्यार्थियों और अभिभावकों को कोचिंग, विषयों और संपर्क संबंधी जानकारी एक जगह उपलब्ध कराने के लिए बनाई गई है।</p></div>
+  <div class="about-box"><h3>हमारी खास बातें</h3><ul><li>आसान भाषा में पढ़ाई</li><li>गणित के सवालों का चरणबद्ध समाधान</li><li>अभ्यास और टेस्ट पर ध्यान</li><li>विद्यार्थियों की गलतियों को सुधारने में मदद</li><li>पढ़ाई से जुड़ी जानकारी एक जगह</li></ul></div>
+</div></section>
+<section class="soft" id="courses"><div class="container"><div class="section-head"><span class="eyebrow">हमारी कक्षाएँ</span><h2>कक्षा और विषय</h2><p>अपनी कक्षा के अनुसार पढ़ाई की जानकारी प्राप्त करें।</p></div>
+<div class="grid">
+  <div class="card course"><span>कक्षा 1–5</span><h3>बुनियादी शिक्षा</h3><p>स्कूल की पढ़ाई, अभ्यास और विषयों की मजबूत नींव बनाने पर ध्यान।</p></div>
+  <div class="card course"><span>कक्षा 6–8</span><h3>मिडिल स्कूल</h3><p>गणित, विज्ञान, सामाजिक विज्ञान और अन्य विषयों की नियमित तैयारी।</p></div>
+  <div class="card course"><span>कक्षा 9–10</span><h3>बोर्ड परीक्षा तैयारी</h3><p>अध्यायवार अभ्यास, महत्वपूर्ण प्रश्न और परीक्षा के लिए व्यवस्थित तैयारी।</p></div>
+</div></div></section>
+<section id="resources"><div class="container"><div class="section-head"><span class="eyebrow">विद्यार्थियों के लिए</span><h2>स्टडी मटेरियल और टेस्ट</h2><p>नोट्स, प्रश्नपत्र और टेस्ट की जानकारी यहाँ जोड़ी जा सकती है।</p></div>
+<div class="grid">
+  <div class="card"><div class="icon">📄</div><h3>नोट्स और PDF</h3><p>अध्यायवार नोट्स और PDF उपलब्ध होने पर यहाँ लिंक जोड़े जाएँगे।</p></div>
+  <div class="card"><div class="icon">📝</div><h3>टेस्ट पेपर</h3><p>अभ्यास प्रश्नपत्र और मॉडल सेट के लिंक यहाँ प्रकाशित किए जा सकते हैं।</p></div>
+  <div class="card"><div class="icon">🏆</div><h3>टेस्ट और रिजल्ट</h3><p>आगामी टेस्ट, परिणाम और जरूरी घोषणाएँ यहाँ साझा की जा सकती हैं।</p></div>
+</div><p class="notice" style="margin-top:20px"><strong>ध्यान दें:</strong> अभी यह शुरुआती वेबसाइट है। असली नोट्स, रिजल्ट और टेस्ट पेपर जोड़ने के लिए उनके PDF/लिंक उपलब्ध कराने होंगे।</p>
+</div></section>
+<section class="soft" id="contact"><div class="container"><div class="section-head"><span class="eyebrow">हमसे जुड़ें</span><h2>एडमिशन और संपर्क</h2><p>कक्षा, बैच और एडमिशन की जानकारी के लिए संपर्क करें।</p></div>
+<div class="contact-grid">
+  <div class="contact-info"><h3>VIM CLASSES BELBATHAN</h3><p>👨‍🏫 शिक्षक: विकास सर</p><p>📍 पता: कुशवाहा टोला, बेलबथान, गोड्डा, झारखंड</p><p>📞 मोबाइल: <a href="tel:+917856902817">7856902817</a></p><p>✉️ ईमेल: <a href="mailto:Kumarvikas785690@gmail.com">Kumarvikas785690@gmail.com</a></p><a class="btn btn-gold" href="https://wa.me/917856902817?text=Namaste%20VIM%20Classes%2C%20mujhe%20jankari%20chahiye." target="_blank" rel="noopener">WhatsApp पर मैसेज करें</a></div>
+  <form class="form" id="admissionForm"><h3>जानकारी के लिए मैसेज भेजें</h3><label for="student">विद्यार्थी का नाम</label><input id="student" name="student" required placeholder="अपना नाम लिखें"><label for="class">कक्षा</label><select id="class" name="class" required><option value="">कक्षा चुनें</option><option>कक्षा 1–5</option><option>कक्षा 6</option><option>कक्षा 7</option><option>कक्षा 8</option><option>कक्षा 9</option><option>कक्षा 10</option></select><label for="message">आपको क्या जानकारी चाहिए?</label><textarea id="message" name="message" rows="3" placeholder="जैसे: फीस, बैच का समय, एडमिशन"></textarea><button class="btn btn-gold" type="submit">WhatsApp पर भेजें</button></form>
+</div></div></section>
+</main>
+<footer><strong>VIM CLASSES BELBATHAN</strong><br>सीखें • समझें • आगे बढ़ें<br>© <span id="year"></span> VIM Classes. सभी अधिकार सुरक्षित।</footer>
+<a class="float" href="https://wa.me/917856902817?text=Namaste%20VIM%20Classes" target="_blank" rel="noopener" aria-label="WhatsApp पर संपर्क करें">WhatsApp</a>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('admissionForm').addEventListener('submit', function(e){
+ e.preventDefault();
+ const student = document.getElementById('student').value.trim();
+ const cls = document.getElementById('class').value;
+ const msg = document.getElementById('message').value.trim() || 'एडमिशन की जानकारी चाहिए';
+ const text = `नमस्ते VIM Classes,\\nविद्यार्थी का नाम: ${student}\\nकक्षा: ${cls}\\nजानकारी: ${msg}`;
+ window.open('https://wa.me/917856902817?text=' + encodeURIComponent(text), '_blank');
+});
+</script>
+</body>
+</html>
