@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIM CLASSES - Class 10 Math 50 VVI Mega Test</title>
+    <style>
+        :root {
+            --primary: #4a148c;
+            --primary-light: #7b1fa2;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --success: #16a34a;
+            --danger: #dc2626;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-size: 26px;
+            font-weight: 800;
+        }
+
+        header p {
+            font-size: 14px;
+            margin-top: 5px;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .instructions-card {
+            background: #fdf4ff;
+            border-left: 5px solid var(--primary-light);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 25px;
+            font-size: 14.5px;
+        }
+
+        .instructions-card ul {
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+
+        .q-card {
+            background: var(--card-bg);
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            transition: all 0.2s ease;
+        }
+
+        .q-title {
+            font-size: 15.5px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .option-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background: #f8fafc;
+            cursor: pointer;
+            font-size: 14.5px;
+            transition: background 0.15s;
+        }
+
+        .option-item:hover {
+            background: #f1f5f9;
+        }
+
+        .option-item input[type="radio"] {
+            accent-color: var(--primary-light);
+            width: 17px;
+            height: 17px;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 12px;
+            padding: 10px 14px;
+            background: #f0fdf4;
+            border-left: 4px solid var(--success);
+            border-radius: 4px;
+            font-size: 13.5px;
+            color: #14532d;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(123, 31, 162, 0.35);
+            margin-top: 15px;
+        }
+
+        .btn-submit:active {
+            transform: scale(0.98);
+        }
+
+        #result-box {
+            display: none;
+            margin-top: 25px;
+            padding: 22px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid;
+        }
+
+        .result-score {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+            margin-top: 35px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>VIM CLASSES</h1>
+        <p>सपनों को सच करने की उड़ान! | कक्षा 10वीं गणित - 50 VVI वस्तुनिष्ठ प्रश्न महा-टेस्ट</p>
+    </header>
+
+    <div class="container">
+        <div class="instructions-card">
+            <strong>📋 टेस्ट निर्देश:</strong>
+            <ul>
+                <li>इस टेस्ट में कुल <strong>50 बहुविकल्पीय प्रश्न (MCQs)</strong> हैं।</li>
+                <li>प्रत्येक प्रश्न 1 अंक का है (कुल पूर्णांक: 50)।</li>
+                <li>सभी प्रश्नों को हल करने के बाद नीचे <strong>'टेस्ट सबमिट करें'</strong> बटन पर क्लिक करें।</li>
+                <li>सबमिट करते ही आपको आपका कुल प्राप्तांक, प्रतिशत और सभी प्रश्नों के सही उत्तर व्याख्या सहित दिखेंगे।</li>
+            </ul>
+        </div>
+
+        <form id="quiz-form">
+            <div id="questions-container"></div>
+            <button type="button" class="btn-submit" onclick="submitMegaTest()">टेस्ट सबमिट करें और रिज़ल्ट देखें</button>
+        </form>
+
+        <div id="result-box">
+            <div class="result-score" id="res-score"></div>
+            <div id="res-msg" style="font-size: 15px; font-weight: 600;"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; VIM CLASSES - मेहनत, लगन और सही मार्गदर्शन से हर लक्ष्य आसान बनता है।</p>
+    </footer>
+
+    <script>
+        const questionsData = [
+            { q: "1. सह-अभाज्य संख्याओं का म०स० (HCF) हमेशा कितना होता है?", opt: ["1", "2", "3", "इनमें से कोई नहीं"], ans: "A", exp: "सह-अभाज्य संख्याओं में 1 के अतिरिक्त कोई उभयनिष्ठ गुणनखंड नहीं होता, अतः HCF = 1।" },
+            { q: "2. π (पाई) किस प्रकार की संख्या है?", opt: ["परिमेय संख्या", "अपरिमेय संख्या", "पूर्णांक संख्या", "प्राकृत संख्या"], ans: "B", exp: "π एक अपरिमेय संख्या है, जबकि 22/7 परिमेय संख्या मानी जाती है।" },
+            { q: "3. दो परिमेय संख्याओं के बीच अधिकतम कितनी परिमेय संख्याएं हो सकती हैं?", opt: ["1", "2", "3", "अनंत"], ans: "D", exp: "किन्हीं भी दो वास्तविक/परिमेय संख्याओं के बीच अनगिनत (अनंत) संख्याएं होती हैं।" },
+            { q: "4. संख्या 0.23 (23 पर बार) को p/q के रूप में लिखा जा सकता है:", opt: ["23/90", "23/99", "23/100", "23/9"], ans: "B", exp: "दशमलव के बाद दो अंकों की पुनरावृत्ति है, अतः भिन्न = 23/99।" },
+            { q: "5. किसी धनात्मक पूर्णांक q के लिए प्रत्येक धनात्मक सम पूर्णांक का रूप होता है:", opt: ["2q + 1", "q", "2q", "q + 1"], ans: "C", exp: "सम पूर्णांक सदैव 2 से पूर्णतः विभाज्य होता है, अतः रूप 2q होगा।" },
+            { q: "6. एक घात वाले बहुपद को क्या कहा जाता है?", opt: ["रैखिक बहुपद", "द्विघात बहुपद", "त्रिघात बहुपद", "शून्य बहुपद"], ans: "A", exp: "अधिकतम घात 1 वाले बहुपद को रैखिक बहुपद कहते हैं।" },
+            { q: "7. बहुपद x² - 2x - 8 के शून्यक होंगे:", opt: ["(2, -4)", "(4, -2)", "(-2, -4)", "(4, 2)"], ans: "B", exp: "x² - 4x + 2x - 8 = 0 ⇒ (x - 4)(x + 2) = 0 ⇒ x = 4, -2।" },
+            { q: "8. यदि द्विघात बहुपद ax² + bx + c के शून्यक α और β हों, तो α + β का मान क्या होगा?", opt: ["b/a", "-b/a", "c/a", "-c/a"], ans: "B", exp: "शून्यकों का योग α + β = -b/a होता है।" },
+            { q: "9. बहुपद x² - 11 के शून्यक क्या हैं?", opt: ["11, -11", "√11, -√11", "√11, √11", "11, 0"], ans: "B", exp: "x² = 11 ⇒ x = ±√11।" },
+            { q: "10. यदि दो चरों वाले रैखिक समीकरणों का युग्म संपाती रेखाएं प्रदर्शित करता हो, तो उनके कितने हल होंगे?", opt: ["एक अद्वितीय हल", "कोई हल नहीं", "अनगिनत (अपरिमित) हल", "दो हल"], ans: "C", exp: "संपाती रेखाओं (a1/a2 = b1/b2 = c1/c2) के अनंत अनेक हल होते हैं।" },
+            { q: "11. रैखिक समीकरण युग्म x + 2y = 4 तथा 2x + 4y = 8 का हल होगा:", opt: ["अद्वितीय हल", "कोई हल नहीं", "अनंत हल", "केवल एक हल"], ans: "C", exp: "1/2 = 2/4 = 4/8 (तीनों अनुपात बराबर हैं), अतः अनंत हल होंगे।" },
+            { q: "12. समीकरण x + y = 6 में यदि x = 2 हो, तो y का मान क्या होगा?", opt: ["2", "4", "6", "8"], ans: "B", exp: "2 + y = 6 ⇒ y = 6 - 2 = 4।" },
+            { q: "13. द्विघात समीकरण ax² + bx + c = 0 के मूल वास्तविक और समान होंगे यदि:", opt: ["b² - 4ac > 0", "b² - 4ac = 0", "b² - 4ac < 0", "b² - 4ac ≤ 0"], ans: "B", exp: "जब विविक्तकर D = b² - 4ac = 0 हो, तब मूल वास्तविक एवं समान होते हैं।" },
+            { q: "14. समीकरण 2x² - 4x + 3 = 0 का विविक्तकर (Discriminant, D) क्या होगा?", opt: ["-8", "8", "-16", "16"], ans: "A", exp: "D = b² - 4ac = (-4)² - 4(2)(3) = 16 - 24 = -8।" },
+            { q: "15. द्विघात समीकरण x² - 5x + 6 = 0 के मूलों की प्रकृति कैसी होगी?", opt: ["वास्तविक और समान", "वास्तविक और असमान", "अवास्तविक (काल्पनिक)", "इनमें से कोई नहीं"], ans: "B", exp: "D = (-5)² - 4(1)(6) = 25 - 24 = 1 > 0, अतः मूल वास्तविक और असमान हैं।" },
+            { q: "16. समांतर श्रेढ़ी 4, 10, 16, 22, ... का सार्व अंतर (d) क्या होगा?", opt: ["4", "6", "-6", "2"], ans: "B", exp: "d = a2 - a1 = 10 - 4 = 6।" },
+            { q: "17. A.P. 2, 7, 12, ... का 10वाँ पद क्या है?", opt: ["45", "47", "50", "52"], ans: "B", exp: "a = 2, d = 5 ⇒ a10 = a + 9d = 2 + 9(5) = 47।" },
+            { q: "18. यदि किसी A.P. का nवाँ पद (3n + 5) हो, तो इसका सार्व अंतर क्या होगा?", opt: ["3", "5", "8", "2"], ans: "A", exp: "an = 3n + 5 में n का गुणांक ही सार्व अंतर होता है, अतः d = 3।" },
+            { q: "19. प्रथम 100 प्राकृत संख्याओं का योगफल क्या होगा?", opt: ["5000", "5050", "5100", "5025"], ans: "B", exp: "सूत्र: Sn = n(n + 1)/2 = 100 × 101 / 2 = 5050।" },
+            { q: "20. सभी वृत्त परस्पर क्या होते हैं?", opt: ["सर्वांगसम", "समरूप", "समान", "इनमें से कोई नहीं"], ans: "B", exp: "सभी वृत्तों का आकार समान होता है, अतः वे समरूप होते हैं।" },
+            { q: "21. यदि दो समरूप त्रिभुजों की संगत भुजाओं का अनुपात 4 : 9 है, तो उनके क्षेत्रफलों का अनुपात क्या होगा?", opt: ["2 : 3", "16 : 81", "81 : 16", "4 : 9"], ans: "B", exp: "समरूप त्रिभुजों के क्षेत्रफलों का अनुपात भुजाओं के वर्गों के अनुपात के बराबर होता है: 4² : 9² = 16 : 81।" },
+            { q: "22. यदि ΔABC में AB² + BC² = AC² हो, तो कोण B का मान क्या होगा?", opt: ["60°", "90°", "45°", "120°"], ans: "B", exp: "पाइथागोरस प्रमेय के विलोम से सबसे बड़ी भुजा AC के सामने का कोण 90° होगा।" },
+            { q: "23. बिंदु (-4, 3) किस चतुर्थांश (Quadrant) में स्थित है?", opt: ["प्रथम", "द्वितीय", "तृतीय", "चतुर्थ"], ans: "B", exp: "जब x ऋणात्मक और y धनात्मक हो (-, +), तो बिंदु द्वितीय चतुर्थांश में होता है।" },
+            { q: "24. बिंदु (2, 3) की मूल बिंदु (0, 0) से दूरी क्या होगी?", opt: ["5", "√13", "√5", "13"], ans: "B", exp: "दूरी = √(x² + y²) = √(2² + 3²) = √(4 + 9) = √13।" },
+            { q: "25. बिंदुओं (2, 4) और (4, 6) को मिलाने वाले रेखाखंड के मध्य बिंदु के निर्देशांक होंगे:", opt: ["(3, 5)", "(6, 10)", "(2, 2)", "(1, 1)"], ans: "A", exp: "मध्य बिंदु = ((x1+x2)/2, (y1+y2)/2) = ((2+4)/2, (4+6)/2) = (3, 5)।" },
+            { q: "26. बिंदु (4, -5) में कोटि (Ordinate) का मान क्या है?", opt: ["4", "-5", "1", "-1"], ans: "B", exp: "x-निर्देशांक को भुज तथा y-निर्देशांक को कोटि कहते हैं, अतः कोटि = -5।" },
+            { q: "27. sin 30° का मान निम्नलिखित में से कौन सा है?", opt: ["1", "1/2", "√3/2", "1/√2"], ans: "B", exp: "त्रिकोणमितीय सारणी के अनुसार sin 30° = 1/2।" },
+            { q: "28. (sin² 45° + cos² 45°) का मान क्या होगा?", opt: ["0", "1", "2", "1/2"], ans: "B", exp: "सर्वसमिका: sin²θ + cos²θ = 1 (किसी भी कोण θ के लिए)।" },
+            { q: "29. 9 sec²A - 9 tan²A का मान किसके बराबर है?", opt: ["1", "9", "8", "0"], ans: "B", exp: "9(sec²A - tan²A) = 9(1) = 9।" },
+            { q: "30. (tan 65° / cot 25°) का मान क्या होगा?", opt: ["1", "0", "-1", "2"], ans: "A", exp: "tan 65° = cot(90° - 65°) = cot 25°, अतः अनुपात = 1।" },
+            { q: "31. यदि sin θ = 3/5 हो, तो cos θ का मान क्या होगा?", opt: ["4/5", "5/3", "3/4", "5/4"], ans: "A", exp: "cos θ = √(1 - sin²θ) = √(1 - 9/25) = √(16/25) = 4/5।" },
+            { q: "32. (1 + tan²θ) किसके बराबर होता है?", opt: ["sec²θ", "cos²θ", "cot²θ", "cosec²θ"], ans: "A", exp: "सर्वसमिका: 1 + tan²θ = sec²θ।" },
+            { q: "33. यदि एक ऊर्ध्वाधर खंभे की ऊँचाई तथा उसकी छाया की लंबाई बराबर हो, तो सूर्य का उन्नयन कोण होगा:", opt: ["30°", "45°", "60°", "90°"], ans: "B", exp: "tan θ = लंब/आधार = 1 ⇒ θ = 45°।" },
+            { q: "34. वृत्त की सबसे बड़ी जीवा (Chord) को क्या कहते हैं?", opt: ["त्रिज्या", "व्यास", "चाप", "स्पर्श रेखा"], ans: "B", exp: "वृत्त के केंद्र से गुजरने वाली सबसे बड़ी जीवा को उसका व्यास कहते हैं।" },
+            { q: "35. किसी वृत्त पर बाह्य बिंदु से अधिकतम कितनी स्पर्श रेखाएं खींची जा सकती हैं?", opt: ["1", "2", "3", "अनंत"], ans: "B", exp: "वृत्त के बाहर स्थित किसी बिंदु से वृत्त पर केवल 2 स्पर्श रेखाएं खींची जा सकती हैं।" },
+            { q: "36. वृत्त के केंद्र पर बनने वाला कुल कोण कितना होता है?", opt: ["90°", "180°", "270°", "360°"], ans: "D", exp: "वृत्त के केंद्र पर बना संपूर्ण कोण 360° होता है।" },
+            { q: "37. r त्रिज्या वाले वृत्त के परिमाप (परिधि) का सूत्र क्या होता है?", opt: ["πr²", "2πr", "πr", "2πr²"], ans: "B", exp: "वृत्त की परिधि = 2πr।" },
+            { q: "38. यदि एक वृत्त का क्षेत्रफल 154 सेमी² है, तो इसकी त्रिज्या क्या होगी?", opt: ["7 सेमी", "14 सेमी", "21 सेमी", "3.5 सेमी"], ans: "A", exp: "πr² = 154 ⇒ (22/7)r² = 154 ⇒ r² = 49 ⇒ r = 7 सेमी।" },
+            { q: "39. त्रिज्या r वाले अर्धवृत्त की कुल परिमिति (परिमाप) क्या होगी?", opt: ["πr", "πr + 2r", "2πr", "πr²"], ans: "B", exp: "अर्धवृत्त का परिमाप = चाप की लंबाई + व्यास = πr + 2r।" },
+            { q: "40. दो वृत्तों के क्षेत्रफलों का अनुपात 9 : 4 है, उनकी त्रिज्याओं का अनुपात क्या होगा?", opt: ["3 : 2", "9 : 4", "81 : 16", "2 : 3"], ans: "A", exp: "त्रिज्याओं का अनुपात = √(9/4) = 3 : 2।" },
+            { q: "41. एक बेलन (Cylinder) का वक्र पृष्ठीय क्षेत्रफल क्या होता है?", opt: ["2πrh", "πr²h", "2πr(r + h)", "πrh"], ans: "A", exp: "बेलन का वक्र पृष्ठीय क्षेत्रफल = 2πrh।" },
+            { q: "42. r त्रिज्या वाले गोले (Sphere) का कुल आयतन क्या होता है?", opt: ["(4/3)πr³", "4πr²", "(2/3)πr³", "3πr³"], ans: "A", exp: "गोले का आयतन = (4/3)πr³।" },
+            { q: "43. एक शंकु की त्रिज्या 3 सेमी और ऊँचाई 4 सेमी है, तो इसकी तिर्यक ऊँचाई (l) क्या होगी?", opt: ["5 सेमी", "6 सेमी", "7 सेमी", "25 सेमी"], ans: "A", exp: "l = √(r² + h²) = √(3² + 4²) = √(9 + 16) = √25 = 5 सेमी।" },
+            { q: "44. आंकड़े 3, 5, 7, 5, 8, 5, 9 का बहुलक (Mode) क्या होगा?", opt: ["3", "5", "7", "8"], ans: "B", exp: "संख्या 5 सबसे अधिक बार (3 बार) आई है, अतः बहुलक = 5।" },
+            { q: "45. प्रथम 5 प्राकृत संख्याओं का माध्य (Mean) क्या होगा?", opt: ["2", "3", "4", "5"], ans: "B", exp: "माध्य = (1 + 2 + 3 + 4 + 5) / 5 = 15 / 5 = 3।" },
+            { q: "46. माध्य, माध्यक और बहुलक के बीच सही आनुभविक संबंध कौन सा है?", opt: ["बहुलक = 3 माध्यक - 2 माध्य", "माध्यक = 3 बहुलक - 2 माध्य", "बहुलक = 2 माध्यक - 3 माध्य", "माध्य = 3 माध्यक - 2 बहुलक"], ans: "A", exp: "सही सूत्र: Mode = 3 Median - 2 Mean।" },
+            { q: "47. निश्चित घटना की प्रायिकता (Probability) हमेशा कितनी होती है?", opt: ["0", "1", "1/2", "अनंत"], ans: "B", exp: "जो घटना निश्चित रूप से घटित होगी, उसकी प्रायिकता 1 होती है।" },
+            { q: "48. असंभव घटना की प्रायिकता कितनी होती है?", opt: ["0", "1", "-1", "0.5"], ans: "A", exp: "असंभव घटना की प्रायिकता सदैव 0 होती है।" },
+            { q: "49. निम्न में से कौन सी संख्या किसी घटना की प्रायिकता नहीं हो सकती?", opt: ["2/3", "-1.5", "15%", "0.7"], ans: "B", exp: "प्रायिकता कभी भी ऋणात्मक नहीं हो सकती (0 ≤ P(E) ≤ 1)।" },
+            { q: "50. एक पासे को फेंकने पर सम संख्या आने की प्रायिकता क्या होगी?", opt: ["1/2", "1/3", "1/6", "2/3"], ans: "A", exp: "कुल परिणाम = 6 {1,2,3,4,5,6}, अनुकूल परिणाम = 3 {2,4,6} ⇒ P = 3/6 = 1/2।" }
+        ];
+
+        // प्रश्नों को रेंडर करना
+        const container = document.getElementById('questions-container');
+        questionsData.forEach((item, index) => {
+            const qNum = index + 1;
+            const letters = ['A', 'B', 'C', 'D'];
+            
+            let optionsHTML = '';
+            item.opt.forEach((optText, oIdx) => {
+                optionsHTML += `
+                    <label class="option-item">
+                        <input type="radio" name="q${qNum}" value="${letters[oIdx]}">
+                        <span><strong>(${letters[oIdx]})</strong> ${optText}</span>
+                    </label>
+                `;
+            });
+
+            const card = document.createElement('div');
+            card.className = 'q-card';
+            card.id = `qbox-${qNum}`;
+            card.innerHTML = `
+                <p class="q-title">${item.q}</p>
+                <div class="options-list">
+                    ${optionsHTML}
+                </div>
+                <div class="explanation" id="exp-${qNum}">
+                    <strong>सही उत्तर: (${item.ans})</strong> — ${item.exp}
+                </div>
+            `;
+            container.appendChild(card);
+        });
+
+        // टेस्ट सबमिशन
+        function submitMegaTest() {
+            let score = 0;
+            let attempted = 0;
+            const total = questionsData.length;
+
+            questionsData.forEach((item, index) => {
+                const qNum = index + 1;
+                const selected = document.querySelector(`input[name="q${qNum}"]:checked`);
+                const expBox = document.getElementById(`exp-${qNum}`);
+                const qBox = document.getElementById(`qbox-${qNum}`);
+
+                if (expBox) expBox.style.display = 'block';
+
+                if (selected) {
+                    attempted++;
+                    if (selected.value === item.ans) {
+                        score++;
+                        qBox.style.border = '2px solid #16a34a';
+                        qBox.style.background = '#f0fdf4';
+                    } else {
+                        qBox.style.border = '2px solid #dc2626';
+                        qBox.style.background = '#fef2f2';
+                    }
+                } else {
+                    qBox.style.border = '2px solid #eab308';
+                }
+            });
+
+            const resultBox = document.getElementById('result-box');
+            const resScore = document.getElementById('res-score');
+            const resMsg = document.getElementById('res-msg');
+
+            resultBox.style.display = 'block';
+            const percentage = ((score / total) * 100).toFixed(1);
+
+            if (score >= 40) {
+                resultBox.style.borderColor = '#16a34a';
+                resultBox.style.background = '#f0fdf4';
+                resultBox.style.color = '#14532d';
+                resScore.innerText = `शानदार परिणाम! आपका स्कोर: ${score} / ${total} (${percentage}%)`;
+                resMsg.innerText = `कुल हल किए: ${attempted} | आपकी तैयारी उत्कृष्ट स्तर पर है। ऐसे ही लगातार अभ्यास बनाए रखें!`;
+            } else if (score >= 25) {
+                resultBox.style.borderColor = '#eab308';
+                resultBox.style.background = '#fefce8';
+                resultBox.style.color = '#713f12';
+                resScore.innerText = `अच्छा प्रयास! आपका स्कोर: ${score} / ${total} (${percentage}%)`;
+                resMsg.innerText = `कुल हल किए: ${attempted} | जिन प्रश्नों के उत्तर गलत हुए हैं, उनकी व्याख्या देखकर सूत्रों का पुनः अभ्यास करें।`;
+            } else {
+                resultBox.style.borderColor = '#dc2626';
+                resultBox.style.background = '#fef2f2';
+                resultBox.style.color = '#7f1d1d';
+                resScore.innerText = `आपका स्कोर: ${score} / ${total} (${percentage}%)`;
+                resMsg.innerText = `कुल हल किए: ${attempted} | आपको गणित के बुनियादी सूत्रों व अवधारणाओं पर अधिक अभ्यास की आवश्यकता है।`;
+            }
+
+            resultBox.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
