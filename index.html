@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VIM CLASSES BELBATHAN</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #222;
+}
+
+header {
+  background: #123b70;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+header p {
+  font-size: 16px;
+}
+
+nav {
+  background: #0b2545;
+  padding: 14px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 8px;
+  font-weight: bold;
+}
+
+section {
+  padding: 30px 16px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: #123b70;
+  text-align: center;
+}
+
+.hero {
+  background: white;
+  padding: 35px 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  background: #16803d;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #00000012;
+}
+
+.card h3 {
+  color: #123b70;
+}
+
+select, button {
+  padding: 12px;
+  margin: 5px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+}
+
+button {
+  background: #123b70;
+  color: white;
+  cursor: pointer;
+}
+
+.question {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  line-height: 1.7;
+}
+
+footer {
+  background: #0b2545;
+  color: white;
+  text-align: center;
+  padding: 22px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>VIM CLASSES BELBATHAN</h1>
+  <p>आपकी सफलता ही हमारा लक्ष्य है!</p>
+  <p>शिक्षक: विकास सर</p>
+</header>
+
+<nav>
+  <a href="#home">होम</a>
+  <a href="#about">हमारे बारे में</a>
+  <a href="#courses">कोर्स</a>
+  <a href="#study">स्टडी मटेरियल</a>
+  <a href="#contact">संपर्क</a>
+</nav>
+
+<section id="home">
+  <div class="hero">
+    <h2>Welcome to VIM CLASSES</h2>
+    <p>
+      कक्षा 1 से 10 तक पढ़ाई, अभ्यास प्रश्न,
+      बोर्ड परीक्षा की तैयारी और स्टडी मटेरियल।
+    </p>
+    <a href="#study" class="btn">स्टडी मटेरियल देखें</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>हमारे बारे में</h2>
+  <div class="card">
+    <p>
+      VIM CLASSES BELBATHAN में विद्यार्थियों को
+      आसान तरीके से पढ़ाई कराई जाती है।
+      हमारा उद्देश्य विद्यार्थियों को बेहतर शिक्षा
+      और परीक्षा की तैयारी में सहायता देना है।
+    </p>
+    <p><b>शिक्षक:</b> विकास सर</p>
+    <p><b>स्थान:</b> कुशवाहा टोला, बेलबथान, गोड्डा, झारखंड</p>
+  </div>
+</section>
+
+<section id="courses">
+  <h2>हमारे विषय</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>📘 गणित</h3>
+      <p>अध्यायवार प्रश्न एवं अभ्यास।</p>
+    </div>
+    <div class="card">
+      <h3>🔬 विज्ञान</h3>
+      <p>महत्वपूर्ण प्रश्न एवं उत्तर।</p>
+    </div>
+    <div class="card">
+      <h3>🌍 सामाजिक विज्ञान</h3>
+      <p>इतिहास, भूगोल, नागरिक शास्त्र।</p>
+    </div>
+    <div class="card">
+      <h3>📖 हिंदी एवं अंग्रेज़ी</h3>
+      <p>व्याकरण एवं लेखन अभ्यास।</p>
+    </div>
+  </div>
+</section>
+
+<section id="study">
+  <h2>📚 स्टडी मटेरियल</h2>
+  <p style="text-align:center;">
+    अपनी कक्षा और विषय चुनकर अभ्यास प्रश्न देखें।
+  </p>
+
+  <div style="text-align:center;">
+    <select id="classSelect">
+      <option value="">कक्षा चुनें</option>
+      <option value="9">कक्षा 9</option>
+      <option value="10">कक्षा 10</option>
+    </select>
+
+    <select id="subjectSelect">
+      <option value="">विषय चुनें</option>
+      <option value="math">गणित</option>
+      <option value="science">विज्ञान</option>
+      <option value="sst">सामाजिक विज्ञान</option>
+      <option value="hindi">हिंदी</option>
+      <option value="english">अंग्रेज़ी</option>
+    </select>
+
+    <button onclick="showQuestions()">प्रश्न देखें</button>
+  </div>
+
+  <div id="questions" style="margin-top:20px;"></div>
+</section>
+
+<section id="contact">
+  <h2>संपर्क करें</h2>
+  <div class="card">
+    <p><b>कोचिंग:</b> VIM CLASSES BELBATHAN</p>
+    <p><b>शिक्षक:</b> विकास सर</p>
+    <p><b>मोबाइल:</b> 7856902817</p>
+    <p><b>ईमेल:</b> Kumarvikas785690@gmail.com</p>
+    <p><b>पता:</b> कुशवाहा टोला, बेलबथान, गोड्डा, झारखंड</p>
+    <a class="btn"
+       href="https://wa.me/917856902817"
+       target="_blank"
+       rel="noopener noreferrer">
+       WhatsApp पर संपर्क करें
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 VIM CLASSES BELBATHAN</p>
+  <p>Learn Today, Lead Tomorrow!</p>
+</footer>
+
+<script>
+const questionBank = {
+  "9": {
+    math: [
+      "1. √2 को अपरिमेय सिद्ध कीजिए।",
+      "2. x² - 5x + 6 के शून्यक ज्ञात कीजिए।",
+      "3. समीकरण 2x + 3 = 11 हल कीजिए।",
+      "4. त्रिभुज के तीनों कोणों का योग कितना होता है?",
+      "5. 7 cm त्रिज्या वाले वृत्त का क्षेत्रफल ज्ञात कीजिए।"
+    ],
+    science: [
+      "1. पदार्थ की तीन अवस्थाओं के नाम लिखिए।",
+      "2. कोशिका क्या है?",
+      "3. न्यूटन का गति का प्रथम नियम लिखिए।",
+      "4. ऊतक किसे कहते हैं?",
+      "5. परमाणु और अणु में अंतर लिखिए।"
+    ],
+    sst: [
+      "1. फ्रांसीसी क्रांति के दो कारण लिखिए।",
+      "2. लोकतंत्र क्या है?",
+      "3. भारत की प्रमुख भौतिक विशेषताएँ लिखिए।",
+      "4. संसाधन किसे कहते हैं?",
+      "5. भारत में मानसून का क्या महत्व है?"
+    ],
+    hindi: [
+      "1. संधि की परिभाषा उदाहरण सहित लिखिए।",
+      "2. उपसर्ग और प्रत्यय में अंतर लिखिए।",
+      "3. संज्ञा के भेद उदाहरण सहित लिखिए।",
+      "4. किसी एक त्योहार पर अनुच्छेद लिखिए।",
+      "5. अपने मित्र को परीक्षा की तैयारी के लिए पत्र लिखिए।"
+    ],
+    english: [
+      "1. Write an essay on My School.",
+      "2. Define a noun with examples.",
+      "3. Change into past tense: He plays cricket.",
+      "4. Write five sentences about your family.",
+      "5. Write an application for sick leave."
+    ]
+  },
+
+  "10": {
+    math: [
+      "1. यूक्लिड विभाजन एल्गोरिथ्म से 135 और 225 का HCF ज्ञात कीजिए।",
+      "2. x² - 7x + 12 के शून्यक ज्ञात कीजिए।",
+      "3. x² - 5x + 6 = 0 हल कीजिए।",
+      "4. समांतर श्रेणी 2, 5, 8, 11,... का 20वाँ पद ज्ञात कीजिए।",
+      "5. सिद्ध कीजिए: tan²θ + 1 = sec²θ।"
+    ],
+    science: [
+      "1. प्रकाश संश्लेषण क्या है?",
+      "2. विद्युत धारा का SI मात्रक लिखिए।",
+      "3. ओम का नियम लिखिए।",
+      "4. अम्ल और क्षार में दो अंतर लिखिए।",
+      "5. मानव हृदय का मुख्य कार्य क्या है?"
+    ],
+    sst: [
+      "1. भारत में राष्ट्रवाद के उदय के कारण लिखिए।",
+      "2. संघवाद क्या है?",
+      "3. राजनीतिक दलों के दो कार्य लिखिए।",
+      "4. वैश्वीकरण क्या है?",
+      "5. संसाधनों के संरक्षण के उपाय लिखिए।"
+    ],
+    hindi: [
+      "1. समास की परिभाषा उदाहरण सहित लिखिए।",
+      "2. मुहावरे और लोकोक्ति में अंतर लिखिए।",
+      "3. औपचारिक पत्र का प्रारूप लिखिए।",
+      "4. पर्यावरण संरक्षण पर अनुच्छेद लिखिए।",
+      "5. किसी कविता का भावार्थ लिखिए।"
+    ],
+    english: [
+      "1. Write an essay on Environmental Protection.",
+      "2. Change into passive voice: Ram writes a letter.",
+      "3. Change into indirect speech: He said, 'I am happy.'",
+      "4. Write an application for leave.",
+      "5. Write a paragraph on the Importance of Education."
+    ]
+  }
+};
+
+function showQuestions() {
+  const classValue =
+    document.getElementById("classSelect").value;
+  const subjectValue =
+    document.getElementById("subjectSelect").value;
+  const output = document.getElementById("questions");
+
+  if (!classValue || !subjectValue) {
+    output.innerHTML =
+      "<p style='text-align:center;'>कृपया कक्षा और विषय चुनें।</p>";
+    return;
+  }
+
+  const questions =
+    questionBank[classValue][subjectValue];
+
+  output.innerHTML = `
+    <div class="card">
+      <h3>कक्षा ${classValue} — अभ्यास प्रश्न</h3>
+      ${questions.map(question =>
+        `<div class="question">${question}</div>`
+      ).join("")}
+      <p style="color:#a15c00;">
+        नोट: ये अभ्यास के लिए तैयार किए गए प्रश्न हैं।
+        ये आधिकारिक बोर्ड प्रश्नपत्र नहीं हैं।
+      </p>
+    </div>
+  `;
+}
+</script>
+
+</body>
+</html>
