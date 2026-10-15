@@ -1,725 +1,1045 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="VIM CLASSES BELBATHAN - विद्यार्थियों के लिए रिजल्ट, ऑनलाइन प्रश्न-अभ्यास और शैक्षणिक जानकारी।">
-  <title>VIM CLASSES BELBATHAN</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<title>VIM CLASSES BELBATHAN</title>
 
-    body {
-      font-family: Arial, "Noto Sans Devanagari", sans-serif;
-      background: #f3f6fc;
-      color: #172033;
-      line-height: 1.6;
-    }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    header {
-      background: linear-gradient(135deg, #082d72, #1265c7);
-      color: white;
-      padding: 28px 15px;
-      text-align: center;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #102a83, #0877d1);
+    color: white;
+    text-align: center;
+    padding: 25px 12px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header p {
+    margin-top: 5px;
+}
+
+nav {
+    background: #061b55;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 13px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: #0877d1;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 15px;
+}
+
+.card {
+    background: white;
+    margin: 18px 0;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000012;
+}
+
+h2 {
+    color: #102a83;
+    margin-bottom: 12px;
+}
+
+h3 {
+    margin: 12px 0;
+}
+
+.hero {
+    background: white;
+    text-align: center;
+    padding: 35px 15px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 3px 12px #00000012;
+}
+
+.hero h2 {
+    font-size: 27px;
+}
+
+button, .btn {
+    display: inline-block;
+    border: none;
+    background: #075bc7;
+    color: white;
+    padding: 11px 17px;
+    margin: 5px 3px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+button:hover, .btn:hover {
+    background: #003b91;
+}
+
+input, select {
+    width: 100%;
+    padding: 11px;
+    margin: 7px 0 12px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 15px;
+    background: white;
+}
+
+label {
+    display: block;
+    margin-top: 8px;
+}
+
+.question {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    background: #fff;
+}
+
+.option {
+    background: #f1f5ff;
+    padding: 9px;
+    margin: 7px 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.option input {
+    width: auto;
+    margin-right: 8px;
+}
+
+#testArea, #resultArea {
+    display: none;
+}
+
+#timer {
+    position: sticky;
+    top: 0;
+    background: #fff3cd;
+    color: #8a4b00;
+    padding: 10px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 8px;
+    z-index: 5;
+}
+
+.notice {
+    background: #e8f2ff;
+    border-left: 5px solid #075bc7;
+    padding: 12px;
+    margin: 10px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #102a83;
+    color: white;
+}
+
+footer {
+    background: #061b55;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 25px;
+}
+
+footer a {
+    color: #ffdf70;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media(max-width:600px) {
     header h1 {
-      font-size: clamp(24px, 5vw, 38px);
-      margin-bottom: 8px;
-    }
-
-    header p {
-      margin: 4px 0;
-    }
-
-    nav {
-      background: #06245b;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 12px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 8px 13px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      background: #174d98;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px 14px;
-    }
-
-    .hero {
-      background: white;
-      padding: 28px 18px;
-      text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 3px 12px #00000010;
-      margin-bottom: 22px;
+        font-size: 22px;
     }
 
     .hero h2 {
-      color: #0a3985;
-      margin-bottom: 10px;
+        font-size: 22px;
     }
 
-    .button {
-      display: inline-block;
-      background: #087b43;
-      color: white;
-      text-decoration: none;
-      border: none;
-      padding: 11px 18px;
-      border-radius: 7px;
-      margin: 10px 5px 0;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .button:hover {
-      opacity: 0.9;
-    }
-
-    .section {
-      background: white;
-      border-radius: 12px;
-      padding: 22px 16px;
-      margin-bottom: 22px;
-      box-shadow: 0 3px 12px #00000010;
-    }
-
-    .section h2 {
-      color: #0a3985;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #e2ebfa;
-      padding-bottom: 8px;
-    }
-
-    .table-wrap {
-      width: 100%;
-      overflow-x: auto;
-    }
-
-    table {
-      width: 100%;
-      min-width: 480px;
-      border-collapse: collapse;
-      margin-top: 12px;
-    }
-
-    th, td {
-      padding: 10px;
-      border: 1px solid #dce3ee;
-      text-align: center;
-    }
-
-    th {
-      background: #0b3986;
-      color: white;
-    }
-
-    tbody tr:nth-child(even) {
-      background: #f2f6ff;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 14px;
-      margin-bottom: 16px;
-    }
-
-    label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-
-    select {
-      width: 100%;
-      padding: 11px;
-      border: 1px solid #bdc9da;
-      border-radius: 7px;
-      background: white;
-      font-size: 15px;
-    }
-
-    .question-card {
-      background: #f5f8ff;
-      border: 1px solid #dce7fa;
-      border-radius: 9px;
-      padding: 15px;
-      margin: 12px 0;
-    }
-
-    .question-card h3 {
-      font-size: 17px;
-      margin-bottom: 8px;
-    }
-
-    .options {
-      margin: 10px 0;
-      padding-left: 22px;
-    }
-
-    .answer {
-      display: none;
-      color: #087b43;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    .small-button {
-      background: #0b3986;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 8px 12px;
-      cursor: pointer;
-    }
-
-    .notice {
-      background: #fff8df;
-      border-left: 4px solid #e8ae17;
-      padding: 12px;
-      border-radius: 5px;
-      margin-top: 12px;
-    }
-
-    footer {
-      background: #06245b;
-      color: white;
-      text-align: center;
-      padding: 22px 12px;
-      margin-top: 20px;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 22px 10px;
-      }
-
-      .section {
-        padding: 18px 12px;
-      }
-
-      nav a {
+    nav a {
         padding: 7px 9px;
-        font-size: 14px;
-      }
+        font-size: 13px;
     }
-  </style>
+
+    .card {
+        padding: 15px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
+<header>
     <h1>VIM CLASSES BELBATHAN</h1>
-    <p>शिक्षक: विकास सर</p>
-    <p>कुशवाहा टोला, बेलबथान, गोड्डा, झारखंड</p>
-    <p>शिक्षा • अभ्यास • सफलता</p>
-  </header>
+    <p>सीखें • समझें • आगे बढ़ें</p>
+    <p>गुणवत्तापूर्ण शिक्षा, बेहतर भविष्य</p>
+</header>
 
-  <nav>
+<nav>
     <a href="#home">होम</a>
-    <a href="#result">रिजल्ट</a>
-    <a href="#practice">प्रश्न-अभ्यास</a>
-    <a href="#activities">गतिविधियाँ</a>
+    <a href="#classes">कक्षाएँ</a>
+    <a href="#onlineTest">ऑनलाइन टेस्ट</a>
+    <a href="#results">रिजल्ट</a>
+    <a href="#about">हमारे बारे में</a>
     <a href="#contact">संपर्क</a>
-  </nav>
+</nav>
 
-  <main class="container">
+<main class="container">
 
-    <section class="hero" id="home">
-      <h2>आपका स्वागत है!</h2>
-      <p>
-        VIM CLASSES BELBATHAN में आपका स्वागत है।
-        यहाँ विद्यार्थियों के लिए रिजल्ट, अभ्यास प्रश्न और शैक्षणिक जानकारी उपलब्ध कराई जाएगी।
-      </p>
-      <a class="button" href="#practice">प्रश्न-अभ्यास शुरू करें</a>
-      <a class="button" href="#result" style="background:#b78208;">रिजल्ट देखें</a>
-    </section>
+<section id="home" class="hero">
+    <h2>VIM CLASSES में आपका स्वागत है!</h2>
+    <p>
+        अपनी कक्षा चुनें, विषय का अभ्यास करें और ऑनलाइन टेस्ट देकर
+        अपनी तैयारी जाँचें।
+    </p>
+    <br>
+    <a class="btn" href="#onlineTest">ऑनलाइन टेस्ट शुरू करें</a>
+    <a class="btn" href="#classes">कक्षाएँ देखें</a>
+</section>
 
-    <section class="section" id="result">
-      <h2>🏆 परीक्षा परिणाम</h2>
-      <p>पूर्णांक: 50</p>
+<section id="classes" class="card">
+    <h2>📚 कक्षाएँ एवं विषय</h2>
+    <p>अपनी कक्षा और विषय चुनकर टेस्ट दे सकते हैं।</p>
 
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>रैंक</th>
-              <th>विद्यार्थी का नाम</th>
-              <th>प्राप्तांक</th>
-              <th>प्रतिशत</th>
-            </tr>
-          </thead>
-          <tbody id="resultBody">
-            <tr>
-              <td colspan="4">रिजल्ट लोड हो रहा है...</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="notice">
+        अभी उपलब्ध प्रश्न नमूना प्रश्न हैं। सभी अध्यायों के 50-50 प्रश्न
+        जोड़ने का काम अलग से पूरा करना होगा।
+    </div>
 
-      <p class="notice">
-        नोट: वेबसाइट पर प्रकाशित रिजल्ट को अंतिम मानने से पहले शिक्षक से पुष्टि कर लें।
-      </p>
-    </section>
+    <label for="classSelect">कक्षा चुनें:</label>
+    <select id="classSelect">
+        <option value="7">कक्षा 7</option>
+        <option value="8">कक्षा 8</option>
+        <option value="9">कक्षा 9</option>
+        <option value="10" selected>कक्षा 10</option>
+        <option value="11">कक्षा 11</option>
+    </select>
 
-    <section class="section" id="practice">
-      <h2>📚 ऑनलाइन प्रश्न-अभ्यास</h2>
-      <p>अपनी कक्षा और विषय चुनकर उपलब्ध प्रश्नों का अभ्यास करें।</p>
+    <label for="subjectSelect">विषय चुनें:</label>
+    <select id="subjectSelect">
+        <option value="गणित">गणित</option>
+        <option value="विज्ञान">विज्ञान</option>
+        <option value="सामाजिक विज्ञान">सामाजिक विज्ञान</option>
+        <option value="हिंदी">हिंदी</option>
+        <option value="अंग्रेजी">अंग्रेजी</option>
+        <option value="भूगोल">भूगोल</option>
+        <option value="इतिहास">इतिहास</option>
+        <option value="अर्थशास्त्र">अर्थशास्त्र</option>
+    </select>
 
-      <div class="form-row">
-        <div>
-          <label for="classSelect">कक्षा चुनें</label>
-          <select id="classSelect">
-            <option value="10">कक्षा 10</option>
-            <option value="9">कक्षा 9</option>
+    <label for="chapterSelect">अध्याय चुनें:</label>
+    <select id="chapterSelect">
+        <option value="वास्तविक संख्याएँ">वास्तविक संख्याएँ</option>
+    </select>
+
+    <button type="button" onclick="prepareTest()">
+        इस अध्याय का टेस्ट दें
+    </button>
+
+    <p id="chapterMessage" class="notice"></p>
+</section>
+
+<section id="onlineTest" class="card">
+    <h2>📝 ऑनलाइन टेस्ट</h2>
+
+    <div id="testSetup">
+        <label for="studentName">विद्यार्थी का नाम:</label>
+        <input id="studentName" type="text"
+               placeholder="अपना पूरा नाम लिखें">
+
+        <label for="testClass">कक्षा:</label>
+        <select id="testClass">
+            <option value="7">कक्षा 7</option>
             <option value="8">कक्षा 8</option>
+            <option value="9">कक्षा 9</option>
+            <option value="10" selected>कक्षा 10</option>
             <option value="11">कक्षा 11</option>
-          </select>
-        </div>
+        </select>
 
-        <div>
-          <label for="subjectSelect">विषय चुनें</label>
-          <select id="subjectSelect">
-            <option value="math">गणित</option>
-            <option value="science">विज्ञान</option>
-          </select>
-        </div>
+        <label for="testSubject">विषय:</label>
+        <select id="testSubject">
+            <option value="गणित">गणित</option>
+            <option value="विज्ञान">विज्ञान</option>
+            <option value="सामाजिक विज्ञान">सामाजिक विज्ञान</option>
+            <option value="हिंदी">हिंदी</option>
+            <option value="अंग्रेजी">अंग्रेजी</option>
+            <option value="भूगोल">भूगोल</option>
+            <option value="इतिहास">इतिहास</option>
+            <option value="अर्थशास्त्र">अर्थशास्त्र</option>
+        </select>
 
-        <div>
-          <label for="chapterSelect">अध्याय चुनें</label>
-          <select id="chapterSelect"></select>
-        </div>
-      </div>
+        <label for="testChapter">अध्याय:</label>
+        <select id="testChapter">
+            <option value="वास्तविक संख्याएँ">वास्तविक संख्याएँ</option>
+        </select>
 
-      <button class="button" id="loadQuestions" type="button">
-        प्रश्न दिखाएँ
-      </button>
+        <button type="button" onclick="startTest()">
+            टेस्ट शुरू करें
+        </button>
+    </div>
 
-      <div id="questionsArea" aria-live="polite"></div>
-    </section>
+    <div id="testArea">
+        <div id="timer">शेष समय: 20:00</div>
+        <h3 id="testHeading"></h3>
+        <p id="questionCount"></p>
 
-    <section class="section" id="activities">
-      <h2>🎯 हमारी गतिविधियाँ</h2>
-      <ul style="padding-left:22px;">
-        <li>विद्यार्थियों की परीक्षा एवं टेस्ट</li>
-        <li>गणित और विज्ञान का अभ्यास</li>
-        <li>शैक्षणिक प्रतियोगिताएँ</li>
-        <li>विद्यार्थियों के परिणाम और उपलब्धियाँ</li>
-      </ul>
-      <p class="notice">
-        कोचिंग की गतिविधियों की तस्वीरें और वीडियो यहाँ बाद में जोड़े जा सकते हैं।
-      </p>
-    </section>
+        <form id="questionForm">
+            <div id="questions"></div>
+            <button type="button" onclick="submitTest(false)">
+                टेस्ट सबमिट करें
+            </button>
+        </form>
+    </div>
 
-    <section class="section" id="contact">
-      <h2>📞 संपर्क करें</h2>
-      <p><strong>कोचिंग:</strong> VIM CLASSES BELBATHAN</p>
-      <p><strong>शिक्षक:</strong> विकास सर</p>
-      <p><strong>स्थान:</strong> कुशवाहा टोला, बेलबथान, गोड्डा, झारखंड</p>
+    <div id="resultArea">
+        <h3>📊 आपका रिजल्ट</h3>
+        <div id="resultDetails"></div>
+        <div id="answerReview"></div>
+        <button type="button" onclick="printResult()">
+            रिजल्ट प्रिंट करें
+        </button>
+        <button type="button" onclick="resetTest()">
+            दूसरा टेस्ट दें
+        </button>
+    </div>
+</section>
 
-      <a
-        class="button"
-        href="https://wa.me/917856902817"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        WhatsApp पर संपर्क करें
-      </a>
-    </section>
+<section id="results" class="card">
+    <h2>🏆 रिजल्ट रिकॉर्ड</h2>
+    <p>
+        इस डिवाइस के ब्राउज़र में सेव किए गए टेस्ट परिणाम यहाँ दिखेंगे।
+    </p>
 
-  </main>
+    <div style="overflow-x:auto">
+        <table>
+            <thead>
+                <tr>
+                    <th>नाम</th>
+                    <th>कक्षा</th>
+                    <th>विषय</th>
+                    <th>अंक</th>
+                    <th>प्रतिशत</th>
+                </tr>
+            </thead>
+            <tbody id="resultTable">
+                <tr>
+                    <td colspan="5">अभी कोई रिजल्ट उपलब्ध नहीं है।</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
 
-  <footer>
+<section id="about" class="card">
+    <h2>👨‍🏫 हमारे बारे में</h2>
+    <p><strong>संस्थान:</strong> VIM CLASSES BELBATHAN</p>
+    <p><strong>शिक्षक:</strong> विकास सर</p>
+    <p><strong>उद्देश्य:</strong> विद्यार्थियों को सरल तरीके से पढ़ाना और
+    उनकी परीक्षा की तैयारी में सहायता करना।</p>
+</section>
+
+<section id="contact" class="card">
+    <h2>📞 संपर्क करें</h2>
+    <p><strong>पता:</strong> कुशवाहा टोला, बेलबथान, गोड्डा, झारखंड</p>
+    <p><strong>मोबाइल:</strong> 7856902817</p>
+    <p><strong>ईमेल:</strong> Kumarvikas785690@gmail.com</p>
+
+    <a class="btn"
+       href="https://wa.me/917856902817"
+       target="_blank"
+       rel="noopener">
+       WhatsApp पर संपर्क करें
+    </a>
+</section>
+
+</main>
+
+<footer>
     <p>© <span id="year"></span> VIM CLASSES BELBATHAN</p>
-    <p>विद्यार्थियों की सफलता ही हमारा लक्ष्य है।</p>
-  </footer>
+    <p>शिक्षा ही सफलता की कुंजी है।</p>
+</footer>
 
-  <script>
-    // यहाँ अपने विद्यार्थियों के सही नाम और अंक दर्ज करें।
-    // नीचे दिए गए उदाहरण केवल डेमो के लिए हैं।
-    const students = [
-      { name: "अंकिता आर्या", marks: 48 },
-      { name: "स्वीटी कुमारी", marks: 46 },
-      { name: "रौनक कुमार", marks: 45 }
-    ];
+<script>
+"use strict";
 
-    function renderResults() {
-      const body = document.getElementById("resultBody");
-      body.replaceChildren();
+/*
+  प्रश्नों का प्रारूप:
+  q = प्रश्न
+  o = चार विकल्प
+  a = सही विकल्प का क्रमांक (0 से शुरू)
+*/
 
-      const sorted = [...students].sort((a, b) => b.marks - a.marks);
-
-      let previousMarks = null;
-      let previousRank = 0;
-
-      sorted.forEach((student, index) => {
-        const rank = student.marks === previousMarks
-          ? previousRank
-          : index + 1;
-
-        previousMarks = student.marks;
-        previousRank = rank;
-
-        const row = document.createElement("tr");
-        const values = [
-          rank,
-          student.name,
-          student.marks + "/50",
-          ((student.marks / 50) * 100).toFixed(0) + "%"
-        ];
-
-        values.forEach(value => {
-          const cell = document.createElement("td");
-          cell.textContent = value;
-          row.appendChild(cell);
-        });
-
-        body.appendChild(row);
-      });
-    }
-
-    const chapters = {
-      "8": {
-        math: [
-          "परिमेय संख्याएँ",
-          "एक चर वाले रैखिक समीकरण",
-          "चतुर्भुज",
-          "वर्ग और वर्गमूल",
-          "घन और घनमूल",
-          "क्षेत्रमिति",
-          "आँकड़ों का प्रबंधन"
-        ],
-        science: [
-          "फसल उत्पादन एवं प्रबंधन",
-          "सूक्ष्मजीव",
-          "बल एवं दाब",
-          "घर्षण",
-          "ध्वनि",
-          "प्रकाश"
-        ]
-      },
-      "9": {
-        math: [
-          "संख्या पद्धति",
-          "बहुपद",
-          "निर्देशांक ज्यामिति",
-          "दो चरों वाले रैखिक समीकरण",
-          "रेखाएँ और कोण",
-          "त्रिभुज",
-          "चतुर्भुज",
-          "वृत्त",
-          "हीरोन का सूत्र",
-          "पृष्ठीय क्षेत्रफल और आयतन",
-          "सांख्यिकी"
-        ],
-        science: [
-          "हमारे आस-पास के पदार्थ",
-          "क्या हमारे आस-पास के पदार्थ शुद्ध हैं",
-          "परमाणु एवं अणु",
-          "परमाणु की संरचना",
-          "जीवन की मौलिक इकाई",
-          "ऊतक",
-          "गति",
-          "बल तथा गति के नियम",
-          "गुरुत्वाकर्षण",
-          "कार्य तथा ऊर्जा",
-          "ध्वनि"
-        ]
-      },
-      "10": {
-        math: [
-          "वास्तविक संख्याएँ",
-          "बहुपद",
-          "दो चर वाले रैखिक समीकरण युग्म",
-          "द्विघात समीकरण",
-          "समांतर श्रेढ़ियाँ",
-          "त्रिभुज",
-          "निर्देशांक ज्यामिति",
-          "त्रिकोणमिति का परिचय",
-          "त्रिकोणमिति के कुछ अनुप्रयोग",
-          "वृत्त",
-          "वृत्तों से संबंधित क्षेत्रफल",
-          "पृष्ठीय क्षेत्रफल और आयतन",
-          "सांख्यिकी",
-          "प्रायिकता"
-        ],
-        science: [
-          "रासायनिक अभिक्रियाएँ एवं समीकरण",
-          "अम्ल, क्षारक एवं लवण",
-          "धातु एवं अधातु",
-          "कार्बन एवं उसके यौगिक",
-          "तत्त्वों का आवर्त वर्गीकरण",
-          "जैव प्रक्रम",
-          "नियंत्रण एवं समन्वय",
-          "जीव जनन कैसे करते हैं",
-          "आनुवंशिकता",
-          "प्रकाश: परावर्तन तथा अपवर्तन",
-          "मानव नेत्र तथा रंग-बिरंगा संसार",
-          "विद्युत",
-          "विद्युत धारा के चुंबकीय प्रभाव",
-          "हमारा पर्यावरण"
-        ]
-      },
-      "11": {
-        math: [
-          "समुच्चय",
-          "संबंध एवं फलन",
-          "त्रिकोणमितीय फलन",
-          "सम्मिश्र संख्याएँ",
-          "रैखिक असमिकाएँ",
-          "क्रमचय और संचय",
-          "द्विपद प्रमेय",
-          "अनुक्रम तथा श्रेणी",
-          "सरल रेखाएँ",
-          "शंकु परिच्छेद",
-          "त्रिविमीय ज्यामिति का परिचय",
-          "सीमा एवं अवकलज",
-          "सांख्यिकी",
-          "प्रायिकता"
-        ],
-        science: [
-          "भौतिक जगत",
-          "मात्रक एवं मापन",
-          "सरल रेखा में गति",
-          "समतल में गति",
-          "गति के नियम",
-          "कार्य, ऊर्जा और शक्ति",
-          "कणों के निकाय तथा घूर्णी गति",
-          "गुरुत्वाकर्षण",
-          "ठोसों के यांत्रिक गुण",
-          "तरलों के यांत्रिक गुण",
-          "ऊष्मीय गुण",
-          "ऊष्मागतिकी",
-          "अणुगति सिद्धांत",
-          "दोलन",
-          "तरंगें"
-        ]
-      }
-    };
-
-    // उपलब्ध उदाहरण प्रश्न। दूसरे अध्यायों के प्रश्न बाद में जोड़े जा सकते हैं।
-    const questionBank = {
-      "10": {
-        math: {
-          "वास्तविक संख्याएँ": [
-            {
-              question: "36 और 48 का महत्तम समापवर्तक (HCF) क्या है?",
-              options: ["6", "8", "12", "16"],
-              answer: 2,
-              explanation: "36 और 48 का HCF = 12 है।"
-            },
-            {
-              question: "√2 किस प्रकार की संख्या है?",
-              options: ["परिमेय", "अपरिमेय", "पूर्णांक", "प्राकृतिक"],
-              answer: 1,
-              explanation: "√2 एक अपरिमेय संख्या है।"
-            }
-          ],
-          "बहुपद": [
-            {
-              question: "यदि p(x) = x² - 5x + 6 है, तो इसके शून्यक कौन-से हैं?",
-              options: ["1 और 6", "2 और 3", "-2 और -3", "1 और 5"],
-              answer: 1,
-              explanation: "x² - 5x + 6 = (x - 2)(x - 3), इसलिए शून्यक 2 और 3 हैं।"
-            }
-          ],
-          "द्विघात समीकरण": [
-            {
-              question: "x² - 5x + 6 = 0 के मूल क्या हैं?",
-              options: ["1, 6", "2, 3", "-2, -3", "0, 6"],
-              answer: 1,
-              explanation: "(x - 2)(x - 3) = 0, इसलिए x = 2 या x = 3।"
-            }
-          ],
-          "समांतर श्रेढ़ियाँ": [
-            {
-              question: "समांतर श्रेढ़ी 2, 5, 8, 11, ... का सार्व अंतर क्या है?",
-              options: ["2", "3", "5", "8"],
-              answer: 1,
-              explanation: "सार्व अंतर = 5 - 2 = 3।"
-            }
-          ],
-          "त्रिकोणमिति का परिचय": [
-            {
-              question: "sin 30° का मान क्या है?",
-              options: ["0", "1/2", "√3/2", "1"],
-              answer: 1,
-              explanation: "sin 30° = 1/2।"
-            }
-          ],
-          "सांख्यिकी": [
-            {
-              question: "2, 4, 6 का माध्य क्या है?",
-              options: ["3", "4", "5", "6"],
-              answer: 1,
-              explanation: "माध्य = (2 + 4 + 6) / 3 = 4।"
-            }
-          ],
-          "प्रायिकता": [
-            {
-              question: "एक निष्पक्ष सिक्का उछालने पर चित आने की प्रायिकता क्या है?",
-              options: ["0", "1/4", "1/2", "1"],
-              answer: 2,
-              explanation: "चित आने के अनुकूल परिणाम 1 और कुल संभावित परिणाम 2 हैं।"
-            }
-          ]
-        },
-        science: {
-          "रासायनिक अभिक्रियाएँ एवं समीकरण": [
-            {
-              question: "लोहे की कील को कॉपर सल्फेट के घोल में डालने पर क्या होता है?",
-              options: [
-                "कोई परिवर्तन नहीं होता",
-                "घोल का रंग बदलता है",
-                "घोल उबलने लगता है",
-                "कील गायब हो जाती है"
-              ],
-              answer: 1,
-              explanation: "लोहा कॉपर सल्फेट से ताँबे को विस्थापित करता है और आयरन सल्फेट बनता है।"
-            }
-          ],
-          "अम्ल, क्षारक एवं लवण": [
-            {
-              question: "नीले लिटमस पत्र को लाल कौन करता है?",
-              options: ["अम्ल", "क्षार", "जल", "नमक का घोल"],
-              answer: 0,
-              explanation: "अम्ल नीले लिटमस को लाल कर देता है।"
-            }
-          ],
-          "धातु एवं अधातु": [
-            {
-              question: "सामान्य ताप पर द्रव अवस्था में पाई जाने वाली धातु कौन-सी है?",
-              options: ["लोहा", "ताँबा", "पारा", "एल्युमिनियम"],
-              answer: 2,
-              explanation: "पारा सामान्य ताप पर द्रव धातु है।"
-            }
-          ],
-          "विद्युत": [
-            {
-              question: "विद्युत धारा का SI मात्रक क्या है?",
-              options: ["वोल्ट", "एम्पियर", "ओम", "वाट"],
-              answer: 1,
-              explanation: "विद्युत धारा का SI मात्रक एम्पियर है।"
-            }
-          ]
+const questionBank = {
+    "10": {
+        "गणित": {
+            "वास्तविक संख्याएँ": [
+                {
+                    q: "यूक्लिड विभाजन एल्गोरिथ्म में a = bq + r के लिए r की शर्त क्या है?",
+                    o: ["r < 0", "0 ≤ r < b", "r > b", "r = b"],
+                    a: 1
+                },
+                {
+                    q: "दो धनात्मक पूर्णांकों के लिए HCF × LCM किसके बराबर होता है?",
+                    o: [
+                        "दोनों संख्याओं के योग के",
+                        "दोनों संख्याओं के अंतर के",
+                        "दोनों संख्याओं के गुणनफल के",
+                        "दोनों संख्याओं के भागफल के"
+                    ],
+                    a: 2
+                },
+                {
+                    q: "12 और 18 का HCF कितना है?",
+                    o: ["2", "3", "6", "9"],
+                    a: 2
+                },
+                {
+                    q: "26 और 91 का HCF कितना है?",
+                    o: ["7", "13", "26", "91"],
+                    a: 1
+                },
+                {
+                    q: "किसी परिमेय संख्या का दशमलव प्रसार सांत कब होता है?",
+                    o: [
+                        "हर में केवल 2 और 5 अभाज्य गुणनखंड हों",
+                        "हर में 3 का गुणनखंड हो",
+                        "हर में 7 का गुणनखंड हो",
+                        "हर हमेशा विषम हो"
+                    ],
+                    a: 0
+                },
+                {
+                    q: "√2 किस प्रकार की संख्या है?",
+                    o: ["प्राकृतिक", "पूर्णांक", "परिमेय", "अपरिमेय"],
+                    a: 3
+                },
+                {
+                    q: "7/8 का दशमलव रूप क्या है?",
+                    o: ["0.875", "0.785", "0.75", "0.625"],
+                    a: 0
+                },
+                {
+                    q: "96 और 404 का HCF कितना है?",
+                    o: ["2", "4", "8", "12"],
+                    a: 1
+                },
+                {
+                    q: "5 और 7 का LCM कितना है?",
+                    o: ["12", "25", "35", "49"],
+                    a: 2
+                },
+                {
+                    q: "यदि दो संख्याओं का HCF 1 हो, तो वे संख्याएँ कहलाती हैं:",
+                    o: [
+                        "सम संख्याएँ",
+                        "सह-अभाज्य संख्याएँ",
+                        "अभाज्य गुणनखंड",
+                        "ऋणात्मक संख्याएँ"
+                    ],
+                    a: 1
+                }
+            ]
         }
-      }
-    };
+    }
+};
 
-    const classSelect = document.getElementById("classSelect");
-    const subjectSelect = document.getElementById("subjectSelect");
-    const chapterSelect = document.getElementById("chapterSelect");
-    const questionsArea = document.getElementById("questionsArea");
+let currentQuestions = [];
+let timerInterval = null;
+let timeLeft = 20 * 60;
+let testSubmitted = false;
+let currentStudent = {};
+let selectedQuestions = [];
 
-    function updateChapters() {
-      const classValue = classSelect.value;
-      const subjectValue = subjectSelect.value;
-      const list = chapters[classValue]?.[subjectValue] || [];
+/* सभी कक्षा-विषय संयोजनों की अध्याय सूची */
+const chapterLists = {
+    "7": {
+        "गणित": [
+            "पूर्णांक",
+            "भिन्न एवं दशमलव",
+            "आँकड़ों का प्रबंधन",
+            "सरल समीकरण",
+            "रेखाएँ एवं कोण",
+            "त्रिभुज एवं उसके गुण",
+            "परिमेय संख्याएँ"
+        ],
+        "विज्ञान": [
+            "पौधों में पोषण",
+            "प्राणियों में पोषण",
+            "ऊष्मा",
+            "अम्ल, क्षारक एवं लवण",
+            "भौतिक एवं रासायनिक परिवर्तन",
+            "मौसम, जलवायु एवं अनुकूलन"
+        ],
+        "सामाजिक विज्ञान": ["इतिहास", "भूगोल", "नागरिक शास्त्र"],
+        "हिंदी": ["पाठ अभ्यास", "व्याकरण"],
+        "अंग्रेजी": ["पाठ अभ्यास", "व्याकरण"]
+    },
 
-      chapterSelect.replaceChildren();
+    "8": {
+        "गणित": [
+            "परिमेय संख्याएँ",
+            "एक चर वाले रैखिक समीकरण",
+            "चतुर्भुजों को समझना",
+            "वर्ग एवं वर्गमूल",
+            "घन एवं घनमूल",
+            "राशियों की तुलना",
+            "बीजीय व्यंजक"
+        ],
+        "विज्ञान": [
+            "फसल उत्पादन एवं प्रबंधन",
+            "सूक्ष्मजीव",
+            "कोयला एवं पेट्रोलियम",
+            "दहन एवं ज्वाला",
+            "पौधे एवं जंतुओं का संरक्षण",
+            "बल एवं दाब"
+        ],
+        "सामाजिक विज्ञान": ["इतिहास", "भूगोल", "नागरिक शास्त्र"],
+        "हिंदी": ["पाठ अभ्यास", "व्याकरण"],
+        "अंग्रेजी": ["पाठ अभ्यास", "व्याकरण"]
+    },
 
-      list.forEach(chapter => {
+    "9": {
+        "गणित": [
+            "संख्या पद्धति",
+            "बहुपद",
+            "निर्देशांक ज्यामिति",
+            "दो चरों वाले रैखिक समीकरण",
+            "यूक्लिड की ज्यामिति का परिचय",
+            "रेखाएँ और कोण",
+            "त्रिभुज",
+            "चतुर्भुज",
+            "वृत्त",
+            "हीरोन का सूत्र",
+            "पृष्ठीय क्षेत्रफल और आयतन",
+            "सांख्यिकी"
+        ],
+        "विज्ञान": [
+            "हमारे आस-पास के पदार्थ",
+            "क्या हमारे आस-पास के पदार्थ शुद्ध हैं",
+            "परमाणु एवं अणु",
+            "परमाणु की संरचना",
+            "जीवन की मौलिक इकाई",
+            "ऊतक",
+            "गति",
+            "बल तथा गति के नियम",
+            "गुरुत्वाकर्षण",
+            "कार्य तथा ऊर्जा",
+            "ध्वनि",
+            "खाद्य संसाधनों में सुधार"
+        ],
+        "सामाजिक विज्ञान": ["इतिहास", "भूगोल", "नागरिक शास्त्र", "अर्थशास्त्र"],
+        "हिंदी": ["पाठ अभ्यास", "व्याकरण"],
+        "अंग्रेजी": ["पाठ अभ्यास", "व्याकरण"]
+    },
+
+    "10": {
+        "गणित": [
+            "वास्तविक संख्याएँ",
+            "बहुपद",
+            "दो चर वाले रैखिक समीकरण युग्म",
+            "द्विघात समीकरण",
+            "समांतर श्रेढ़ियाँ",
+            "त्रिभुज",
+            "निर्देशांक ज्यामिति",
+            "त्रिकोणमिति का परिचय",
+            "त्रिकोणमिति के कुछ अनुप्रयोग",
+            "वृत्त",
+            "वृत्तों से संबंधित क्षेत्रफल",
+            "पृष्ठीय क्षेत्रफल और आयतन",
+            "सांख्यिकी",
+            "प्रायिकता"
+        ],
+        "विज्ञान": [
+            "रासायनिक अभिक्रियाएँ एवं समीकरण",
+            "अम्ल, क्षारक एवं लवण",
+            "धातु एवं अधातु",
+            "कार्बन एवं उसके यौगिक",
+            "तत्वों का आवर्त वर्गीकरण",
+            "जैव प्रक्रम",
+            "नियंत्रण एवं समन्वय",
+            "जीव जनन कैसे करते हैं",
+            "आनुवंशिकता",
+            "प्रकाश परावर्तन तथा अपवर्तन",
+            "मानव नेत्र तथा रंग-बिरंगा संसार",
+            "विद्युत",
+            "विद्युत धारा के चुंबकीय प्रभाव",
+            "हमारा पर्यावरण"
+        ],
+        "सामाजिक विज्ञान": ["इतिहास", "भूगोल", "नागरिक शास्त्र", "अर्थशास्त्र"],
+        "हिंदी": ["पाठ अभ्यास", "व्याकरण"],
+        "अंग्रेजी": ["पाठ अभ्यास", "व्याकरण"]
+    },
+
+    "11": {
+        "भूगोल": ["भौतिक भूगोल के मूल सिद्धांत", "भारत: भौतिक पर्यावरण"],
+        "इतिहास": ["विश्व इतिहास के कुछ विषय"],
+        "अर्थशास्त्र": ["अर्थशास्त्र में सांख्यिकी", "भारतीय आर्थिक विकास"],
+        "हिंदी": ["आरोह", "वितान", "अभिव्यक्ति और माध्यम"],
+        "अंग्रेजी": ["Hornbill", "Snapshots"]
+    }
+};
+
+/* कक्षा, विषय और अध्याय के विकल्प अपडेट करना */
+function updateChapters(classId, subjectId, chapterId) {
+    const classValue = document.getElementById(classId).value;
+    const subjectValue = document.getElementById(subjectId).value;
+    const chapterSelect = document.getElementById(chapterId);
+
+    const subjects = chapterLists[classValue] || {};
+    const chapters = subjects[subjectValue] || ["सामान्य अभ्यास"];
+
+    chapterSelect.innerHTML = "";
+
+    chapters.forEach(function(chapter) {
         const option = document.createElement("option");
         option.value = chapter;
         option.textContent = chapter;
         chapterSelect.appendChild(option);
-      });
+    });
+}
 
-      questionsArea.replaceChildren();
+function updateSubjects(classId, subjectId, chapterId) {
+    const classValue = document.getElementById(classId).value;
+    const subjectSelect = document.getElementById(subjectId);
+    const subjects = Object.keys(chapterLists[classValue] || {});
+
+    subjectSelect.innerHTML = "";
+
+    subjects.forEach(function(subject) {
+        const option = document.createElement("option");
+        option.value = subject;
+        option.textContent = subject;
+        subjectSelect.appendChild(option);
+    });
+
+    updateChapters(classId, subjectId, chapterId);
+}
+
+/* ऊपर वाले सिलेबस चयन से टेस्ट फॉर्म भरना */
+function prepareTest() {
+    document.getElementById("testClass").value =
+        document.getElementById("classSelect").value;
+
+    updateSubjects("testClass", "testSubject", "testChapter");
+
+    const chosenSubject = document.getElementById("subjectSelect").value;
+    const testSubject = document.getElementById("testSubject");
+
+    if ([...testSubject.options].some(o => o.value === chosenSubject)) {
+        testSubject.value = chosenSubject;
     }
 
-    function showQuestions() {
-      const classValue = classSelect.value;
-      const subjectValue = subjectSelect.value;
-      const chapterValue = chapterSelect.value;
+    updateChapters("testClass", "testSubject", "testChapter");
 
-      questionsArea.replaceChildren();
+    const chosenChapter = document.getElementById("chapterSelect").value;
+    const testChapter = document.getElementById("testChapter");
 
-      const questions =
-        questionBank[classValue]?.[subjectValue]?.[chapterValue];
+    if ([...testChapter.options].some(o => o.value === chosenChapter)) {
+        testChapter.value = chosenChapter;
+    }
 
-      if (!questions || questions.length === 0) {
-        const message = document.createElement("p");
-        message.className = "notice";
-        message.textContent =
-          "इस अध्याय के प्रश्न अभी वेबसाइट पर उपलब्ध नहीं हैं। प्रश्न जोड़े जाने पर यहाँ दिखाई देंगे।";
-        questionsArea.appendChild(message);
+    document.getElementById("chapterMessage").textContent =
+        "आपकी पसंद के अनुसार टेस्ट फॉर्म तैयार है। अब नाम भरकर टेस्ट शुरू करें।";
+
+    document.getElementById("onlineTest").scrollIntoView();
+}
+
+/* टेस्ट शुरू करना */
+function startTest() {
+    const name = document.getElementById("studentName").value.trim();
+
+    if (!name) {
+        alert("कृपया पहले अपना नाम लिखें।");
+        document.getElementById("studentName").focus();
         return;
-      }
-
-      questions.forEach((item, index) => {
-        const card = document.createElement("div");
-        card.className = "question-card";
-
-        const heading = document.createElement("h3");
-        heading.textContent = `प्रश्न ${index + 1}. ${item.question}`;
-        card.appendChild(heading);
-
-        const list = document.createElement("ol");
-        list.className = "options";
-        list.type = "A";
-
-        item.options.forEach(optionText => {
-          const li = document.createElement("li");
-          li.textContent = optionText;
-          list.appendChild(li);
-        });
-
-        card.appendChild(list);
-
-        const button = document.createElement("button");
-        button.className = "small-button";
-        button.type = "button";
-        button.textContent = "उत्तर देखें";
-
-        const answer = document.createElement("p");
-        answer.className = "answer";
-        answer.textContent =
-          `सही उत्तर: ${item.options[item.answer]}. ${item.explanation}`;
-
-        button.addEventListener("click", () => {
-          const isHidden = answer.style.display === "none" ||
-                           answer.style.display === "";
-
-          answer.style.display = isHidden ? "block" : "none";
-          button.textContent = isHidden ? "उत्तर छिपाएँ" : "उत्तर देखें";
-        });
-
-        card.appendChild(button);
-        card.appendChild(answer);
-        questionsArea.appendChild(card);
-      });
     }
 
-    classSelect.addEventListener("change", updateChapters);
-    subjectSelect.addEventListener("change", updateChapters);
-    document.getElementById("loadQuestions")
-      .addEventListener("click", showQuestions);
+    const classValue = document.getElementById("testClass").value;
+    const subject = document.getElementById("testSubject").value;
+    const chapter = document.getElementById("testChapter").value;
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const questions =
+        questionBank[classValue]?.[subject]?.[chapter] || [];
+
+    if (questions.length === 0) {
+        alert(
+            "इस कक्षा, विषय और अध्याय के प्रश्न अभी जोड़े नहीं गए हैं। " +
+            "फिलहाल वास्तविक संख्याएँ अध्याय का नमूना टेस्ट उपलब्ध है।"
+        );
+        return;
+    }
+
+    currentStudent = {
+        name: name,
+        classValue: classValue,
+        subject: subject,
+        chapter: chapter
+    };
+
+    currentQuestions = questions;
+    selectedQuestions = new Array(questions.length).fill(null);
+    testSubmitted = false;
+    timeLeft = 20 * 60;
+
+    document.getElementById("testSetup").style.display = "none";
+    document.getElementById("resultArea").style.display = "none";
+    document.getElementById("testArea").style.display = "block";
+
+    document.getElementById("testHeading").textContent =
+        "कक्षा " + classValue + " | " + subject + " | " + chapter;
+
+    document.getElementById("questionCount").textContent =
+        "कुल प्रश्न: " + questions.length;
+
+    renderQuestions();
+    startTimer();
+
+    document.getElementById("onlineTest").scrollIntoView();
+}
+
+/* प्रश्न और विकल्प दिखाना */
+function renderQuestions() {
+    const container = document.getElementById("questions");
+    container.innerHTML = "";
+
+    currentQuestions.forEach(function(question, index) {
+        const box = document.createElement("div");
+        box.className = "question";
+
+        const title = document.createElement("h3");
+        title.textContent = (index + 1) + ". " + question.q;
+        box.appendChild(title);
+
+        question.o.forEach(function(option, optionIndex) {
+            const label = document.createElement("label");
+            label.className = "option";
+
+            const input = document.createElement("input");
+            input.type = "radio";
+            input.name = "question_" + index;
+            input.value = optionIndex;
+
+            input.addEventListener("change", function() {
+                selectedQuestions[index] = optionIndex;
+            });
+
+            label.appendChild(input);
+            label.appendChild(document.createTextNode(option));
+            box.appendChild(label);
+        });
+
+        container.appendChild(box);
+    });
+}
+
+/* टाइमर */
+function startTimer() {
+    clearInterval(timerInterval);
+    updateTimerDisplay();
+
+    timerInterval = setInterval(function() {
+        timeLeft--;
+        updateTimerDisplay();
+
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            alert("समय समाप्त हो गया है। आपका टेस्ट सबमिट किया जा रहा है।");
+            submitTest(true);
+        }
+    }, 1000);
+}
+
+function updateTimerDisplay() {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+
+    document.getElementById("timer").textContent =
+        "शेष समय: " +
+        String(minutes).padStart(2, "0") + ":" +
+        String(seconds).padStart(2, "0");
+}
+
+/* टेस्ट सबमिट करना और रिजल्ट निकालना */
+function submitTest(autoSubmit) {
+    if (testSubmitted) return;
+
+    if (!autoSubmit) {
+        const confirmSubmit = confirm(
+            "क्या आप वाकई टेस्ट सबमिट करना चाहते हैं?"
+        );
+
+        if (!confirmSubmit) return;
+    }
+
+    testSubmitted = true;
+    clearInterval(timerInterval);
+
+    let correct = 0;
+    let wrong = 0;
+    let unanswered = 0;
+
+    currentQuestions.forEach(function(question, index) {
+        if (selectedQuestions[index] === null) {
+            unanswered++;
+        } else if (selectedQuestions[index] === question.a) {
+            correct++;
+        } else {
+            wrong++;
+        }
+    });
+
+    const total = currentQuestions.length;
+    const percentage = total ? (correct / total * 100) : 0;
+
+    const result = {
+        name: currentStudent.name,
+        classValue: currentStudent.classValue,
+        subject: currentStudent.subject,
+        chapter: currentStudent.chapter,
+        correct: correct,
+        wrong: wrong,
+        unanswered: unanswered,
+        total: total,
+        percentage: percentage.toFixed(2),
+        date: new Date().toLocaleString("hi-IN")
+    };
+
+    saveResult(result);
+    showResult(result);
+    showAnswerReview();
+
+    document.getElementById("testArea").style.display = "none";
+    document.getElementById("resultArea").style.display = "block";
+
+    document.getElementById("onlineTest").scrollIntoView();
+}
+
+/* रिजल्ट लोकल ब्राउज़र में सेव करना */
+function saveResult(result) {
+    let records = [];
+
+    try {
+        records = JSON.parse(localStorage.getItem("vimTestResults") || "[]");
+        if (!Array.isArray(records)) records = [];
+    } catch (error) {
+        records = [];
+    }
+
+    records.push(result);
+    localStorage.setItem("vimTestResults", JSON.stringify(records));
 
     renderResults();
-    updateChapters();
-  </script>
+}
+
+/* रिजल्ट दिखाना */
+function showResult(result) {
+    document.getElementById("resultDetails").innerHTML = `
+        <p><strong>विद्यार्थी:</strong> ${escapeHTML(result.name)}</p>
+        <p><strong>कक्षा:</strong> ${escapeHTML(result.classValue)}</p>
+        <p><strong>विषय:</strong> ${escapeHTML(result.subject)}</p>
+        <p><strong>अध्याय:</strong> ${escapeHTML(result.chapter)}</p>
+        <p><strong>कुल प्रश्न:</strong> ${result.total}</p>
+        <p><strong>सही उत्तर:</strong> ${result.correct}</p>
+        <p><strong>गलत उत्तर:</strong> ${result.wrong}</p>
+        <p><strong>अनुत्तरित प्रश्न:</strong> ${result.unanswered}</p>
+        <p><strong>प्राप्त अंक:</strong> ${result.correct} / ${result.total}</p>
+        <p><strong>प्रतिशत:</strong> ${result.percentage}%</p>
+        <p><strong>दिनांक:</strong> ${escapeHTML(result.date)}</p>
+    `;
+}
+
+/* सबमिट करने के बाद सही उत्तरों की समीक्षा */
+function showAnswerReview() {
+    const container = document.getElementById("answerReview");
+    container.innerHTML = "<h3>उत्तर की समीक्षा</h3>";
+
+    currentQuestions.forEach(function(question, index) {
+        const box = document.createElement("div");
+        box.className = "question";
+
+        const selected = selectedQuestions[index];
+        const isCorrect = selected === question.a;
+
+        const title = document.createElement("p");
+        title.textContent = (index + 1) + ". " + question.q;
+        box.appendChild(title);
+
+        const yourAnswer = document.createElement("p");
+        yourAnswer.textContent = "आपका उत्तर: " +
+            (selected === null ? "उत्तर नहीं दिया" : question.o[selected]);
+        box.appendChild(yourAnswer);
+
+        const correctAnswer = document.createElement("p");
+        correctAnswer.textContent = "सही उत्तर: " + question.o[question.a];
+        box.appendChild(correctAnswer);
+
+        const status = document.createElement("p");
+        status.textContent = isCorrect ? "सही उत्तर" :
+            (selected === null ? "अनुत्तरित" : "गलत उत्तर");
+
+        status.style.color = isCorrect ? "green" : "red";
+        status.style.fontWeight = "bold";
+        box.appendChild(status);
+
+        container.appendChild(box);
+    });
+}
+
+/* HTML में नाम सुरक्षित तरीके से दिखाना */
+function escapeHTML(value) {
+    return String(value).replace(/[&<>"']/g, function(character) {
+        const map = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;"
+        };
+        return map[character];
+    });
+}
+
+/* पुराने रिजल्ट दिखाना */
+function renderResults() {
+    let records = [];
+
+    try {
+        records = JSON.parse(localStorage.getItem("vimTestResults") || "[]");
+        if (!Array.isArray(records)) records = [];
+    } catch (error) {
+        records = [];
+    }
+
+    const tbody = document.getElementById("resultTable");
+    tbody.innerHTML = "";
+
+    if (records.length === 0) {
+        tbody.innerHTML =
+            '<tr><td colspan="5">अभी कोई रिजल्ट उपलब्ध नहीं है।</td></tr>';
+        return;
+    }
+
+    records.slice().reverse().forEach(function(record) {
+        const row = document.createElement("tr");
+
+        [
+            record.name,
+            record.classValue,
+            record.subject,
+            record.correct + "/" + record.total,
+            record.percentage + "%"
+        ].forEach(function(value) {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            row.appendChild(cell);
+        });
+
+        tbody.appendChild(row);
+    });
+}
+
+/* प्रिंट */
+function printResult() {
+    window.print();
+}
+
+/* दूसरा टेस्ट */
+function resetTest() {
+    clearInterval(timerInterval);
+    testSubmitted = false;
+
+    document.getElementById("testArea").style.display = "none";
+    document.getElementById("resultArea").style.display = "none";
+    document.getElementById("testSetup").style.display = "block";
+
+    document.getElementById("studentName").value = "";
+    document.getElementById("onlineTest").scrollIntoView();
+}
+
+/* कक्षा बदलने पर विषय और अध्याय बदलें */
+document.getElementById("classSelect").addEventListener("change", function() {
+    updateSubjects("classSelect", "subjectSelect", "chapterSelect");
+});
+
+document.getElementById("subjectSelect").addEventListener("change", function() {
+    updateChapters("classSelect", "subjectSelect", "chapterSelect");
+});
+
+document.getElementById("testClass").addEventListener("change", function() {
+    updateSubjects("testClass", "testSubject", "testChapter");
+});
+
+document.getElementById("testSubject").addEventListener("change", function() {
+    updateChapters("testClass", "testSubject", "testChapter");
+});
+
+/* पेज लोड होने पर */
+document.getElementById("year").textContent = new Date().getFullYear();
+
+updateChapters("classSelect", "subjectSelect", "chapterSelect");
+updateSubjects("testClass", "testSubject", "testChapter");
+renderResults();
+</script>
 
 </body>
 </html>
