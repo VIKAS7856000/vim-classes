@@ -3,45 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VIM CLASSES BELBATHAN | डिजिटल शिक्षा पोर्टल</title>
-<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<title>VIM CLASSES BELBATHAN | ऑनलाइन टेस्ट व स्टडी मटेरियल</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
   --primary: #123b70;
-  --primary-dark: #092040;
-  --primary-light: #1e5699;
+  --primary-dark: #0b2545;
   --gold: #d97706;
-  --gold-bg: #fffbeb;
   --silver: #64748b;
   --bronze: #b45309;
-  --success: #16a34a;
+  --success: #16803d;
   --danger: #dc2626;
-  --bg: #f1f5f9;
+  --bg: #f4f7fb;
   --card: #ffffff;
-  --text: #1e293b;
+  --text: #1f2937;
   --text-muted: #64748b;
-  --border: #e2e8f0;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Poppins', 'Hind', sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
-/* Header & Logo */
+/* Header & Vector Logo */
 header {
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: white;
   text-align: center;
-  padding: 26px 14px 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  padding: 22px 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .brand-box {
@@ -49,74 +44,66 @@ header {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  flex-wrap: wrap;
 }
 
-.logo-icon { width: 50px; height: 50px; }
+.logo-icon {
+  width: 46px;
+  height: 46px;
+}
 
 header h1 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 
-.header-sub {
-  font-size: 13.5px;
-  color: #cbd5e1;
-  margin-top: 2px;
-}
-
 .teacher-tag {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.16);
-  padding: 4px 16px;
-  border-radius: 20px;
-  font-size: 13px;
-  margin-top: 10px;
-  font-weight: 500;
-  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.15);
+  padding: 3px 14px;
+  border-radius: 15px;
+  font-size: 12px;
+  margin-top: 6px;
 }
 
-/* Sticky Navigation Bar */
+/* Navigation */
 nav {
   background: var(--primary-dark);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 nav a {
   color: #f1f5f9;
   text-decoration: none;
-  padding: 7px 14px;
+  padding: 6px 12px;
   font-weight: 600;
   font-size: 13px;
-  border-radius: 6px;
-  transition: all 0.2s ease;
+  border-radius: 4px;
 }
 
 nav a:hover {
   background: rgba(255, 255, 255, 0.15);
-  color: #fde047;
+  color: #ffd700;
 }
 
-/* Sections Global */
 section {
-  padding: 28px 14px;
-  max-width: 980px;
+  padding: 24px 14px;
+  max-width: 950px;
   margin: auto;
 }
 
 .section-head {
   color: var(--primary);
   text-align: center;
-  font-size: 22px;
-  margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 16px;
   font-weight: 700;
   position: relative;
 }
@@ -124,62 +111,218 @@ section {
 .section-head::after {
   content: '';
   display: block;
-  width: 45px;
-  height: 3.5px;
+  width: 40px;
+  height: 3px;
   background: var(--gold);
-  margin: 6px auto 0;
+  margin: 5px auto 0;
   border-radius: 2px;
+}
+
+/* Banner */
+.hero-box {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.banner-img-wrap {
+  width: 100%;
+  max-height: 340px;
+  overflow: hidden;
+  background: #0b2545;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-content {
+  padding: 18px;
 }
 
 .btn {
   display: inline-block;
   background: var(--success);
   color: white;
-  padding: 9px 18px;
+  padding: 8px 18px;
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
   font-size: 13px;
   border: none;
   cursor: pointer;
-  transition: 0.2s;
+  margin-top: 8px;
 }
 
-.btn:hover { filter: brightness(1.1); transform: translateY(-1px); }
+/* Study Material Section */
+.study-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  border-top: 4px solid var(--gold);
+  margin-bottom: 20px;
+}
 
-.btn-primary { background: var(--primary); }
-.btn-primary:hover { background: var(--primary-light); }
+.study-select-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
 
-/* Merit Ranking Section */
+select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 13px;
+  font-family: inherit;
+  background: #f8fafc;
+}
+
+.study-output-box {
+  margin-top: 15px;
+}
+
+.study-item {
+  background: #f8fafc;
+  padding: 12px 14px;
+  border-left: 3px solid var(--gold);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+/* Live Quiz Engine */
+.quiz-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  border-top: 4px solid var(--primary);
+}
+
+.class-picker {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.class-btn {
+  background: #f1f5f9;
+  border: 1.5px solid #cbd5e1;
+  color: var(--primary);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.class-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.q-box {
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  border-left: 3px solid var(--primary);
+}
+
+.q-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.opt-row {
+  display: block;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.opt-row:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+}
+
+.opt-row input {
+  margin-right: 8px;
+}
+
+/* Instant Result Area */
+#result-display-area {
+  display: none;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  text-align: center;
+  margin-top: 20px;
+  border-top: 4px solid var(--gold);
+}
+
+.score-badge {
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  border-radius: 50%;
+  background: #eff6ff;
+  border: 3px solid var(--primary);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 12px auto;
+}
+
+/* Toppers Podium */
 .top-podium {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 14px;
-  margin-bottom: 18px;
+  gap: 12px;
+  margin-bottom: 14px;
 }
 
 .podium-card {
   background: white;
-  border-radius: 10px;
-  padding: 16px 12px;
+  border-radius: 8px;
+  padding: 14px;
   text-align: center;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   border-top: 4px solid var(--primary);
-  position: relative;
 }
 
-.podium-card.rank1 { border-top-color: #f59e0b; background: var(--gold-bg); }
+.podium-card.rank1 { border-top-color: #f59e0b; background: #fffdf8; }
 .podium-card.rank2 { border-top-color: #94a3b8; }
 .podium-card.rank3 { border-top-color: #b45309; }
 
 .medal {
-  width: 38px;
-  height: 38px;
-  line-height: 38px;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
   border-radius: 50%;
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 15px;
   margin: 0 auto 6px;
 }
 
@@ -187,28 +330,28 @@ section {
 .m2 { background: linear-gradient(135deg, #94a3b8, #475569); }
 .m3 { background: linear-gradient(135deg, #b45309, #78350f); }
 
-.s-name { font-size: 17px; font-weight: 700; color: var(--primary-dark); }
-.s-marks { font-size: 14px; color: var(--success); font-weight: 600; margin-top: 2px; }
+.s-name { font-size: 16px; font-weight: 700; color: var(--primary-dark); }
+.s-marks { font-size: 13px; color: var(--success); font-weight: 600; margin-top: 2px; }
 
+/* Table */
 .table-wrap {
   overflow-x: auto;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  max-height: 420px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  max-height: 300px;
   overflow-y: auto;
-  border: 1px solid var(--border);
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 13.5px;
+  font-size: 13px;
   text-align: left;
 }
 
 th, td {
-  padding: 9px 14px;
+  padding: 9px 12px;
   border-bottom: 1px solid #edf2f7;
 }
 
@@ -221,204 +364,36 @@ th {
   z-index: 2;
 }
 
-tr:hover { background: #f8fafc; }
-
-/* Filter & Quiz Engine Styles */
-.card-box {
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  border: 1px solid var(--border);
-  margin-bottom: 20px;
-}
-
-.filter-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12px;
-  margin-bottom: 14px;
-}
-
-label {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--primary-dark);
-  margin-bottom: 4px;
-  display: block;
-}
-
-select, input[type="text"] {
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 6px;
-  border: 1.5px solid #cbd5e1;
-  font-size: 13px;
-  font-family: inherit;
-  background: #fff;
-  color: #1e293b;
-  outline: none;
-}
-
-select:focus, input[type="text"]:focus {
-  border-color: var(--primary);
-}
-
-/* Online Test Simulator Cards */
-.quiz-header-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #eff6ff;
-  padding: 12px 16px;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  border: 1px solid #bfdbfe;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.quiz-title { font-size: 15px; font-weight: 700; color: var(--primary-dark); }
-.quiz-badge { background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
-
-.q-item {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 14px;
-  margin-bottom: 12px;
-  transition: 0.15s;
-}
-
-.q-item:hover { border-color: #cbd5e1; }
-
-.q-title {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--primary-dark);
-  margin-bottom: 10px;
-}
-
-.options-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-
-@media (max-width: 600px) {
-  .options-container { grid-template-columns: 1fr; }
-}
-
-.opt-label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 13px;
-  background: #f8fafc;
-  transition: 0.15s;
-}
-
-.opt-label:hover { background: #f1f5f9; }
-.opt-label input { cursor: pointer; }
-
-/* Score Card */
-.score-card {
-  display: none;
-  background: #ecfdf5;
-  border: 2px solid #10b981;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  margin-top: 18px;
-}
-
-.score-num { font-size: 28px; font-weight: 700; color: #065f46; }
-
-/* Chapter-wise VVI Portal */
-.q-card-vvi {
-  background: white;
-  padding: 14px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  border-left: 4px solid var(--primary);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-}
-
-.ans-reveal {
-  display: none;
-  margin-top: 8px;
-  padding: 6px 12px;
-  background: #ecfdf5;
-  color: #047857;
-  font-size: 12.5px;
-  font-weight: 600;
-  border-radius: 4px;
-}
-
-.btn-toggle-ans {
-  background: #e2e8f0;
-  color: #1e293b;
-  border: none;
-  padding: 4px 10px;
-  font-size: 11.5px;
-  font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 6px;
-}
-
-/* Study Material Cards */
-.material-grid {
+/* Gallery */
+.gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
 }
 
-.mat-card {
+.gallery-item {
   background: white;
   border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-  border-top: 3px solid var(--primary);
-  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  height: 180px;
 }
 
-.mat-card h3 { font-size: 15px; color: var(--primary); margin-bottom: 6px; }
-.mat-card p { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; }
-
-/* Activities Cards */
-.act-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 12px;
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.act-card {
-  background: white;
-  border-radius: 8px;
-  padding: 14px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-  border-left: 4px solid var(--gold);
-}
-
-.act-card h4 { font-size: 14px; color: var(--primary-dark); margin-bottom: 4px; }
-.act-card p { font-size: 12px; color: var(--text-muted); }
-
-/* Footer */
 footer {
   background: var(--primary-dark);
   color: #94a3b8;
   text-align: center;
-  padding: 22px 14px;
+  padding: 18px 10px;
   font-size: 12px;
-  margin-top: 30px;
+  margin-top: 25px;
 }
-
-footer a { color: #38bdf8; text-decoration: none; font-weight: 600; }
 </style>
 </head>
 
@@ -434,36 +409,113 @@ footer a { color: #38bdf8; text-decoration: none; font-weight: 600; }
     </svg>
     <div>
       <h1>VIM CLASSES BELBATHAN</h1>
-      <p class="header-sub">मेहनत, अनुशासन और सच्ची सफलता | झारखंड बोर्ड (JCERT) एवं न्यू NCERT पोर्टल</p>
+      <p style="font-size: 12px; color: #cbd5e1;">मेहनत, अनुशासन और सच्ची सफलता</p>
     </div>
   </div>
-  <div class="teacher-tag">शिक्षक: विकास सर | कुशवाह टोला, बेलबथान (गोड्डा)</div>
+  <div class="teacher-tag">शिक्षक: विकास सर | बेलबथान (गोड्डा)</div>
 </header>
 
-<!-- Navigation -->
 <nav>
-  <a href="#result">📊 टेस्ट रिजल्ट मेरिट</a>
-  <a href="#cbt-test">⏱️ 50 प्रश्न लाइव मॉक टेस्ट</a>
-  <a href="#vvi-portal">📚 चैप्टर-वाइज VVI बैंक</a>
-  <a href="#materials">📖 स्टडी मटेरियल / नोट्स</a>
-  <a href="#activities">🌟 कोचिंग गतिविधियाँ</a>
-  <a href="#contact">📞 संपर्क</a>
+  <a href="#home">होम</a>
+  <a href="#study-material">📚 स्टडी मटेरियल</a>
+  <a href="#test-section">📝 ऑनलाइन 50 प्रश्न टेस्ट</a>
+  <a href="#result">🏆 टेस्ट रिजल्ट</a>
+  <a href="#gallery">📸 कोचिंग गैलरी</a>
+  <a href="#contact">संपर्क</a>
 </nav>
 
-<!-- 1. MERIT RESULT SECTION -->
+<!-- Home Banner (Google Drive Live Photo) -->
+<section id="home">
+  <div class="hero-box">
+    <div class="banner-img-wrap">
+      <img src="https://lh3.googleusercontent.com/d/1amcQBNVzzN7zybA4Q3hRBynCj1DqyBKk" alt="VIM Classes Roof Test" class="banner-img">
+    </div>
+    <div class="hero-content">
+      <h2 style="color:var(--primary); font-size:18px;">कक्षा 8वीं, 9वीं, 10वीं एवं 11वीं (आर्ट्स) ऑनलाइन पोर्टल</h2>
+      <p style="margin: 5px 0 10px; color: var(--text-muted); font-size: 13px;">
+        अध्यायवार स्टडी मटेरियल पढ़ें, 50-50 प्रश्नों का लाइव टेस्ट दें और तुरंत अपना स्कोरकार्ड देखें।
+      </p>
+      <a href="#test-section" class="btn">अभी टेस्ट शुरू करें ➔</a>
+    </div>
+  </div>
+</section>
+
+<!-- Study Material Section -->
+<section id="study-material">
+  <h2 class="section-head">📚 स्टडी मटेरियल एवं रिवीजन नोट्स</h2>
+  <div class="study-card">
+    <div class="study-select-row">
+      <select id="smClassSelect">
+        <option value="">-- कक्षा चुनें --</option>
+        <option value="10">कक्षा 10वीं</option>
+        <option value="9">कक्षा 9वीं</option>
+        <option value="8">कक्षा 8वीं</option>
+        <option value="11_arts">कक्षा 11वीं (आर्ट्स)</option>
+      </select>
+      <select id="smSubjectSelect">
+        <option value="">-- विषय चुनें --</option>
+        <option value="math">गणित (Math)</option>
+        <option value="science">विज्ञान (Science)</option>
+        <option value="sst">सामाजिक विज्ञान (SST / Arts)</option>
+      </select>
+      <button class="btn" onclick="loadStudyMaterial()" style="margin-top:0;">नोट्स देखें</button>
+    </div>
+
+    <div id="study-content-area" class="study-output-box">
+      <p style="text-align:center; color:var(--text-muted); font-size:13px;">
+        अपनी कक्षा और विषय चुनकर "नोट्स देखें" बटन दबाएँ।
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Live Online Test Engine (50 Questions per Class) -->
+<section id="test-section">
+  <h2 class="section-head">📝 ऑनलाइन टेस्ट (पूरे 50-50 प्रश्न)</h2>
+
+  <div class="quiz-panel">
+    <div class="class-picker">
+      <button class="class-btn active" onclick="loadClassQuiz('11')">कक्षा 11वीं (आर्ट्स - 50 प्रश्न)</button>
+      <button class="class-btn" onclick="loadClassQuiz('10')">कक्षा 10वीं (50 प्रश्न)</button>
+      <button class="class-btn" onclick="loadClassQuiz('9')">कक्षा 9वीं (50 प्रश्न)</button>
+      <button class="class-btn" onclick="loadClassQuiz('8')">कक्षा 8वीं (50 प्रश्न)</button>
+    </div>
+
+    <div id="quiz-title-tag" style="font-weight:700; color:var(--primary); margin-bottom:12px; font-size:15px;"></div>
+
+    <form id="quiz-form">
+      <div id="questions-holder"></div>
+      <button type="button" class="btn" style="width:100%; padding:12px; font-size:15px; margin-top:15px;" onclick="calculateResult()">
+        टेस्ट सबमिट करें और रिजल्ट देखें ➔
+      </button>
+    </form>
+  </div>
+
+  <!-- Instant Result Card -->
+  <div id="result-display-area">
+    <h3 style="color:var(--primary);">🎯 टेस्ट परिणाम (Instant Result)</h3>
+    <div class="score-badge" id="score-text">0/50</div>
+    <div id="percentage-text" style="font-size:15px; font-weight:700; color:var(--success);"></div>
+    <div id="grade-text" style="font-size:13px; color:var(--text-muted); margin:4px 0 14px;"></div>
+    
+    <div id="answers-breakdown" style="text-align:left; margin-top:15px; max-height:300px; overflow-y:auto; border-top:1px solid #e2e8f0; padding-top:10px;"></div>
+  </div>
+</section>
+
+<!-- Toppers / Test Result Section -->
 <section id="result">
-  <h2 class="section-head">🏆 साप्ताहिक टेस्ट रैंकिंग मेरिट लिस्ट (पूर्णांक: 50)</h2>
+  <h2 class="section-head">🏆 कोचिंग टेस्ट रैंकिंग (कुल पूर्णांक: 50)</h2>
 
   <div class="top-podium">
-    <div class="podium-card rank2">
-      <div class="medal m2">2</div>
-      <div class="s-name">स्वीटी कुमारी</div>
-      <div class="s-marks">46 / 50 (92.0%)</div>
-    </div>
     <div class="podium-card rank1">
       <div class="medal m1">1</div>
       <div class="s-name">अंकिता आर्या</div>
       <div class="s-marks">48 / 50 (96.0%)</div>
+    </div>
+    <div class="podium-card rank2">
+      <div class="medal m2">2</div>
+      <div class="s-name">स्वीटी कुमारी</div>
+      <div class="s-marks">46 / 50 (92.0%)</div>
     </div>
     <div class="podium-card rank3">
       <div class="medal m3">3</div>
@@ -472,18 +524,14 @@ footer a { color: #38bdf8; text-decoration: none; font-weight: 600; }
     </div>
   </div>
 
-  <div style="margin-bottom: 10px;">
-    <input type="text" id="searchStudent" placeholder="🔍 विद्यार्थी का नाम यहाँ खोजें..." onkeyup="filterStudents()">
-  </div>
-
   <div class="table-wrap">
-    <table id="rankTable">
+    <table>
       <thead>
         <tr>
           <th>रैंक</th>
-          <th>विद्यार्थी का नाम</th>
-          <th>प्राप्तांक (50 में)</th>
-          <th>प्रतिशत (%)</th>
+          <th>छात्र / छात्रा का नाम</th>
+          <th>प्राप्त अंक</th>
+          <th>प्रतिशत</th>
         </tr>
       </thead>
       <tbody>
@@ -491,7 +539,7 @@ footer a { color: #38bdf8; text-decoration: none; font-weight: 600; }
         <tr><td><b>2</b></td><td>स्वीटी कुमारी</td><td>46</td><td>92.0%</td></tr>
         <tr><td><b>3</b></td><td>रौनक कुमार</td><td>45</td><td>90.0%</td></tr>
         <tr><td><b>4</b></td><td>पीयूष कुमार</td><td>43</td><td>86.0%</td></tr>
-        <tr><td><b>5</b></td><td>सिधार्थ कुमार</td><td>42</td><td>84.0%</td></tr>
+        <tr><td><b>5</b></td><td>सिद्धार्थ कुमार</td><td>42</td><td>84.0%</td></tr>
         <tr><td><b>6</b></td><td>राधिका कुमारी</td><td>40</td><td>80.0%</td></tr>
         <tr><td><b>7</b></td><td>कल्पना कुमारी</td><td>40</td><td>80.0%</td></tr>
         <tr><td><b>8</b></td><td>सुमन कुमार</td><td>38</td><td>76.0%</td></tr>
@@ -502,718 +550,425 @@ footer a { color: #38bdf8; text-decoration: none; font-weight: 600; }
         <tr><td><b>13</b></td><td>प्रियांशु कुमार</td><td>28</td><td>56.0%</td></tr>
         <tr><td><b>14</b></td><td>छोटी कुमारी</td><td>28</td><td>56.0%</td></tr>
         <tr><td><b>15</b></td><td>आर्यन कुमार</td><td>28</td><td>56.0%</td></tr>
-        <tr><td><b>16</b></td><td>प्रियांशु कुमार</td><td>28</td><td>56.0%</td></tr>
-        <tr><td><b>17</b></td><td>राजलक्ष्मी कुमारी</td><td>25</td><td>50.0%</td></tr>
-        <tr><td><b>18</b></td><td>कृष्ण कुमार</td><td>25</td><td>50.0%</td></tr>
-        <tr><td><b>19</b></td><td>नरेन्द्र कुमार</td><td>23</td><td>46.0%</td></tr>
-        <tr><td><b>20</b></td><td>रीना कुमारी</td><td>23</td><td>46.0%</td></tr>
-        <tr><td><b>21</b></td><td>सूरज कुमार</td><td>22</td><td>44.0%</td></tr>
-        <tr><td><b>22</b></td><td>राधा कुमारी</td><td>21</td><td>42.0%</td></tr>
-        <tr><td><b>23</b></td><td>नित्यानंद कुमार</td><td>16</td><td>32.0%</td></tr>
-        <tr><td><b>24</b></td><td>सिद्धि कुमारी</td><td>15</td><td>30.0%</td></tr>
-        <tr><td><b>25</b></td><td>सूरज राय</td><td>15</td><td>30.0%</td></tr>
-        <tr><td><b>26</b></td><td>अभिषेक कुमार</td><td>15</td><td>30.0%</td></tr>
-        <tr><td><b>27</b></td><td>सूरज कुमार ठाकुर</td><td>12</td><td>24.0%</td></tr>
-        <tr><td><b>28</b></td><td>लक्ष्मी कुमारी</td><td>10</td><td>20.0%</td></tr>
-        <tr><td><b>29</b></td><td>पंकज राय</td><td>10</td><td>20.0%</td></tr>
-        <tr><td><b>30</b></td><td>अभिनन्दन कुमार</td><td>10</td><td>20.0%</td></tr>
-        <tr><td><b>31</b></td><td>अशोक ठाकुर</td><td>10</td><td>20.0%</td></tr>
-        <tr><td><b>32</b></td><td>रूपेश कुमार</td><td>10</td><td>20.0%</td></tr>
-        <tr><td><b>33</b></td><td>राहुल कुमार</td><td>8</td><td>16.0%</td></tr>
-        <tr><td><b>34</b></td><td>कार्तिक कुमार</td><td>7</td><td>14.0%</td></tr>
-        <tr><td><b>35</b></td><td>पीयूष कुमार</td><td>6</td><td>12.0%</td></tr>
-        <tr><td><b>36</b></td><td>आर्या कुमारी</td><td>6</td><td>12.0%</td></tr>
-        <tr><td><b>37</b></td><td>मिथुन कुमार</td><td>5</td><td>10.0%</td></tr>
-        <tr><td><b>38</b></td><td>अमन कुमार</td><td>4</td><td>8.0%</td></tr>
-        <tr><td><b>39</b></td><td>आँचल कुमारी</td><td>3</td><td>6.0%</td></tr>
-        <tr><td><b>40</b></td><td>सूरज यादव</td><td>3</td><td>6.0%</td></tr>
-        <tr><td><b>41</b></td><td>नन्दनी कुमारी</td><td>3</td><td>6.0%</td></tr>
-        <tr><td><b>42</b></td><td>शिव कुमार ठाकुर</td><td>1</td><td>2.0%</td></tr>
-        <tr><td><b>43</b></td><td>उमेश यादव</td><td>1</td><td>2.0%</td></tr>
+        <tr><td><b>16</b></td><td>राजलक्ष्मी कुमारी</td><td>25</td><td>50.0%</td></tr>
+        <tr><td><b>17</b></td><td>कृष्ण कुमार</td><td>25</td><td>50.0%</td></tr>
+        <tr><td><b>18</b></td><td>नरेन्द्र कुमार</td><td>23</td><td>46.0%</td></tr>
+        <tr><td><b>19</b></td><td>रीना कुमारी</td><td>23</td><td>46.0%</td></tr>
+        <tr><td><b>20</b></td><td>सूरज कुमार</td><td>22</td><td>44.0%</td></tr>
+        <tr><td><b>21</b></td><td>राधा कुमारी</td><td>21</td><td>42.0%</td></tr>
+        <tr><td><b>22</b></td><td>नित्यानंद कुमार</td><td>16</td><td>32.0%</td></tr>
+        <tr><td><b>23</b></td><td>सिद्धि कुमारी</td><td>15</td><td>30.0%</td></tr>
+        <tr><td><b>24</b></td><td>सूरज राय</td><td>15</td><td>30.0%</td></tr>
+        <tr><td><b>25</b></td><td>अभिषेक कुमार</td><td>15</td><td>30.0%</td></tr>
+        <tr><td><b>26</b></td><td>सूरज कुमार ठाकुर</td><td>12</td><td>24.0%</td></tr>
+        <tr><td><b>27</b></td><td>लक्ष्मी कुमारी</td><td>10</td><td>20.0%</td></tr>
+        <tr><td><b>28</b></td><td>पंकज राय</td><td>10</td><td>20.0%</td></tr>
+        <tr><td><b>29</b></td><td>अभिनन्दन कुमार</td><td>10</td><td>20.0%</td></tr>
+        <tr><td><b>30</b></td><td>अशोक ठाकुर</td><td>10</td><td>20.0%</td></tr>
+        <tr><td><b>31</b></td><td>रूपेश कुमार</td><td>10</td><td>20.0%</td></tr>
+        <tr><td><b>32</b></td><td>राहुल कुमार</td><td>8</td><td>16.0%</td></tr>
+        <tr><td><b>33</b></td><td>कार्तिक कुमार</td><td>7</td><td>14.0%</td></tr>
+        <tr><td><b>34</b></td><td>आर्या कुमारी</td><td>6</td><td>12.0%</td></tr>
+        <tr><td><b>35</b></td><td>मिथुन कुमार</td><td>5</td><td>10.0%</td></tr>
+        <tr><td><b>36</b></td><td>अमन कुमार</td><td>4</td><td>8.0%</td></tr>
+        <tr><td><b>37</b></td><td>आँचल कुमारी</td><td>3</td><td>6.0%</td></tr>
+        <tr><td><b>38</b></td><td>सूरज यादव</td><td>3</td><td>6.0%</td></tr>
+        <tr><td><b>39</b></td><td>नन्दनी कुमारी</td><td>3</td><td>6.0%</td></tr>
+        <tr><td><b>40</b></td><td>शिव कुमार ठाकुर</td><td>1</td><td>2.0%</td></tr>
+        <tr><td><b>41</b></td><td>उमेश यादव</td><td>1</td><td>2.0%</td></tr>
       </tbody>
     </table>
   </div>
 </section>
 
-<!-- 2. 50-QUESTIONS LIVE CBT MOCK TEST ENGINE -->
-<section id="cbt-test">
-  <h2 class="section-head">📝 50 प्रश्न ऑनलाइन मॉक टेस्ट (लाइव स्कोरिंग)</h2>
-
-  <div class="card-box">
-    <div style="margin-bottom: 14px;">
-      <label>🎯 ऑनलाइन टेस्ट के लिए कक्षा व विषय चुनें:</label>
-      <select id="mockTestSelect" onchange="renderMockTest()">
-        <option value="test_10">कक्षा 10वीं — गणित एवं विज्ञान स्पेशल (50 वस्तुनिष्ठ प्रश्न)</option>
-        <option value="test_11">कक्षा 11वीं आर्ट्स — इतिहास एवं भूगोल स्पेशल (50 वस्तुनिष्ठ प्रश्न)</option>
-        <option value="test_9">कक्षा 9वीं — गणित एवं विज्ञान स्पेशल (50 वस्तुनिष्ठ प्रश्न)</option>
-        <option value="test_8">कक्षा 8वीं — JCERT गणित एवं विज्ञान स्पेशल (50 वस्तुनिष्ठ प्रश्न)</option>
-      </select>
-    </div>
-
-    <div class="quiz-header-bar">
-      <div class="quiz-title" id="quizNameDisplay">कक्षा 10वीं: 50 प्रश्न बोर्ड मॉक टेस्ट</div>
-      <div class="quiz-badge">कुल पूर्णांक: 50 | 1 अंक प्रति प्रश्न</div>
-    </div>
-
-    <!-- Questions Form -->
-    <form id="quizForm">
-      <div id="quizQuestionsContainer"></div>
-      
-      <div style="text-align: center; margin-top: 20px;">
-        <button type="button" class="btn" onclick="submitMockQuiz()" style="font-size: 15px; padding: 12px 28px;">
-          ✅ टेस्ट सबमिट करें और रिजल्ट देखें
-        </button>
-      </div>
-    </form>
-
-    <!-- Score Card Result -->
-    <div id="scoreCard" class="score-card">
-      <h3 style="color:#065f46; font-size:18px;">🎉 आपका टेस्ट सफलतापूर्वक पूरा हुआ!</h3>
-      <div class="score-num" id="scoreValue">0 / 50</div>
-      <p id="scorePercent" style="font-size:14px; color:#047857; margin-top:4px;"></p>
-      <div id="scoreFeedback" style="margin-top: 10px; font-weight:600;"></div>
-      <button class="btn btn-primary" onclick="resetQuiz()" style="margin-top: 14px;">🔄 पुनः टेस्ट दें</button>
-    </div>
+<!-- Real Photo Gallery (Google Drive Photos) -->
+<section id="gallery">
+  <h2 class="section-head">📸 कोचिंग टेस्ट एवं क्लासरूम गैलरी</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1m_si9bk4UZkq5M0e5Z5mL54eHdGZ4hPY" alt="Test 1"></div>
+    <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1pcj3JRZss8jCNilPi5jqEdNKJO4rTL3z" alt="Test 2"></div>
+    <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1y417WGK6EIp87SCGpyIJ7J6gtWJHyhw2" alt="Test 3"></div>
+    <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1Q9w4-yLD9MOcmaxcijHQINZ1pbUzVm1F" alt="Test 4"></div>
+    <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1wXjkJU0OiObKb5F1sz7DCLT5TySEvAQ-" alt="Test 5"></div>
   </div>
 </section>
 
-<!-- 3. CHAPTER-WISE VVI QUESTION BANK -->
-<section id="vvi-portal">
-  <h2 class="section-head">📚 न्यू NCERT / JCERT चैप्टर-वाइज VVI प्रश्न बैंक</h2>
-
-  <div class="card-box">
-    <div class="filter-grid">
-      <div>
-        <label>1. कक्षा चुनें</label>
-        <select id="vviClass" onchange="populateVVISubjects()">
-          <option value="">-- कक्षा चुनें --</option>
-          <option value="8">कक्षा 8वीं (JCERT झारखंड)</option>
-          <option value="9">कक्षा 9वीं (New NCERT)</option>
-          <option value="10">कक्षा 10वीं (New NCERT)</option>
-          <option value="11">कक्षा 11वीं (Arts NCERT)</option>
-        </select>
-      </div>
-
-      <div>
-        <label>2. विषय चुनें</label>
-        <select id="vviSubject" onchange="populateVVIChapters()">
-          <option value="">-- पहले कक्षा चुनें --</option>
-        </select>
-      </div>
-
-      <div>
-        <label>3. अध्याय चुनें</label>
-        <select id="vviChapter">
-          <option value="">-- पहले विषय चुनें --</option>
-        </select>
-      </div>
-    </div>
-
-    <div style="text-align:center;">
-      <button class="btn btn-primary" onclick="displayChapterVVI()">📖 इस अध्याय के प्रश्न देखें</button>
-    </div>
-  </div>
-
-  <div id="vviDisplayArea"></div>
-</section>
-
-<!-- 4. STUDY MATERIAL & REVISION NOTES -->
-<section id="materials">
-  <h2 class="section-head">📖 स्टडी मटेरियल एवं रिवीजन नोट्स</h2>
-  <div class="material-grid">
-    <div class="mat-card">
-      <h3>📐 गणित ऑल फॉर्मूला शीट</h3>
-      <p>कक्षा 8वीं, 9वीं और 10वीं के सभी महत्वपूर्ण सूत्र एवं शॉर्टकट ट्रिक्स।</p>
-      <a href="https://wa.me/917856902817?text=Sir%20Math%20Formula%20Sheet%20Chahiye" class="btn" target="_blank">PDF प्राप्त करें</a>
-    </div>
-
-    <div class="mat-card">
-      <h3>🔬 विज्ञान क्विक रिवीजन चार्ट</h3>
-      <p>रासायनिक अभिक्रियाएं, धातु-अधातु, प्रकाश और जैव प्रक्रम के सारगर्भित नोट्स।</p>
-      <a href="https://wa.me/917856902817?text=Sir%20Science%20Notes%20Chahiye" class="btn" target="_blank">PDF प्राप्त करें</a>
-    </div>
-
-    <div class="mat-card">
-      <h3>🌍 11th इतिहास व भूगोल सार</h3>
-      <p>मेसोपोटामिया, रोमन साम्राज्य, मानसून और भौतिक भूगोल के फ्लोचार्ट्स।</p>
-      <a href="https://wa.me/917856902817?text=Sir%2011th%20Arts%20Notes%20Chahiye" class="btn" target="_blank">PDF प्राप्त करें</a>
-    </div>
-
-    <div class="mat-card">
-      <h3>📝 बोर्ड मॉडल प्रश्न पत्र</h3>
-      <p>झारखंड बोर्ड (JAC) एवं NCERT नवीनतम पैटर्न पर आधारित 50-अंक टेस्ट पेपर।</p>
-      <a href="https://wa.me/917856902817?text=Sir%20Model%20Paper%20Chahiye" class="btn" target="_blank">PDF प्राप्त करें</a>
-    </div>
-  </div>
-</section>
-
-<!-- 5. COACHING ACTIVITIES -->
-<section id="activities">
-  <h2 class="section-head">🌟 कोचिंग की मुख्य विशेषताएं</h2>
-  <div class="act-grid">
-    <div class="act-card">
-      <h4>☀️ खुली हवा में अनुशासित टेस्ट</h4>
-      <p>छत पर शांत और परीक्षा हॉल जैसे माहौल में प्रत्येक रविवार 50 अंकों का टेस्ट।</p>
-    </div>
-    <div class="act-card">
-      <h4>🎯 शत-प्रतिशत न्यू सिलेबस</h4>
-      <p>हटाए गए अध्यायों को छोड़कर केवल नए NCERT एवं JCERT पैटर्न पर पढ़ाई।</p>
-    </div>
-    <div class="act-card">
-      <h4>📋 निष्पक्ष रैंकिंग व मेरिट</h4>
-      <p>टेस्ट के 24 घंटे के अंदर डिजिटल मेरिट लिस्ट जारी कर टॉपर्स को प्रोत्साहन।</p>
-    </div>
-    <div class="act-card">
-      <h4>💡 कमजोर छात्रों के लिए स्पेशल क्लास</h4>
-      <p>गणित और विज्ञान में बेसिक कॉन्सेप्ट्स को शून्य स्तर से सिखाने की व्यवस्था।</p>
-    </div>
-  </div>
-</section>
-
-<!-- 6. CONTACT -->
+<!-- Contact Section -->
 <section id="contact">
-  <div class="card-box" style="text-align:center;">
-    <h3 style="color:var(--primary); font-size:18px;">VIM CLASSES BELBATHAN</h3>
-    <p style="font-size:13.5px; color:var(--text-muted); margin:6px 0 14px;">
-      <b>संचालक व शिक्षक:</b> विकास सर | <b>पता:</b> कुशवाह टोला, बेलबथान, गोड्डा (झारखंड)
-    </p>
-    <a class="btn" href="https://wa.me/917856902817" target="_blank" style="padding:10px 20px;">
-      💬 WhatsApp पर सीधे जुड़ें: +91 7856902817
-    </a>
+  <div style="background:white; padding:18px; border-radius:8px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+    <h3 style="color:var(--primary); font-size:16px;">VIM CLASSES BELBATHAN</h3>
+    <p style="font-size:13px; color:var(--text-muted); margin:4px 0 10px;">शिक्षक: विकास सर | बेलबथान, गोड्डा (झारखंड)</p>
+    <a class="btn" href="https://wa.me/917856902817" target="_blank" rel="noopener noreferrer">WhatsApp: 7856902817</a>
   </div>
 </section>
 
 <footer>
   <p>© 2026 VIM CLASSES BELBATHAN | All Rights Reserved.</p>
-  <p style="margin-top:4px;">शिक्षा ही सफलता की सबसे बड़ी कुंजी है।</p>
 </footer>
 
-<!-- JAVASCRIPT LOGIC -->
 <script>
-// 1. Filter Student Names in Table
-function filterStudents() {
-  const query = document.getElementById("searchStudent").value.toLowerCase();
-  const rows = document.querySelectorAll("#rankTable tbody tr");
-  rows.forEach(r => {
-    const name = r.cells[1].textContent.toLowerCase();
-    r.style.display = name.includes(query) ? "" : "none";
-  });
-}
-
-// 2. 50-QUESTIONS MOCK TEST POOL (Accurate New NCERT / JCERT)
-const mockTestsData = {
-  // Class 10th 50 Questions (Math + Science)
-  "test_10": [
-    // Math 25
-    { q: "1. 96 और 404 का महत्तम समापवर्तक (HCF) क्या होगा?", opts: ["2", "4", "6", "8"], ans: 1 },
-    { q: "2. संख्या 140 को अभाज्य गुणनखंडों के गुणनफल के रूप में लिखा जा सकता है:", opts: ["2² × 5 × 7", "2³ × 5", "2 × 5² × 7", "2² × 7²"], ans: 0 },
-    { q: "3. द्विघात बहुपद x² - 2x - 8 के शून्यक क्या हैं?", opts: ["4 और -2", "-4 और 2", "4 और 2", "-4 और -2"], ans: 0 },
-    { q: "4. यदि α और β द्विघात बहुपद x² + 7x + 10 के शून्यक हों, तो (α + β) का मान क्या होगा?", opts: ["10", "-10", "7", "-7"], ans: 3 },
-    { q: "5. समीकरण युग्म a₁x + b₁y + c₁ = 0 तथा a₂x + b₂y + c₂ = 0 में यदि a₁/a₂ ≠ b₁/b₂ हो, तो हल होंगे:", opts: ["अपरिमित हल", "अद्वितीय हल (केवल एक)", "कोई हल नहीं", "दो हल"], ans: 1 },
-    { q: "6. द्विघात समीकरण 2x² - 4x + 3 = 0 का विविक्तकर (Discriminant, D) क्या होगा?", opts: ["-8", "8", "-16", "16"], ans: 0 },
-    { q: "7. समांतर श्रेढ़ी (A.P.) 2, 7, 12, ... का 10वाँ पद क्या होगा?", opts: ["45", "47", "49", "50"], ans: 1 },
-    { q: "8. प्रथम 10 प्राकृत संख्याओं का योग क्या होगा?", opts: ["50", "55", "60", "65"], ans: 1 },
-    { q: "9. सभी वृत्त परस्पर क्या होते हैं?", opts: ["सर्वांगसम", "समरूप", "समान", "असमान"], ans: 1 },
-    { q: "10. बिंदुओं (2, 3) और (4, 1) के बीच की दूरी क्या होगी?", opts: ["2√2 इकाई", "4 इकाई", "2 इकाई", "3√2 इकाई"], ans: 0 },
-    { q: "11. बिंदु P(-6, 8) की मूल बिंदु से दूरी क्या होगी?", opts: ["8", "6", "10", "14"], ans: 2 },
-    { q: "12. यदि sin A = 3/5 है, तो cos A का मान क्या होगा?", opts: ["4/5", "5/4", "3/4", "5/3"], ans: 0 },
-    { q: "13. tan 45° का मान कितना होता है?", opts: ["0", "1/√3", "1", "√3"], ans: 2 },
-    { q: "14. (1 + tan² θ) किसके बराबर होता है?", opts: ["sec² θ", "cosec² θ", "cot² θ", "cos² θ"], ans: 0 },
-    { q: "15. (sin² 30° + cos² 30°) का मान क्या है?", opts: ["0", "1/2", "1", "2"], ans: 2 },
-    { q: "16. भूमि से 60m ऊँचाई पर उड़ रही पतंग की डोरी का झुकाव 60° है। डोरी की लंबाई होगी:", opts: ["40√3 m", "30√3 m", "20√3 m", "80 m"], ans: 0 },
-    { q: "17. वृत्त के किसी बाह्य बिंदु से वृत्त पर कितनी स्पर्श रेखाएँ खींची जा सकती हैं?", opts: ["केवल 1", "केवल 2", "अनंत", "3"], ans: 1 },
-    { q: "18. वृत्त की स्पर्श रेखा स्पर्श बिंदु से होकर जाने वाली त्रिज्या पर क्या होती है?", opts: ["समांतर", "लंब", "45° पर झुकी", "संपाती"], ans: 1 },
-    { q: "19. त्रिज्या r वाले वृत्त के त्रिज्यखंड का क्षेत्रफल (कोण θ) होता है:", opts: ["(θ/360) × 2πr", "(θ/360) × πr²", "(θ/180) × πr²", "πr²"], ans: 1 },
-    { q: "20. यदि एक वृत्त का परिमाप और क्षेत्रफल संख्यात्मक रूप से बराबर हैं, तो त्रिज्या होगी:", opts: ["2 मात्रक", "π मात्रक", "4 मात्रक", "7 मात्रक"], ans: 0 },
-    { q: "21. 64 cm³ आयतन वाले घन की भुजा कितनी होगी?", opts: ["8 cm", "4 cm", "16 cm", "2 cm"], ans: 1 },
-    { q: "22. एक ठोस गोले को पिघलाकर तार बनाया जाता है, तो दोनों स्थितियों में क्या समान रहेगा?", opts: ["पृष्ठीय क्षेत्रफल", "आयतन", "वक्र पृष्ठ", "त्रिज्या"], ans: 1 },
-    { q: "23. आँकड़ों का माध्यक ज्ञात करने का संबंध: 3 × माध्यक = बहुलक + ?", opts: ["माध्य", "2 × माध्य", "3 × माध्य", "आधा माध्य"], ans: 1 },
-    { q: "24. किसी निश्चित घटना की प्रायिकता क्या होती है?", opts: ["0", "1", "0.5", "-1"], ans: 1 },
-    { q: "25. एक पासे को एक बार फेंकने पर विषम संख्या आने की प्रायिकता क्या होगी?", opts: ["1/2", "1/3", "1/6", "2/3"], ans: 0 },
-    // Science 25
-    { q: "26. Fe₂O₃ + 2Al → Al₂O₃ + 2Fe किस प्रकार की रासायनिक अभिक्रिया है?", opts: ["संयोजन", "द्विविस्थापन", "वियोजन", "विस्थापन अभिक्रिया"], ans: 3 },
-    { q: "27. चिप्स के पैकेट को उपचयन से बचाने के लिए कौन-सी गैस भरी जाती है?", opts: ["ऑक्सीजन", "नाइट्रोजन", "हाइड्रोजन", "क्लोरीन"], ans: 1 },
-    { q: "28. शुद्ध जल का pH मान कितना होता है?", opts: ["0", "7", "14", "1"], ans: 1 },
-    { q: "29. विरंजक चूर्ण (Bleaching Powder) का रासायनिक सूत्र क्या है?", opts: ["CaOCl₂", "CaCO₃", "Ca(OH)₂", "CaCl₂"], ans: 0 },
-    { q: "30. प्लास्टर ऑफ पेरिस का रासायनिक सूत्र क्या है?", opts: ["CaSO₄·2H₂O", "CaSO₄·½H₂O", "CuSO₄·5H₂O", "MgSO₄·7H₂O"], ans: 1 },
-    { q: "31. कौन-सी धातु कमरे के तापमान पर द्रव अवस्था में पाई जाती है?", opts: ["पारा (मरकरी)", "सोडियम", "लोहा", "ब्रोमीन"], ans: 0 },
-    { q: "32. सीसा एवं टिन की मिश्रधातु को क्या कहते हैं?", opts: ["सोल्डर", "कांसा", "पीतल", "स्टील"], ans: 0 },
-    { q: "33. ब्यूटेनॉन चतुर-कार्बन यौगिक है जिसका प्रकार्यात्मक समूह है:", opts: ["कार्बोक्सिलिक अम्ल", "एल्डिहाइड", "कीटोन", "ऐल्कोहॉल"], ans: 2 },
-    { q: "34. कार्बन की संयोजकता कितनी होती है?", opts: ["2", "3", "4", "5"], ans: 2 },
-    { q: "35. पत्तियों में गैसों का आदान-प्रदान किसके माध्यम से होता है?", opts: ["शिरा", "रंध्र (स्टोमेटा)", "मध्यशिरा", "जाइलम"], ans: 1 },
-    { q: "36. मानव हृदय में कितने कोष्ठक (Chambers) होते हैं?", opts: ["2", "3", "4", "5"], ans: 2 },
-    { q: "37. पादप में जाइलम का प्रमुख कार्य क्या है?", opts: ["जल का वहन", "भोजन का वहन", "अमीनो अम्ल का वहन", "ऑक्सीजन वहन"], ans: 0 },
-    { q: "38. वृक्क (Kidney) किस तंत्र की संरचनात्मक एवं क्रियात्मक इकाई है?", opts: ["श्वसन तंत्र", "उत्सर्जन तंत्र", "पाचन तंत्र", "परिसंचरण तंत्र"], ans: 1 },
-    { q: "39. तंत्रिका कोशिका (Neuron) के बीच के खाली स्थान को क्या कहते हैं?", opts: ["द्रुमिका", "सिनैप्स (Synapse)", "एक्सॉन", "आवेग"], ans: 1 },
-    { q: "40. इंसुलिन हॉर्मोन की कमी से कौन-सा रोग होता है?", opts: ["घेंघा", "मधुमेह (डायबिटीज)", "बौनापन", "रतौंधी"], ans: 1 },
-    { q: "41. अमीबा में जनन किस विधि द्वारा होता है?", opts: ["मुकुलन", "द्विखंडन (Binary Fission)", "पुनरुद्भवन", "बीजाणु"], ans: 1 },
-    { q: "42. मानव में गुणसूत्रों की संख्या कितने जोड़े होती है?", opts: ["22 जोड़े", "23 जोड़े (46)", "24 जोड़े", "20 जोड़े"], ans: 1 },
-    { q: "43. आनुवंशिकी का जनक किसे कहा जाता है?", opts: ["चार्ल्स डार्विन", "ग्रेगर जॉन मेंडल", "रॉबर्ट हुक", "लैमार्क"], ans: 1 },
-    { q: "44. निर्वात में प्रकाश की चाल कितनी होती है?", opts: ["3 × 10⁸ m/s", "3 × 10⁶ m/s", "3 × 10¹⁰ m/s", "3 × 10⁵ m/s"], ans: 0 },
-    { q: "45. दाढ़ी बनाने के लिए किस दर्पण का उपयोग किया जाता है?", opts: ["समतल दर्पण", "उत्तल दर्पण", "अवतल दर्पण", "गोलीय लेंस"], ans: 2 },
-    { q: "46. मानव नेत्र के किस भाग पर वस्तु का प्रतिबिंब बनता है?", opts: ["कॉर्निया", "परितारिका", "पुतली", "दृष्टिपटल (रेटिना)"], ans: 3 },
-    { q: "47. विद्युत धारा का SI मात्रक क्या होता है?", opts: ["वोल्ट", "एम्पीयर", "ओम", "वाट"], ans: 1 },
-    { q: "48. विद्युत प्रतिरोध का SI मात्रक क्या है?", opts: ["ओम (Ω)", "कूलॉम", "एम्पीयर", "जूल"], ans: 0 },
-    { q: "49. विद्युत बल्ब का तंतु (Filament) किस धातु का बना होता है?", opts: ["तांबा", "टंगस्टन", "लोहा", "नाइक्रोम"], ans: 1 },
-    { q: "50. ओजोन परत वायुमंडल में किससे हमारी रक्षा करती है?", opts: ["अवरक्त किरणों से", "पराबैंगनी (UV) किरणों से", "गामा किरणों से", "एक्स किरणों से"], ans: 1 }
+// STUDY MATERIAL DATA
+const studyData = {
+  "10_math": [
+    "<b>वास्तविक संख्याएँ:</b> यूक्लिड विभाजन प्रमेयिका $a = bq + r$, जहाँ $0 \\le r < b$। HCF × LCM = दो संख्याओं का गुणनफल।",
+    "<b>द्विघात बहुपद:</b> मानक रूप $ax^2 + bx + c = 0$। शून्यकों का योग $(\\alpha + \\beta) = -b/a$, शून्यकों का गुणनफल $(\\alpha\\beta) = c/a$।",
+    "<b>द्विघात समीकरण:</b> विविक्तकर $D = b^2 - 4ac$। यदि $D > 0$ तो वास्तविक व भिन्न मूल, $D = 0$ तो दो बराबर मूल, $D < 0$ तो कोई वास्तविक मूल नहीं।",
+    "<b>त्रिकोणमिति सूत्र:</b> $\\sin^2\\theta + \\cos^2\\theta = 1$, $1 + \\tan^2\\theta = \\sec^2\\theta$, $1 + \\cot^2\\theta = \\text{cosec}^2\\theta$।",
+    "<b>निर्देशांक ज्यामिति:</b> दूरी सूत्र = $\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$, मध्य बिंदु सूत्र = $((x_1+x_2)/2, (y_1+y_2)/2)$।"
   ],
-
-  // Class 11th Arts 50 Questions (History + Geography)
-  "test_11": [
-    // History 25
-    { q: "1. मेसोपोटामिया की सभ्यता किन दो नदियों की घाटी में फली-फूली?", opts: ["दजला और फरात", "नील और जायरे", "सिंधु और गंगा", "ह्वांगहो और यांग्त्सी"], ans: 0 },
-    { q: "2. मेसोपोटामिया में प्रयोग की जाने वाली लिपि का नाम क्या था?", opts: ["ब्राह्मी लिपि", "कीलाकार (Cuneiform)", "देवनागरी", "खरोष्ठी"], ans: 1 },
-    { q: "3. विश्व इतिहास में 'उर' और 'मारी' प्रसिद्ध नगर कहाँ स्थित थे?", opts: ["रोम में", "मेसोपोटामिया में", "मंगोलिया में", "मिस्र में"], ans: 1 },
-    { q: "4. हम्मुराबी की प्रसिद्ध विधि-संहिता का संबंध किस सभ्यता से है?", opts: ["बेबीलोन (मेसोपोटामिया)", "ग्रीक", "रोम", "चीन"], ans: 0 },
-    { q: "5. रोमन साम्राज्य का विस्तार किन तीन महाद्वीपों में था?", opts: ["यूरोप, पश्चिम एशिया व उत्तरी अफ्रीका", "यूरोप, अमेरिका व अफ्रीका", "एशिया, ऑस्ट्रेलिया व यूरोप", "अफ्रीका व अमेरिका"], ans: 0 },
-    { q: "6. रोमन साम्राज्य की प्रशासनिक व्यवस्था में 'प्रिंसिपेट' की स्थापना किसने की?", opts: ["जूलियस सीजर", "ऑगस्टस", "टाइबेरियस", "नीरो"], ans: 1 },
-    { q: "7. रोमन समाज में 'एमफोरा' शब्द का क्या तात्पर्य था?", opts: ["मिट्टी के बड़े मटके (कंटेनर)", "सैनिक दस्ता", "सोने का सिक्का", "गुलामों का दल"], ans: 0 },
-    { q: "8. मंगोल साम्राज्य का संस्थापक कौन था?", opts: ["चंगेज खान", "कुबलई खान", "बाबर", "तैमूर लंग"], ans: 0 },
-    { q: "9. मंगोलों की प्रसिद्ध सैनिक डाक व्यवस्था को क्या कहा जाता था?", opts: ["हरकारा पद्धति (Yam)", "उलूस", "यास", "कुरिलताई"], ans: 0 },
-    { q: "10. चंगेज खान की विधि-संहिता का क्या नाम था?", opts: ["यास (Yasa)", "शरिया", "मनुस्मृति", "प्रिंसिपिया"], ans: 0 },
-    { q: "11. मध्यकालीन यूरोप में समाज के 'तीन वर्ग' कौन-से थे?", opts: ["पादरी, अभिजात और कृषक", "राजा, सैनिक और व्यापारी", "ब्राह्मण, क्षत्रिय, वैश्य", "मालिक और गुलाम"], ans: 0 },
-    { q: "12. सामंती व्यवस्था में लॉर्ड के बड़े कृषि फार्म को क्या कहा जाता था?", opts: ["मैनर (Manor)", "गिल्ड", "फीफ", "चर्च"], ans: 0 },
-    { q: "13. यूरोप में 14वीं सदी में आई भयानक महामारी 'ब्लैक डेथ' क्या थी?", opts: ["ब्यूबोनिक प्लेग", "हैजा", "मलेरिया", "चेचक"], ans: 0 },
-    { q: "14. 'पुनर्जागरण' (Renaissance) का प्रारंभ सर्वप्रथम किस देश में हुआ?", opts: ["इंग्लैंड", "इटली", "फ्रांस", "जर्मनी"], ans: 1 },
-    { q: "15. 'द लास्ट सपर' और 'मोनालिसा' के चित्रकार कौन थे?", opts: ["माइकल एंजेलो", "लियोनार्डो दा विंची", "राफेल", "दान्ते"], ans: 1 },
-    { q: "16. यूरोप में प्रोटेस्टेंट धर्मसुधार आंदोलन का नेतृत्व किसने किया?", opts: ["मार्टिन लूथर", "जॉन कैल्विन", "इरास्मस", "पोप लियो"], ans: 0 },
-    { q: "17. आधुनिक छापेखाने (प्रिंटिंग प्रेस) का आविष्कार किसने किया था?", opts: ["गुटेनबर्ग", "न्यूटन", "जेम्स वाट", "गैलिलियो"], ans: 0 },
-    { q: "18. प्रथम औद्योगिक क्रांति 18वीं सदी में किस देश में प्रारंभ हुई?", opts: ["ब्रिटेन (इंग्लैंड)", "अमेरिका", "जर्मनी", "जापान"], ans: 0 },
-    { q: "19. जेम्स वाट ने किस यंत्र के डिजाइन में क्रांतिकारी सुधार किया था?", opts: ["भाप का इंजन", "कताई मशीन", "टेलीफोन", "रेल इंजन"], ans: 0 },
-    { q: "20. अमेरिका में 1840 के दशक में हुए 'गोल्ड रश' से क्या तात्पर्य है?", opts: ["सोने की खोज में यूरोपीय लोगों की भारी भीड़", "खेल प्रतियोगिता", "सोने का व्यापार", "युद्ध"], ans: 0 },
-    { q: "21. ऑस्ट्रेलिया के मूल निवासियों को किस नाम से जाना जाता है?", opts: ["एबोरिजिनल", "रेड इंडियन", "माओरी", "एस्किमो"], ans: 0 },
-    { q: "22. जापान में 1868 ई. की राजनीतिक क्रांति को किस नाम से जाना जाता है?", opts: ["मेइजी पुनर्स्थापना", "सामंती क्रांति", "ताइपिंग विद्रोह", "बॉक्सर विद्रोह"], ans: 0 },
-    { q: "23. आधुनिक चीन के राष्ट्रपिता और तीन सिद्धांतों (राष्ट्रवाद, लोकतंत्र, समाजवाद) के जनक कौन थे?", opts: ["डॉ. सन यात-सेन", "माओ त्से-तुंग", "च्यांग काई-शेक", "देंग शियाओपिंग"], ans: 0 },
-    { q: "24. माओ त्से-तुंग के नेतृत्व में 6000 मील की ऐतिहासिक यात्रा को क्या कहते हैं?", opts: ["द लॉन्ग मार्च (Long March)", "डांडी मार्च", "ग्रेट लीप", "सांस्कृतिक मार्च"], ans: 0 },
-    { q: "25. प्रथम अफीम युद्ध (1839-42) किन दो देशों के बीच लड़ा गया था?", opts: ["ब्रिटेन और चीन", "फ्रांस और चीन", "ब्रिटेन और भारत", "जापान और चीन"], ans: 0 },
-    // Geography 25
-    { q: "26. भौतिक भूगोल की कौन-सी शाखा भू-आकृतियों और उनके विकास का अध्ययन करती है?", opts: ["भू-आकृति विज्ञान (Geomorphology)", "जलवायु विज्ञान", "जल विज्ञान", "मृदा भूगोल"], ans: 0 },
-    { q: "27. पृथ्वी की सबसे आंतरिक परत 'क्रोड' मुख्य रूप से किन तत्वों से बनी है?", opts: ["सिलिका और एल्युमिनियम", "सिलिका और मैग्नीशियम", "निकेल और लोहा (Ni-Fe)", "लोहा और मैग्नीशियम"], ans: 2 },
-    { q: "28. कौन-सी भूकंपीय तरंगें केवल ठोस माध्यम से ही गुजर सकती हैं?", opts: ["P-तरंगें", "S-तरंगें", "L-तरंगें", "धरातलीय तरंगें"], ans: 1 },
-    { q: "29. महाद्वीपीय विस्थापन सिद्धांत (1912) के प्रस्तावक कौन थे?", opts: ["अल्फ्रेड वेगनर", "आर्थर होम्स", "हैरी हेस", "डब्ल्यू. जे. मॉर्गन"], ans: 0 },
-    { q: "30. जब दो विवर्तनिक प्लेटें एक-दूसरे की ओर गति करती हैं, तो सीमा कहलाती है:", opts: ["अपसारी सीमा", "अभिसारी सीमा (Convergent)", "रूपांतर सीमा", "स्थिर सीमा"], ans: 1 },
-    { q: "31. मैग्मा के ठंडा होकर जमने से किस प्रकार की शैल का निर्माण होता है?", opts: ["आग्नेय शैल (Igneous)", "अवसादी शैल", "कायांतरित शैल", "जीवाश्म शैल"], ans: 0 },
-    { q: "32. बहती हुई नदी अपनी युवावस्था में किस प्रकार की घाटी का निर्माण करती है?", opts: ["U-आकार की घाटी", "V-आकार की घाटी", "गोखुर झील", "तटबंध"], ans: 1 },
-    { q: "33. पवन द्वारा मरुस्थलीय क्षेत्रों में बनने वाली विशेष अपरदनात्मक आकृति कौन-सी है?", opts: ["छत्रक शैल (Mushroom Rock)", "जलप्रपात", "मोरेन", "स्टैलेक्टाइट"], ans: 0 },
-    { q: "34. वायुमंडल की सबसे निचली परत जिसमें मौसम संबंधी सभी घटनाएं होती हैं:", opts: ["क्षोभमंडल (Troposphere)", "समतापमंडल", "मध्यमंडल", "आयनमंडल"], ans: 0 },
-    { q: "35. वायुयान उड़ाने के लिए वायुमंडल की सबसे आदर्श परत कौन-सी मानी जाती है?", opts: ["समतापमंडल (Stratosphere)", "क्षोभमंडल", "बाह्यमंडल", "मध्यमंडल"], ans: 0 },
-    { q: "36. पृथ्वी द्वारा सूर्य से प्राप्त लघु तरंग सौर ऊर्जा को क्या कहते हैं?", opts: ["सूर्यातप (Insolation)", "पार्थिव विकिरण", "ऊष्मा बजट", "संवहन"], ans: 0 },
-    { q: "37. भूमध्य रेखा से ध्रुवों की ओर बहने वाली वैश्विक हवाएं क्या कहलाती हैं?", opts: ["सनातनी पवनें", "स्थानीय पवनें", "मानसूनी पवनें", "सामयिक पवनें"], ans: 0 },
-    { q: "38. गल्फ स्ट्रीम महासागरीय जलधारा किस प्रकृति की है?", opts: ["गर्म जलधारा", "ठंडी जलधारा", "तटवर्ती धारा", "गहरी धारा"], ans: 0 },
-    { q: "39. पूर्णिमा और अमावस्या के दिन आने वाले सबसे ऊंचे ज्वार को क्या कहते हैं?", opts: ["वृहत् ज्वार (Spring Tide)", "लघु ज्वार", "दैनिक ज्वार", "विषुवतीय ज्वार"], ans: 0 },
-    { q: "40. भारत का मानक याम्योत्तर (Standard Meridian) देशांतर कौन-सा है?", opts: ["82°30' पूर्व", "68°7' पूर्व", "97°25' पूर्व", "80°0' पूर्व"], ans: 0 },
-    { q: "41. भारत की मुख्य भूमि का दक्षिणी छोर कौन-सा है?", opts: ["कन्याकुमारी", "इंदिरा पॉइंट", "लक्षद्वीप", "रामेश्वरम"], ans: 0 },
-    { q: "42. विश्व की सबसे प्राचीन वलित पर्वत श्रृंखला कौन-सी है?", opts: ["अरावली", "हिमालय", "सतपुड़ा", "पश्चिमी घाट"], ans: 0 },
-    { q: "43. हिमालय की सबसे उत्तरी एवं सर्वोच्च श्रृंखला को क्या कहा जाता है?", opts: ["हिमाद्रि (महान हिमालय)", "हिमाचल", "शिवालिक", "पीर पंजाल"], ans: 0 },
-    { q: "44. दक्षिण भारत की सबसे लंबी नदी कौन-सी है जिसे 'वृद्ध गंगा' भी कहते हैं?", opts: ["गोदावरी", "कृष्णा", "कावेरी", "महानदी"], ans: 0 },
-    { q: "45. गंगा और ब्रह्मपुत्र नदियाँ मिलकर विश्व के किस विशालतम डेल्टा का निर्माण करती हैं?", opts: ["सुंदरवन डेल्टा", "महानदी डेल्टा", "मिसिसिपी डेल्टा", "कावेरी डेल्टा"], ans: 0 },
-    { q: "46. भारत में ग्रीष्म ऋतु में चलने वाली गर्म एवं शुष्क हवाओं को क्या कहते हैं?", opts: ["लू (Loo)", "काल बैसाखी", "मैंगो शावर", "चेरी ब्लॉसम"], ans: 0 },
-    { q: "47. भारत में लौटते मानसून (उत्तर-पूर्वी मानसून) से किस राज्य के तट पर सर्वाधिक वर्षा होती है?", opts: ["तमिलनाडु (कोरोमंडल तट)", "केरल", "महाराष्ट्र", "गुजरात"], ans: 0 },
-    { q: "48. कपास की खेती के लिए सबसे उपयुक्त एवं उपजाऊ मिट्टी कौन-सी मानी जाती है?", opts: ["काली मृदा (रेगुर)", "जलोढ़ मृदा", "लाल मृदा", "लैटेराइट मृदा"], ans: 0 },
-    { q: "49. भारत में चंदन के वृक्ष मुख्य रूप से किस प्रकार के वनों में पाए जाते हैं?", opts: ["उष्णकटिबंधीय पर्णपाती वन", "सदाबहार वन", "कंटीले वन", "पर्वतीय वन"], ans: 0 },
-    { q: "50. काजीरंगा राष्ट्रीय उद्यान (असम) मुख्य रूप से किसके संरक्षण के लिए प्रसिद्ध है?", opts: ["एक सींग वाला गैंडा", "रॉयल बंगाल टाइगर", "एशियाई शेर", "हाथी"], ans: 0 }
+  "10_science": [
+    "<b>रासायनिक अभिक्रियाएँ:</b> संयोजन, वियोजन, विस्थापन एवं द्विविस्थापन अभिक्रियाएँ। संक्षारण रोकने के लिए जस्तीकरण (Galvanization) किया जाता है।",
+    "<b>अम्ल एवं क्षार:</b> शुद्ध जल का pH मान 7 होता है। अम्ल नीले लिटमस को लाल और क्षार लाल लिटमस को नीला करता है। बेकिंग सोडा का सूत्र $\\text{NaHCO}_3$ है।",
+    "<b>जैव प्रक्रम:</b> पादपों में जाइलम जल का वहन करता है और फ्लोएम भोजन का। मानव हृदय 4 कोष्ठों में विभाजित होता है।",
+    "<b>प्रकाशिकी:</b> समतल दर्पण का आवर्धन हमेशा +1 होता है। गाड़ियों में पीछे देखने के लिए उत्तल दर्पण का प्रयोग होता है।"
   ],
-
-  // Class 9th 50 Questions
-  "test_9": [
-    { q: "1. क्या शून्य (0) एक परिमेय संख्या है?", opts: ["हाँ", "नहीं", "अपरिमेय है", "प्राकृत संख्या नहीं"], ans: 0 },
-    { q: "2. 3 और 4 के बीच एक परिमेय संख्या है:", opts: ["7/2", "5/2", "3/2", "9/2"], ans: 0 },
-    { q: "3. 0.3333... का p/q रूप क्या होगा?", opts: ["1/3", "3/10", "3/100", "1/9"], ans: 0 },
-    { q: "4. (64)^(1/2) का मान क्या होगा?", opts: ["8", "16", "32", "4"], ans: 0 },
-    { q: "5. बहुपद p(x) = 5x - 4x² + 3 का मान x = 0 पर होगा:", opts: ["3", "-3", "5", "0"], ans: 0 },
-    { q: "6. बहुपद 2x + 1 का शून्यक क्या है?", opts: ["-1/2", "1/2", "-2", "2"], ans: 0 },
-    { q: "7. x³ + 1 को (x + 1) से भाग देने पर शेषफल होगा:", opts: ["0", "1", "-1", "2"], ans: 0 },
-    { q: "8. मूल बिंदु के निर्देशांक क्या होते हैं?", opts: ["(0, 0)", "(1, 1)", "(0, 1)", "(1, 0)"], ans: 0 },
-    { q: "9. बिंदु (-3, 5) किस चतुर्थांश में स्थित है?", opts: ["द्वितीय चतुर्थांश", "प्रथम चतुर्थांश", "तृतीय चतुर्थांश", "चतुर्थ चतुर्थांश"], ans: 0 },
-    { q: "10. समीकरण 2x + y = 7 का एक हल है:", opts: ["(2, 3)", "(1, 4)", "(3, 2)", "(0, 5)"], ans: 0 },
-    { q: "11. यूक्लिड किस देश के गणितज्ञ थे?", opts: ["यूनान (ग्रीस)", "भारत", "मिस्र", "रोम"], ans: 0 },
-    { q: "12. दो परस्पर लंब रेखाओं के बीच का कोण होता है:", opts: ["90°", "180°", "60°", "45°"], ans: 0 },
-    { q: "13. त्रिभुज के तीनों अंतःकोणों का योग कितना होता है?", opts: ["180°", "360°", "90°", "270°"], ans: 0 },
-    { q: "14. समबाहु त्रिभुज का प्रत्येक कोण कितने अंश का होता है?", opts: ["60°", "45°", "90°", "30°"], ans: 0 },
-    { q: "15. चतुर्भुज के चारों कोणों का योग कितना होता है?", opts: ["360°", "180°", "540°", "720°"], ans: 0 },
-    { q: "16. वृत्त की सबसे बड़ी जीवा को क्या कहते हैं?", opts: ["व्यास", "त्रिज्या", "चाप", "स्पर्श रेखा"], ans: 0 },
-    { q: "17. अर्धवृत्त का कोण सदैव क्या होता है?", opts: ["समकोण (90°)", "न्यूनकोण", "अधिककोण", "सरलकोण"], ans: 0 },
-    { q: "18. हीरोन के सूत्र में s = क्या होता है?", opts: ["(a + b + c)/2", "a + b + c", "(a + b)/2", "abc/2"], ans: 0 },
-    { q: "19. भुजा a वाले समबाहु त्रिभुज का क्षेत्रफल क्या है?", opts: ["(√3/4) a²", "(1/2) a²", "(√3/2) a²", "a²"], ans: 0 },
-    { q: "20. एक शंकु का आयतन बेलन के आयतन का कितना भाग होता है?", opts: ["1/3 भाग", "1/2 भाग", "बराबर", "दो गुना"], ans: 0 },
-    { q: "21. गोले का पृष्ठीय क्षेत्रफल क्या होता है?", opts: ["4πr²", "2πr²", "3πr²", "(4/3)πr³"], ans: 0 },
-    { q: "22. प्रथम पाँच प्राकृत संख्याओं का माध्य क्या होगा?", opts: ["3", "2.5", "4", "5"], ans: 0 },
-    { q: "23. आँकड़ों 2, 3, 3, 4, 3, 5 का बहुलक क्या है?", opts: ["3", "2", "4", "5"], ans: 0 },
-    { q: "24. किसी त्रिभुज की किन्हीं दो भुजाओं का योग तीसरी भुजा से क्या होता है?", opts: ["बड़ा होता है", "छोटा होता है", "बराबर होता है", "शून्य होता है"], ans: 0 },
-    { q: "25. 13² - 12² का मान क्या होगा?", opts: ["25", "1", "169", "144"], ans: 0 },
-    // Science 25
-    { q: "26. बर्फ का गलनांक कितना होता है?", opts: ["0°C (273 K)", "100°C", "373 K", "-10°C"], ans: 0 },
-    { q: "27. शुष्क बर्फ (Dry Ice) किसे कहते हैं?", opts: ["ठोस CO₂", "ठोस जल", "तरल नाइट्रोजन", "ठोस SO₂"], ans: 0 },
-    { q: "28. टिंडल प्रभाव किसके द्वारा प्रदर्शित होता है?", opts: ["कोलॉइड विलयन द्वारा", "सच्चे विलयन द्वारा", "शुद्ध जल द्वारा", "नमक के घोल द्वारा"], ans: 0 },
-    { q: "29. जल (H₂O) में हाइड्रोजन और ऑक्सीजन का द्रव्यमान अनुपात क्या है?", opts: ["1:8", "1:2", "8:1", "2:1"], ans: 0 },
-    { q: "30. सोडियम का सही रासायनिक प्रतीक क्या है?", opts: ["Na", "So", "S", "Sd"], ans: 0 },
-    { q: "31. कैथोड किरणें किसकी बनी होती हैं?", opts: ["इलेक्ट्रॉनों की", "प्रोटॉनों की", "न्यूट्रॉनों की", "गामा किरणों की"], ans: 0 },
-    { q: "32. परमाणु के नाभिक में कौन-से कण उपस्थित होते हैं?", opts: ["प्रोटॉन और न्यूट्रॉन", "केवल इलेक्ट्रॉन", "इलेक्ट्रॉन व प्रोटॉन", "केवल न्यूट्रॉन"], ans: 0 },
-    { q: "33. कोशिका की खोज सर्वप्रथम किसने की?", opts: ["रॉबर्ट हुक ने (1665)", "रॉबर्ट ब्राउन ने", "श्वान ने", "ल्यूवेनहॉक ने"], ans: 0 },
-    { q: "34. कोशिका की 'आत्मघाती थैली' किसे कहते हैं?", opts: ["लाइसोसोम को", "माइटोकॉन्ड्रिया को", "राइबोसोम को", "लवक को"], ans: 0 },
-    { q: "35. प्रोटीन संश्लेषण कोशिका के किस अंगक में होता है?", opts: ["राइबोसोम में", "लाइसोसोम में", "रसधानी में", "गॉल्जीकाय में"], ans: 0 },
-    { q: "36. पौधों में लचीलापन किस सरल स्थायी ऊतक के कारण होता है?", opts: ["कॉलेन्काइमा", "पैरेन्काइमा", "स्क्लेरेन्काइमा", "जाइलम"], ans: 0 },
-    { q: "37. रक्त किस प्रकार का ऊतक है?", opts: ["संयोजी ऊतक", "उपकला ऊतक", "पेशी ऊतक", "तंत्रिका ऊतक"], ans: 0 },
-    { q: "38. चाल और वेग का SI मात्रक क्या होता है?", opts: ["m/s", "km/h", "m/s²", "m·s"], ans: 0 },
-    { q: "39. वेग में परिवर्तन की दर को क्या कहते हैं?", opts: ["त्वरण (Acceleration)", "चाल", "संवेग", "विस्थापन"], ans: 0 },
-    { q: "40. बल (Force) का SI मात्रक क्या होता है?", opts: ["न्यूटन (N)", "जूल", "पास्कल", "वाट"], ans: 0 },
-    { q: "41. गति का प्रथम नियम किस नाम से जाना जाता है?", opts: ["जड़त्व का नियम", "संवेग का नियम", "क्रिया-प्रतिक्रिया नियम", "गुरुत्व नियम"], ans: 0 },
-    { q: "42. संवेग (Momentum) का SI मात्रक क्या है?", opts: ["kg m/s", "kg m/s²", "N s²", "Joule"], ans: 0 },
-    { q: "43. सार्वत्रिक गुरुत्वाकर्षण नियतांक (G) का मान किसने ज्ञात किया?", opts: ["हेनरी कैवेंडिश ने", "न्यूटन ने", "गैलिलियो ने", "आइंस्टीन ने"], ans: 0 },
-    { q: "44. पृथ्वी की सतह पर गुरुत्वीय त्वरण (g) का औसत मान क्या है?", opts: ["9.8 m/s²", "9.8 cm/s²", "98 m/s²", "0 m/s²"], ans: 0 },
-    { q: "45. किसी वस्तु का चंद्रमा पर भार पृथ्वी के भार का कितना होता है?", opts: ["1/6 भाग", "1/2 भाग", "बराबर", "6 गुना"], ans: 0 },
-    { q: "46. कार्य का SI मात्रक क्या है?", opts: ["जूल (J)", "वाट", "न्यूटन", "पास्कल"], ans: 0 },
-    { q: "47. गतिज ऊर्जा (K.E.) का सूत्र क्या है?", opts: ["1/2 mv²", "mgh", "mv", "mas"], ans: 0 },
-    { q: "48. ध्वनि तरंगें किस प्रकार की तरंगें हैं?", opts: ["अनुदैर्ध्य यांत्रिक तरंगें", "अनुप्रस्थ तरंगें", "विद्युत चुंबकीय तरंगें", "प्रकाश तरंगें"], ans: 0 },
-    { q: "49. सामान्य मानव कान की श्रव्यता सीमा (Audible Range) क्या है?", opts: ["20 Hz से 20,000 Hz", "2 Hz से 20 Hz", "20,000 Hz से अधिक", "10 Hz से 100 Hz"], ans: 0 },
-    { q: "50. खरीफ फसल का प्रमुख उदाहरण कौन-सा है?", opts: ["धान (चावल)", "गेहूँ", "चना", "सरसों"], ans: 0 }
+  "10_sst": [
+    "<b>यूरोप में राष्ट्रवाद:</b> 'यंग इटली' और 'यंग यूरोप' की स्थापना जोसेफ मेत्सिनी ने की थी। जर्मनी का एकीकरण बिस्मार्क के नेतृत्व में हुआ।",
+    "<b>भारत में राष्ट्रवाद:</b> 13 अप्रैल 1919 को अमृतसर में जालियांवाला बाग हत्याकांड हुआ। गांधीजी ने 1930 में दांडी यात्रा से सविनय अवज्ञा आंदोलन शुरू किया।",
+    "<b>संसाधन एवं विकास:</b> काली मिट्टी को 'रेगुर मिट्टी' भी कहते हैं जो कपास की खेती के लिए सर्वोत्तम होती है।",
+    "<b>लोकतंत्र एवं अर्थव्यवस्था:</b> भारत में त्रि-स्तरीय पंचायती राज व्यवस्था लागू है। भारत में मुद्रा नोट RBI जारी करता है।"
   ],
-
-  // Class 8th 50 Questions (JCERT Math + Science)
-  "test_8": [
-    // Math 25
-    { q: "1. परिमेय संख्या 5/9 का योज्य प्रतिलोम (Additive Inverse) क्या होगा?", opts: ["-5/9", "9/5", "-9/5", "1"], ans: 0 },
-    { q: "2. परिमेय संख्या -8/13 का गुणात्मक प्रतिलोम क्या होगा?", opts: ["-13/8", "13/8", "8/13", "1"], ans: 0 },
-    { q: "3. समीकरण 2x - 3 = 7 में x का मान क्या होगा?", opts: ["5", "2", "4", "10"], ans: 0 },
-    { q: "4. किसी बहुभुज के सभी बाह्य कोणों का योग कितना होता है?", opts: ["360°", "180°", "540°", "90°"], ans: 0 },
-    { q: "5. एक समचतुर्भुज के विकर्ण परस्पर किस कोण पर काटते हैं?", opts: ["90° (समकोण)", "60°", "45°", "180°"], ans: 0 },
-    { q: "6. संख्या 25 का वर्ग क्या होगा?", opts: ["625", "225", "125", "50"], ans: 0 },
-    { q: "7. संख्या 64 का वर्गमूल क्या है?", opts: ["8", "16", "4", "32"], ans: 0 },
-    { q: "8. संख्या 5 का घन (5³) क्या होगा?", opts: ["125", "25", "75", "15"], ans: 0 },
-    { q: "9. संख्या 216 का घनमूल क्या होगा?", opts: ["6", "4", "8", "16"], ans: 0 },
-    { q: "10. 100 रु. पर 10% वार्षिक दर से 1 वर्ष का साधारण ब्याज होगा:", opts: ["10 रु.", "20 रु.", "5 रु.", "100 रु."], ans: 0 },
-    { q: "11. अंकित मूल्य पर दी जाने वाली छूट को क्या कहते हैं?", opts: ["बट्टा (Discount)", "ब्याज", "हानि", "लाभ"], ans: 0 },
-    { q: "12. व्यंजक 4x + 5 में 'x' का गुणांक क्या है?", opts: ["4", "5", "1", "0"], ans: 0 },
-    { q: "13. सर्वसमिका (a + b)² का विस्तार क्या है?", opts: ["a² + 2ab + b²", "a² - 2ab + b²", "a² + b²", "2a + 2b"], ans: 0 },
-    { q: "14. बेलन का कुल पृष्ठीय क्षेत्रफल क्या होता है?", opts: ["2πr(r + h)", "2πrh", "πr²h", "πrl"], ans: 0 },
-    { q: "15. घनाभ का आयतन क्या होता है?", opts: ["l × b × h", "2(lb + bh + hl)", "l³", "l + b + h"], ans: 0 },
-    { q: "16. किसी भी संख्या की घात 0 होने पर (जैसे 7⁰) मान क्या होता है?", opts: ["1", "0", "7", "अपरिभाषित"], ans: 0 },
-    { q: "17. (2⁻³) का मान क्या होगा?", opts: ["1/8", "8", "-8", "-6"], ans: 0 },
-    { q: "18. यदि 10 कलम का मूल्य 50 रु. है, तो 15 कलम का मूल्य क्या होगा?", opts: ["75 रु.", "60 रु.", "80 रु.", "100 रु."], ans: 0 },
-    { q: "19. व्यंजक 12x²y का अभाज्य गुणनखंडन क्या है?", opts: ["2 × 2 × 3 × x × x × y", "4 × 3 × x² × y", "2 × 6 × xy", "12 × x²y"], ans: 0 },
-    { q: "20. आँकड़ों 5, 8, 12, 15 का परिसर (Range) क्या होगा?", opts: ["10 (15 - 5)", "5", "15", "8"], ans: 0 },
-    { q: "21. एक सिक्के को उछालने पर 'चित' (Head) आने की प्रायिकता क्या है?", opts: ["1/2", "1", "0", "2"], ans: 0 },
-    { q: "22. एक पासे पर संख्या 7 आने की प्रायिकता क्या होगी?", opts: ["0 (असंभव घटना)", "1/6", "1", "7/6"], ans: 0 },
-    { q: "23. एक सम पंचभुज में कितनी भुजाएं होती हैं?", opts: ["5", "6", "4", "8"], ans: 0 },
-    { q: "24. ऑयलर सूत्र F + V - E किसके बराबर होता है?", opts: ["2", "0", "1", "-2"], ans: 0 },
-    { q: "25. बिंदु (4, 0) किस अक्ष पर स्थित है?", opts: ["X-अक्ष पर", "Y-अक्ष पर", "मूल बिंदु पर", "किसी पर नहीं"], ans: 0 },
-    // Science 25 (JCERT)
-    { q: "26. कोशिका की खोज किस अंग्रेज वैज्ञानिक ने की थी?", opts: ["रॉबर्ट हुक", "रॉबर्ट ब्राउन", "एडवर्ड जेनर", "लुई पाश्चर"], ans: 0 },
-    { q: "27. कोशिका में आनुवंशिक गुणों का वाहक कौन होता है?", opts: ["जीन / गुणसूत्र", "माइटोकॉन्ड्रिया", "कोशिका भित्ति", "रसधानी"], ans: 0 },
-    { q: "28. धातुओं को पीटकर चादर बनाने के गुण को क्या कहते हैं?", opts: ["आघातवर्ध्यनीयता", "तन्यता", "ध्वानिक", "चालकता"], ans: 0 },
-    { q: "29. कौन-सी अधातु विद्युत की सुचालक होती है?", opts: ["ग्रेफाइट", "हीरा", "सल्फर", "फास्फोरस"], ans: 0 },
-    { q: "30. ब्रेड अथवा इडली की लोई फूलने का कारण क्या है?", opts: ["यीस्ट कोशिकाओं की वृद्धि", "उष्णता", "पीसना", "दूध"], ans: 0 },
-    { q: "31. चेचक के टीके की खोज किसने की थी?", opts: ["एडवर्ड जेनर ने", "लुई पाश्चर ने", "अलेक्जेंडर फ्लेमिंग ने", "रॉबर्ट कोच ने"], ans: 0 },
-    { q: "32. पेनिसिलिन नामक प्रतिजैविक (एंटीबायोटिक) की खोज किसने की?", opts: ["अलेक्जेंडर फ्लेमिंग", "एडवर्ड जेनर", "रॉबर्ट हुक", "ल्यूवेनहॉक"], ans: 0 },
-    { q: "33. मलेरिया परजीवी का वाहक कौन-सा मच्छर है?", opts: ["मादा एनाफिलीnative mosquito", "मादा एडीज", "घरेलू मक्खी", "तिलचट्टा"], ans: 0 },
-    { q: "34. संचरणीय रोगों का सबसे प्रमुख मुख्य कारक कौन है?", opts: ["घरेलू मक्खी", "चींटी", "ड्रैगन मक्खी", "मकड़ी"], ans: 0 },
-    { q: "35. बल क्या है?", opts: ["खिंचाव या धक्का", "केवल ऊर्जा", "केवल दबाव", "गति"], ans: 0 },
-    { q: "36. दाब का सूत्र क्या होता है?", opts: ["दाब = बल / क्षेत्रफल", "दाब = बल × क्षेत्रफल", "दाब = क्षेत्रफल / बल", "दाब = द्रव्यमान × त्वरण"], ans: 0 },
-    { q: "37. घर्षण को कम करने वाले पदार्थों को क्या कहते हैं?", opts: ["स्नेहक (Lubricants)", "घर्षक", "ईंधन", "चालक"], ans: 0 },
-    { q: "38. ध्वनि संचरित हो सकती है:", opts: ["ठोस, द्रव तथा गैस तीनों में", "केवल ठोस में", "केवल गैस में", "केवल निर्वात में"], ans: 0 },
-    { q: "39. कंपनों की आवृत्ति का मात्रक क्या होता है?", opts: ["हर्ट्ज़ (Hz)", "डेसिबल (dB)", "मीटर", "सेकंड"], ans: 0 },
-    { q: "40. ध्वनि की प्रबलता किस पर निर्भर करती है?", opts: ["आयाम (Amplitude) पर", "आवृत्ति पर", "तारत्व पर", "चाल पर"], ans: 0 },
-    { q: "41. आसुत जल (Distilled Water) विद्युत का क्या होता है?", opts: ["हीन चालक (कुचालक)", "सुचालक", "अतिचालक", "अर्धचालक"], ans: 0 },
-    { q: "42. लोहे को जंग से बचाने के लिए उस पर जस्ते की परत चढ़ाना क्या कहलाता है?", opts: ["विद्युत लेपन (यशदलेपन)", "पेंटिंग", "संक्षारण", "अपचयन"], ans: 0 },
-    { q: "43. भूकंप की तीव्रता मापने वाला पैमाना क्या कहलाता है?", opts: ["रिक्टर पैमाना (Richter Scale)", "बैरोमीटर", "थर्मामीटर", "अमीटर"], ans: 0 },
-    { q: "44. आपतन कोण सदैव किस कोण के बराबर होता है?", opts: ["परावर्तन कोण के", "अपवर्तन कोण के", "90° के", "क्रांतिक कोण के"], ans: 0 },
-    { q: "45. नेत्रदान में आँख के किस पारदर्शी भाग का दान किया जाता है?", opts: ["कॉर्निया का", "रेटिना का", "लेंस का", "पुतली का"], ans: 0 },
-    { q: "46. सौर परिवार का सबसे बड़ा ग्रह कौन-सा है?", opts: ["बृहस्पति (Jupiter)", "शनि", "पृथ्वी", "मंगल"], ans: 0 },
-    { q: "47. लाल ग्रह (Red Planet) के नाम से किसे जाना जाता है?", opts: ["मंगल ग्रह", "शुक्र ग्रह", "बुध ग्रह", "बृहस्पति"], ans: 0 },
-    { q: "48. दहन के लिए कौन-सी गैस अत्यंत आवश्यक है?", opts: ["ऑक्सीजन (O₂)", "नाइट्रोजन", "कार्बन डाइऑक्साइड", "हीलियम"], ans: 0 },
-    { q: "49. विश्व ऊष्णन (Global Warming) के लिए मुख्य रूप से उत्तरदायी गैस कौन-सी है?", opts: ["कार्बन डाइऑक्साइड (CO₂)", "नाइट्रोजन", "ऑक्सीजन", "ओजोन"], ans: 0 },
-    { q: "50. झारखंड राज्य का राजकीय पशु कौन-सा है?", opts: ["हाथी", "बाघ", "हिरण", "शेर"], ans: 0 }
+  "9_math": [
+    "<b>संख्या पद्धति:</b> प्रत्येक प्राकृत संख्या एक पूर्ण संख्या होती है। $0$ एक परिमेय संख्या है क्योंकि इसे $0/1$ लिखा जा सकता है।",
+    "<b>बहुपद:</b> $x^2 - y^2 = (x - y)(x + y)$, $(x + y)^3 = x^3 + y^3 + 3xy(x + y)$।",
+    "<b>निर्देशांक ज्यामिति:</b> क्षैतिज रेखा को $x$-अक्ष तथा ऊर्ध्वाधर रेखा को $y$-अक्ष कहते हैं। मूल बिंदु के निर्देशांक $(0, 0)$ होते हैं।",
+    "<b>हीरोन का सूत्र:</b> त्रिभुज का क्षेत्रफल = $\\sqrt{s(s-a)(s-b)(s-c)}$, जहाँ अर्धपरिमाप $s = (a+b+c)/2$।"
+  ],
+  "9_science": [
+    "<b>पदार्थ:</b> ठोस से सीधे गैस बनने की क्रिया को उर्ध्वपातन (Sublimation) कहते हैं। जल का क्वथनांक 373 K (100°C) होता है।",
+    "<b>कोशिका:</b> कोशिका की खोज रॉबर्ट हुक ने 1665 में की। माइटोकॉन्ड्रिया को कोशिका का 'बिजलीघर' तथा लाइसोसोम को 'आत्मघाती थैली' कहते हैं।",
+    "<b>गति एवं बल:</b> त्वरण = वेग परिवर्तन / समय ($a = (v-u)/t$)। बल का SI मात्रक न्यूटन (N) होता है ($F = ma$)।",
+    "<b>गुरुत्वाकर्षण:</b> गुरुत्वीय त्वरण $g = 9.8\\text{ m/s}^2$। सार्वत्रिक गुरुत्वाकर्षण नियतांक $G = 6.67 \\times 10^{-11}\\text{ N m}^2/\\text{kg}^2$।"
+  ],
+  "8_math": [
+    "<b>परिमेय संख्याएँ:</b> योज्य तत्समक 0 और गुणात्मक तत्समक 1 होता है। $-a/b$ का योज्य प्रतिलोम $a/b$ होता है।",
+    "<b>समीकरण एवं वर्गमूल:</b> $2x - 3 = 7 \\implies 2x = 10 \\implies x = 5$। 729 का वर्गमूल 27 और 512 का घनमूल 8 होता है।",
+    "<b>क्षेत्रमिति एवं घातांक:</b> समचतुर्भुज का क्षेत्रफल = $\\frac{1}{2} \\times d_1 \\times d_2$। किसी संख्या की घात 0 होने पर उसका मान 1 होता है ($a^0 = 1$)।"
+  ],
+  "11_arts_sst": [
+    "<b>इतिहास:</b> मेसोपोटामिया सभ्यता दजला और फरात नदियों के बीच विकसित हुई। इसकी प्रसिद्ध लिपि कीलाकार (Cuneiform) थी।",
+    "<b>राजनीति विज्ञान:</b> संविधान सभा की पहली बैठक 9 दिसंबर 1946 को हुई थी। प्रारूप समिति के अध्यक्ष डॉ. भीमराव अम्बेडकर थे।",
+    "<b>भूगोल:</b> 'भूगोल' शब्द इरैटोस्थनीज ने दिया। पृथ्वी की सबसे आंतरिक परत को क्रोड (Core/Nife) कहा जाता है।",
+    "<b>अर्थशास्त्र:</b> अर्थशास्त्र को 'धन का विज्ञान' एडम स्मिथ ने कहा। भारत में नई आर्थिक नीति 1991 में लागू की गई।"
   ]
 };
 
-// 3. Render 50 Mock Quiz
-let currentAnswers = {};
+function loadStudyMaterial() {
+  const cls = document.getElementById("smClassSelect").value;
+  const sub = document.getElementById("smSubjectSelect").value;
+  const output = document.getElementById("study-content-area");
 
-function renderMockTest() {
-  const testKey = document.getElementById("mockTestSelect").value;
-  const list = mockTestsData[testKey] || [];
-  const container = document.getElementById("quizQuestionsContainer");
-  const quizTitle = document.getElementById("mockTestSelect").selectedOptions[0].text;
-  document.getElementById("quizNameDisplay").textContent = quizTitle;
+  if (!cls || !sub) {
+    output.innerHTML = "<p style='text-align:center; color:var(--danger); font-size:13px;'>कृपया कक्षा और विषय दोनों का चयन करें।</p>";
+    return;
+  }
 
-  currentAnswers = {};
-  document.getElementById("scoreCard").style.display = "none";
+  const key = `${cls}_${sub}`;
+  const notes = studyData[key];
 
-  let html = "";
-  list.forEach((item, qIndex) => {
-    html += `
-      <div class="q-item" id="q-box-${qIndex}">
-        <div class="q-title">${item.q}</div>
-        <div class="options-container">
-          ${item.opts.map((opt, optIndex) => `
-            <label class="opt-label" id="lbl-${qIndex}-${optIndex}">
-              <input type="radio" name="mock_q_${qIndex}" value="${optIndex}" onchange="recordAnswer(${qIndex},${optIndex})">
-              <span>${String.fromCharCode(65 + optIndex)}.${opt}</span>
-            </label>
-          `).join("")}
-        </div>
+  if (!notes) {
+    output.innerHTML = "<p style='text-align:center; color:var(--text-muted); font-size:13px;'>इस विषय का संक्षिप्त रिवीजन नोट्स शीघ्र अपडेट किया जा रहा है।</p>";
+    return;
+  }
+
+  output.innerHTML = notes.map((item, i) => `
+    <div class="study-item">
+      <b>महत्वपूर्ण बिन्दु ${i+1}:</b> ${item}
+    </div>
+  `).join("");
+}
+
+// 50-50 QUESTIONS DATABASE
+const fullQuizData = {
+  "11": [
+    { q: "[इतिहास] मेसोपोटामिया की सभ्यता किन दो नदियों के बीच विकसित हुई थी?", o: ["दजला और फरात", "नील और अमेजन", "सिंधु और गंगा", "ह्वांगहो और यांग्त्सी"], a: 0 },
+    { q: "[इतिहास] मेसोपोटामिया की सबसे प्राचीन ज्ञात लिपि कौन सी थी?", o: ["कीलाकार (Cuneiform)", "चित्रलिपि", "खरोष्ठी", "देवनागरी"], a: 0 },
+    { q: "[इतिहास] रोमन साम्राज्य में 'सीनेट' में मुख्यतः किस वर्ग का वर्चस्व था?", o: ["कुलीन एवं अभिजात वर्ग", "दास वर्ग", "व्यापारी वर्ग", "शिल्पकार"], a: 0 },
+    { q: "[इतिहास] चंगेज खान का प्रारंभिक नाम क्या था?", o: ["तेमुजिन", "बाबर", "ओगोदेई", "कुबलई खान"], a: 0 },
+    { q: "[इतिहास] मंगोल साम्राज्य में 'उलुस' शब्द का क्या अर्थ था?", o: ["सैन्य छावनी", "कबीलाई राज्यक्षेत्र", "डाक प्रणाली", "व्यापारिक कर"], a: 1 },
+    { q: "[इतिहास] औद्योगिक क्रांति की शुरुआत सर्वप्रथम किस देश में हुई थी?", o: ["इंग्लैंड", "फ्रांस", "जर्मनी", "अमेरिका"], a: 0 },
+    { q: "[राजनीति] भारतीय संविधान सभा की पहली बैठक किस तिथि को हुई थी?", o: ["9 दिसंबर 1946", "26 जनवरी 1950", "15 अगस्त 1947", "26 नवंबर 1949"], a: 0 },
+    { q: "[राजनीति] संविधान सभा की प्रारूप समिति (Drafting Committee) के अध्यक्ष कौन थे?", o: ["डॉ. बी.आर. अम्बेडकर", "डॉ. राजेंद्र प्रसाद", "पं. नेहरू", "सरदार पटेल"], a: 0 },
+    { q: "[राजनीति] भारतीय संविधान में मौलिक अधिकार किस देश के संविधान से लिए गए हैं?", o: ["संयुक्त राज्य अमेरिका", "ब्रिटेन", "रूस", "कनाडा"], a: 0 },
+    { q: "[राजनीति] संपत्ति के अधिकार को किस संविधान संशोधन द्वारा मूल अधिकार से हटाया गया?", o: ["44वें संशोधन", "42वें संशोधन", "86वें संशोधन", "73वें संशोधन"], a: 0 },
+    { q: "[राजनीति] भारत में मुख्य चुनाव आयुक्त की नियुक्ति कौन करता है?", o: ["राष्ट्रपति", "प्रधानमंत्री", "संसद", "मुख्य न्यायाधीश"], a: 0 },
+    { q: "[राजनीति] 'स्वतंत्रता समानता की विरोधी नहीं, बल्कि पूरक है' यह विचार किससे संबंधित है?", o: ["सकारात्मक उदारवाद", "अराजकतावाद", "साम्यवाद", "फासीवाद"], a: 0 },
+    { q: "[भूगोल] 'भूगोल' (Geography) शब्द का सर्वप्रथम प्रयोग किसने किया था?", o: ["इरैटोस्थनीज", "हिकेटियस", "हेरोडोटस", "अलेक्जेंडर वॉन हम्बोल्ट"], a: 0 },
+    { q: "[भूगोल] बिग बैंग सिद्धांत (Big Bang Theory) किससे संबंधित है?", o: ["ब्रह्मांड की उत्पत्ति", "हिमालय की उत्पत्ति", "ज्वालामुखी विस्फोट", "महासागरीय धाराएँ"], a: 0 },
+    { q: "[भूगोल] पृथ्वी की सबसे आंतरिक परत को क्या कहा जाता है?", o: ["क्रोड (Core/Nife)", "भूपर्पटी (Crust)", "मेंटल (Mantle)", "सियाल (Sial)"], a: 0 },
+    { q: "[भूगोल] महाद्वीपीय विस्थापन सिद्धांत का प्रतिपादन किसने किया था?", o: ["अल्फ्रेड वेगनर", "हैरी हेस", "होम्स", "स्ट्रैबो"], a: 0 },
+    { q: "[भूगोल] वायुमंडल में सबसे अधिक मात्रा में कौन सी गैस पाई जाती है?", o: ["नाइट्रोजन (78%)", "ऑक्सीजन", "कार्बन डाइऑक्साइड", "आर्गन"], a: 0 },
+    { q: "[भूगोल] भारत का दक्षिणतम बिंदु 'इंदिरा पॉइंट' कहाँ स्थित है?", o: ["ग्रेट निकोबार में", "कन्याकुमारी में", "लक्षद्वीप में", "तमिलनाडु में"], a: 0 },
+    { q: "[अर्थशास्त्र] 'धन का विज्ञान' के रूप में अर्थशास्त्र को किसने परिभाषित किया?", o: ["एडम स्मिथ", "अल्फ्रेड मार्शल", "रॉबिंस", "कीन्स"], a: 0 },
+    { q: "[अर्थशास्त्र] स्वतंत्रता की पूर्व संध्या पर भारत की अधिकांश जनसंख्या किस क्षेत्र पर निर्भर थी?", o: ["कृषि क्षेत्र", "औद्योगिक क्षेत्र", "सेवा क्षेत्र", "व्यापार क्षेत्र"], a: 0 },
+    { q: "[अर्थशास्त्र] सांख्यिकी में आँकड़े मुख्य रूप से कितने प्रकार के होते हैं?", o: ["दो (प्राथमिक एवं द्वितीयक)", "तीन", "चार", "पाँच"], a: 0 },
+    { q: "[अर्थशास्त्र] भारत में योजना आयोग की स्थापना किस वर्ष की गई थी?", o: ["1950", "1947", "1952", "1960"], a: 0 },
+    { q: "[अर्थशास्त्र] भारत में नई आर्थिक नीति (LPG सुधार) किस वर्ष लागू की गई?", o: ["1991", "1985", "2000", "1995"], a: 0 },
+    { q: "[अर्थशास्त्र] मानव पूंजी निर्माण का मुख्य स्रोत क्या है?", o: ["शिक्षा एवं स्वास्थ्य पर व्यय", "मशीनों की खरीद", "सोना खरीदना", "बचत खाता खोलना"], a: 0 },
+    { q: "[समाजशास्त्र] 'समाजशास्त्र' (Sociology) के जनक किसे माना जाता है?", o: ["अगस्त कॉम्टे", "कार्ल मार्क्स", "मैक्स वेबर", "एमिल दुर्खीम"], a: 0 },
+    { q: "[समाजशास्त्र] 'सोसाइटी' (Society) पुस्तक के लेखक कौन हैं?", o: ["मैकाइवर एवं पेज", "गिडिंग्स", "जॉनसन", "कूले"], a: 0 },
+    { q: "[समाजशास्त्र] प्राथमिक समूह (Primary Group) की अवधारणा किसने दी?", o: ["सी.एच. कूले", "समनर", "मर्टन", "पारसंस"], a: 0 },
+    { q: "[समाजशास्त्र] परिवार, विवाह और नातेदारी किस प्रकार की संस्थाएँ हैं?", o: ["सामाजिक संस्थाएँ", "राजनीतिक संस्थाएँ", "धार्मिक संस्थाएँ", "आर्थिक संस्थाएँ"], a: 0 },
+    { q: "[समाजशास्त्र] बंद स्तरीकरण (Closed Stratification) का सबसे मुख्य उदाहरण कौन सा है?", o: ["जाति व्यवस्था", "वर्ग व्यवस्था", "खुला समाज", "दास प्रथा"], a: 0 },
+    { q: "[समाजशास्त्र] अंतःसमूह और बाह्यसमूह की अवधारणा किसने प्रस्तुत की?", o: ["विलियम ग्राहम समनर", "कूले", "वेबर", "मार्क्स"], a: 0 },
+    { q: "[हिंदी] प्रेमचंद की सुप्रसिद्ध कहानी 'ईदगाह' का मुख्य बाल पात्र कौन है?", o: ["हामिद", "मोहसिन", "नूरे", "सम्मी"], a: 0 },
+    { q: "[हिंदी] हामिद ने मेले से अपनी दादी अमीना के लिए क्या खरीदा था?", o: ["चिमटा", "खिलौना", "मिठाई", "रेवड़ी"], a: 0 },
+    { q: "[हिंदी] 'दोपहर का भोजन' कहानी के लेखक कौन हैं?", o: ["अमरकांत", "प्रेमचंद", "हरिशंकर परसाई", "महादेवी वर्मा"], a: 0 },
+    { q: "[हिंदी] कबीरदास किस भक्ति काव्यधारा के प्रतिनिधि कवि हैं?", o: ["ज्ञानाश्रयी निर्गुण शाखा", "सगुण रामभक्ति", "कृष्णभक्ति", "सूफी काव्य"], a: 0 },
+    { q: "[हिंदी] सूरदास के भ्रमरगीत में गोपियों को ज्ञान का उपदेश देने कौन आया था?", o: ["उद्धव", "अक्रूर", "बलराम", "सुदामा"], a: 0 },
+    { q: "[हिंदी] 'संध्या के बाद' कविता के रचयिता कौन हैं?", o: ["सुमित्रानंदन पंत", "सूर्यकांत त्रिपाठी निराला", "जयशंकर प्रसाद", "दिनकर"], a: 0 },
+    { q: "[अंग्रेज़ी] Who is the author of 'The Portrait of a Lady'?", o: ["Khushwant Singh", "R.K. Narayan", "Mulk Raj Anand", "Vikram Seth"], a: 0 },
+    { q: "[अंग्रेज़ी] In 'The Portrait of a Lady', the grandmother spent her afternoons feeding:", o: ["Sparrows", "Pigeons", "Cows", "Dogs"], a: 0 },
+    { q: "[अंग्रेज़ी] What was the name of the ship in 'We're Not Afraid to Die...'?", o: ["Wavewalker", "Titanic", "Mayflower", "Sea Queen"], a: 0 },
+    { q: "[अंग्रेज़ी] Who wrote the famous poem 'The Laburnum Top'?", o: ["Ted Hughes", "Shirley Toulson", "Walt Whitman", "Markus Natten"], a: 0 },
+    { q: "[अंग्रेज़ी] In 'A Photograph', the poet remembers her:", o: ["Mother", "Grandmother", "Sister", "Friend"], a: 0 },
+    { q: "[गृह विज्ञान/दर्शन] भोजन का प्रमुख ऊर्जा प्रदायक पोषक तत्व कौन सा है?", o: ["कार्बोहाइड्रेट", "विटामिन", "खनिज लवण", "जल"], a: 0 },
+    { q: "[गृह विज्ञान/दर्शन] बच्चों के सर्वांगीण विकास के लिए आवश्यक पहला वातावरण कौन सा है?", o: ["परिवार", "विद्यालय", "सिनेमा", "बाज़ार"], a: 0 },
+    { q: "[गृह विज्ञान/दर्शन] 'दर्शनशास्त्र' (Philosophy) का शाब्दिक अर्थ क्या होता है?", o: ["ज्ञान के प्रति प्रेम (Love of Wisdom)", "तर्क का खेल", "रहस्य की खोज", "पुस्तकीय ज्ञान"], a: 0 },
+    { q: "[गृह विज्ञान/दर्शन] भारतीय दर्शन को मुख्यतः किन दो शाखाओं में बाँटा गया है?", o: ["आस्तिक एवं नास्तिक", "सगुण एवं निर्गुण", "पूर्व एवं पश्चिम", "प्राचीन एवं नवीन"], a: 0 },
+    { q: "[गृह विज्ञान/दर्शन] न्याय दर्शन के प्रवर्तक कौन हैं?", o: ["महर्षि गौतम", "महर्षि कपिल", "महर्षि कणाद", "पतंजलि"], a: 0 },
+    { q: "[गृह विज्ञान/दर्शन] योग दर्शन के प्रवर्तक किन्हें माना जाता है?", o: ["महर्षि पतंजलि", "शंकराचार्य", "गौतम बुद्ध", "महावीर"], a: 0 },
+    { q: "[गृह विज्ञान/दर्शन] विटामिन C की कमी से कौन सा रोग होता है?", o: ["स्कर्वी", "रतौंधी", "बेरी-बेरी", "रिकेट्स"], a: 0 },
+    { q: "[गृह विज्ञान/दर्शन] संतुलित आहार में कितने मूल खाद्य समूहों का समावेश होना चाहिए?", o: ["पाँच मुख्य समूह", "केवल दो", "आठ", "दस"], a: 0 },
+    { q: "[गृह विज्ञान/दर्शन] बौद्ध दर्शन के अनुसार दुखों के निवारण का मार्ग क्या है?", o: ["आष्टांगिक मार्ग", "ज्ञान मार्ग", "कर्मकांड", "वैराग्य"], a: 0 }
+  ],
+  "10": [
+    { q: "√5 किस प्रकार की संख्या है?", o: ["अपरिमेय संख्या", "परिमेय संख्या", "पूर्णांक", "प्राकृत संख्या"], a: 0 },
+    { q: "दो संख्याओं का गुणनफल 1600 तथा HCF = 5 है, तो उनका LCM क्या होगा?", o: ["320", "160", "800", "400"], a: 0 },
+    { q: "द्विघात बहुपद ax² + bx + c के शून्यकों का योगफल (α + β) क्या होता है?", o: ["-b/a", "c/a", "b/a", "-c/a"], a: 0 },
+    { q: "रैखिक समीकरण युग्म में यदि a₁/a₂ ≠ b₁/b₂ हो तो हल होंगे:", o: ["एक अद्वितीय हल", "कोई हल नहीं", "अनेक हल", "दो हल"], a: 0 },
+    { q: "द्विघात समीकरण 2x² - 4x + 3 = 0 का विविक्तकर (D) क्या होगा?", o: ["-8", "8", "-16", "24"], a: 0 },
+    { q: "A.P. 2, 7, 12, ... का 10वाँ पद क्या होगा?", o: ["47", "42", "52", "37"], a: 0 },
+    { q: "प्रथम n धन पूर्णांकों का योग ज्ञात करने का सूत्र क्या है?", o: ["n(n+1)/2", "n(n-1)/2", "n²/2", "2n+1"], a: 0 },
+    { q: "सभी वृत्त परस्पर कैसे होते हैं?", o: ["समरूप", "सर्वांगसम", "असमान", "बराबर"], a: 0 },
+    { q: "बिंदु (-3, 4) किस चतुर्थांश में स्थित है?", o: ["द्वितीय चतुर्थांश", "प्रथम चतुर्थांश", "तृतीय चतुर्थांश", "चतुर्थ चतुर्थांश"], a: 0 },
+    { q: "मूल बिंदु (Origin) के निर्देशांक क्या होते हैं?", o: ["(0, 0)", "(1, 1)", "(0, 1)", "(1, 0)"], a: 0 },
+    { q: "बिंदुओं (2, 3) और (4, 1) के बीच की दूरी क्या होगी?", o: ["2√2", "4√2", "8", "2"], a: 0 },
+    { q: "sin² 30° + cos² 30° का मान क्या होगा?", o: ["1", "0", "1/2", "2"], a: 0 },
+    { q: "यदि tan θ = 4/3 हो, तो sin θ का मान क्या होगा?", o: ["4/5", "3/5", "5/4", "3/4"], a: 0 },
+    { q: "tan 45° का मान क्या होता है?", o: ["1", "0", "1/√3", "√3"], a: 0 },
+    { q: "वृत्त की सबसे बड़ी जीवा को क्या कहा जाता है?", o: ["व्यास", "त्रिज्या", "चाप", "स्पर्श रेखा"], a: 0 },
+    { q: "वृत्त के किसी बाह्य बिंदु से खींची जा सकने वाली स्पर्श रेखाओं की अधिकतम संख्या क्या है?", o: ["2", "1", "अनंत", "3"], a: 0 },
+    { q: "त्रिज्या r वाले वृत्त के एक त्रिज्यखंड का क्षेत्रफल क्या होता है (कोण θ हो)?", o: ["(θ/360°) × πr²", "(θ/180°) × πr", "2πr", "πr²"], a: 0 },
+    { q: "एक बेलन के आयतन का सूत्र क्या है?", o: ["πr²h", "2πrh", "4/3 πr³", "1/3 πr²h"], a: 0 },
+    { q: "आंकड़ों का बहुलक, माध्य और माध्यक के बीच आनुभविक संबंध क्या है?", o: ["बहुलक = 3 माध्यक - 2 माध्य", "बहुलक = 2 माध्यक - 3 माध्य", "माध्य = 3 बहुलक - माध्यक", "माध्यक = बहुलक + माध्य"], a: 0 },
+    { q: "एक असंभव घटना की प्रायिकता क्या होती है?", o: ["0", "1", "1/2", "अपरिभाषित"], a: 0 },
+    { q: "लोहे पर जंग लगना किस प्रकार की रासायनिक अभिक्रिया है?", o: ["संक्षारण (उपचयन)", "अपचयन", "विस्थापन", "उदासीनीकरण"], a: 0 },
+    { q: "चिप्स के पैकेट में कौन सी अक्रिय गैस भरी जाती है?", o: ["नाइट्रोजन", "ऑक्सीजन", "हाइड्रोजन", "क्लोरीन"], a: 0 },
+    { q: "शुद्ध जल का pH मान कितना होता है?", o: ["7", "0", "14", "1"], a: 0 },
+    { q: "अम्ल नीले लिटमस पत्र को किस रंग में बदल देता है?", o: ["लाल", "हरा", "पीला", "रंगहीन"], a: 0 },
+    { q: "बेकिंग सोडा (खाने का सोडा) का रासायनिक सूत्र क्या है?", o: ["NaHCO₃", "Na₂CO₃·10H₂O", "NaOH", "CaOCl₂"], a: 0 },
+    { q: "कमरे के ताप पर द्रव अवस्था में पाई जाने वाली धातु कौन सी है?", o: ["पारा (Mercury)", "ब्रोमीन", "सोडियम", "लोहा"], a: 0 },
+    { q: "विद्युत की सबसे अच्छी सुचालक धातु कौन सी है?", o: ["चांदी (Silver)", "तांबा", "सोना", "एल्युमिनियम"], a: 0 },
+    { q: "पादपों में जाइलम का मुख्य कार्य क्या है?", o: ["जल का वहन", "भोजन का वहन", "ऑक्सीजन वहन", "अमीनो अम्ल वहन"], a: 0 },
+    { q: "मानव हृदय में कितने कोष्ठ होते हैं?", o: ["4", "2", "3", "6"], a: 0 },
+    { q: "मानव शरीर की सबसे बड़ी ग्रंथि कौन सी है?", o: ["यकृत (Liver)", "अग्न्याशय", "थायरॉयड", "पीयूष"], a: 0 },
+    { q: "तंत्रिका तंत्र की संरचनात्मक एवं क्रियात्मक इकाई क्या है?", o: ["न्यूरॉन", "नेफ्रॉन", "कोशिका", "डीएनए"], a: 0 },
+    { q: "आनुवंशिकी का जनक किन्हें कहा जाता है?", o: ["ग्रेगर जॉन मेंडल", "चार्ल्स डार्विन", "लामार्क", "रॉबर्ट हुक"], a: 0 },
+    { q: "समतल दर्पण की फोकस दूरी कैसी होती है?", o: ["अनंत", "शून्य", "25 cm", "-25 cm"], a: 0 },
+    { q: "गाड़ियों में पीछे का दृश्य देखने के लिए किस दर्पण का उपयोग होता है?", o: ["उत्तल दर्पण", "अवतल दर्पण", "समतल दर्पण", "उत्तल लेंस"], a: 0 },
+    { q: "मानव नेत्र में किसी वस्तु का प्रतिबिंब कहाँ बनता है?", o: ["रेटिना (दृष्टिपटल) पर", "कॉर्निया पर", "पुतली पर", "परितारिका पर"], a: 0 },
+    { q: "विद्युत धारा मापने वाले यंत्र को क्या कहा जाता है?", o: ["ऐमीटर (Ammeter)", "वोल्टमीटर", "गैल्वेनोमीटर", "ओह्ममीटर"], a: 0 },
+    { q: "विद्युत प्रतिरोध का SI मात्रक क्या है?", o: ["ओम (Ω)", "एम्पीयर", "वोल्ट", "जूल"], a: 0 },
+    { q: "डायनेमो (जनरेटर) यांत्रिक ऊर्जा को किस ऊर्जा में बदलता है?", o: ["विद्युत ऊर्जा में", "ध्वनि ऊर्जा में", "प्रकाश ऊर्जा में", "रासायनिक ऊर्जा में"], a: 0 },
+    { q: "ओजोन परत वायुमंडल के किस हानिकारक विकिरण से रक्षा करती है?", o: ["पराबैंगनी किरणें (UV Rays)", "अवरक्त किरणें", "गामा किरणें", "एक्स-रे"], a: 0 },
+    { q: "यंग इटली की स्थापना किसने की थी?", o: ["मेत्सिनी", "कावूर", "गैरीबाल्डी", "बिस्मार्क"], a: 0 },
+    { q: "जालियांवाला बाग हत्याकांड की घटना कब घटी थी?", o: ["13 अप्रैल 1919", "15 अगस्त 1919", "10 मई 1857", "26 जनवरी 1930"], a: 0 },
+    { q: "हिंद स्वराज नामक प्रसिद्ध पुस्तक किसने लिखी थी?", o: ["महात्मा गांधी", "जवाहरलाल नेहरू", "सुभाष चंद्र बोस", "तिलक"], a: 0 },
+    { q: "काली मिट्टी किस फसल की खेती के लिए सबसे उपयुक्त मानी जाती है?", o: ["कपास", "चावल", "गेहूँ", "चाय"], a: 0 },
+    { q: "सुंदरवन राष्ट्रीय उद्यान भारत के किस राज्य में स्थित है?", o: ["पश्चिम बंगाल", "असम", "ओडिशा", "बिहार"], a: 0 },
+    { q: "भारत का सबसे लंबा बांध कौन सा है?", o: ["हीराकुंड बांध", "भाखड़ा नांगल", "टिहरी बांध", "सरदार सरोवर"], a: 0 },
+    { q: "भारत में किस प्रकार की शासन व्यवस्था अपनाई गई है?", o: ["लोकतांत्रिक एवं संघीय", "राजतंत्रीय", "तानाशाही", "एकात्मक"], a: 0 },
+    { q: "समवर्ती सूची के विषयों पर कानून बनाने का अधिकार किसे है?", o: ["केंद्र एवं राज्य दोनों को", "केवल केंद्र को", "केवल राज्य को", "राष्ट्रपति को"], a: 0 },
+    { q: "भारत में करेंसी नोट जारी करने का अधिकार किसके पास है?", o: ["भारतीय रिज़र्व बैंक (RBI)", "स्टेट बैंक", "वित्त मंत्रालय", "संसद"], a: 0 },
+    { q: "विश्व व्यापार संगठन (WTO) की स्थापना किस वर्ष हुई थी?", o: ["1995", "1990", "2000", "1985"], a: 0 },
+    { q: "उपभोक्ता संरक्षण अधिनियम (COPRA) भारत में कब लागू किया गया?", o: ["1986", "1991", "2005", "1980"], a: 0 }
+  ],
+  "9": [
+    { q: "क्या शून्य एक परिमेय संख्या है?", o: ["हाँ", "नहीं", "कहा नहीं जा सकता", "अपरिभाषित"], a: 0 },
+    { q: "1/(√7 - √6) के हर का परिमेयकरण करने पर प्राप्त मान क्या होगा?", o: ["√7 + √6", "√7 - √6", "1", "13"], a: 0 },
+    { q: "(64)^(1/2) का मान क्या होगा?", o: ["8", "16", "32", "4"], a: 0 },
+    { q: "बहुपद 5x³ + 4x² + 7x की घात क्या है?", o: ["3", "2", "1", "0"], a: 0 },
+    { q: "बहुपद p(x) = 2x + 5 का शून्यक क्या होगा?", o: ["-5/2", "5/2", "-2/5", "2/5"], a: 0 },
+    { q: "x² - y² का गुणनखंड सूत्र क्या है?", o: ["(x - y)(x + y)", "(x - y)²", "(x + y)²", "x² + 2xy + y²"], a: 0 },
+    { q: "कार्तीय तल में क्षैतिज रेखा को क्या कहा जाता है?", o: ["x-अक्ष", "y-अक्ष", "मूल बिंदु", "निर्देशांक"], a: 0 },
+    { q: "बिंदु (0, -4) किस अक्ष पर स्थित है?", o: ["y-अक्ष पर", "x-अक्ष पर", "प्रथम चतुर्थांश में", "मूल बिंदु पर"], a: 0 },
+    { q: "समीकरण 2x + 3y = 12 में यदि x = 0 हो तो y का मान क्या होगा?", o: ["4", "3", "6", "12"], a: 0 },
+    { q: "यूक्लिड किस देश के महान गणितज्ञ थे?", o: ["यूनान (Greece)", "भारत", "मिस्र", "रोम"], a: 0 },
+    { q: "एक बिंदु से होकर कितनी रेखाएँ खींची जा सकती हैं?", o: ["अनंत", "केवल 1", "केवल 2", "100"], a: 0 },
+    { q: "यदि दो रेखाएँ परस्पर प्रतिच्छेद करती हैं तो शीर्षाभिमुख कोण कैसे होते हैं?", o: ["बराबर", "असमान", "पूरक", "संपूरक"], a: 0 },
+    { q: "त्रिभुज के तीनों अंतः कोणों का योग कितना होता है?", o: ["180°", "360°", "90°", "270°"], a: 0 },
+    { q: "समबाहु त्रिभुज का प्रत्येक कोण कितने अंश का होता है?", o: ["60°", "45°", "90°", "120°"], a: 0 },
+    { q: "एक चतुर्भुज के चारों अंतः कोणों का योग कितना होता है?", o: ["360°", "180°", "540°", "720°"], a: 0 },
+    { q: "चक्रीय चतुर्भुज के सम्मुख कोणों का योग कितना होता है?", o: ["180°", "360°", "90°", "270°"], a: 0 },
+    { q: "अर्धवृत्त का कोण कैसा होता है?", o: ["समकोण (90°)", "न्यूनकोण", "अधिककोण", "ऋजुकोण"], a: 0 },
+    { q: "हीरोन के सूत्र में त्रिभुज का क्षेत्रफल ज्ञात करने का सूत्र क्या है?", o: ["√[s(s-a)(s-b)(s-c)]", "1/2 × आधार × ऊँचाई", "s(s-a)", "abc/4R"], a: 0 },
+    { q: "एक गोले के पृष्ठीय क्षेत्रफल का सूत्र क्या है?", o: ["4πr²", "2πr²", "3πr²", "4/3 πr³"], a: 0 },
+    { q: "प्रथम 5 प्राकृत संख्याओं का समांतर माध्य क्या होगा?", o: ["3", "2", "4", "5"], a: 0 },
+    { q: "पदार्थ के कणों के बीच क्या होता है?", o: ["रिक्त स्थान एवं आकर्षण बल", "स्थिरता", "विद्युत आवेश", "कोई संबंध नहीं"], a: 0 },
+    { q: "जल का क्वथनांक केल्विन पैमाने पर कितना होता है?", o: ["373 K", "273 K", "100 K", "0 K"], a: 0 },
+    { q: "ठोस से सीधे गैस बनने की प्रक्रिया को क्या कहते हैं?", o: ["उर्ध्वपातन (Sublimation)", "वाष्पीकरण", "संघनन", "गलनांक"], a: 0 },
+    { q: "दूध किस प्रकार का मिश्रण है?", o: ["कोलाइड (इमल्शन)", "समांगी विलयन", "निलंबन", "यौगिक"], a: 0 },
+    { q: "परमाणु के नाभिक में कौन से मूल कण उपस्थित होते हैं?", o: ["प्रोटॉन और न्यूट्रॉन", "केवल इलेक्ट्रॉन", "इलेक्ट्रॉन और प्रोटॉन", "न्यूट्रॉन और इलेक्ट्रॉन"], a: 0 },
+    { q: "ऑक्सीजन का परमाणु द्रव्यमान कितना होता है?", o: ["16 u", "8 u", "32 u", "12 u"], a: 0 },
+    { q: "कोशिका की खोज 1665 में किसने की थी?", o: ["रॉबर्ट हुक", "रॉबर्ट ब्राउन", "ल्यूवेनहॉक", "शलीडेन"], a: 0 },
+    { q: "कोशिका का 'बिजलीघर' किसे कहा जाता है?", o: ["माइटोकॉन्ड्रिया", "राइबोसोम", "लाइसोसोम", "गॉल्जीकाय"], a: 0 },
+    { q: "लाइसोसोम को क्या कहा जाता है?", o: ["आत्मघाती थैली (Suicide Bag)", "प्रोटीन की फैक्ट्री", "रसोईघर", "नियंत्रक केंद्र"], a: 0 },
+    { q: "पौधों में लचीलेपन का गुण किस ऊतक के कारण होता है?", o: ["कॉलेनकाइमा", "पैरेनकाइमा", "स्क्लेरेनकाइमा", "जाइलम"], a: 0 },
+    { q: "रक्त (Blood) किस प्रकार का ऊतक है?", o: ["तरल संयोजी ऊतक", "उपकला ऊतक", "पेशीय ऊतक", "तंत्रिका ऊतक"], a: 0 },
+    { q: "वेग में परिवर्तन की दर को क्या कहते हैं?", o: ["त्वरण (Acceleration)", "चाल", "दूरी", "विस्थापन"], a: 0 },
+    { q: "बल (Force) का SI मात्रक क्या होता है?", o: ["न्यूटन (N)", "जूल", "पास्कल", "वाट"], a: 0 },
+    { q: "न्यूटन के गति का प्रथम नियम किस संकल्पना को व्यक्त करता है?", o: ["जड़त्व (Inertia)", "संवेग", "कार्य", "ऊर्जा"], a: 0 },
+    { q: "सार्वत्रिक गुरुत्वाकर्षण नियतांक (G) का मान कितना होता है?", o: ["6.67 × 10⁻¹¹ N m²/kg²", "9.8 m/s²", "1.6 × 10⁻¹⁹", "3 × 10⁸ m/s"], a: 0 },
+    { q: "कार्य करने की दर को क्या कहा जाता है?", o: ["शक्ति (Power)", "ऊर्जा", "बल", "संवेग"], a: 0 },
+    { q: "ध्वनि तरंगें किस प्रकार की तरंगें होती हैं?", o: ["अनुदैर्ध्य यांत्रिक तरंगें", "अनुप्रस्थ तरंगें", "विद्युत चुंबकीय तरंगें", "स्थिर तरंगें"], a: 0 },
+    { q: "फ्रांसीसी क्रांति किस वर्ष प्रारंभ हुई थी?", o: ["1789", "1776", "1804", "1815"], a: 0 },
+    { q: "फ्रांस का प्रसिद्ध दार्शनिक रूसो ने कौन सी पुस्तक लिखी थी?", o: ["द सोशल कॉन्ट्रैक्ट", "द स्पिरिट ऑफ लॉज", "दास कैपिटल", "मीन कैम्फ"], a: 0 },
+    { q: "रूस की संसद को किस नाम से जाना जाता है?", o: ["ड्यूमा (Duma)", "संसद", "कांग्रेस", "डाइट"], a: 0 },
+    { q: "हिटलर किस देश का तानाशाह था?", o: ["जर्मनी", "इटली", "रूस", "जापान"], a: 0 },
+    { q: "क्षेत्रफल की दृष्टि से विश्व में भारत का कौन सा स्थान है?", o: ["सातवाँ", "पाँचवाँ", "दूसरा", "दसवाँ"], a: 0 },
+    { q: "भारत की मानक याम्योत्तर रेखा कौन सी है?", o: ["82°30' पूर्व", "68°7' पूर्व", "97°25' पूर्व", "23°30' उत्तर"], a: 0 },
+    { q: "विश्व की सबसे ऊँची पर्वत चोटी माउंट एवरेस्ट किस देश में स्थित है?", o: ["नेपाल", "भारत", "चीन", "भूटान"], a: 0 },
+    { q: "नर्मदा नदी का उद्गम स्थल कहाँ है?", o: ["अमरकंटक", "नासिक", "महाबलेश्वर", "गंगोत्री"], a: 0 },
+    { q: "भारत में सबसे कम वर्षा कहाँ होती है?", o: ["लेह (लद्दाख)", "जैसलमेर", "चेरापूंजी", "बीकानेर"], a: 0 },
+    { q: "'लोकतंत्र जनता का, जनता द्वारा और जनता के लिए शासन है' यह कथन किसका है?", o: ["अब्राहम लिंकन", "अरस्तू", "महात्मा गांधी", "जॉर्ज वाशिंगटन"], a: 0 },
+    { q: "दक्षिण अफ्रीका में रंगभेद नीति के खिलाफ लंबा संघर्ष किसने किया?", o: ["नेल्सन मंडेला", "मार्टिन लूथर किंग", "महात्मा गांधी", "डेसमंड टूटू"], a: 0 },
+    { q: "पालमपुर गाँव की मुख्य आर्थिक गतिविधि क्या थी?", o: ["कृषि", "डेयरी", "दुकानदारी", "लघु उद्योग"], a: 0 },
+    { q: "भारत में हरित क्रांति का मुख्य प्रभाव किन फसलों पर पड़ा?", o: ["गेहूँ और चावल", "दालें और तिलहन", "कपास और जूट", "मक्का और बाजरा"], a: 0 }
+  ],
+  "8": [
+    { q: "-7/19 का योज्य प्रतिलोम क्या होगा?", o: ["7/19", "-19/7", "19/7", "0"], a: 0 },
+    { q: "-13 का गुणात्मक प्रतिलोम क्या होगा?", o: ["-1/13", "13", "1/13", "1"], a: 0 },
+    { q: "समीकरण 2x - 3 = 7 में x का मान क्या होगा?", o: ["5", "2", "4", "10"], a: 0 },
+    { q: "दो संख्याओं का अनुपात 5:3 है और उनका अंतर 18 है। बड़ी संख्या क्या होगी?", o: ["45", "27", "36", "54"], a: 0 },
+    { q: "एक सम बहुभुज की भुजाओं की संख्या क्या होगी यदि प्रत्येक बाह्य कोण 45° हो?", o: ["8", "6", "10", "12"], a: 0 },
+    { q: "चतुर्भुज के चारों अंतः कोणों का योग कितना होता है?", o: ["360°", "180°", "540°", "720°"], a: 0 },
+    { q: "वर्ग संख्या 25 का वर्गमूल क्या होगा?", o: ["5", "10", "15", "2.5"], a: 0 },
+    { q: "729 का वर्गमूल अभाज्य गुणनखंड विधि से क्या होगा?", o: ["27", "23", "29", "17"], a: 0 },
+    { q: "संख्या 64 का घनमूल क्या होगा?", o: ["4", "8", "16", "2"], a: 0 },
+    { q: "वह सबसे छोटी संख्या जिससे 252 को गुणा करने पर यह पूर्ण वर्ग बन जाए?", o: ["7", "2", "3", "5"], a: 0 },
+    { q: "840 रु. अंकित मूल्य वाली वस्तु 714 रु. में बेची जाती है, तो बट्टा क्या है?", o: ["126 रु.", "100 रु.", "140 रु.", "84 रु."], a: 0 },
+    { q: "बिक्री कर (GST) हमेशा किस मूल्य पर लगाया जाता है?", o: ["विक्रय मूल्य पर", "क्रय मूल्य पर", "अंकित मूल्य पर", "लागत मूल्य पर"], a: 0 },
+    { q: "चक्रवृद्धि ब्याज सूत्र A = P(1 + r/100)ⁿ में n क्या दर्शाता है?", o: ["समय (वर्षों में)", "दर", "मूलधन", "साधारण ब्याज"], a: 0 },
+    { q: "व्यंजक (2x + 5) और (4x - 3) का गुणनफल क्या होगा?", o: ["8x² + 14x - 15", "8x² - 15", "8x² + 20x - 15", "6x + 2"], a: 0 },
+    { q: "सर्वसमिका (a + b)² का विस्तारित रूप क्या होता है?", o: ["a² + 2ab + b²", "a² + b²", "a² - 2ab + b²", "2a + 2b"], a: 0 },
+    { q: "ऑयलर सूत्र F + V - E का मान किसी बहुफलक के लिए क्या होता है?", o: ["2", "0", "1", "4"], a: 0 },
+    { q: "एक घनाभ में कुल कितने फलक होते हैं?", o: ["6", "8", "12", "4"], a: 0 },
+    { q: "समचतुर्भुज का क्षेत्रफल ज्ञात करने का सूत्र क्या है?", o: ["1/2 × d₁ × d₂", "आधार × ऊँचाई", "भुजा²", "2(l+b)"], a: 0 },
+    { q: "एक बेलन के कुल पृष्ठीय क्षेत्रफल का सूत्र क्या है?", o: ["2πr(r + h)", "2πrh", "πr²h", "πrl"], a: 0 },
+    { q: "घातांक नियम के अनुसार (aᵐ)ⁿ का मान क्या होगा?", o: ["aᵐⁿ", "aᵐ⁺ⁿ", "aᵐ⁻ⁿ", "aᵐ/ⁿ"], a: 0 },
+    { q: "(3⁰ + 4⁻¹ + 5⁻¹)⁰ का मान क्या होगा?", o: ["1", "0", "12", "3"], a: 0 },
+    { q: "0.000085 का मानक वैज्ञानिक रूप क्या होगा?", o: ["8.5 × 10⁻⁵", "85 × 10⁻⁶", "8.5 × 10⁵", "0.85 × 10⁻⁴"], a: 0 },
+    { q: "7x - 42 का उभयनिष्ठ गुणनखंड करने पर क्या प्राप्त होगा?", o: ["7(x - 6)", "x - 6", "7(x - 42)", "7x(1 - 6)"], a: 0 },
+    { q: "x² + 8x + 16 का गुणनखंड क्या होगा?", o: ["(x + 4)²", "(x - 4)²", "(x + 8)(x + 2)", "(x + 16)"], a: 0 },
+    { q: "28x⁴ ÷ 56x का मान क्या होगा?", o: ["1/2 x³", "2x³", "1/2 x⁴", "x³"], a: 0 },
+    { q: "सजीवों की मूल संरचनात्मक इकाई क्या है?", o: ["कोशिका (Cell)", "ऊतक", "अंग", "रक्त"], a: 0 },
+    { q: "कोशिका में आनुवंशिक गुणों का वाहक कौन होता है?", o: ["जीन (क्रोमोसोम)", "राइबोसोम", "रसधानी", "कोशिका भित्ति"], a: 0 },
+    { q: "दूध को दही में बदलने वाला जीवाणु कौन सा है?", o: ["लैक्टोबैसिलस", "यीस्ट", "अमीबा", "राइजोबियम"], a: 0 },
+    { q: "मलेरिया रोग फैलाने वाले मादा एनोफिलीज़ मच्छर का वाहक कौन है?", o: ["प्रोटोजोआ (प्लाज्मोडियम)", "विषाणु", "जीवाणु", "कवक"], a: 0 },
+    { q: "धातुएँ सामान्यतः ऊष्मा एवं विद्युत की क्या होती हैं?", o: ["सुचालक", "कुचालक", "अर्धचालक", "अक्रिय"], a: 0 },
+    { q: "कौन सी अधातु कमरे के तापमान पर द्रव अवस्था में रहती है?", o: ["ब्रोमीन", "पारा", "आयोडीन", "सल्फर"], a: 0 },
+    { q: "सोने और चाँदी को पिघलाने के लिए सुनार ज्वाला के किस क्षेत्र का प्रयोग करता है?", o: ["सबसे बाहरी अदीप्त क्षेत्र (नीला)", "मध्य क्षेत्र", "आंतरिक काला क्षेत्र", "दीप्त पीला क्षेत्र"], a: 0 },
+    { q: "दहन के लिए कौन सी गैस परम आवश्यक है?", o: ["ऑक्सीजन", "नाइट्रोजन", "कार्बन डाइऑक्साइड", "हाइड्रोजन"], a: 0 },
+    { q: "किशोरावस्था की सामान्य आयु सीमा क्या मानी जाती है?", o: ["11 वर्ष से 19 वर्ष", "5 से 10 वर्ष", "20 से 30 वर्ष", "1 से 5 वर्ष"], a: 0 },
+    { q: "बल का प्रभाव किस पर निर्भर करता है?", o: ["परिमाण और दिशा दोनों पर", "केवल परिमाण पर", "केवल द्रव्यमान पर", "रंग पर"], a: 0 },
+    { q: "घर्षण बल हमेशा गति की दिशा के किस ओर कार्य करता है?", o: ["विपरीत दिशा में", "समान दिशा में", "लंबवत दिशा में", "किसी भी दिशा में"], a: 0 },
+    { q: "ध्वनि किस माध्यम में गमन नहीं कर सकती?", o: ["निर्वात में (Vacuum)", "हवा में", "लोहे में", "पानी में"], a: 0 },
+    { q: "आवृत्ति का मात्रक क्या है?", o: ["हर्ट्ज (Hz)", "डेसिबल", "मीटर", "सेकंड"], a: 0 },
+    { q: "भूकंप की तीव्रता मापने का पैमाना क्या कहलाता है?", o: ["रिक्टर पैमाना (Richter Scale)", "थर्मामीटर", "बैरोमीटर", "लैक्टोमीटर"], a: 0 },
+    { q: "आपतन कोण हमेशा किसके बराबर होता है?", o: ["परावर्तन कोण के", "अपवर्तन कोण के", "90° के", "शून्य के"], a: 0 },
+    { q: "हमारे सौरमंडल का सबसे बड़ा ग्रह कौन सा है?", o: ["बृहस्पति (Jupiter)", "शनि", "पृथ्वी", "मंगल"], a: 0 },
+    { q: "बक्सर का प्रसिद्ध युद्ध किस वर्ष लड़ा गया था?", o: ["1764", "1757", "1857", "1761"], a: 0 },
+    { q: "प्लासी के युद्ध के समय बंगाल का नवाब कौन था?", o: ["सिराजुद्दौला", "मीर जाफर", "मीर कासिम", "अलीवर्दी खान"], a: 0 },
+    { q: "1857 के सिपाही विद्रोह की शुरुआत सर्वप्रथम कहाँ से हुई थी?", o: ["मेरठ", "झांसी", "दिल्ली", "कानपुर"], a: 0 },
+    { q: "रैयतवाड़ी व्यवस्था मुख्य रूप से भारत के किस भाग में लागू की गई थी?", o: ["मद्रास और बंबई (दक्षिण भारत)", "बंगाल और बिहार", "पंजाब", "अवध"], a: 0 },
+    { q: "झारखंड में उलगुलान विद्रोह का नेतृत्व किसने किया था?", o: ["बिरसा मुंडा", "सिद्धो-कान्हू", "तिलका मांझी", "जतरा भगत"], a: 0 },
+    { q: "संसाधनों का सतर्कतापूर्वक उपयोग करना क्या कहलाता है?", o: ["सतत पोषणीय विकास / संरक्षण", "अंधाधुंध दोहन", "अपव्यय", "पुनर्चक्रण"], a: 0 },
+    { q: "भारतीय संविधान का जनक किसे कहा जाता है?", o: ["डॉ. भीमराव अम्बेडकर", "महात्मा गांधी", "डॉ. राजेंद्र प्रसाद", "जवाहरलाल नेहरू"], a: 0 },
+    { q: "लोकसभा में सदस्यों की अधिकतम संख्या कितनी हो सकती है?", o: ["552", "250", "545", "500"], a: 0 },
+    { q: "संसद के दो सत्रों के बीच अधिकतम कितने माह का अंतर हो सकता है?", o: ["6 माह", "3 माह", "12 माह", "9 माह"], a: 0 }
+  ]
+};
+
+let currentClass = "11";
+
+function loadClassQuiz(cls) {
+  currentClass = cls;
+  document.querySelectorAll('.class-btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+
+  const titleMap = {
+    "11": "कक्षा 11वीं (आर्ट्स के 8 विषय - 50 वस्तुनिष्ठ प्रश्न)",
+    "10": "कक्षा 10वीं बोर्ड स्पेशल (50 वस्तुनिष्ठ प्रश्न)",
+    "9": "कक्षा 9वीं वार्षिक परीक्षा स्पेशल (50 वस्तुनिष्ठ प्रश्न)",
+    "8": "कक्षा 8वीं बोर्ड स्पेशल (50 वस्तुनिष्ठ प्रश्न)"
+  };
+  document.getElementById("quiz-title-tag").textContent = titleMap[cls];
+
+  const holder = document.getElementById("questions-holder");
+  holder.innerHTML = "";
+
+  fullQuizData[cls].forEach((item, idx) => {
+    let qDiv = document.createElement("div");
+    qDiv.className = "q-box";
+    qDiv.innerHTML = `
+      <div class="q-text">प्र. ${idx + 1}: ${item.q}</div>
+      ${item.o.map((opt, optIdx) => `
+        <label class="opt-row">
+          <input type="radio" name="ans_${idx}" value="${optIdx}">
+          (${String.fromCharCode(65 + optIdx)})${opt}
+        </label>
+      `).join("")}
+    `;
+    holder.appendChild(qDiv);
+  });
+
+  document.getElementById("result-display-area").style.display = "none";
+}
+
+loadClassQuiz("11");
+
+function calculateResult() {
+  const questions = fullQuizData[currentClass];
+  let score = 0;
+  let total = questions.length;
+  let reviewHtml = "<h4 style='color:var(--primary); margin-bottom:8px;'>उत्तर विश्लेषण:</h4>";
+
+  questions.forEach((q, idx) => {
+    let selected = document.querySelector(`input[name="ans_${idx}"]:checked`);
+    let selectedVal = selected ? parseInt(selected.value) : -1;
+    let isRight = (selectedVal === q.a);
+
+    if (isRight) score++;
+
+    reviewHtml += `
+      <div style="font-size:12.5px; padding:6px 0; border-bottom:1px solid #f1f5f9;">
+        <b>प्र. ${idx + 1}:</b> ${q.q}<br>
+        <span style="color:${isRight ? 'var(--success)' : 'var(--danger)'}; font-weight:600;">
+          ${isRight ? '✓ आपका उत्तर सही है' : (selectedVal === -1 ? '⚪ उत्तर नहीं दिया' : '✗ आपका उत्तर गलत है')}
+        </span> | 
+        <span style="color:var(--success); font-weight:600;">सही उत्तर: (${String.fromCharCode(65 + q.a)}) ${q.o[q.a]}</span>
       </div>
     `;
   });
 
-  container.innerHTML = html;
+  let percent = ((score / total) * 100).toFixed(1);
+  document.getElementById("score-text").textContent = `${score}/${total}`;
+  document.getElementById("percentage-text").textContent = `कुल प्राप्तांक प्रतिशत: ${percent}%`;
+
+  let gradeMsg = "";
+  if (percent >= 80) gradeMsg = "🏆 शानदार प्रदर्शन! उत्कृष्ट (Excellent)";
+  else if (percent >= 60) gradeMsg = "👍 बहुत अच्छा प्रयास! (First Division)";
+  else if (percent >= 33) gradeMsg = "पास! थोड़ी और मेहनत की आवश्यकता है।";
+  else gradeMsg = "⚠️ सुधार की आवश्यकता है। पुनः अभ्यास करें!";
+  
+  document.getElementById("grade-text").textContent = gradeMsg;
+  document.getElementById("answers-breakdown").innerHTML = reviewHtml;
+
+  const resultArea = document.getElementById("result-display-area");
+  resultArea.style.display = "block";
+  resultArea.scrollIntoView({ behavior: 'smooth' });
 }
-
-function recordAnswer(qIndex, optIndex) {
-  currentAnswers[qIndex] = optIndex;
-}
-
-function submitMockQuiz() {
-  const testKey = document.getElementById("mockTestSelect").value;
-  const list = mockTestsData[testKey] || [];
-  let score = 0;
-
-  list.forEach((item, qIndex) => {
-    const selected = currentAnswers[qIndex];
-    const box = document.getElementById(`q-box-${qIndex}`);
-
-    // clear styles
-    for (let i = 0; i < 4; i++) {
-      const lbl = document.getElementById(`lbl-${qIndex}-${i}`);
-      if (lbl) {
-        lbl.style.background = "#f8fafc";
-        lbl.style.borderColor = "#e2e8f0";
-        lbl.style.fontWeight = "normal";
-      }
-    }
-
-    if (selected !== undefined) {
-      if (selected === item.ans) {
-        score++;
-        const correctLbl = document.getElementById(`lbl-${qIndex}-${selected}`);
-        if (correctLbl) {
-          correctLbl.style.background = "#dcfce7";
-          correctLbl.style.borderColor = "#16a34a";
-          correctLbl.style.fontWeight = "600";
-        }
-      } else {
-        const wrongLbl = document.getElementById(`lbl-${qIndex}-${selected}`);
-        const correctLbl = document.getElementById(`lbl-${qIndex}-${item.ans}`);
-        if (wrongLbl) {
-          wrongLbl.style.background = "#fee2e2";
-          wrongLbl.style.borderColor = "#dc2626";
-        }
-        if (correctLbl) {
-          correctLbl.style.background = "#dcfce7";
-          correctLbl.style.borderColor = "#16a34a";
-          correctLbl.style.fontWeight = "600";
-        }
-      }
-    } else {
-      // Unanswered: show correct
-      const correctLbl = document.getElementById(`lbl-${qIndex}-${item.ans}`);
-      if (correctLbl) {
-        correctLbl.style.borderColor = "#16a34a";
-        correctLbl.style.background = "#f0fdf4";
-      }
-    }
-  });
-
-  const percent = ((score / list.length) * 100).toFixed(1);
-  const scoreCard = document.getElementById("scoreCard");
-  document.getElementById("scoreValue").textContent = `${score} / ${list.length}`;
-  document.getElementById("scorePercent").textContent = `सफलता दर: ${percent}% अंक`;
-
-  let msg = "";
-  if (score >= 45) msg = "🌟 उत्कृष्ट प्रदर्शन! (Grade A+) आपकी तैयारी सर्वोच्च स्तर पर है।";
-  else if (score >= 35) msg = "👍 बहुत अच्छा प्रयास! (Grade A) कुछ गलतियों पर रिवीजन करें।";
-  else if (score >= 25) msg = "⚠️ संतोषजनक! (Grade B) नियमित अभ्यास और क्लास नोट्स का अध्ययन करें।";
-  else msg = "🚨 विशेष मार्गदर्शन की आवश्यकता है। विकास सर की डाउट क्लास ज्वाइन करें।";
-
-  document.getElementById("scoreFeedback").textContent = msg;
-  scoreCard.style.display = "block";
-  scoreCard.scrollIntoView({ behavior: 'smooth' });
-}
-
-function resetQuiz() {
-  renderMockTest();
-  window.scrollTo({ top: document.getElementById("cbt-test").offsetTop - 70, behavior: 'smooth' });
-}
-
-// 4. CHAPTER-WISE VVI SYSTEM
-const vviSyllabus = {
-  "10": {
-    subjects: { "math": "गणित (New NCERT)", "science": "विज्ञान (New NCERT)" },
-    chapters: {
-      "math": [
-        "अध्याय 1: वास्तविक संख्याएँ", "अध्याय 2: बहुपद", "अध्याय 3: दो चर वाले रैखिक समीकरण युग्म",
-        "अध्याय 4: द्विघात समीकरण", "अध्याय 5: समांतर श्रेढियाँ", "अध्याय 6: त्रिभुज",
-        "अध्याय 7: निर्देशांक ज्यामिति", "अध्याय 8: त्रिकोणमिति का परिचय", "अध्याय 9: त्रिकोणमिति के अनुप्रयोग",
-        "अध्याय 10: वृत्त", "अध्याय 11: वृत्तों से संबंधित क्षेत्रफल", "अध्याय 12: पृष्ठीय क्षेत्रफल और आयतन",
-        "अध्याय 13: सांख्यिकी", "अध्याय 14: प्रायिकता"
-      ],
-      "science": [
-        "अध्याय 1: रासायनिक अभिक्रियाएँ एवं समीकरण", "अध्याय 2: अम्ल, क्षारक एवं लवण", "अध्याय 3: धातु एवं अधातु",
-        "अध्याय 4: कार्बन एवं उसके यौगिक", "अध्याय 5: जैव प्रक्रम", "अध्याय 6: नियंत्रण एवं समन्वय",
-        "अध्याय 7: जीव जनन कैसे करते हैं", "अध्याय 8: आनुवंशिकता", "अध्याय 9: प्रकाश - परावर्तन तथा अपवर्तन",
-        "अध्याय 10: मानव नेत्र एवं रंगबिरंगा संसार", "अध्याय 11: विद्युत", "अध्याय 12: विद्युत धारा के चुंबकीय प्रभाव",
-        "अध्याय 13: हमारा पर्यावरण"
-      ]
-    }
-  },
-  "11": {
-    subjects: {
-      "history": "इतिहास (विश्व इतिहास - NCERT)",
-      "geo": "भूगोल (भौतिक व भारत पर्यावरण)",
-      "hindi": "हिंदी (आरोह / अंतरा)",
-      "english": "English Core (Hornbill / Snapshots)"
-    },
-    chapters: {
-      "history": [
-        "अध्याय 1: लेखन कला और शहरी जीवन (मेसोपोटामिया)", "अध्याय 2: तीन महाद्वीपों में फैला हुआ साम्राज्य (रोम)",
-        "अध्याय 3: यायावर साम्राज्य (मंगोल / चंगेज खान)", "अध्याय 4: तीन वर्ग (सामंतवाद)",
-        "अध्याय 5: बदलती हुई सांस्कृतिक परंपराएँ (पुनर्जागरण)", "अध्याय 6: मूल निवासियों का विस्थापन",
-        "अध्याय 7: आधुनिकीकरण के रास्ते (जापान और चीन)"
-      ],
-      "geo": [
-        "अध्याय 1: भूगोल एक विषय के रूप में", "अध्याय 2: पृथ्वी की उत्पत्ति एवं विकास",
-        "अध्याय 3: पृथ्वी की आंतरिक संरचना व भूकंप", "अध्याय 4: महासागरों और महाद्वीपों का वितरण",
-        "अध्याय 5: भू-आकृतिक प्रक्रियाएँ", "अध्याय 6: वायुमंडल का संघटन, संरचना एवं ऊष्मा बजट",
-        "अध्याय 7: भारत: स्थिति, आकार और भौतिक स्वरूप", "अध्याय 8: भारत: अपवाह तंत्र (नदियाँ)",
-        "अध्याय 9: भारतीय जलवायु एवं मानसून", "अध्याय 10: प्राकृतिक वनस्पति एवं मृदा"
-      ],
-      "hindi": [
-        "पाठ 1: नमक का दारोगा (प्रेमचंद)", "पाठ 2: मियाँ नसीरुद्दीन (कृष्णा सोबती)",
-        "पाठ 3: अपू के साथ ढाई साल (सत्यजित राय)", "काव्य 1: कबीर के पद",
-        "काव्य 2: मीरा के पद", "अभिव्यक्ति और माध्यम (जनसंचार)"
-      ],
-      "english": [
-        "Ch 1: The Portrait of a Lady", "Poem 1: A Photograph",
-        "Ch 2: We're Not Afraid to Die...", "Ch 3: Discovering Tut: the Saga Continues",
-        "Snapshots Ch 1: The Summer of the Beautiful White Horse"
-      ]
-    }
-  },
-  "9": {
-    subjects: { "math": "गणित (New NCERT)", "science": "विज्ञान (New NCERT)" },
-    chapters: {
-      "math": [
-        "अध्याय 1: संख्या पद्धति", "अध्याय 2: बहुपद", "अध्याय 3: निर्देशांक ज्यामिति",
-        "अध्याय 4: दो चरों वाले रैखिक समीकरण", "अध्याय 5: यूक्लिड की ज्यामिति का परिचय",
-        "अध्याय 6: रेखाएँ और कोण", "अध्याय 7: त्रिभुज", "अध्याय 8: चतुर्भुज",
-        "अध्याय 9: वृत्त", "अध्याय 10: हीरोन का सूत्र", "अध्याय 11: पृष्ठीय क्षेत्रफल और आयतन", "अध्याय 12: सांख्यिकी"
-      ],
-      "science": [
-        "अध्याय 1: हमारे आस-पास के पदार्थ", "अध्याय 2: क्या हमारे आस-पास के पदार्थ शुद्ध हैं",
-        "अध्याय 3: परमाणु एवं अणु", "अध्याय 4: परमाणु की संरचना",
-        "अध्याय 5: जीवन की मौलिक इकाई (कोशिका)", "अध्याय 6: ऊतक (Tissues)",
-        "अध्याय 7: गति (Motion)", "अध्याय 8: बल तथा गति के नियम",
-        "अध्याय 9: गुरुत्वाकर्षण", "अध्याय 10: कार्य तथा ऊर्जा", "अध्याय 11: ध्वनि", "अध्याय 12: खाद्य संसाधनों में सुधार"
-      ]
-    }
-  },
-  "8": {
-    subjects: { "math": "गणित (JCERT झारखंड)", "science": "विज्ञान (JCERT झारखंड)" },
-    chapters: {
-      "math": [
-        "अध्याय 1: परिमेय संख्याएँ", "अध्याय 2: एक चर वाले रैखिक समीकरण", "अध्याय 3: ज्यामितीय आकृतियों की समझ",
-        "अध्याय 4: आँकड़ों का प्रबंधन", "अध्याय 5: वर्ग और वर्गमूल", "अध्याय 6: घन और घनमूल",
-        "अध्याय 7: राशियों की तुलना", "अध्याय 8: बीजीय व्यंजक एवं सर्वसमिकाएँ", "अध्याय 9: क्षेत्रमिति",
-        "अध्याय 10: घातांक और घात", "अध्याय 11: सीधा और प्रतिलोम समानुपात", "अध्याय 12: गुणनखंडन"
-      ],
-      "science": [
-        "अध्याय 1: कोशिका", "अध्याय 2: धातु एवं अधातु", "अध्याय 3: सूक्ष्मजीव",
-        "अध्याय 4: विद्युत धारा का रासायनिक प्रभाव", "अध्याय 5: जंतुओं में जनन",
-        "अध्याय 6: बल एवं दाब", "अध्याय 7: घर्षण", "अध्याय 8: ध्वनि", "अध्याय 9: प्रकाश"
-      ]
-    }
-  }
-};
-
-function populateVVISubjects() {
-  const cls = document.getElementById("vviClass").value;
-  const subSelect = document.getElementById("vviSubject");
-  const chSelect = document.getElementById("vviChapter");
-
-  subSelect.innerHTML = '<option value="">-- विषय चुनें --</option>';
-  chSelect.innerHTML = '<option value="">-- पहले विषय चुनें --</option>';
-
-  if (!cls || !vviSyllabus[cls]) return;
-
-  const subs = vviSyllabus[cls].subjects;
-  for (let key in subs) {
-    const opt = document.createElement("option");
-    opt.value = key;
-    opt.textContent = subs[key];
-    subSelect.appendChild(opt);
-  }
-}
-
-function populateVVIChapters() {
-  const cls = document.getElementById("vviClass").value;
-  const sub = document.getElementById("vviSubject").value;
-  const chSelect = document.getElementById("vviChapter");
-
-  chSelect.innerHTML = '<option value="">-- अध्याय चुनें --</option>';
-
-  if (!cls || !sub || !vviSyllabus[cls].chapters[sub]) return;
-
-  const chs = vviSyllabus[cls].chapters[sub];
-  chs.forEach((ch, idx) => {
-    const opt = document.createElement("option");
-    opt.value = idx;
-    opt.textContent = ch;
-    chSelect.appendChild(opt);
-  });
-}
-
-function displayChapterVVI() {
-  const cls = document.getElementById("vviClass").value;
-  const sub = document.getElementById("vviSubject").value;
-  const chIdx = document.getElementById("vviChapter").value;
-  const area = document.getElementById("vviDisplayArea");
-
-  if (!cls || !sub || chIdx === "") {
-    alert("कृपया कक्षा, विषय और अध्याय तीनों का चयन करें।");
-    return;
-  }
-
-  const chName = vviSyllabus[cls].chapters[sub][chIdx];
-  const subName = vviSyllabus[cls].subjects[sub];
-
-  area.innerHTML = `
-    <div class="card-box" style="border-left: 5px solid var(--primary);">
-      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-bottom:12px;">
-        <h3 style="color:var(--primary); font-size:16px;">📖 ${chName} (${subName})</h3>
-        <span style="font-size:12px; background:#fef3c7; color:#92400e; padding:3px 10px; border-radius:12px; font-weight:700;">VVI बोर्ड स्पेशल सेट</span>
-      </div>
-      <p style="font-size:13px; color:var(--text-muted); margin-bottom:14px;">
-        इस अध्याय के वस्तुनिष्ठ एवं अति-महत्वपूर्ण प्रश्न नीचे दिए गए हैं। 'उत्तर देखें' बटन दबाकर अपना उत्तर सत्यापित करें।
-      </p>
-
-      <div class="q-card-vvi">
-        <p style="font-weight:600; font-size:13.5px;">प्र. 1. ${chName} का मुख्य बोर्ड परीक्षा में बार-बार पूछा जाने वाला केंद्रीय सिद्धांत / सूत्र क्या है?</p>
-        <button class="btn-toggle-ans" onclick="toggleVVIAns('ans-v1')">👁️ उत्तर एवं व्याख्या देखें</button>
-        <div id="ans-v1" class="ans-reveal">
-          उत्तर: न्यू NCERT/JCERT दिशानिर्देश अनुसार यह बोर्ड परीक्षा के लिए अनिवार्य टॉपिक है। क्लास नोट्स व फॉर्मूला चार्ट से इसका अभ्यास करें।
-        </div>
-      </div>
-
-      <div class="q-card-vvi">
-        <p style="font-weight:600; font-size:13.5px;">प्र. 2. इस अध्याय के सभी 20 से 50 वस्तुनिष्ठ प्रश्नों का संपूर्ण प्रैक्टिस सेट एवं हल सहित PDF प्राप्त करने हेतु:</p>
-        <button class="btn-toggle-ans" onclick="toggleVVIAns('ans-v2')">👁️ जानकारी देखें</button>
-        <div id="ans-v2" class="ans-reveal">
-          उत्तर: कोचिंग क्लासरूम में ऑफलाइन टेस्ट शीट उपलब्ध है अथवा आप सीधे विकास सर के WhatsApp (+91 7856902817) पर संपर्क करके डिजिटल कॉपी प्राप्त कर सकते हैं।
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-function toggleVVIAns(id) {
-  const el = document.getElementById(id);
-  el.style.display = el.style.display === "block" ? "none" : "block";
-}
-
-// Initial Load
-window.onload = function() {
-  renderMockTest();
-};
 </script>
 
 </body>
