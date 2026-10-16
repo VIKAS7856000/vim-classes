@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VIM CLASSES BELBATHAN | ऑनलाइन टेस्ट व स्टडी मटेरियल</title>
+<title>VIM CLASSES BELBATHAN | ऑनलाइन टेस्ट व स्टडी पोर्टल</title>
 <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
 <style>
@@ -30,7 +30,7 @@ body {
   line-height: 1.5;
 }
 
-/* Header & Vector Logo */
+/* Header */
 header {
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: white;
@@ -94,7 +94,7 @@ nav a:hover {
 }
 
 section {
-  padding: 24px 14px;
+  padding: 22px 14px;
   max-width: 950px;
   margin: auto;
 }
@@ -116,6 +116,34 @@ section {
   background: var(--gold);
   margin: 5px auto 0;
   border-radius: 2px;
+}
+
+/* Motivation Card */
+.quote-box {
+  background: linear-gradient(135deg, #ffffff, #fffbeb);
+  border: 1.5px dashed var(--gold);
+  border-radius: 10px;
+  padding: 16px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-top: 14px;
+}
+
+.quote-icon {
+  font-size: 22px;
+  color: var(--gold);
+}
+
+.quote-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin: 6px 0;
+}
+
+.quote-author {
+  font-size: 12px;
+  color: var(--text-muted);
 }
 
 /* Banner */
@@ -149,7 +177,7 @@ section {
   display: inline-block;
   background: var(--success);
   color: white;
-  padding: 8px 18px;
+  padding: 9px 18px;
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
@@ -159,14 +187,13 @@ section {
   margin-top: 8px;
 }
 
-/* Study Material Section */
+/* Study Material */
 .study-card {
   background: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.06);
   border-top: 4px solid var(--gold);
-  margin-bottom: 20px;
 }
 
 .study-select-row {
@@ -186,10 +213,6 @@ select {
   background: #f8fafc;
 }
 
-.study-output-box {
-  margin-top: 15px;
-}
-
 .study-item {
   background: #f8fafc;
   padding: 12px 14px;
@@ -200,13 +223,33 @@ select {
   line-height: 1.6;
 }
 
-/* Live Quiz Engine */
+/* Quiz Panel */
 .quiz-panel {
   background: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.06);
   border-top: 4px solid var(--primary);
+}
+
+.student-info-box {
+  background: #eff6ff;
+  border: 1.5px dashed var(--primary);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.student-info-box input {
+  padding: 9px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 6px;
+  font-family: inherit;
 }
 
 .class-picker {
@@ -226,6 +269,7 @@ select {
   font-weight: 600;
   font-size: 13px;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .class-btn.active {
@@ -269,11 +313,11 @@ select {
   margin-right: 8px;
 }
 
-/* Instant Result Area */
+/* Result Area */
 #result-display-area {
   display: none;
   background: white;
-  padding: 20px;
+  padding: 24px;
   border-radius: 10px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
   text-align: center;
@@ -292,76 +336,6 @@ select {
   font-weight: 700;
   color: var(--primary);
   margin: 12px auto;
-}
-
-/* Toppers Podium */
-.top-podium {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 12px;
-  margin-bottom: 14px;
-}
-
-.podium-card {
-  background: white;
-  border-radius: 8px;
-  padding: 14px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  border-top: 4px solid var(--primary);
-}
-
-.podium-card.rank1 { border-top-color: #f59e0b; background: #fffdf8; }
-.podium-card.rank2 { border-top-color: #94a3b8; }
-.podium-card.rank3 { border-top-color: #b45309; }
-
-.medal {
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
-  border-radius: 50%;
-  color: white;
-  font-weight: bold;
-  font-size: 15px;
-  margin: 0 auto 6px;
-}
-
-.m1 { background: linear-gradient(135deg, #f59e0b, #b45309); }
-.m2 { background: linear-gradient(135deg, #94a3b8, #475569); }
-.m3 { background: linear-gradient(135deg, #b45309, #78350f); }
-
-.s-name { font-size: 16px; font-weight: 700; color: var(--primary-dark); }
-.s-marks { font-size: 13px; color: var(--success); font-weight: 600; margin-top: 2px; }
-
-/* Table */
-.table-wrap {
-  overflow-x: auto;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-  text-align: left;
-}
-
-th, td {
-  padding: 9px 12px;
-  border-bottom: 1px solid #edf2f7;
-}
-
-th {
-  background: #f8fafc;
-  color: var(--primary);
-  font-weight: 700;
-  position: sticky;
-  top: 0;
-  z-index: 2;
 }
 
 /* Gallery */
@@ -418,25 +392,34 @@ footer {
 <nav>
   <a href="#home">होम</a>
   <a href="#study-material">📚 स्टडी मटेरियल</a>
-  <a href="#test-section">📝 ऑनलाइन 50 प्रश्न टेस्ट</a>
-  <a href="#result">🏆 टेस्ट रिजल्ट</a>
+  <a href="#test-section">📝 ऑनलाइन टेस्ट</a>
   <a href="#gallery">📸 कोचिंग गैलरी</a>
   <a href="#contact">संपर्क</a>
 </nav>
 
-<!-- Home Banner (Google Drive Live Photo) -->
+<!-- Home Banner & Daily Quote -->
 <section id="home">
   <div class="hero-box">
     <div class="banner-img-wrap">
-      <img src="https://lh3.googleusercontent.com/d/1amcQBNVzzN7zybA4Q3hRBynCj1DqyBKk" alt="VIM Classes Roof Test" class="banner-img">
+      <img src="https://lh3.googleusercontent.com/d/1amcQBNVzzN7zybA4Q3hRBynCj1DqyBKk" alt="VIM Classes Banner" class="banner-img">
     </div>
     <div class="hero-content">
-      <h2 style="color:var(--primary); font-size:18px;">कक्षा 8वीं, 9वीं, 10वीं एवं 11वीं (आर्ट्स) ऑनलाइन पोर्टल</h2>
+      <h2 style="color:var(--primary); font-size:18px;">कक्षा 6वीं से 11वीं (आर्ट्स) ऑनलाइन पोर्टल</h2>
       <p style="margin: 5px 0 10px; color: var(--text-muted); font-size: 13px;">
-        अध्यायवार स्टडी मटेरियल पढ़ें, 50-50 प्रश्नों का लाइव टेस्ट दें और तुरंत अपना स्कोरकार्ड देखें।
+        अध्यायवार नोट्स पढ़ें, 50 प्रश्नों का लाइव टेस्ट दें और सीधा स्कोर WhatsApp पर भेजें।
       </p>
       <a href="#test-section" class="btn">अभी टेस्ट शुरू करें ➔</a>
     </div>
+  </div>
+
+  <!-- Motivational Quotes Box -->
+  <div class="quote-box">
+    <div class="quote-icon">❝</div>
+    <div class="quote-text" id="quote-display">"कड़ी मेहनत का कोई विकल्प नहीं होता, आपकी आज की मेहनत ही आपका कल तय करेगी।"</div>
+    <div class="quote-author" id="quote-author">— प्रेरक सुविचार | VIM Classes</div>
+    <button type="button" class="btn" style="background:var(--gold); padding:4px 12px; font-size:11px; margin-top:8px;" onclick="changeQuote()">
+      नया विचार पढ़ें ↻
+    </button>
   </div>
 </section>
 
@@ -447,10 +430,12 @@ footer {
     <div class="study-select-row">
       <select id="smClassSelect">
         <option value="">-- कक्षा चुनें --</option>
+        <option value="11_arts">कक्षा 11वीं (आर्ट्स)</option>
         <option value="10">कक्षा 10वीं</option>
         <option value="9">कक्षा 9वीं</option>
         <option value="8">कक्षा 8वीं</option>
-        <option value="11_arts">कक्षा 11वीं (आर्ट्स)</option>
+        <option value="7">कक्षा 7वीं</option>
+        <option value="6">कक्षा 6वीं</option>
       </select>
       <select id="smSubjectSelect">
         <option value="">-- विषय चुनें --</option>
@@ -461,7 +446,7 @@ footer {
       <button class="btn" onclick="loadStudyMaterial()" style="margin-top:0;">नोट्स देखें</button>
     </div>
 
-    <div id="study-content-area" class="study-output-box">
+    <div id="study-content-area">
       <p style="text-align:center; color:var(--text-muted); font-size:13px;">
         अपनी कक्षा और विषय चुनकर "नोट्स देखें" बटन दबाएँ।
       </p>
@@ -469,23 +454,33 @@ footer {
   </div>
 </section>
 
-<!-- Live Online Test Engine (50 Questions per Class) -->
+<!-- Live Online Test Engine -->
 <section id="test-section">
-  <h2 class="section-head">📝 ऑनलाइन टेस्ट (पूरे 50-50 प्रश्न)</h2>
+  <h2 class="section-head">📝 ऑनलाइन टेस्ट (50 वस्तुनिष्ठ प्रश्न)</h2>
 
   <div class="quiz-panel">
+    <!-- Mandatory Student Name -->
+    <div class="student-info-box">
+      <label style="font-weight: 700; color: var(--primary); font-size: 14px;">
+        ✏️ परीक्षार्थी अपना पूरा नाम लिखें:
+      </label><br>
+      <input type="text" id="studentNameInput" placeholder="जैसे: राहुल कुमार" required>
+    </div>
+
+    <!-- Class Selector -->
     <div class="class-picker">
-      <button class="class-btn active" onclick="loadClassQuiz('11')">कक्षा 11वीं (आर्ट्स - 50 प्रश्न)</button>
-      <button class="class-btn" onclick="loadClassQuiz('10')">कक्षा 10वीं (50 प्रश्न)</button>
-      <button class="class-btn" onclick="loadClassQuiz('9')">कक्षा 9वीं (50 प्रश्न)</button>
-      <button class="class-btn" onclick="loadClassQuiz('8')">कक्षा 8वीं (50 प्रश्न)</button>
+      <button class="class-btn active" data-cls="11" onclick="loadClassQuiz('11', this)">कक्षा 11वीं (आर्ट्स)</button>
+      <button class="class-btn" data-cls="10" onclick="loadClassQuiz('10', this)">कक्षा 10वीं</button>
+      <button class="class-btn" data-cls="9" onclick="loadClassQuiz('9', this)">कक्षा 9वीं</button>
+      <button class="class-btn" data-cls="8" onclick="loadClassQuiz('8', this)">कक्षा 8वीं</button>
+      <button class="class-btn" data-cls="7" onclick="loadClassQuiz('7', this)">कक्षा 7वीं</button>
     </div>
 
     <div id="quiz-title-tag" style="font-weight:700; color:var(--primary); margin-bottom:12px; font-size:15px;"></div>
 
     <form id="quiz-form">
       <div id="questions-holder"></div>
-      <button type="button" class="btn" style="width:100%; padding:12px; font-size:15px; margin-top:15px;" onclick="calculateResult()">
+      <button type="button" class="btn" style="width:100%; padding:12px; font-size:15px; margin-top:15px;" onclick="calculateAndShowResult()">
         टेस्ट सबमिट करें और रिजल्ट देखें ➔
       </button>
     </form>
@@ -493,95 +488,27 @@ footer {
 
   <!-- Instant Result Card -->
   <div id="result-display-area">
-    <h3 style="color:var(--primary);">🎯 टेस्ट परिणाम (Instant Result)</h3>
+    <h3 style="color:var(--primary);">🎯 टेस्ट परिणाम (Result Card)</h3>
     <div class="score-badge" id="score-text">0/50</div>
+    <div id="student-res-name" style="font-size:16px; font-weight:700; color:var(--primary-dark); margin-top:4px;"></div>
     <div id="percentage-text" style="font-size:15px; font-weight:700; color:var(--success);"></div>
     <div id="grade-text" style="font-size:13px; color:var(--text-muted); margin:4px 0 14px;"></div>
-    
-    <div id="answers-breakdown" style="text-align:left; margin-top:15px; max-height:300px; overflow-y:auto; border-top:1px solid #e2e8f0; padding-top:10px;"></div>
+
+    <!-- Direct WhatsApp Button -->
+    <div style="background:#f0fdf4; border:1px dashed #86efac; border-radius:8px; padding:15px;">
+      <p style="font-size:13px; color:#166534; font-weight:600; margin-bottom:8px;">
+        नीचे दिए गए बटन पर क्लिक करके अपना रिजल्ट सीधे विकास सर को WhatsApp पर भेजें:
+      </p>
+      <button type="button" class="btn" style="background:#16803d; width:100%; max-width:320px; font-size:14px;" onclick="sendResultToWhatsApp()">
+        📲 विकास सर को रिजल्ट WhatsApp करें
+      </button>
+    </div>
+
+    <div id="answers-breakdown" style="text-align:left; margin-top:18px; max-height:280px; overflow-y:auto; border-top:1px solid #e2e8f0; padding-top:10px;"></div>
   </div>
 </section>
 
-<!-- Toppers / Test Result Section -->
-<section id="result">
-  <h2 class="section-head">🏆 कोचिंग टेस्ट रैंकिंग (कुल पूर्णांक: 50)</h2>
-
-  <div class="top-podium">
-    <div class="podium-card rank1">
-      <div class="medal m1">1</div>
-      <div class="s-name">अंकिता आर्या</div>
-      <div class="s-marks">48 / 50 (96.0%)</div>
-    </div>
-    <div class="podium-card rank2">
-      <div class="medal m2">2</div>
-      <div class="s-name">स्वीटी कुमारी</div>
-      <div class="s-marks">46 / 50 (92.0%)</div>
-    </div>
-    <div class="podium-card rank3">
-      <div class="medal m3">3</div>
-      <div class="s-name">रौनक कुमार</div>
-      <div class="s-marks">45 / 50 (90.0%)</div>
-    </div>
-  </div>
-
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>रैंक</th>
-          <th>छात्र / छात्रा का नाम</th>
-          <th>प्राप्त अंक</th>
-          <th>प्रतिशत</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td><b>1</b></td><td>अंकिता आर्या</td><td>48</td><td>96.0%</td></tr>
-        <tr><td><b>2</b></td><td>स्वीटी कुमारी</td><td>46</td><td>92.0%</td></tr>
-        <tr><td><b>3</b></td><td>रौनक कुमार</td><td>45</td><td>90.0%</td></tr>
-        <tr><td><b>4</b></td><td>पीयूष कुमार</td><td>43</td><td>86.0%</td></tr>
-        <tr><td><b>5</b></td><td>सिद्धार्थ कुमार</td><td>42</td><td>84.0%</td></tr>
-        <tr><td><b>6</b></td><td>राधिका कुमारी</td><td>40</td><td>80.0%</td></tr>
-        <tr><td><b>7</b></td><td>कल्पना कुमारी</td><td>40</td><td>80.0%</td></tr>
-        <tr><td><b>8</b></td><td>सुमन कुमार</td><td>38</td><td>76.0%</td></tr>
-        <tr><td><b>9</b></td><td>आयुष कुमार</td><td>32</td><td>64.0%</td></tr>
-        <tr><td><b>10</b></td><td>चाँदनी कुमारी</td><td>32</td><td>64.0%</td></tr>
-        <tr><td><b>11</b></td><td>दुलार</td><td>30</td><td>60.0%</td></tr>
-        <tr><td><b>12</b></td><td>विष्णु कुमार</td><td>28</td><td>56.0%</td></tr>
-        <tr><td><b>13</b></td><td>प्रियांशु कुमार</td><td>28</td><td>56.0%</td></tr>
-        <tr><td><b>14</b></td><td>छोटी कुमारी</td><td>28</td><td>56.0%</td></tr>
-        <tr><td><b>15</b></td><td>आर्यन कुमार</td><td>28</td><td>56.0%</td></tr>
-        <tr><td><b>16</b></td><td>राजलक्ष्मी कुमारी</td><td>25</td><td>50.0%</td></tr>
-        <tr><td><b>17</b></td><td>कृष्ण कुमार</td><td>25</td><td>50.0%</td></tr>
-        <tr><td><b>18</b></td><td>नरेन्द्र कुमार</td><td>23</td><td>46.0%</td></tr>
-        <tr><td><b>19</b></td><td>रीना कुमारी</td><td>23</td><td>46.0%</td></tr>
-        <tr><td><b>20</b></td><td>सूरज कुमार</td><td>22</td><td>44.0%</td></tr>
-        <tr><td><b>21</b></td><td>राधा कुमारी</td><td>21</td><td>42.0%</td></tr>
-        <tr><td><b>22</b></td><td>नित्यानंद कुमार</td><td>16</td><td>32.0%</td></tr>
-        <tr><td><b>23</b></td><td>सिद्धि कुमारी</td><td>15</td><td>30.0%</td></tr>
-        <tr><td><b>24</b></td><td>सूरज राय</td><td>15</td><td>30.0%</td></tr>
-        <tr><td><b>25</b></td><td>अभिषेक कुमार</td><td>15</td><td>30.0%</td></tr>
-        <tr><td><b>26</b></td><td>सूरज कुमार ठाकुर</td><td>12</td><td>24.0%</td></tr>
-        <tr><td><b>27</b></td><td>लक्ष्मी कुमारी</td><td>10</td><td>20.0%</td></tr>
-        <tr><td><b>28</b></td><td>पंकज राय</td><td>10</td><td>20.0%</td></tr>
-        <tr><td><b>29</b></td><td>अभिनन्दन कुमार</td><td>10</td><td>20.0%</td></tr>
-        <tr><td><b>30</b></td><td>अशोक ठाकुर</td><td>10</td><td>20.0%</td></tr>
-        <tr><td><b>31</b></td><td>रूपेश कुमार</td><td>10</td><td>20.0%</td></tr>
-        <tr><td><b>32</b></td><td>राहुल कुमार</td><td>8</td><td>16.0%</td></tr>
-        <tr><td><b>33</b></td><td>कार्तिक कुमार</td><td>7</td><td>14.0%</td></tr>
-        <tr><td><b>34</b></td><td>आर्या कुमारी</td><td>6</td><td>12.0%</td></tr>
-        <tr><td><b>35</b></td><td>मिथुन कुमार</td><td>5</td><td>10.0%</td></tr>
-        <tr><td><b>36</b></td><td>अमन कुमार</td><td>4</td><td>8.0%</td></tr>
-        <tr><td><b>37</b></td><td>आँचल कुमारी</td><td>3</td><td>6.0%</td></tr>
-        <tr><td><b>38</b></td><td>सूरज यादव</td><td>3</td><td>6.0%</td></tr>
-        <tr><td><b>39</b></td><td>नन्दनी कुमारी</td><td>3</td><td>6.0%</td></tr>
-        <tr><td><b>40</b></td><td>शिव कुमार ठाकुर</td><td>1</td><td>2.0%</td></tr>
-        <tr><td><b>41</b></td><td>उमेश यादव</td><td>1</td><td>2.0%</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- Real Photo Gallery (Google Drive Photos) -->
+<!-- Gallery -->
 <section id="gallery">
   <h2 class="section-head">📸 कोचिंग टेस्ट एवं क्लासरूम गैलरी</h2>
   <div class="gallery-grid">
@@ -593,7 +520,7 @@ footer {
   </div>
 </section>
 
-<!-- Contact Section -->
+<!-- Contact -->
 <section id="contact">
   <div style="background:white; padding:18px; border-radius:8px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
     <h3 style="color:var(--primary); font-size:16px;">VIM CLASSES BELBATHAN</h3>
@@ -607,49 +534,62 @@ footer {
 </footer>
 
 <script>
-// STUDY MATERIAL DATA
+// Motivational Quotes
+const quotesList = [
+  { q: "कड़ी मेहनत का कोई विकल्प नहीं होता, आपकी आज की मेहनत ही आपका कल तय करेगी।", a: "प्रेरक विचार" },
+  { q: "शिक्षा वह सबसे शक्तिशाली हथियार है जिसका उपयोग आप दुनिया को बदलने के लिए कर सकते हैं।", a: "नेल्सन मंडेला" },
+  { q: "उठो, जागो और तब तक मत रुको जब तक लक्ष्य की प्राप्ति न हो जाए।", a: "स्वामी विवेकानंद" },
+  { q: "सपने वो नहीं जो हम सोते हुए देखते हैं, सपने वो हैं जो हमें सोने नहीं देते।", a: "डॉ. ए.पी.जे. अब्दुल कलाम" },
+  { q: "सफलता एक दिन में नहीं मिलती, लेकिन निरंतर प्रयास करने से एक दिन ज़रूर मिलती है।", a: "सुविचार" },
+  { q: "जिसने अपनी पढ़ाई में अनुशासन बना लिया, उसे सफल होने से कोई नहीं रोक सकता।", a: "विकास सर" }
+];
+
+let quoteIdx = 0;
+function changeQuote() {
+  quoteIdx = (quoteIdx + 1) % quotesList.length;
+  document.getElementById("quote-display").textContent = `"${quotesList[quoteIdx].q}"`;
+  document.getElementById("quote-author").textContent = `— ${quotesList[quoteIdx].a}`;
+}
+
+// Study Material
 const studyData = {
   "10_math": [
-    "<b>वास्तविक संख्याएँ:</b> यूक्लिड विभाजन प्रमेयिका $a = bq + r$, जहाँ $0 \\le r < b$। HCF × LCM = दो संख्याओं का गुणनफल।",
-    "<b>द्विघात बहुपद:</b> मानक रूप $ax^2 + bx + c = 0$। शून्यकों का योग $(\\alpha + \\beta) = -b/a$, शून्यकों का गुणनफल $(\\alpha\\beta) = c/a$।",
-    "<b>द्विघात समीकरण:</b> विविक्तकर $D = b^2 - 4ac$। यदि $D > 0$ तो वास्तविक व भिन्न मूल, $D = 0$ तो दो बराबर मूल, $D < 0$ तो कोई वास्तविक मूल नहीं।",
-    "<b>त्रिकोणमिति सूत्र:</b> $\\sin^2\\theta + \\cos^2\\theta = 1$, $1 + \\tan^2\\theta = \\sec^2\\theta$, $1 + \\cot^2\\theta = \\text{cosec}^2\\theta$।",
-    "<b>निर्देशांक ज्यामिति:</b> दूरी सूत्र = $\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$, मध्य बिंदु सूत्र = $((x_1+x_2)/2, (y_1+y_2)/2)$।"
+    "<b>वास्तविक संख्याएँ:</b> यूक्लिड विभाजन प्रमेयिका a = bq + r, जहाँ 0 ≤ r < b। HCF × LCM = दो संख्याओं का गुणनफल।",
+    "<b>द्विघात बहुपद:</b> मानक रूप ax² + bx + c = 0। शून्यकों का योग (α + β) = -b/a, शून्यकों का गुणनफल (αβ) = c/a।",
+    "<b>द्विघात समीकरण:</b> विविक्तकर D = b² - 4ac। यदि D > 0 तो दो भिन्न मूल, D = 0 तो दो बराबर मूल, D < 0 तो कोई वास्तविक मूल नहीं।",
+    "<b>त्रिकोणमिति:</b> sin²θ + cos²θ = 1, 1 + tan²θ = sec²θ, 1 + cot²θ = cosec²θ।"
   ],
   "10_science": [
-    "<b>रासायनिक अभिक्रियाएँ:</b> संयोजन, वियोजन, विस्थापन एवं द्विविस्थापन अभिक्रियाएँ। संक्षारण रोकने के लिए जस्तीकरण (Galvanization) किया जाता है।",
-    "<b>अम्ल एवं क्षार:</b> शुद्ध जल का pH मान 7 होता है। अम्ल नीले लिटमस को लाल और क्षार लाल लिटमस को नीला करता है। बेकिंग सोडा का सूत्र $\\text{NaHCO}_3$ है।",
-    "<b>जैव प्रक्रम:</b> पादपों में जाइलम जल का वहन करता है और फ्लोएम भोजन का। मानव हृदय 4 कोष्ठों में विभाजित होता है।",
-    "<b>प्रकाशिकी:</b> समतल दर्पण का आवर्धन हमेशा +1 होता है। गाड़ियों में पीछे देखने के लिए उत्तल दर्पण का प्रयोग होता है।"
+    "<b>रासायनिक अभिक्रियाएँ:</b> संयोजन, वियोजन, विस्थापन एवं द्विविस्थापन। संक्षारण रोकने हेतु जस्तीकरण किया जाता है।",
+    "<b>अम्ल एवं क्षार:</b> शुद्ध जल का pH मान 7 होता है। बेकिंग सोडा का रासायनिक सूत्र NaHCO₃ तथा विरंजक चूर्ण का सूत्र CaOCl₂ है।",
+    "<b>जैव प्रक्रम:</b> पादपों में जाइलम जल का वहन करता है और फ्लोएम भोजन का।"
   ],
   "10_sst": [
-    "<b>यूरोप में राष्ट्रवाद:</b> 'यंग इटली' और 'यंग यूरोप' की स्थापना जोसेफ मेत्सिनी ने की थी। जर्मनी का एकीकरण बिस्मार्क के नेतृत्व में हुआ।",
-    "<b>भारत में राष्ट्रवाद:</b> 13 अप्रैल 1919 को अमृतसर में जालियांवाला बाग हत्याकांड हुआ। गांधीजी ने 1930 में दांडी यात्रा से सविनय अवज्ञा आंदोलन शुरू किया।",
-    "<b>संसाधन एवं विकास:</b> काली मिट्टी को 'रेगुर मिट्टी' भी कहते हैं जो कपास की खेती के लिए सर्वोत्तम होती है।",
-    "<b>लोकतंत्र एवं अर्थव्यवस्था:</b> भारत में त्रि-स्तरीय पंचायती राज व्यवस्था लागू है। भारत में मुद्रा नोट RBI जारी करता है।"
+    "<b>इतिहास:</b> 'यंग इटली' की स्थापना जोसेफ मेत्सिनी ने की थी। 13 अप्रैल 1919 को जलियांवाला बाग हत्याकांड हुआ।",
+    "<b>भूगोल:</b> काली मिट्टी को 'रेगुर मिट्टी' कहते हैं, जो कपास की खेती के लिए सबसे उपयुक्त मानी जाती है।"
   ],
   "9_math": [
-    "<b>संख्या पद्धति:</b> प्रत्येक प्राकृत संख्या एक पूर्ण संख्या होती है। $0$ एक परिमेय संख्या है क्योंकि इसे $0/1$ लिखा जा सकता है।",
-    "<b>बहुपद:</b> $x^2 - y^2 = (x - y)(x + y)$, $(x + y)^3 = x^3 + y^3 + 3xy(x + y)$।",
-    "<b>निर्देशांक ज्यामिति:</b> क्षैतिज रेखा को $x$-अक्ष तथा ऊर्ध्वाधर रेखा को $y$-अक्ष कहते हैं। मूल बिंदु के निर्देशांक $(0, 0)$ होते हैं।",
-    "<b>हीरोन का सूत्र:</b> त्रिभुज का क्षेत्रफल = $\\sqrt{s(s-a)(s-b)(s-c)}$, जहाँ अर्धपरिमाप $s = (a+b+c)/2$।"
+    "<b>संख्या पद्धति:</b> 0 एक परिमेय संख्या है क्योंकि इसे 0/1 लिखा जा सकता है।",
+    "<b>हीरोन का सूत्र:</b> त्रिभुज का क्षेत्रफल = √[s(s-a)(s-b)(s-c)], जहाँ s = (a+b+c)/2 है।"
   ],
   "9_science": [
-    "<b>पदार्थ:</b> ठोस से सीधे गैस बनने की क्रिया को उर्ध्वपातन (Sublimation) कहते हैं। जल का क्वथनांक 373 K (100°C) होता है।",
-    "<b>कोशिका:</b> कोशिका की खोज रॉबर्ट हुक ने 1665 में की। माइटोकॉन्ड्रिया को कोशिका का 'बिजलीघर' तथा लाइसोसोम को 'आत्मघाती थैली' कहते हैं।",
-    "<b>गति एवं बल:</b> त्वरण = वेग परिवर्तन / समय ($a = (v-u)/t$)। बल का SI मात्रक न्यूटन (N) होता है ($F = ma$)।",
-    "<b>गुरुत्वाकर्षण:</b> गुरुत्वीय त्वरण $g = 9.8\\text{ m/s}^2$। सार्वत्रिक गुरुत्वाकर्षण नियतांक $G = 6.67 \\times 10^{-11}\\text{ N m}^2/\\text{kg}^2$।"
+    "<b>पदार्थ:</b> ठोस से सीधे गैस बनने की प्रक्रिया उर्ध्वपातन (Sublimation) कहलाती है।",
+    "<b>कोशिका:</b> कोशिका की खोज रॉबर्ट हुक ने की। माइटोकॉन्ड्रिया को कोशिका का 'पावरहाउस' कहते हैं।"
   ],
   "8_math": [
-    "<b>परिमेय संख्याएँ:</b> योज्य तत्समक 0 और गुणात्मक तत्समक 1 होता है। $-a/b$ का योज्य प्रतिलोम $a/b$ होता है।",
-    "<b>समीकरण एवं वर्गमूल:</b> $2x - 3 = 7 \\implies 2x = 10 \\implies x = 5$। 729 का वर्गमूल 27 और 512 का घनमूल 8 होता है।",
-    "<b>क्षेत्रमिति एवं घातांक:</b> समचतुर्भुज का क्षेत्रफल = $\\frac{1}{2} \\times d_1 \\times d_2$। किसी संख्या की घात 0 होने पर उसका मान 1 होता है ($a^0 = 1$)।"
+    "<b>परिमेय संख्याएँ:</b> योज्य तत्समक 0 और गुणात्मक तत्समक 1 होता है।",
+    "<b>घातांक:</b> किसी भी गैर-शून्य संख्या की घात 0 होने पर उसका मान 1 होता है (a⁰ = 1)।"
+  ],
+  "7_math": [
+    "<b>पूर्णांक:</b> दो ऋणात्मक पूर्णांकों का गुणनफल सदैव धनात्मक होता है।",
+    "<b>भिन्न:</b> 2/3 का व्युत्क्रम 3/2 होता है।"
+  ],
+  "6_math": [
+    "<b>संख्याएँ:</b> सबसे छोटी प्राकृत संख्या 1 और सबसे छोटी पूर्ण संख्या 0 है।"
   ],
   "11_arts_sst": [
-    "<b>इतिहास:</b> मेसोपोटामिया सभ्यता दजला और फरात नदियों के बीच विकसित हुई। इसकी प्रसिद्ध लिपि कीलाकार (Cuneiform) थी।",
-    "<b>राजनीति विज्ञान:</b> संविधान सभा की पहली बैठक 9 दिसंबर 1946 को हुई थी। प्रारूप समिति के अध्यक्ष डॉ. भीमराव अम्बेडकर थे।",
-    "<b>भूगोल:</b> 'भूगोल' शब्द इरैटोस्थनीज ने दिया। पृथ्वी की सबसे आंतरिक परत को क्रोड (Core/Nife) कहा जाता है।",
-    "<b>अर्थशास्त्र:</b> अर्थशास्त्र को 'धन का विज्ञान' एडम स्मिथ ने कहा। भारत में नई आर्थिक नीति 1991 में लागू की गई।"
+    "<b>इतिहास:</b> मेसोपोटामिया की सभ्यता दजला और फरात नदियों के बीच विकसित हुई थी।",
+    "<b>राजनीति विज्ञान:</b> संविधान सभा की प्रारूप समिति के अध्यक्ष डॉ. भीमराव अम्बेडकर थे।"
   ]
 };
 
@@ -663,9 +603,7 @@ function loadStudyMaterial() {
     return;
   }
 
-  const key = `${cls}_${sub}`;
-  const notes = studyData[key];
-
+  const notes = studyData[`${cls}_${sub}`];
   if (!notes) {
     output.innerHTML = "<p style='text-align:center; color:var(--text-muted); font-size:13px;'>इस विषय का संक्षिप्त रिवीजन नोट्स शीघ्र अपडेट किया जा रहा है।</p>";
     return;
@@ -678,7 +616,7 @@ function loadStudyMaterial() {
   `).join("");
 }
 
-// 50-50 QUESTIONS DATABASE
+// Full 50 Questions per Class
 const fullQuizData = {
   "11": [
     { q: "[इतिहास] मेसोपोटामिया की सभ्यता किन दो नदियों के बीच विकसित हुई थी?", o: ["दजला और फरात", "नील और अमेजन", "सिंधु और गंगा", "ह्वांगहो और यांग्त्सी"], a: 0 },
@@ -688,7 +626,7 @@ const fullQuizData = {
     { q: "[इतिहास] मंगोल साम्राज्य में 'उलुस' शब्द का क्या अर्थ था?", o: ["सैन्य छावनी", "कबीलाई राज्यक्षेत्र", "डाक प्रणाली", "व्यापारिक कर"], a: 1 },
     { q: "[इतिहास] औद्योगिक क्रांति की शुरुआत सर्वप्रथम किस देश में हुई थी?", o: ["इंग्लैंड", "फ्रांस", "जर्मनी", "अमेरिका"], a: 0 },
     { q: "[राजनीति] भारतीय संविधान सभा की पहली बैठक किस तिथि को हुई थी?", o: ["9 दिसंबर 1946", "26 जनवरी 1950", "15 अगस्त 1947", "26 नवंबर 1949"], a: 0 },
-    { q: "[राजनीति] संविधान सभा की प्रारूप समिति (Drafting Committee) के अध्यक्ष कौन थे?", o: ["डॉ. बी.आर. अम्बेडकर", "डॉ. राजेंद्र प्रसाद", "पं. नेहरू", "सरदार पटेल"], a: 0 },
+    { q: "[राजनीति] संविधान सभा की प्रारूप समिति के अध्यक्ष कौन थे?", o: ["डॉ. बी.आर. अम्बेडकर", "डॉ. राजेंद्र प्रसाद", "पं. नेहरू", "सरदार पटेल"], a: 0 },
     { q: "[राजनीति] भारतीय संविधान में मौलिक अधिकार किस देश के संविधान से लिए गए हैं?", o: ["संयुक्त राज्य अमेरिका", "ब्रिटेन", "रूस", "कनाडा"], a: 0 },
     { q: "[राजनीति] संपत्ति के अधिकार को किस संविधान संशोधन द्वारा मूल अधिकार से हटाया गया?", o: ["44वें संशोधन", "42वें संशोधन", "86वें संशोधन", "73वें संशोधन"], a: 0 },
     { q: "[राजनीति] भारत में मुख्य चुनाव आयुक्त की नियुक्ति कौन करता है?", o: ["राष्ट्रपति", "प्रधानमंत्री", "संसद", "मुख्य न्यायाधीश"], a: 0 },
@@ -887,49 +825,125 @@ const fullQuizData = {
     { q: "भारतीय संविधान का जनक किसे कहा जाता है?", o: ["डॉ. भीमराव अम्बेडकर", "महात्मा गांधी", "डॉ. राजेंद्र प्रसाद", "जवाहरलाल नेहरू"], a: 0 },
     { q: "लोकसभा में सदस्यों की अधिकतम संख्या कितनी हो सकती है?", o: ["552", "250", "545", "500"], a: 0 },
     { q: "संसद के दो सत्रों के बीच अधिकतम कितने माह का अंतर हो सकता है?", o: ["6 माह", "3 माह", "12 माह", "9 माह"], a: 0 }
+  ],
+  "7": [
+    { q: "[गणित] दो ऋणात्मक पूर्णांकों का गुणनफल सदैव कैसा होता है?", o: ["धनात्मक", "ऋणात्मक", "शून्य", "अपरिभाषित"], a: 0 },
+    { q: "[गणित] (-1) × (-1) × (-1) का मान क्या होगा?", o: ["-1", "1", "0", "-3"], a: 0 },
+    { q: "[गणित] 2/3 का व्युत्क्रम क्या है?", o: ["3/2", "-2/3", "1", "0"], a: 0 },
+    { q: "[गणित] प्रथम पाँच पूर्ण संख्याओं का माध्य क्या होगा?", o: ["2", "2.5", "3", "1.5"], a: 0 },
+    { q: "[गणित] त्रिभुज के तीनों बाह्य कोणों का योग कितना होता है?", o: ["360°", "180°", "90°", "270°"], a: 0 },
+    { q: "[गणित] एक समकोण त्रिभुज में समकोण के सामने वाली भुजा क्या कहलाती है?", o: ["कर्ण (Hypotenuse)", "आधार", "लंब", "माध्यिका"], a: 0 },
+    { q: "[गणित] 0.5 × 0.05 का गुणनफल क्या होगा?", o: ["0.025", "0.25", "0.0025", "2.5"], a: 0 },
+    { q: "[गणित] समीकरण 3n + 7 = 25 में n का मान क्या है?", o: ["6", "5", "7", "4"], a: 0 },
+    { q: "[गणित] संपूरक कोणों का योग कितना होता है?", o: ["180°", "90°", "360°", "45°"], a: 0 },
+    { q: "[गणित] एक वृत्त का परिमाप ज्ञात करने का सूत्र क्या है?", o: ["2πr", "πr²", "4πr", "πd²"], a: 0 },
+    { q: "[विज्ञान] पादपों की रसोई किसे कहा जाता है?", o: ["पत्तियाँ", "तना", "जड़", "फूल"], a: 0 },
+    { q: "[विज्ञान] प्रकाश संश्लेषण के लिए आवश्यक गैस कौन सी है?", o: ["कार्बन डाइऑक्साइड", "ऑक्सीजन", "नाइट्रोजन", "हाइड्रोजन"], a: 0 },
+    { q: "[विज्ञान] अमरबेल किस प्रकार के पोषण का उदाहरण है?", o: ["परजीवी पोषण", "स्वपोषी", "मृतजीवी", "कीटभक्षी"], a: 0 },
+    { q: "[विज्ञान] मानव शरीर का सामान्य तापमान कितना होता है?", o: ["37°C", "98.6°C", "35°C", "40°C"], a: 0 },
+    { q: "[विज्ञान] ऊष्मा के स्थानांतरण की वह विधि जिसमें माध्यम की आवश्यकता नहीं होती:", o: ["विकिरण (Radiation)", "चालन", "संवहन", "वाष्पीकरण"], a: 0 },
+    { q: "[विज्ञान] सिरके में कौन सा अम्ल पाया जाता है?", o: ["एसिटिक अम्ल", "साइट्रिक अम्ल", "टार्टरिक अम्ल", "ऑक्सालिक अम्ल"], a: 0 },
+    { q: "[विज्ञान] भौतिक परिवर्तन का उदाहरण कौन सा है?", o: ["बर्फ का पिघलना", "लोहे पर जंग लगना", "दूध से दही बनना", "कागज का जलना"], a: 0 },
+    { q: "[विज्ञान] कीटभक्षी पौधा कौन सा है?", o: ["घटपर्णी (Pitcher Plant)", "गुलाब", "नीम", "बरगद"], a: 0 },
+    { q: "[विज्ञान] पित्त रस का निर्माण शरीर के किस अंग में होता है?", o: ["यकृत (Liver)", "आमाशय", "अग्न्याशय", "पित्ताशय"], a: 0 },
+    { q: "[विज्ञान] लाल लिटमस को नीला कौन करता है?", o: ["क्षारक (Base)", "अम्ल", "उदासीन लवण", "आसुत जल"], a: 0 },
+    { q: "[सामाजिक] दिल्ली के सुल्तानों के शासनकाल में प्रशासनिक भाषा कौन सी थी?", o: ["फारसी", "उर्दू", "अरबी", "तुर्की"], a: 0 },
+    { q: "[सामाजिक] रजिया सुल्तान किसकी पुत्री थी?", o: ["इल्तुतमिश", "कुतुबुद्दीन ऐबक", "बलबन", "अलाउद्दीन खिलजी"], a: 0 },
+    { q: "[सामाजिक] मुगल साम्राज्य की नींव 1526 में किसने रखी थी?", o: ["बाबर", "हुमायूँ", "अकबर", "जहाँगीर"], a: 0 },
+    { q: "[सामाजिक] अकबरनामा के लेखक कौन हैं?", o: ["अबुल फजल", "बीरबल", "फैजी", "बदायूँनी"], a: 0 },
+    { q: "[सामाजिक] पर्यावरण के जैविक घटक में क्या शामिल है?", o: ["पेड़-पौधे एवं जीव-जंतु", "हवा", "भूमि", "जल"], a: 0 },
+    { q: "[सामाजिक] पृथ्वी की सबसे पतली परत कौन सी है?", o: ["पर्पटी (Crust)", "मेंटल", "कोर", "क्रोड"], a: 0 },
+    { q: "[सामाजिक] विश्व पर्यावरण दिवस कब मनाया जाता है?", o: ["5 जून", "22 अप्रैल", "1 मई", "15 अगस्त"], a: 0 },
+    { q: "[सामाजिक] वायुमंडल की सबसे निचली परत कौन सी है?", o: ["क्षोभमंडल (Troposphere)", "समतापमंडल", "मध्यमंडल", "बहिर्मंडल"], a: 0 },
+    { q: "[सामाजिक] भारत में सार्वभौमिक वयस्क मताधिकार की न्यूनतम आयु क्या है?", o: ["18 वर्ष", "21 वर्ष", "25 वर्ष", "16 वर्ष"], a: 0 },
+    { q: "[सामाजिक] भारतीय राज्य का प्रमुख (संवैधानिक मुखिया) कौन होता है?", o: ["राज्यपाल", "मुख्यमंत्री", "विधानसभा अध्यक्ष", "गृहमंत्री"], a: 0 },
+    { q: "[सामाजिक] स्वास्थ्य सेवाएँ उपलब्ध कराना मुख्य रूप से किसका दायित्व है?", o: ["सरकार का", "निजी कंपनियों का", "जनता का", "व्यापारियों का"], a: 0 },
+    { q: "[सामाजिक] साप्ताहिक बाज़ार की विशेषता क्या होती है?", o: ["सप्ताह में किसी निश्चित दिन लगना", "पक्की दुकानें होना", "ब्रांडेड सामान मिलना", "मॉल की तरह होना"], a: 0 },
+    { q: "[सामाजिक] ताजमहल किस पत्थर से बना है?", o: ["सफेद संगमरमर", "लाल बलुआ पत्थर", "ग्रेनाइट", "कोटा स्टोन"], a: 0 },
+    { q: "[सामाजिक] गुरु नानक देव जी का जन्म कहाँ हुआ था?", o: ["ननकाना साहिब (तलवंडी)", "अमृतसर", "पटना", "दिल्ली"], a: 0 },
+    { q: "[सामाजिक] मराठा साम्राज्य की स्थापना किसने की थी?", o: ["छत्रपति शिवाजी महाराज", "बाजीराव", "संभाजी", "तानाजी"], a: 0 },
+    { q: "[विज्ञान] श्वसन क्रिया में हम कौन सी गैस अंदर लेते हैं?", o: ["ऑक्सीजन", "कार्बन डाइऑक्साइड", "नाइट्रोजन", "हीलियम"], a: 0 },
+    { q: "[विज्ञान] पादप में भोजन का संवहन किसके द्वारा होता है?", o: ["फ्लोएम", "जाइलम", "रंध्र", "जड़"], a: 0 },
+    { q: "[विज्ञान] रक्त का लाल रंग किस वर्णक के कारण होता है?", o: ["हीमोग्लोबिन", "क्लोरोफिल", "प्लाज्मा", "प्लेटलेट्स"], a: 0 },
+    { q: "[विज्ञान] पत्तियों की सतह पर मौजूद सूक्ष्म छिद्रों को क्या कहते हैं?", o: ["रंध्र (Stomata)", "क्लोरोप्लास्ट", "जाइलम", "शिरा"], a: 0 },
+    { q: "[विज्ञान] चाल (Speed) का मूल मात्रक क्या है?", o: ["मीटर/सेकंड (m/s)", "किमी/घंटा", "मीटर", "सेकंड"], a: 0 },
+    { q: "[विज्ञान] विद्युत धारा के तापीय प्रभाव पर आधारित उपकरण कौन सा है?", o: ["विद्युत हीटर", "पंखे की मोटर", "घंटी", "जनरेटर"], a: 0 },
+    { q: "[विज्ञान] समतल दर्पण द्वारा बना प्रतिबिंब कैसा होता है?", o: ["सीधा और आभासी", "उल्टा और वास्तविक", "बड़ा और वास्तविक", "धुंधला"], a: 0 },
+    { q: "[विज्ञान] वनों से हमें क्या प्राप्त होता है?", o: ["ऑक्सीजन, लकड़ी और औषधियाँ", "प्लास्टिक", "केमिकल", "कंक्रीट"], a: 0 },
+    { q: "[गणित] यदि किसी त्रिभुज की दो भुजाएँ बराबर हों, तो उसे क्या कहते हैं?", o: ["समद्विबाहु त्रिभुज", "समबाहु त्रिभुज", "विषमबाहु त्रिभुज", "समकोण त्रिभुज"], a: 0 },
+    { q: "[गणित] 25% का भिन्न रूप क्या होगा?", o: ["1/4", "1/2", "1/5", "3/4"], a: 0 },
+    { q: "[गणित] एक आयत का क्षेत्रफल ज्ञात करने का सूत्र क्या है?", o: ["लंबाई × चौड़ाई", "2(लंबाई + चौड़ाई)", "भुजा²", "आधार × ऊँचाई"], a: 0 },
+    { q: "[गणित] व्यंजक 4x + 5 में चर पद कौन सा है?", o: ["x", "4", "5", "+"], a: 0 },
+    { q: "[गणित] 10³ का मान क्या होगा?", o: ["1000", "100", "30", "10000"], a: 0 },
+    { q: "[गणित] रेखाखंड में कितने समरूपता के अक्ष हो सकते हैं?", o: ["2", "1", "3", "अनंत"], a: 0 },
+    { q: "[गणित] घनाभ के किनारों की कुल संख्या कितनी होती है?", o: ["12", "6", "8", "4"], a: 0 }
   ]
 };
 
 let currentClass = "11";
+let studentSubmittedName = "";
+let studentFinalScore = "";
+let studentFinalPercent = "";
 
-function loadClassQuiz(cls) {
+function loadClassQuiz(cls, elem) {
   currentClass = cls;
   document.querySelectorAll('.class-btn').forEach(btn => btn.classList.remove('active'));
-  event.target.classList.add('active');
+  if (elem) {
+    elem.classList.add('active');
+  } else {
+    const targetBtn = document.querySelector(`.class-btn[data-cls="${cls}"]`);
+    if (targetBtn) targetBtn.classList.add('active');
+  }
 
   const titleMap = {
     "11": "कक्षा 11वीं (आर्ट्स के 8 विषय - 50 वस्तुनिष्ठ प्रश्न)",
     "10": "कक्षा 10वीं बोर्ड स्पेशल (50 वस्तुनिष्ठ प्रश्न)",
     "9": "कक्षा 9वीं वार्षिक परीक्षा स्पेशल (50 वस्तुनिष्ठ प्रश्न)",
-    "8": "कक्षा 8वीं बोर्ड स्पेशल (50 वस्तुनिष्ठ प्रश्न)"
+    "8": "कक्षा 8वीं बोर्ड स्पेशल (50 वस्तुनिष्ठ प्रश्न)",
+    "7": "कक्षा 7वीं बोर्ड स्पेशल (50 वस्तुनिष्ठ प्रश्न)"
   };
-  document.getElementById("quiz-title-tag").textContent = titleMap[cls];
+  document.getElementById("quiz-title-tag").textContent = titleMap[cls] || "ऑनलाइन टेस्ट";
 
   const holder = document.getElementById("questions-holder");
   holder.innerHTML = "";
 
-  fullQuizData[cls].forEach((item, idx) => {
-    let qDiv = document.createElement("div");
-    qDiv.className = "q-box";
-    qDiv.innerHTML = `
-      <div class="q-text">प्र. ${idx + 1}: ${item.q}</div>
-      ${item.o.map((opt, optIdx) => `
-        <label class="opt-row">
-          <input type="radio" name="ans_${idx}" value="${optIdx}">
-          (${String.fromCharCode(65 + optIdx)})${opt}
-        </label>
-      `).join("")}
-    `;
-    holder.appendChild(qDiv);
-  });
+  if (fullQuizData[cls]) {
+    fullQuizData[cls].forEach((item, idx) => {
+      let qDiv = document.createElement("div");
+      qDiv.className = "q-box";
+      qDiv.innerHTML = `
+        <div class="q-text">प्र. ${idx + 1}: ${item.q}</div>
+        ${item.o.map((opt, optIdx) => `
+          <label class="opt-row">
+            <input type="radio" name="ans_${idx}" value="${optIdx}">
+            (${String.fromCharCode(65 + optIdx)})${opt}
+          </label>
+        `).join("")}
+      `;
+      holder.appendChild(qDiv);
+    });
+  }
 
   document.getElementById("result-display-area").style.display = "none";
 }
 
-loadClassQuiz("11");
+window.addEventListener("DOMContentLoaded", () => {
+  loadClassQuiz("11", null);
+});
 
-function calculateResult() {
+// Calculate Result
+function calculateAndShowResult() {
+  const nameInput = document.getElementById("studentNameInput").value.trim();
+  if (!nameInput) {
+    alert("कृपया टेस्ट सबमिट करने से पहले ऊपर अपना पूरा नाम लिखें!");
+    document.getElementById("studentNameInput").focus();
+    return;
+  }
+
+  studentSubmittedName = nameInput;
   const questions = fullQuizData[currentClass];
+  if (!questions) return;
+
   let score = 0;
   let total = questions.length;
   let reviewHtml = "<h4 style='color:var(--primary); margin-bottom:8px;'>उत्तर विश्लेषण:</h4>";
@@ -953,8 +967,12 @@ function calculateResult() {
   });
 
   let percent = ((score / total) * 100).toFixed(1);
-  document.getElementById("score-text").textContent = `${score}/${total}`;
-  document.getElementById("percentage-text").textContent = `कुल प्राप्तांक प्रतिशत: ${percent}%`;
+  studentFinalScore = `${score}/${total}`;
+  studentFinalPercent = `${percent}%`;
+
+  document.getElementById("score-text").textContent = studentFinalScore;
+  document.getElementById("student-res-name").textContent = `परीक्षार्थी: ${studentSubmittedName} (कक्षा ${currentClass}वीं)`;
+  document.getElementById("percentage-text").textContent = `कुल प्राप्तांक प्रतिशत: ${studentFinalPercent}`;
 
   let gradeMsg = "";
   if (percent >= 80) gradeMsg = "🏆 शानदार प्रदर्शन! उत्कृष्ट (Excellent)";
@@ -968,6 +986,20 @@ function calculateResult() {
   const resultArea = document.getElementById("result-display-area");
   resultArea.style.display = "block";
   resultArea.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Direct Send to Teacher's WhatsApp
+function sendResultToWhatsApp() {
+  const teacherNumber = "917856902817";
+  const msg = `*VIM CLASSES - ऑनलाइन टेस्ट रिजल्ट*%0A` +
+              `👤 परीक्षार्थी: ${studentSubmittedName}%0A` +
+              `📚 कक्षा: ${currentClass}वीं%0A` +
+              `🎯 प्राप्तांक: ${studentFinalScore}%0A` +
+              `📊 प्रतिशत: ${studentFinalPercent}%0A` +
+              `--------------------------------%0A` +
+              `शिक्षक: विकास सर (बेलबथान)`;
+  
+  window.open(`https://wa.me/${teacherNumber}?text=${msg}`, "_blank");
 }
 </script>
 
