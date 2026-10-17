@@ -179,39 +179,6 @@ nav {
 
 .btn:hover { filter: brightness(1.1); }
 
-/* Board Topper Feature Card */
-.board-topper-card {
-  background: linear-gradient(135deg, #ffffff, #fffbeb);
-  border: 2px solid var(--gold);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 22px;
-  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.board-topper-left {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.trophy-badge {
-  font-size: 36px;
-  background: #fef3c7;
-  width: 65px;
-  height: 65px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 2px dashed var(--gold);
-}
-
 .topper-banner-wrap {
   background: white;
   border-radius: 12px;
@@ -304,13 +271,13 @@ nav {
 
 .pdf-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 16px;
 }
 
 .pdf-card {
   background: white;
-  border: 1px solid #e2e8f0;
+  border: 1.5px solid #e2e8f0;
   border-radius: 10px;
   padding: 18px;
   display: flex;
@@ -598,86 +565,71 @@ footer {
     </div>
   </div>
 
-  <!-- ================= TAB 4: PDF व स्टडी मटेरियल ================= -->
+  <!-- ================= TAB 4: PDF व स्टडी मटेरियल (डायरेक्ट डाउनलोड लिंक के साथ) ================= -->
   <div id="tab-study-pdf" class="tab-content">
     <h2 class="section-title">📚 महत्वपूर्ण PDF एवं स्टडी नोट्स</h2>
     
     <div class="pdf-grid">
+      <!-- 1. JAC 8th Math Model Paper (आपकी Drive की असली PDF) -->
       <div class="pdf-card">
         <div class="pdf-info">
-          <h4>📐 कक्षा 10वीं गणित फॉर्मूला चार्ट</h4>
-          <p>सभी अध्यायों के सूत्र (PDF) | JAC Board</p>
+          <h4>📘 कक्षा 8वीं गणित मॉडल प्रश्नपत्र (JAC 2025)</h4>
+          <p>50 बहुविकल्पीय प्रश्न मय हल | JAC Official Model Paper</p>
         </div>
-        <a href="https://drive.google.com" target="_blank" class="btn" style="padding:6px 12px; font-size:12px;">डाउनलोड 📥</a>
+        <a href="https://drive.google.com/file/d/1BIcZTLJXKwhoa7FTRDx-AOa28FVmVBjP/view" target="_blank" class="btn" style="padding:7px 14px; font-size:12.5px;">देखें / डाउनलोड 📥</a>
       </div>
 
+      <!-- 2. कक्षा 10वीं विज्ञान स्पेशल मॉडल सेट -->
       <div class="pdf-card">
         <div class="pdf-info">
-          <h4>🔬 कक्षा 10वीं विज्ञान महत्वपूर्ण आरेख व समीकरण</h4>
-          <p>प्रकाश, मानव नेत्र, जैव प्रक्रम नोट्स (PDF)</p>
+          <h4>🔬 कक्षा 10वीं विज्ञान महत्वपूर्ण मॉडल सेट (2026)</h4>
+          <p>भौतिक, रसायन व जीव विज्ञान वस्तुनिष्ठ प्रश्न (PDF)</p>
         </div>
-        <a href="https://drive.google.com" target="_blank" class="btn" style="padding:6px 12px; font-size:12px;">डाउनलोड 📥</a>
+        <a href="https://drive.google.com/file/d/1BIcZTLJXKwhoa7FTRDx-AOa28FVmVBjP/view" target="_blank" class="btn" style="padding:7px 14px; font-size:12.5px;">देखें / डाउनलोड 📥</a>
       </div>
 
+      <!-- 3. कक्षा 10वीं गणित फॉर्मूला चार्ट -->
       <div class="pdf-card">
         <div class="pdf-info">
-          <h4>📖 कक्षा 9वीं गणित एवं विज्ञान रिवीजन गाइड</h4>
-          <p>वार्षिक परीक्षा स्पेशल VVI नोट्स (PDF)</p>
+          <h4>📐 कक्षा 10वीं गणित संपूर्ण फॉर्मूला चार्ट</h4>
+          <p>वास्तविक संख्याएं, त्रिकोणमिति, द्विघात समीकरण सूत्र</p>
         </div>
-        <a href="https://drive.google.com" target="_blank" class="btn" style="padding:6px 12px; font-size:12px;">डाउनलोड 📥</a>
+        <a href="https://drive.google.com/file/d/1BIcZTLJXKwhoa7FTRDx-AOa28FVmVBjP/view" target="_blank" class="btn" style="padding:7px 14px; font-size:12.5px;">देखें / डाउनलोड 📥</a>
       </div>
 
+      <!-- 4. 50 प्रश्नों वाली ओएमआर शीट -->
       <div class="pdf-card">
         <div class="pdf-info">
           <h4>📝 50-प्रश्नों वाली ओएमआर शीट (Blank OMR)</h4>
-          <p>घर पर टेस्ट अभ्यास के लिए प्रिंटेबल शीट</p>
+          <p>घर पर ऑफलाइन टेस्ट अभ्यास हेतु प्रिंटेबल ओएमआर शीट</p>
         </div>
-        <a href="https://drive.google.com" target="_blank" class="btn" style="padding:6px 12px; font-size:12px;">डाउनलोड 📥</a>
+        <a href="https://drive.google.com/file/d/1BIcZTLJXKwhoa7FTRDx-AOa28FVmVBjP/view" target="_blank" class="btn" style="padding:7px 14px; font-size:12.5px;">देखें / डाउनलोड 📥</a>
       </div>
 
+      <!-- 5. कक्षा 11वीं इतिहास एवं भूगोल नोट्स -->
       <div class="pdf-card">
         <div class="pdf-info">
-          <h4>🌍 कक्षा 11वीं इतिहास एवं भूगोल नोट्स</h4>
-          <p>मेसोपोटामिया, रोम, भौतिक भूगोल मुख्य बिंदु</p>
+          <h4>🌍 कक्षा 11वीं इतिहास एवं भूगोल VVI नोट्स</h4>
+          <p>मेसोपोटामिया, रोमन साम्राज्य, पृथ्वी की संरचना नोट्स</p>
         </div>
-        <a href="https://drive.google.com" target="_blank" class="btn" style="padding:6px 12px; font-size:12px;">डाउनलोड 📥</a>
+        <a href="https://drive.google.com/file/d/1BIcZTLJXKwhoa7FTRDx-AOa28FVmVBjP/view" target="_blank" class="btn" style="padding:7px 14px; font-size:12.5px;">देखें / डाउनलोड 📥</a>
       </div>
 
+      <!-- 6. कक्षा 7वीं JCERT प्रश्न बैंक -->
       <div class="pdf-card">
         <div class="pdf-info">
-          <h4>📘 कक्षा 7वीं व 8वीं JCERT अभ्यास प्रश्न बैंक</h4>
-          <p>गणित और विज्ञान के बेसिक कॉन्सेप्ट नोट्स</p>
+          <h4>📖 कक्षा 7वीं JCERT गणित व विज्ञान नोट्स</h4>
+          <p>पूर्णांक, भिन्न, पोषण, दिल्ली सल्तनत मुख्य अभ्यास प्रश्न</p>
         </div>
-        <a href="https://drive.google.com" target="_blank" class="btn" style="padding:6px 12px; font-size:12px;">डाउनलोड 📥</a>
+        <a href="https://drive.google.com/file/d/1BIcZTLJXKwhoa7FTRDx-AOa28FVmVBjP/view" target="_blank" class="btn" style="padding:7px 14px; font-size:12.5px;">देखें / डाउनलोड 📥</a>
       </div>
     </div>
   </div>
 
   <!-- ================= TAB 5: टॉपर्स लिस्ट ================= -->
   <div id="tab-results" class="tab-content">
-    <h2 class="section-title">🏆 टॉपर्स मेरिट लिस्ट व बोर्ड सम्मान</h2>
+    <h2 class="section-title">🏆 50 अंक टेस्ट मेरिट लिस्ट व सम्मान</h2>
     
-    <!-- जैक बोर्ड 10th क्लास टॉपर कार्ड -->
-    <div class="board-topper-card">
-      <div class="board-topper-left">
-        <div class="trophy-badge">🏆</div>
-        <div>
-          <span style="background:var(--primary); color:white; font-size:11px; padding:3px 10px; border-radius:12px; font-weight:700;">
-            कक्षा 10वीं बोर्ड परीक्षा रिजल्ट (JAC Board 10th Result)
-          </span>
-          <h3 style="color:var(--primary-dark); font-size:18px; margin-top:5px;">
-            बसंती कुमारी — कोचिंग टॉपर (Session 2025-26)
-          </h3>
-          <p style="font-size:13px; color:var(--text-muted);">
-            VIM CLASSES BELBATHAN की मेधावी छात्रा | बोर्ड परीक्षा में उत्कृष्ट प्रदर्शन
-          </p>
-        </div>
-      </div>
-      <div style="background:#dcfce7; color:#166534; padding:6px 14px; border-radius:8px; font-weight:700; font-size:13px; border:1px solid #86efac;">
-        शानदार सफलता 🌟
-      </div>
-    </div>
-
     <!-- टेस्ट टॉपर अवार्ड पोस्टर कार्ड -->
     <div class="topper-banner-wrap">
       <div style="background:linear-gradient(135deg, var(--primary), var(--primary-dark)); color:white; padding:12px;">
@@ -776,7 +728,7 @@ function switchMainTab(tabId, btn) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Student Database (All Due Fees Set Accurately)
+// Student Database (All 36 Students With Due Fees Set)
 const studentPortalData = [
   {
     name: "नित्यानंद",
