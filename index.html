@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VIM CLASSES BELBATHAN | डिजिटल कोचिंग पोर्टल</title>
-<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -22,7 +22,6 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* एंटी-कॉपी सुरक्षा */
 body, .q-box, .q-text, .opt-row {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -38,7 +37,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header With Teacher Photo */
+/* Header */
 header {
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: white;
@@ -80,7 +79,7 @@ header .teacher-badge {
   margin-top: 4px;
 }
 
-/* Tab Navigation */
+/* Navigation */
 nav {
   background: var(--primary-dark);
   position: sticky;
@@ -117,7 +116,6 @@ nav {
   font-weight: 700;
 }
 
-/* Page Layout */
 .page-container {
   max-width: 950px;
   margin: 20px auto;
@@ -157,7 +155,6 @@ nav {
   border-radius: 2px;
 }
 
-/* Cards */
 .card {
   background: white;
   border-radius: 12px;
@@ -182,7 +179,39 @@ nav {
 
 .btn:hover { filter: brightness(1.1); }
 
-/* Topper Poster Style */
+/* Board Topper Feature Card */
+.board-topper-card {
+  background: linear-gradient(135deg, #ffffff, #fffbeb);
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.board-topper-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.trophy-badge {
+  font-size: 36px;
+  background: #fef3c7;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px dashed var(--gold);
+}
+
 .topper-banner-wrap {
   background: white;
   border-radius: 12px;
@@ -202,7 +231,6 @@ nav {
   margin: 0 auto;
 }
 
-/* Quotes */
 .quote-card {
   background: linear-gradient(135deg, #ffffff, #fffbeb);
   border: 1.5px dashed var(--gold);
@@ -212,7 +240,6 @@ nav {
   margin-top: 15px;
 }
 
-/* Student Search Portal */
 .search-box-wrap {
   display: flex;
   gap: 10px;
@@ -275,7 +302,6 @@ nav {
   margin-bottom: 6px;
 }
 
-/* PDF Download Grid */
 .pdf-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -303,7 +329,6 @@ nav {
   color: var(--text-muted);
 }
 
-/* Timer & Quiz */
 .timer-container {
   position: sticky;
   top: 48px;
@@ -367,7 +392,6 @@ nav {
 .opt-row:hover { background: #eff6ff; }
 .opt-row input { margin-right: 8px; }
 
-/* Table */
 .table-wrap {
   overflow-x: auto;
   background: white;
@@ -386,7 +410,6 @@ table {
 th, td { padding: 10px 12px; border-bottom: 1px solid #edf2f7; }
 th { background: #f8fafc; color: var(--primary); position: sticky; top: 0; }
 
-/* Gallery */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -420,10 +443,9 @@ footer {
 
 <body>
 
-<!-- Header With Teacher Photo -->
+<!-- Header -->
 <header>
   <div class="teacher-header-box">
-    <!-- शिक्षक: विकास सर की फोटो -->
     <img src="https://lh3.googleusercontent.com/d/1t8jFOzQMjhMAJD-fwW5ZU-LvLDIDJ1rQ" alt="विकास सर - VIM Classes" class="teacher-avatar">
     <h1>VIM CLASSES BELBATHAN</h1>
     <div class="teacher-badge">शिक्षक एवं मार्गदर्शक: विकास सर | गोड्डा (झारखंड)</div>
@@ -633,8 +655,29 @@ footer {
 
   <!-- ================= TAB 5: टॉपर्स लिस्ट ================= -->
   <div id="tab-results" class="tab-content">
-    <h2 class="section-title">🏆 50 अंक टेस्ट मेरिट लिस्ट व सम्मान</h2>
+    <h2 class="section-title">🏆 टॉपर्स मेरिट लिस्ट व बोर्ड सम्मान</h2>
     
+    <!-- जैक बोर्ड 10th क्लास टॉपर कार्ड -->
+    <div class="board-topper-card">
+      <div class="board-topper-left">
+        <div class="trophy-badge">🏆</div>
+        <div>
+          <span style="background:var(--primary); color:white; font-size:11px; padding:3px 10px; border-radius:12px; font-weight:700;">
+            कक्षा 10वीं बोर्ड परीक्षा रिजल्ट (JAC Board 10th Result)
+          </span>
+          <h3 style="color:var(--primary-dark); font-size:18px; margin-top:5px;">
+            बसंती कुमारी — कोचिंग टॉपर (Session 2025-26)
+          </h3>
+          <p style="font-size:13px; color:var(--text-muted);">
+            VIM CLASSES BELBATHAN की मेधावी छात्रा | बोर्ड परीक्षा में उत्कृष्ट प्रदर्शन
+          </p>
+        </div>
+      </div>
+      <div style="background:#dcfce7; color:#166534; padding:6px 14px; border-radius:8px; font-weight:700; font-size:13px; border:1px solid #86efac;">
+        शानदार सफलता 🌟
+      </div>
+    </div>
+
     <!-- टेस्ट टॉपर अवार्ड पोस्टर कार्ड -->
     <div class="topper-banner-wrap">
       <div style="background:linear-gradient(135deg, var(--primary), var(--primary-dark)); color:white; padding:12px;">
@@ -722,7 +765,6 @@ footer {
 </footer>
 
 <script>
-// Tab Switching
 function switchMainTab(tabId, btn) {
   document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.nav-tab-btn').forEach(el => el.classList.remove('active'));
@@ -734,16 +776,16 @@ function switchMainTab(tabId, btn) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Student Database (Fees + Performance + Remarks)
+// Student Database (All Due Fees Set Accurately)
 const studentPortalData = [
   {
     name: "नित्यानंद",
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
     totalFee: "400",
-    paidFee: "400",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "400",
+    status: "बकाया (Due)",
     testScore: "16 / 50 (32%)",
     rank: "रैंक #22",
     attendance: "84%",
@@ -755,9 +797,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
     totalFee: "400",
-    paidFee: "400",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "400",
+    status: "बकाया (Due)",
     testScore: "10 / 50 (20%)",
     rank: "रैंक #29",
     attendance: "82%",
@@ -769,9 +811,9 @@ const studentPortalData = [
     className: "कक्षा 10वीं",
     month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
     totalFee: "400",
-    paidFee: "400",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "400",
+    status: "बकाया (Due)",
     testScore: "42 / 50 (84%)",
     rank: "रैंक #5",
     attendance: "94%",
@@ -783,9 +825,9 @@ const studentPortalData = [
     className: "कक्षा 10वीं",
     month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
     totalFee: "400",
-    paidFee: "400",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "400",
+    status: "बकाया (Due)",
     testScore: "46 / 50 (92%)",
     rank: "रैंक #2 (टॉपर 🏆)",
     attendance: "96%",
@@ -797,9 +839,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
     totalFee: "400",
-    paidFee: "400",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "400",
+    status: "बकाया (Due)",
     testScore: "3 / 50 (6%)",
     rank: "रैंक #39",
     attendance: "75%",
@@ -811,9 +853,9 @@ const studentPortalData = [
     className: "कक्षा 10वीं",
     month: "अक्टूबर 2026 (दिनांक: 12/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "38 / 50 (76%)",
     rank: "रैंक #8",
     attendance: "90%",
@@ -839,9 +881,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "मूल्यांकन जारी",
     rank: "--",
     attendance: "85%",
@@ -853,9 +895,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 07/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "10 / 50 (20%)",
     rank: "रैंक #27",
     attendance: "80%",
@@ -867,9 +909,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "सितंबर 2026 (दिनांक: 23/09/26)",
     totalFee: "400",
-    paidFee: "400",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "400",
+    status: "बकाया (Due)",
     testScore: "15 / 50 (30%)",
     rank: "रैंक #23",
     attendance: "85%",
@@ -881,9 +923,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
     totalFee: "900",
-    paidFee: "900",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "900",
+    status: "बकाया (Due)",
     testScore: "15 / 50 (30%)",
     rank: "रैंक #24",
     attendance: "88%",
@@ -895,9 +937,9 @@ const studentPortalData = [
     className: "कक्षा 10वीं",
     month: "अक्टूबर 2026 (दिनांक: 25/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "32 / 50 (64%)",
     rank: "रैंक #9",
     attendance: "88%",
@@ -909,9 +951,9 @@ const studentPortalData = [
     className: "कक्षा 10वीं",
     month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
     totalFee: "400",
-    paidFee: "400",
-    dueFee: "0",
-    status: "जमा है (200 + 200)",
+    paidFee: "0",
+    dueFee: "400",
+    status: "बकाया (Due)",
     testScore: "43 / 50 (86%)",
     rank: "रैंक #4",
     attendance: "92%",
@@ -923,9 +965,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
     totalFee: "400",
-    paidFee: "400",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "400",
+    status: "बकाया (Due)",
     testScore: "10 / 50 (20%)",
     rank: "रैंक #30",
     attendance: "80%",
@@ -937,9 +979,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "6 / 50 (12%)",
     rank: "रैंक #34",
     attendance: "78%",
@@ -951,9 +993,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "मूल्यांकन जारी",
     rank: "--",
     attendance: "88%",
@@ -965,9 +1007,9 @@ const studentPortalData = [
     className: "कक्षा 10वीं",
     month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "40 / 50 (80%)",
     rank: "रैंक #6",
     attendance: "92%",
@@ -979,9 +1021,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
     totalFee: "400",
-    paidFee: "400",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "400",
+    status: "बकाया (Due)",
     testScore: "मूल्यांकन जारी",
     rank: "--",
     attendance: "85%",
@@ -993,9 +1035,9 @@ const studentPortalData = [
     className: "कक्षा 10वीं",
     month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
     totalFee: "400",
-    paidFee: "400",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "400",
+    status: "बकाया (Due)",
     testScore: "30 / 50 (60%)",
     rank: "रैंक #11",
     attendance: "86%",
@@ -1007,9 +1049,9 @@ const studentPortalData = [
     className: "कक्षा 10वीं",
     month: "अक्टूबर 2026 (दिनांक: 12/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "48 / 50 (96%)",
     rank: "रैंक #1 (टॉपर 🏆)",
     attendance: "98% (नियमित)",
@@ -1021,9 +1063,9 @@ const studentPortalData = [
     className: "कक्षा 10वीं",
     month: "अक्टूबर 2026 (दिनांक: 04/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "25 / 50 (50%)",
     rank: "रैंक #16",
     attendance: "85%",
@@ -1035,9 +1077,9 @@ const studentPortalData = [
     className: "कक्षा 10वीं",
     month: "अक्टूबर 2026 (दिनांक: 04/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "25 / 50 (50%)",
     rank: "रैंक #17",
     attendance: "88%",
@@ -1049,9 +1091,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 11/10/26)",
     totalFee: "600",
-    paidFee: "600",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "600",
+    status: "बकाया (Due)",
     testScore: "मूल्यांकन जारी",
     rank: "--",
     attendance: "90%",
@@ -1063,9 +1105,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
     totalFee: "1000",
-    paidFee: "1000",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "1000",
+    status: "बकाया (Due)",
     testScore: "22 / 50 (44%)",
     rank: "रैंक #20",
     attendance: "84%",
@@ -1077,9 +1119,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "7 / 50 (14%)",
     rank: "रैंक #33",
     attendance: "76%",
@@ -1091,9 +1133,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 04/10/26)",
     totalFee: "400",
-    paidFee: "400",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "400",
+    status: "बकाया (Due)",
     testScore: "4 / 50 (8%)",
     rank: "रैंक #36",
     attendance: "72%",
@@ -1105,9 +1147,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अगस्त 2026 (दिनांक: 28/08/26)",
     totalFee: "800",
-    paidFee: "800",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "800",
+    status: "बकाया (Due)",
     testScore: "10 / 50 (20%)",
     rank: "रैंक #28",
     attendance: "80%",
@@ -1119,9 +1161,9 @@ const studentPortalData = [
     className: "कक्षा 10वीं",
     month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "45 / 50 (90%)",
     rank: "रैंक #3 (टॉपर 🏆)",
     attendance: "95%",
@@ -1133,9 +1175,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "सितंबर 2026 (दिनांक: 18/09/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "15 / 50 (30%)",
     rank: "रैंक #25",
     attendance: "82%",
@@ -1147,9 +1189,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 03/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "28 / 50 (56%)",
     rank: "रैंक #13",
     attendance: "89%",
@@ -1161,9 +1203,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "3 / 50 (6%)",
     rank: "रैंक #37",
     attendance: "70%",
@@ -1175,9 +1217,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
     totalFee: "600",
-    paidFee: "600",
-    dueFee: "0",
-    status: "जमा है (400 + 200)",
+    paidFee: "0",
+    dueFee: "600",
+    status: "बकाया (Due)",
     testScore: "12 / 50 (24%)",
     rank: "रैंक #26",
     attendance: "82%",
@@ -1189,9 +1231,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "3 / 50 (6%)",
     rank: "रैंक #38",
     attendance: "72%",
@@ -1203,9 +1245,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "मूल्यांकन जारी",
     rank: "--",
     attendance: "85%",
@@ -1217,9 +1259,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "21 / 50 (42%)",
     rank: "रैंक #21",
     attendance: "86%",
@@ -1231,9 +1273,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "सितंबर 2026 (दिनांक: 11/09/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "मूल्यांकन जारी",
     rank: "--",
     attendance: "80%",
@@ -1245,9 +1287,9 @@ const studentPortalData = [
     className: "कक्षा 8वीं",
     month: "अक्टूबर 2026 (दिनांक: 21/10/26)",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "8 / 50 (16%)",
     rank: "रैंक #32",
     attendance: "78%",
@@ -1259,9 +1301,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "मूल्यांकन जारी",
     rank: "--",
     attendance: "84%",
@@ -1273,9 +1315,9 @@ const studentPortalData = [
     className: "कोचिंग बैच",
     month: "अक्टूबर 2026",
     totalFee: "200",
-    paidFee: "200",
-    dueFee: "0",
-    status: "जमा है (Paid)",
+    paidFee: "0",
+    dueFee: "200",
+    status: "बकाया (Due)",
     testScore: "मूल्यांकन जारी",
     rank: "--",
     attendance: "82%",
@@ -1302,13 +1344,8 @@ function findStudentReport() {
     
     const badge = document.getElementById("repBadge");
     badge.textContent = student.status;
-    if (student.dueFee === "0") {
-      badge.style.background = "#dcfce7";
-      badge.style.color = "#166534";
-    } else {
-      badge.style.background = "#fee2e2";
-      badge.style.color = "#991b1b";
-    }
+    badge.style.background = "#fee2e2";
+    badge.style.color = "#991b1b";
 
     // Fee Details
     document.getElementById("repFeeMonth").textContent = student.month;
@@ -1619,7 +1656,6 @@ let studentSubmittedName = "";
 let studentFinalScore = "";
 let studentFinalPercent = "";
 
-// Timer Management
 let totalTimeInSeconds = 45 * 60;
 let timerInterval = null;
 let testIsActive = false;
@@ -1710,7 +1746,6 @@ document.addEventListener("visibilitychange", function() {
   }
 });
 
-// Calculate Result
 function calculateAndShowResult() {
   const nameInput = document.getElementById("testStudentName").value.trim();
   if (!nameInput) {
@@ -1770,7 +1805,6 @@ function calculateAndShowResult() {
   resultArea.scrollIntoView({ behavior: 'smooth' });
 }
 
-// Send Result via WhatsApp
 function sendResultToWhatsApp() {
   const teacherNumber = "917856902817";
   const msg = `*VIM CLASSES - ऑनलाइन टेस्ट रिजल्ट*%0A` +
