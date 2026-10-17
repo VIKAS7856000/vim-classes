@@ -3,27 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VIM CLASSES BELBATHAN | ऑनलाइन टेस्ट व स्टडी पोर्टल</title>
-<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<title>VIM CLASSES BELBATHAN | डिजिटल कोचिंग पोर्टल</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
   --primary: #123b70;
   --primary-dark: #0b2545;
   --gold: #d97706;
-  --silver: #64748b;
-  --bronze: #b45309;
+  --accent: #f59e0b;
   --success: #16803d;
   --danger: #dc2626;
-  --bg: #f4f7fb;
-  --card: #ffffff;
-  --text: #1f2937;
+  --bg: #f1f5f9;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
   --text-muted: #64748b;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* एंटी-कॉपी / टेक्स्ट सेलेक्ट सुरक्षा */
+/* एंटी-कॉपी सुरक्षा */
 body, .q-box, .q-text, .opt-row {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -35,47 +34,53 @@ body, .q-box, .q-text, .opt-row {
 body {
   font-family: 'Poppins', 'Hind', sans-serif;
   background: var(--bg);
-  color: var(--text);
-  line-height: 1.5;
+  color: var(--text-main);
+  line-height: 1.6;
 }
 
-/* Header */
+/* Header With Teacher Photo */
 header {
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: white;
   text-align: center;
-  padding: 22px 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 24px 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-.brand-box {
+.teacher-header-box {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
 }
 
-.logo-icon {
-  width: 46px;
-  height: 46px;
+.teacher-avatar {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 header h1 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 
-.teacher-tag {
+header .teacher-badge {
   display: inline-block;
   background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255,255,255,0.25);
   padding: 3px 14px;
-  border-radius: 15px;
-  font-size: 12px;
-  margin-top: 6px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-top: 4px;
 }
 
-/* Navigation */
+/* Tab Navigation */
 nav {
   background: var(--primary-dark);
   position: sticky;
@@ -84,189 +89,242 @@ nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 6px 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-nav a {
-  color: #f1f5f9;
-  text-decoration: none;
-  padding: 6px 12px;
+.nav-tab-btn {
+  background: transparent;
+  color: #cbd5e1;
+  border: none;
+  padding: 8px 14px;
   font-weight: 600;
   font-size: 13px;
-  border-radius: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
 }
 
-nav a:hover {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffd700;
+.nav-tab-btn:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-section {
-  padding: 22px 14px;
+.nav-tab-btn.active {
+  background: var(--accent);
+  color: #0b2545;
+  font-weight: 700;
+}
+
+/* Page Layout */
+.page-container {
   max-width: 950px;
-  margin: auto;
+  margin: 20px auto;
+  padding: 0 14px;
 }
 
-.section-head {
+.tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title {
   color: var(--primary);
   text-align: center;
-  font-size: 20px;
-  margin-bottom: 16px;
+  font-size: 22px;
+  margin-bottom: 20px;
   font-weight: 700;
   position: relative;
 }
 
-.section-head::after {
+.section-title::after {
   content: '';
   display: block;
-  width: 40px;
+  width: 45px;
   height: 3px;
   background: var(--gold);
-  margin: 5px auto 0;
+  margin: 6px auto 0;
   border-radius: 2px;
 }
 
-/* Motivation Card */
-.quote-box {
-  background: linear-gradient(135deg, #ffffff, #fffbeb);
-  border: 1.5px dashed var(--gold);
-  border-radius: 10px;
-  padding: 16px 20px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  margin-top: 14px;
-}
-
-.quote-icon {
-  font-size: 22px;
-  color: var(--gold);
-}
-
-.quote-text {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--primary-dark);
-  margin: 6px 0;
-}
-
-.quote-author {
-  font-size: 12px;
-  color: var(--text-muted);
-}
-
-/* Banner */
-.hero-box {
+/* Cards */
+.card {
   background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-  text-align: center;
-}
-
-.banner-img-wrap {
-  width: 100%;
-  max-height: 340px;
-  overflow: hidden;
-  background: #0b2545;
-}
-
-.banner-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero-content {
-  padding: 18px;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
 }
 
 .btn {
   display: inline-block;
   background: var(--success);
   color: white;
-  padding: 9px 18px;
+  padding: 10px 20px;
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 13.5px;
   border: none;
   cursor: pointer;
-  margin-top: 8px;
+  transition: 0.2s;
 }
 
-/* Study Material */
-.study-card {
+.btn:hover { filter: brightness(1.1); }
+
+/* Topper Poster Style */
+.topper-banner-wrap {
   background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-  border-top: 4px solid var(--gold);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  border: 2px solid #fed7aa;
+  margin-bottom: 22px;
+  text-align: center;
 }
 
-.study-select-row {
+.topper-poster-img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  background: #fffbeb;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Quotes */
+.quote-card {
+  background: linear-gradient(135deg, #ffffff, #fffbeb);
+  border: 1.5px dashed var(--gold);
+  border-radius: 10px;
+  padding: 16px 20px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Student Search Portal */
+.search-box-wrap {
   display: flex;
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.search-box-wrap input {
+  padding: 11px 16px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 340px;
+  font-family: inherit;
+}
+
+.report-card {
+  display: none;
+  background: white;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 12px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.report-box {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+}
+
+.report-box h4 {
+  font-size: 14px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.report-box p {
+  font-size: 13.5px;
+  margin-bottom: 6px;
+}
+
+/* PDF Download Grid */
+.pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.pdf-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.pdf-info h4 {
+  font-size: 14px;
+  color: var(--primary-dark);
+}
+
+.pdf-info p {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Timer & Quiz */
+.timer-container {
+  position: sticky;
+  top: 48px;
+  z-index: 90;
+  background: white;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 15px;
 }
 
-select {
-  padding: 8px 12px;
+.timer-clock {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--danger);
+  background: #fef2f2;
+  padding: 3px 10px;
   border-radius: 6px;
-  border: 1px solid #cbd5e1;
-  font-size: 13px;
-  font-family: inherit;
-  background: #f8fafc;
-}
-
-.study-item {
-  background: #f8fafc;
-  padding: 12px 14px;
-  border-left: 3px solid var(--gold);
-  border-radius: 4px;
-  margin-bottom: 8px;
-  font-size: 13.5px;
-  line-height: 1.6;
-}
-
-/* Quiz Panel */
-.quiz-panel {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-  border-top: 4px solid var(--primary);
-}
-
-.student-info-box {
-  background: #eff6ff;
-  border: 1.5px dashed var(--primary);
-  border-radius: 8px;
-  padding: 14px;
-  margin-bottom: 18px;
-  text-align: center;
-}
-
-.student-info-box input {
-  padding: 9px 14px;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-size: 14px;
-  width: 100%;
-  max-width: 300px;
-  margin-top: 6px;
-  font-family: inherit;
-}
-
-.class-picker {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 20px;
 }
 
 .class-btn {
@@ -287,52 +345,12 @@ select {
   border-color: var(--primary);
 }
 
-/* Sticky Timer */
-.timer-container {
-  position: sticky;
-  top: 48px;
-  z-index: 99;
-  background: #ffffff;
-  border: 2px solid var(--primary);
-  border-radius: 8px;
-  padding: 8px 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-.timer-text {
-  font-size: 13.5px;
-  font-weight: 700;
-  color: var(--primary);
-}
-
-.timer-clock {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--danger);
-  background: #fef2f2;
-  padding: 4px 10px;
-  border-radius: 6px;
-  border: 1px solid #fecaca;
-}
-
 .q-box {
   background: #f8fafc;
   padding: 14px;
   border-radius: 8px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   border-left: 3px solid var(--primary);
-}
-
-.q-text {
-  font-size: 14.5px;
-  font-weight: 600;
-  color: var(--primary-dark);
-  margin-bottom: 10px;
-  line-height: 1.5;
 }
 
 .opt-row {
@@ -346,39 +364,27 @@ select {
   font-size: 13.5px;
 }
 
-.opt-row:hover {
-  background: #eff6ff;
-  border-color: #93c5fd;
-}
+.opt-row:hover { background: #eff6ff; }
+.opt-row input { margin-right: 8px; }
 
-.opt-row input {
-  margin-right: 8px;
-}
-
-/* Result Area */
-#result-display-area {
-  display: none;
+/* Table */
+.table-wrap {
+  overflow-x: auto;
   background: white;
-  padding: 24px;
-  border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  text-align: center;
-  margin-top: 20px;
-  border-top: 4px solid var(--gold);
+  border-radius: 8px;
+  max-height: 350px;
+  overflow-y: auto;
 }
 
-.score-badge {
-  width: 90px;
-  height: 90px;
-  line-height: 90px;
-  border-radius: 50%;
-  background: #eff6ff;
-  border: 3px solid var(--primary);
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--primary);
-  margin: 12px auto;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  text-align: left;
 }
+
+th, td { padding: 10px 12px; border-bottom: 1px solid #edf2f7; }
+th { background: #f8fafc; color: var(--primary); position: sticky; top: 0; }
 
 /* Gallery */
 .gallery-grid {
@@ -388,11 +394,10 @@ select {
 }
 
 .gallery-item {
-  background: white;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
   height: 180px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 
 .gallery-item img {
@@ -406,261 +411,946 @@ footer {
   background: var(--primary-dark);
   color: #94a3b8;
   text-align: center;
-  padding: 18px 10px;
-  font-size: 12px;
-  margin-top: 25px;
+  padding: 20px;
+  font-size: 13px;
+  margin-top: 30px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Header -->
+<!-- Header With Teacher Photo -->
 <header>
-  <div class="brand-box">
-    <svg class="logo-icon" viewBox="0 0 100 100" fill="none">
-      <circle cx="50" cy="50" r="46" fill="#0b2545" stroke="#f59e0b" stroke-width="4"/>
-      <path d="M25 62C34 56 45 58 50 64C55 58 66 56 75 62V40C66 34 55 36 50 42C45 36 34 34 25 40V62Z" fill="#ffffff"/>
-      <polygon points="50,16 52,21 57,21 53,24 55,29 50,26 45,29 47,24 43,21 48,21" fill="#ffd700"/>
-    </svg>
-    <div>
-      <h1>VIM CLASSES BELBATHAN</h1>
-      <p style="font-size: 12px; color: #cbd5e1;">मेहनत, अनुशासन और सच्ची सफलता</p>
-    </div>
+  <div class="teacher-header-box">
+    <!-- शिक्षक: विकास सर की फोटो -->
+    <img src="https://lh3.googleusercontent.com/d/1t8jFOzQMjhMAJD-fwW5ZU-LvLDIDJ1rQ" alt="विकास सर - VIM Classes" class="teacher-avatar">
+    <h1>VIM CLASSES BELBATHAN</h1>
+    <div class="teacher-badge">शिक्षक एवं मार्गदर्शक: विकास सर | गोड्डा (झारखंड)</div>
   </div>
-  <div class="teacher-tag">शिक्षक: विकास सर | बेलबथान (गोड्डा)</div>
 </header>
 
+<!-- Navigation Tabs -->
 <nav>
-  <a href="#home">होम</a>
-  <a href="#study-material">📚 स्टडी मटेरियल</a>
-  <a href="#test-section">📝 ऑनलाइन टेस्ट</a>
-  <a href="#gallery">📸 कोचिंग गैलरी</a>
-  <a href="#contact">संपर्क</a>
+  <button class="nav-tab-btn active" onclick="switchMainTab('tab-home', this)">🏠 होम</button>
+  <button class="nav-tab-btn" onclick="switchMainTab('tab-student-portal', this)">📊 फीस व परफॉर्मेंस</button>
+  <button class="nav-tab-btn" onclick="switchMainTab('tab-online-test', this)">📝 ऑनलाइन टेस्ट</button>
+  <button class="nav-tab-btn" onclick="switchMainTab('tab-study-pdf', this)">📚 PDF व नोट्स</button>
+  <button class="nav-tab-btn" onclick="switchMainTab('tab-results', this)">🏆 टॉपर्स लिस्ट</button>
+  <button class="nav-tab-btn" onclick="switchMainTab('tab-gallery', this)">📸 गैलरी</button>
 </nav>
 
-<!-- Home Banner & Daily Quote -->
-<section id="home">
-  <div class="hero-box">
-    <div class="banner-img-wrap">
-      <img src="https://lh3.googleusercontent.com/d/1amcQBNVzzN7zybA4Q3hRBynCj1DqyBKk" alt="VIM Classes Banner" class="banner-img">
-    </div>
-    <div class="hero-content">
-      <h2 style="color:var(--primary); font-size:18px;">कक्षा 7वीं से 11वीं (आर्ट्स) ऑनलाइन पोर्टल</h2>
-      <p style="margin: 5px 0 10px; color: var(--text-muted); font-size: 13px;">
-        अध्यायवार नोट्स पढ़ें, 50 प्रश्नों का लाइव टेस्ट दें और सीधा स्कोर WhatsApp पर भेजें।
-      </p>
-      <a href="#test-section" class="btn">अभी टेस्ट शुरू करें ➔</a>
-    </div>
-  </div>
+<div class="page-container">
 
-  <!-- Motivational Quotes Box -->
-  <div class="quote-box">
-    <div class="quote-icon">❝</div>
-    <div class="quote-text" id="quote-display">"कड़ी मेहनत का कोई विकल्प नहीं होता, आपकी आज की मेहनत ही आपका कल तय करेगी।"</div>
-    <div class="quote-author" id="quote-author">— प्रेरक सुविचार | VIM Classes</div>
-    <button type="button" class="btn" style="background:var(--gold); padding:4px 12px; font-size:11px; margin-top:8px;" onclick="changeQuote()">
-      नया विचार पढ़ें ↻
-    </button>
-  </div>
-</section>
-
-<!-- Study Material Section -->
-<section id="study-material">
-  <h2 class="section-head">📚 स्टडी मटेरियल एवं रिवीजन नोट्स</h2>
-  <div class="study-card">
-    <div class="study-select-row">
-      <select id="smClassSelect">
-        <option value="">-- कक्षा चुनें --</option>
-        <option value="11_arts">कक्षा 11वीं (इतिहास, भूगोल, हिंदी, अंग्रेजी)</option>
-        <option value="10">कक्षा 10वीं</option>
-        <option value="9">कक्षा 9वीं</option>
-        <option value="8">कक्षा 8वीं</option>
-        <option value="7">कक्षा 7वीं (JCERT)</option>
-      </select>
-      <select id="smSubjectSelect">
-        <option value="">-- विषय चुनें --</option>
-        <option value="math">गणित (Math)</option>
-        <option value="science">विज्ञान (Science)</option>
-        <option value="sst">सामाजिक विज्ञान (SST / Arts)</option>
-      </select>
-      <button class="btn" onclick="loadStudyMaterial()" style="margin-top:0;">नोट्स देखें</button>
+  <!-- ================= TAB 1: होम ================= -->
+  <div id="tab-home" class="tab-content active">
+    <div class="card" style="padding:0; overflow:hidden; text-align:center;">
+      <img src="https://lh3.googleusercontent.com/d/1amcQBNVzzN7zybA4Q3hRBynCj1DqyBKk" alt="VIM Classes Banner" style="width:100%; max-height:340px; object-fit:cover; display:block;">
+      <div style="padding:20px;">
+        <h2 style="color:var(--primary); font-size:20px;">कक्षा 7वीं से 11वीं (आर्ट्स) डिजिटल पोर्टल</h2>
+        <p style="color:var(--text-muted); font-size:13.5px; margin:6px 0 14px;">
+          नियमित साप्ताहिक टेस्ट, चैप्टरवाइज स्टडी मटेरियल, पारदर्शी फीस एवं डिजिटल रिपोर्ट कार्ड।
+        </p>
+        <button class="btn" onclick="switchMainTab('tab-student-portal', document.querySelectorAll('.nav-tab-btn')[1])">
+          विद्यार्थी रिपोर्ट कार्ड देखें ➔
+        </button>
+      </div>
     </div>
 
-    <div id="study-content-area">
-      <p style="text-align:center; color:var(--text-muted); font-size:13px;">
-        अपनी कक्षा और विषय चुनकर "नोट्स देखें" बटन दबाएँ।
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- Live Online Test Engine -->
-<section id="test-section">
-  <h2 class="section-head">📝 ऑनलाइन टेस्ट (50 वस्तुनिष्ठ प्रश्न)</h2>
-
-  <div class="quiz-panel">
-    <!-- Mandatory Student Name -->
-    <div class="student-info-box">
-      <label style="font-weight: 700; color: var(--primary); font-size: 14px;">
-        ✏️ परीक्षार्थी अपना पूरा नाम लिखें:
-      </label><br>
-      <input type="text" id="studentNameInput" placeholder="जैसे: राहुल कुमार" required>
-    </div>
-
-    <!-- Class Selector -->
-    <div class="class-picker">
-      <button class="class-btn active" data-cls="11" onclick="loadClassQuiz('11', this)">कक्षा 11वीं (आर्ट्स)</button>
-      <button class="class-btn" data-cls="10" onclick="loadClassQuiz('10', this)">कक्षा 10वीं</button>
-      <button class="class-btn" data-cls="9" onclick="loadClassQuiz('9', this)">कक्षा 9वीं</button>
-      <button class="class-btn" data-cls="8" onclick="loadClassQuiz('8', this)">कक्षा 8वीं</button>
-      <button class="class-btn" data-cls="7" onclick="loadClassQuiz('7', this)">कक्षा 7वीं</button>
-    </div>
-
-    <!-- Sticky Timer Display -->
-    <div class="timer-container">
-      <span class="timer-text">⏳ शेष समय (Countdown):</span>
-      <span class="timer-clock" id="time-display">45:00</span>
-    </div>
-
-    <div id="quiz-title-tag" style="font-weight:700; color:var(--primary); margin-bottom:12px; font-size:15px;"></div>
-
-    <form id="quiz-form">
-      <div id="questions-holder"></div>
-      <button type="button" class="btn" style="width:100%; padding:12px; font-size:15px; margin-top:15px;" onclick="calculateAndShowResult()">
-        टेस्ट सबमिट करें और रिजल्ट देखें ➔
+    <!-- Motivational Quotes -->
+    <div class="quote-card">
+      <div style="font-size:22px; color:var(--gold);">❝</div>
+      <div id="quote-display" style="font-size:15px; font-weight:600; color:var(--primary-dark); margin:4px 0;">
+        "कड़ी मेहनत का कोई विकल्प नहीं होता, आपकी आज की मेहनत ही आपका कल तय करेगी।"
+      </div>
+      <div id="quote-author" style="font-size:12px; color:var(--text-muted);">— प्रेरक विचार | VIM Classes</div>
+      <button class="btn" style="background:var(--gold); padding:4px 12px; font-size:11px; margin-top:8px;" onclick="changeQuote()">
+        नया विचार पढ़ें ↻
       </button>
-    </form>
+    </div>
   </div>
 
-  <!-- Instant Result Card -->
-  <div id="result-display-area">
-    <h3 style="color:var(--primary);">🎯 टेस्ट परिणाम (Result Card)</h3>
-    <div class="score-badge" id="score-text">0/50</div>
-    <div id="student-res-name" style="font-size:16px; font-weight:700; color:var(--primary-dark); margin-top:4px;"></div>
-    <div id="percentage-text" style="font-size:15px; font-weight:700; color:var(--success);"></div>
-    <div id="grade-text" style="font-size:13px; color:var(--text-muted); margin:4px 0 14px;"></div>
-
-    <!-- Direct WhatsApp Button -->
-    <div style="background:#f0fdf4; border:1px dashed #86efac; border-radius:8px; padding:15px;">
-      <p style="font-size:13px; color:#166534; font-weight:600; margin-bottom:8px;">
-        नीचे दिए गए बटन पर क्लिक करके अपना रिजल्ट सीधे विकास सर को WhatsApp पर भेजें:
+  <!-- ================= TAB 2: फीस एवं विद्यार्थी परफॉर्मेंस पोर्टल ================= -->
+  <div id="tab-student-portal" class="tab-content">
+    <h2 class="section-title">📊 विद्यार्थी फीस एवं परफॉर्मेंस रिपोर्ट कार्ड</h2>
+    
+    <div class="card" style="text-align:center;">
+      <p style="font-size:14px; color:var(--text-muted); margin-bottom:14px;">
+        अभिभावक एवं विद्यार्थी अपना <b>पूरा नाम</b> दर्ज करके फीस और पढ़ाई की स्थिति देखें:
       </p>
-      <button type="button" class="btn" style="background:#16803d; width:100%; max-width:320px; font-size:14px;" onclick="sendResultToWhatsApp()">
+
+      <div class="search-box-wrap">
+        <input type="text" id="studentSearchQuery" placeholder="जैसे: अंकिता आर्या, नित्यानंद, सिद्धार्थ, स्वीटी">
+        <button class="btn" onclick="findStudentReport()">रिपोर्ट देखें 🔍</button>
+      </div>
+
+      <!-- Digital Report Card -->
+      <div id="studentReportBox" class="report-card">
+        <div class="report-header">
+          <div>
+            <h3 id="repName" style="color:var(--primary); font-size:18px;"></h3>
+            <p id="repClass" style="color:var(--text-muted); font-size:13px;"></p>
+          </div>
+          <div id="repBadge" style="padding:4px 12px; border-radius:20px; font-size:12px; font-weight:700;"></div>
+        </div>
+
+        <div class="report-grid">
+          <!-- फीस विवरण -->
+          <div class="report-box" style="border-left-color: var(--primary);">
+            <h4>💳 फीस की स्थिति (Fee Status)</h4>
+            <p><b>महीना / तारीख:</b> <span id="repFeeMonth"></span></p>
+            <p><b>कुल देय फीस:</b> ₹<span id="repFeeTotal"></span></p>
+            <p><b>जमा की गई राशि:</b> <span style="color:var(--success); font-weight:700;">₹<span id="repFeePaid"></span></span></p>
+            <p><b>बकाया राशि:</b> <span style="color:var(--danger); font-weight:700;">₹<span id="repFeeDue"></span></span></p>
+            <p><b>फीस स्थिति:</b> <span id="repFeeStatusText"></span></p>
+          </div>
+
+          <!-- पढ़ाई व परफॉर्मेंस -->
+          <div class="report-box" style="border-left-color: var(--gold);">
+            <h4>📈 पढ़ाई एवं टेस्ट परफॉर्मेंस</h4>
+            <p><b>अंतिम टेस्ट अंक:</b> <span id="repTestScore" style="font-weight:700; color:var(--primary);"></span></p>
+            <p><b>कोचिंग रैंकिंग:</b> <span id="repRank" style="font-weight:700; color:var(--gold);"></span></p>
+            <p><b>उपस्थिति (Attendance):</b> <span id="repAttendance"></span></p>
+            <p><b>अध्ययन स्तर:</b> <span id="repStudyLevel" style="font-weight:700;"></span></p>
+            <p><b>शिक्षक की टिप्पणी:</b> <span id="repTeacherRemark" style="color:var(--text-main); font-style:italic;"></span></p>
+          </div>
+        </div>
+
+        <div style="margin-top:16px; text-align:center;">
+          <a id="repWhatsappLink" href="#" target="_blank" class="btn" style="background:#16803d; font-size:13px;">
+            📲 शिक्षक (विकास सर) से WhatsApp पर बात करें
+          </a>
+        </div>
+      </div>
+
+      <p id="repErrorMsg" style="display:none; color:var(--danger); font-size:13.5px; font-weight:600; margin-top:14px;">
+        ❌ इस नाम का कोई रिकॉर्ड नहीं मिला। कृपया सही नाम लिखकर दोबारा प्रयास करें।
+      </p>
+    </div>
+  </div>
+
+  <!-- ================= TAB 3: ऑनलाइन टेस्ट ================= -->
+  <div id="tab-online-test" class="tab-content">
+    <h2 class="section-title">📝 ऑनलाइन 50 वस्तुनिष्ठ टेस्ट</h2>
+
+    <div class="card">
+      <div style="background:#eff6ff; border:1.5px dashed var(--primary); border-radius:8px; padding:14px; text-align:center; margin-bottom:15px;">
+        <label style="font-weight:700; color:var(--primary); font-size:14px;">✏️ परीक्षार्थी अपना पूरा नाम लिखें:</label><br>
+        <input type="text" id="testStudentName" placeholder="जैसे: राहुल कुमार" style="padding:9px 14px; border:1px solid #cbd5e1; border-radius:6px; font-size:14px; width:100%; max-width:300px; margin-top:6px;">
+      </div>
+
+      <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:15px;">
+        <button class="class-btn active" data-cls="11" onclick="loadClassQuiz('11', this)">कक्षा 11वीं (आर्ट्स)</button>
+        <button class="class-btn" data-cls="10" onclick="loadClassQuiz('10', this)">कक्षा 10वीं</button>
+        <button class="class-btn" data-cls="9" onclick="loadClassQuiz('9', this)">कक्षा 9वीं</button>
+        <button class="class-btn" data-cls="8" onclick="loadClassQuiz('8', this)">कक्षा 8वीं</button>
+        <button class="class-btn" data-cls="7" onclick="loadClassQuiz('7', this)">कक्षा 7वीं</button>
+      </div>
+
+      <div class="timer-container">
+        <span style="font-size:13.5px; font-weight:700; color:var(--primary);">⏳ शेष समय:</span>
+        <span class="timer-clock" id="time-display">45:00</span>
+      </div>
+
+      <form id="quiz-form">
+        <div id="questions-holder"></div>
+        <button type="button" class="btn" style="width:100%; padding:12px; font-size:15px; margin-top:15px;" onclick="calculateAndShowResult()">
+          टेस्ट सबमिट करें और रिजल्ट देखें ➔
+        </button>
+      </form>
+    </div>
+
+    <!-- Result Display -->
+    <div id="result-display-area" class="card" style="display:none; text-align:center; border-top:4px solid var(--gold);">
+      <h3 style="color:var(--primary);">🎯 टेस्ट परिणाम (Result Card)</h3>
+      <div style="width:90px; height:90px; line-height:90px; border-radius:50%; background:#eff6ff; border:3px solid var(--primary); font-size:24px; font-weight:700; color:var(--primary); margin:12px auto;" id="score-text">0/50</div>
+      <div id="student-res-name" style="font-size:16px; font-weight:700; color:var(--primary-dark);"></div>
+      <div id="percentage-text" style="font-size:15px; font-weight:700; color:var(--success); margin:4px 0;"></div>
+      <div id="grade-text" style="font-size:13px; color:var(--text-muted); margin-bottom:12px;"></div>
+
+      <button type="button" class="btn" style="background:#16803d; width:100%; max-width:320px;" onclick="sendResultToWhatsApp()">
         📲 विकास सर को रिजल्ट WhatsApp करें
       </button>
+
+      <div id="answers-breakdown" style="text-align:left; margin-top:16px; max-height:280px; overflow-y:auto; border-top:1px solid #e2e8f0; padding-top:10px;"></div>
+    </div>
+  </div>
+
+  <!-- ================= TAB 4: PDF व स्टडी मटेरियल ================= -->
+  <div id="tab-study-pdf" class="tab-content">
+    <h2 class="section-title">📚 महत्वपूर्ण PDF एवं स्टडी नोट्स</h2>
+    
+    <div class="pdf-grid">
+      <div class="pdf-card">
+        <div class="pdf-info">
+          <h4>📐 कक्षा 10वीं गणित फॉर्मूला चार्ट</h4>
+          <p>सभी अध्यायों के सूत्र (PDF) | JAC Board</p>
+        </div>
+        <a href="https://drive.google.com" target="_blank" class="btn" style="padding:6px 12px; font-size:12px;">डाउनलोड 📥</a>
+      </div>
+
+      <div class="pdf-card">
+        <div class="pdf-info">
+          <h4>🔬 कक्षा 10वीं विज्ञान महत्वपूर्ण आरेख व समीकरण</h4>
+          <p>प्रकाश, मानव नेत्र, जैव प्रक्रम नोट्स (PDF)</p>
+        </div>
+        <a href="https://drive.google.com" target="_blank" class="btn" style="padding:6px 12px; font-size:12px;">डाउनलोड 📥</a>
+      </div>
+
+      <div class="pdf-card">
+        <div class="pdf-info">
+          <h4>📖 कक्षा 9वीं गणित एवं विज्ञान रिवीजन गाइड</h4>
+          <p>वार्षिक परीक्षा स्पेशल VVI नोट्स (PDF)</p>
+        </div>
+        <a href="https://drive.google.com" target="_blank" class="btn" style="padding:6px 12px; font-size:12px;">डाउनलोड 📥</a>
+      </div>
+
+      <div class="pdf-card">
+        <div class="pdf-info">
+          <h4>📝 50-प्रश्नों वाली ओएमआर शीट (Blank OMR)</h4>
+          <p>घर पर टेस्ट अभ्यास के लिए प्रिंटेबल शीट</p>
+        </div>
+        <a href="https://drive.google.com" target="_blank" class="btn" style="padding:6px 12px; font-size:12px;">डाउनलोड 📥</a>
+      </div>
+
+      <div class="pdf-card">
+        <div class="pdf-info">
+          <h4>🌍 कक्षा 11वीं इतिहास एवं भूगोल नोट्स</h4>
+          <p>मेसोपोटामिया, रोम, भौतिक भूगोल मुख्य बिंदु</p>
+        </div>
+        <a href="https://drive.google.com" target="_blank" class="btn" style="padding:6px 12px; font-size:12px;">डाउनलोड 📥</a>
+      </div>
+
+      <div class="pdf-card">
+        <div class="pdf-info">
+          <h4>📘 कक्षा 7वीं व 8वीं JCERT अभ्यास प्रश्न बैंक</h4>
+          <p>गणित और विज्ञान के बेसिक कॉन्सेप्ट नोट्स</p>
+        </div>
+        <a href="https://drive.google.com" target="_blank" class="btn" style="padding:6px 12px; font-size:12px;">डाउनलोड 📥</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= TAB 5: टॉपर्स लिस्ट ================= -->
+  <div id="tab-results" class="tab-content">
+    <h2 class="section-title">🏆 50 अंक टेस्ट मेरिट लिस्ट व सम्मान</h2>
+    
+    <!-- टेस्ट टॉपर अवार्ड पोस्टर कार्ड -->
+    <div class="topper-banner-wrap">
+      <div style="background:linear-gradient(135deg, var(--primary), var(--primary-dark)); color:white; padding:12px;">
+        <h3 style="font-size:16px;">🎖️ TOPPER AWARD — मेधावी छात्र सम्मान (पुरस्कार ₹50)</h3>
+        <p style="font-size:12px; color:#fed7aa;">1. अंकित आर्या | 2. विष्णु कुमार | 3. प्रियांशु कुमार</p>
+      </div>
+      <img src="https://lh3.googleusercontent.com/d/1Yt6MeV_6SGS4J8JT54QiK439Zwd10oUF" alt="Topper Award Poster" class="topper-poster-img">
     </div>
 
-    <div id="answers-breakdown" style="text-align:left; margin-top:18px; max-height:280px; overflow-y:auto; border-top:1px solid #e2e8f0; padding-top:10px;"></div>
+    <!-- Complete 41 Students Rank Table -->
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>रैंक</th>
+            <th>छात्र / छात्रा का नाम</th>
+            <th>प्राप्त अंक</th>
+            <th>प्रतिशत</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><b>1</b></td><td>अंकिता आर्या</td><td>48</td><td>96.0%</td></tr>
+          <tr><td><b>2</b></td><td>स्वीटी कुमारी</td><td>46</td><td>92.0%</td></tr>
+          <tr><td><b>3</b></td><td>रौनक कुमार</td><td>45</td><td>90.0%</td></tr>
+          <tr><td><b>4</b></td><td>पीयूष कुमार</td><td>43</td><td>86.0%</td></tr>
+          <tr><td><b>5</b></td><td>सिद्धार्थ कुमार</td><td>42</td><td>84.0%</td></tr>
+          <tr><td><b>6</b></td><td>राधिका कुमारी</td><td>40</td><td>80.0%</td></tr>
+          <tr><td><b>7</b></td><td>कल्पना कुमारी</td><td>40</td><td>80.0%</td></tr>
+          <tr><td><b>8</b></td><td>सुमन कुमार</td><td>38</td><td>76.0%</td></tr>
+          <tr><td><b>9</b></td><td>आयुष कुमार</td><td>32</td><td>64.0%</td></tr>
+          <tr><td><b>10</b></td><td>चाँदनी कुमारी</td><td>32</td><td>64.0%</td></tr>
+          <tr><td><b>11</b></td><td>दुलार</td><td>30</td><td>60.0%</td></tr>
+          <tr><td><b>12</b></td><td>विष्णु कुमार</td><td>28</td><td>56.0%</td></tr>
+          <tr><td><b>13</b></td><td>प्रियांशु कुमार</td><td>28</td><td>56.0%</td></tr>
+          <tr><td><b>14</b></td><td>छोटी कुमारी</td><td>28</td><td>56.0%</td></tr>
+          <tr><td><b>15</b></td><td>आर्यन कुमार</td><td>28</td><td>56.0%</td></tr>
+          <tr><td><b>16</b></td><td>राजलक्ष्मी कुमारी</td><td>25</td><td>50.0%</td></tr>
+          <tr><td><b>17</b></td><td>कृष्ण कुमार</td><td>25</td><td>50.0%</td></tr>
+          <tr><td><b>18</b></td><td>नरेन्द्र कुमार</td><td>23</td><td>46.0%</td></tr>
+          <tr><td><b>19</b></td><td>रीना कुमारी</td><td>23</td><td>46.0%</td></tr>
+          <tr><td><b>20</b></td><td>सूरज कुमार</td><td>22</td><td>44.0%</td></tr>
+          <tr><td><b>21</b></td><td>राधा कुमारी</td><td>21</td><td>42.0%</td></tr>
+          <tr><td><b>22</b></td><td>नित्यानंद कुमार</td><td>16</td><td>32.0%</td></tr>
+          <tr><td><b>23</b></td><td>सिद्धि कुमारी</td><td>15</td><td>30.0%</td></tr>
+          <tr><td><b>24</b></td><td>सूरज राय</td><td>15</td><td>30.0%</td></tr>
+          <tr><td><b>25</b></td><td>अभिषेक कुमार</td><td>15</td><td>30.0%</td></tr>
+          <tr><td><b>26</b></td><td>सूरज कुमार ठाकुर</td><td>12</td><td>24.0%</td></tr>
+          <tr><td><b>27</b></td><td>लक्ष्मी कुमारी</td><td>10</td><td>20.0%</td></tr>
+          <tr><td><b>28</b></td><td>पंकज राय</td><td>10</td><td>20.0%</td></tr>
+          <tr><td><b>29</b></td><td>अभिनन्दन कुमार</td><td>10</td><td>20.0%</td></tr>
+          <tr><td><b>30</b></td><td>अशोक ठाकुर</td><td>10</td><td>20.0%</td></tr>
+          <tr><td><b>31</b></td><td>रूपेश कुमार</td><td>10</td><td>20.0%</td></tr>
+          <tr><td><b>32</b></td><td>राहुल कुमार</td><td>8</td><td>16.0%</td></tr>
+          <tr><td><b>33</b></td><td>कार्तिक कुमार</td><td>7</td><td>14.0%</td></tr>
+          <tr><td><b>34</b></td><td>आर्या कुमारी</td><td>6</td><td>12.0%</td></tr>
+          <tr><td><b>35</b></td><td>मिथुन कुमार</td><td>5</td><td>10.0%</td></tr>
+          <tr><td><b>36</b></td><td>अमन कुमार</td><td>4</td><td>8.0%</td></tr>
+          <tr><td><b>37</b></td><td>आँचल कुमारी</td><td>3</td><td>6.0%</td></tr>
+          <tr><td><b>38</b></td><td>सूरज यादव</td><td>3</td><td>6.0%</td></tr>
+          <tr><td><b>39</b></td><td>नन्दनी कुमारी</td><td>3</td><td>6.0%</td></tr>
+          <tr><td><b>40</b></td><td>शिव कुमार ठाकुर</td><td>1</td><td>2.0%</td></tr>
+          <tr><td><b>41</b></td><td>उमेश यादव</td><td>1</td><td>2.0%</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</section>
 
-<!-- Gallery -->
-<section id="gallery">
-  <h2 class="section-head">📸 कोचिंग टेस्ट एवं क्लासरूम गैलरी</h2>
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1m_si9bk4UZkq5M0e5Z5mL54eHdGZ4hPY" alt="Test 1"></div>
-    <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1pcj3JRZss8jCNilPi5jqEdNKJO4rTL3z" alt="Test 2"></div>
-    <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1y417WGK6EIp87SCGpyIJ7J6gtWJHyhw2" alt="Test 3"></div>
-    <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1Q9w4-yLD9MOcmaxcijHQINZ1pbUzVm1F" alt="Test 4"></div>
-    <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1wXjkJU0OiObKb5F1sz7DCLT5TySEvAQ-" alt="Test 5"></div>
+  <!-- ================= TAB 6: गैलरी ================= -->
+  <div id="tab-gallery" class="tab-content">
+    <h2 class="section-title">📸 कोचिंग टेस्ट एवं क्लासरूम गैलरी</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1m_si9bk4UZkq5M0e5Z5mL54eHdGZ4hPY" alt="Test 1"></div>
+      <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1pcj3JRZss8jCNilPi5jqEdNKJO4rTL3z" alt="Test 2"></div>
+      <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1y417WGK6EIp87SCGpyIJ7J6gtWJHyhw2" alt="Test 3"></div>
+      <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1Q9w4-yLD9MOcmaxcijHQINZ1pbUzVm1F" alt="Test 4"></div>
+      <div class="gallery-item"><img src="https://lh3.googleusercontent.com/d/1wXjkJU0OiObKb5F1sz7DCLT5TySEvAQ-" alt="Test 5"></div>
+    </div>
   </div>
-</section>
 
-<!-- Contact -->
-<section id="contact">
-  <div style="background:white; padding:18px; border-radius:8px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
-    <h3 style="color:var(--primary); font-size:16px;">VIM CLASSES BELBATHAN</h3>
-    <p style="font-size:13px; color:var(--text-muted); margin:4px 0 10px;">शिक्षक: विकास सर | बेलबथान, गोड्डा (झारखंड)</p>
-    <a class="btn" href="https://wa.me/917856902817" target="_blank" rel="noopener noreferrer">WhatsApp: 7856902817</a>
-  </div>
-</section>
+</div>
 
 <footer>
-  <p>© 2026 VIM CLASSES BELBATHAN | All Rights Reserved.</p>
+  <p>© 2026 VIM CLASSES BELBATHAN | शिक्षक: विकास सर</p>
+  <p style="margin-top:4px;">कुशवाहा टोला, बेलबथान, गोड्डा (झारखंड) | WhatsApp: 7856902817</p>
 </footer>
 
 <script>
-// Motivational Quotes
+// Tab Switching
+function switchMainTab(tabId, btn) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.nav-tab-btn').forEach(el => el.classList.remove('active'));
+  
+  const target = document.getElementById(tabId);
+  if (target) target.classList.add('active');
+  if (btn) btn.classList.add('active');
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Student Database (Fees + Performance + Remarks)
+const studentPortalData = [
+  {
+    name: "नित्यानंद",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
+    totalFee: "400",
+    paidFee: "400",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "16 / 50 (32%)",
+    rank: "रैंक #22",
+    attendance: "84%",
+    studyLevel: "औसत (Average)",
+    remark: "पढ़ाई पर थोड़ा और ध्यान देने की आवश्यकता है।"
+  },
+  {
+    name: "अभिनन्दन",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
+    totalFee: "400",
+    paidFee: "400",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "10 / 50 (20%)",
+    rank: "रैंक #29",
+    attendance: "82%",
+    studyLevel: "सुधार अपेक्षित",
+    remark: "नियमित अभ्यास करें और क्लास में डाउट्स पूछें।"
+  },
+  {
+    name: "सिद्धार्थ",
+    className: "कक्षा 10वीं",
+    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
+    totalFee: "400",
+    paidFee: "400",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "42 / 50 (84%)",
+    rank: "रैंक #5",
+    attendance: "94%",
+    studyLevel: "बहुत अच्छा (Excellent)",
+    remark: "मेहनती छात्र हैं, बोर्ड परीक्षा की तैयारी अच्छी चल रही है।"
+  },
+  {
+    name: "स्वीटी कुमारी",
+    className: "कक्षा 10वीं",
+    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
+    totalFee: "400",
+    paidFee: "400",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "46 / 50 (92%)",
+    rank: "रैंक #2 (टॉपर 🏆)",
+    attendance: "96%",
+    studyLevel: "उत्कृष्ट (Outstanding)",
+    remark: "शानदार प्रदर्शन, लिखावट और तैयारी बहुत अच्छी है।"
+  },
+  {
+    name: "नंदनी",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
+    totalFee: "400",
+    paidFee: "400",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "3 / 50 (6%)",
+    rank: "रैंक #39",
+    attendance: "75%",
+    studyLevel: "मेहनत की आवश्यकता",
+    remark: "रोजाना रिवीजन करने और समय पर होमवर्क करने की जरूरत है।"
+  },
+  {
+    name: "सुमन",
+    className: "कक्षा 10वीं",
+    month: "अक्टूबर 2026 (दिनांक: 12/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "38 / 50 (76%)",
+    rank: "रैंक #8",
+    attendance: "90%",
+    studyLevel: "बहुत अच्छा (Good)",
+    remark: "पढ़ाई में अच्छा ध्यान है, टेस्ट में नियमित प्रगति कर रहे हैं।"
+  },
+  {
+    name: "उज्ज्वल",
+    className: "कक्षा 10वीं",
+    month: "सितंबर 2026 (दिनांक: 01/09/26)",
+    totalFee: "3000",
+    paidFee: "0",
+    dueFee: "3000",
+    status: "बकाया (2000 + 1000 कर्ज)",
+    testScore: "मूल्यांकन जारी",
+    rank: "--",
+    attendance: "75%",
+    studyLevel: "औसत (Average)",
+    remark: "कृपया बकाया फीस का समय पर भुगतान करें।"
+  },
+  {
+    name: "बिल्लु",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "मूल्यांकन जारी",
+    rank: "--",
+    attendance: "85%",
+    studyLevel: "अच्छा (Good)",
+    remark: "क्लास में नियमित उपस्थित रहते हैं।"
+  },
+  {
+    name: "लक्ष्मी",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 07/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "10 / 50 (20%)",
+    rank: "रैंक #27",
+    attendance: "80%",
+    studyLevel: "मेहनत की आवश्यकता",
+    remark: "गणित के बेसिक सवालों का अधिक अभ्यास करें।"
+  },
+  {
+    name: "सिद्धि",
+    className: "कोचिंग बैच",
+    month: "सितंबर 2026 (दिनांक: 23/09/26)",
+    totalFee: "400",
+    paidFee: "400",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "15 / 50 (30%)",
+    rank: "रैंक #23",
+    attendance: "85%",
+    studyLevel: "सुधार जारी",
+    remark: "टेस्ट में स्कोर बढ़ाने के लिए रिवीजन आवश्यक है।"
+  },
+  {
+    name: "सूरज राय",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
+    totalFee: "900",
+    paidFee: "900",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "15 / 50 (30%)",
+    rank: "रैंक #24",
+    attendance: "88%",
+    studyLevel: "संतोषजनक",
+    remark: "पढ़ाई में समय बढ़ाएं, मेहनत से रैंक बेहतर होगी।"
+  },
+  {
+    name: "आयुष",
+    className: "कक्षा 10वीं",
+    month: "अक्टूबर 2026 (दिनांक: 25/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "32 / 50 (64%)",
+    rank: "रैंक #9",
+    attendance: "88%",
+    studyLevel: "अच्छा (Good)",
+    remark: "अच्छा प्रदर्शन है, थोड़ी और लगन से टॉप 5 में आ सकते हैं।"
+  },
+  {
+    name: "पियूष",
+    className: "कक्षा 10वीं",
+    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
+    totalFee: "400",
+    paidFee: "400",
+    dueFee: "0",
+    status: "जमा है (200 + 200)",
+    testScore: "43 / 50 (86%)",
+    rank: "रैंक #4",
+    attendance: "92%",
+    studyLevel: "उत्कृष्ट (Very Good)",
+    remark: "पढ़ने में होशियार हैं, बोर्ड परीक्षा की तैयारी बहुत अच्छी चल रही है।"
+  },
+  {
+    name: "अशोक",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
+    totalFee: "400",
+    paidFee: "400",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "10 / 50 (20%)",
+    rank: "रैंक #30",
+    attendance: "80%",
+    studyLevel: "मेहनत की आवश्यकता",
+    remark: "क्लास के बाद डाउट्स ज़रूर पूछा करें।"
+  },
+  {
+    name: "आर्या",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "6 / 50 (12%)",
+    rank: "रैंक #34",
+    attendance: "78%",
+    studyLevel: "ध्यान देने योग्य",
+    remark: "प्रतिदिन घर पर 2 घंटे का अतिरिक्त अभ्यास करें।"
+  },
+  {
+    name: "अंशु",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "मूल्यांकन जारी",
+    rank: "--",
+    attendance: "88%",
+    studyLevel: "अच्छा",
+    remark: "समय पर क्लास में उपस्थिति रहती है।"
+  },
+  {
+    name: "राधिका",
+    className: "कक्षा 10वीं",
+    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "40 / 50 (80%)",
+    rank: "रैंक #6",
+    attendance: "92%",
+    studyLevel: "बहुत अच्छा (Excellent)",
+    remark: "शानदार मेहनत, उत्तर पुस्तिका में लिखावट बहुत अच्छी है।"
+  },
+  {
+    name: "मोदी",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
+    totalFee: "400",
+    paidFee: "400",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "मूल्यांकन जारी",
+    rank: "--",
+    attendance: "85%",
+    studyLevel: "संतोषजनक",
+    remark: "नियमित टेस्ट में भाग लें।"
+  },
+  {
+    name: "दुलार",
+    className: "कक्षा 10वीं",
+    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
+    totalFee: "400",
+    paidFee: "400",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "30 / 50 (60%)",
+    rank: "रैंक #11",
+    attendance: "86%",
+    studyLevel: "अच्छा (Good)",
+    remark: "गणित में लगातार अच्छा सुधार हो रहा है।"
+  },
+  {
+    name: "अंकिता आर्या",
+    className: "कक्षा 10वीं",
+    month: "अक्टूबर 2026 (दिनांक: 12/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "48 / 50 (96%)",
+    rank: "रैंक #1 (टॉपर 🏆)",
+    attendance: "98% (नियमित)",
+    studyLevel: "सर्वश्रेष्ठ (Outstanding)",
+    remark: "कोचिंग की टॉपर छात्रा। अवधारणाएँ स्पष्ट हैं और तैयारी बहुत मजबूत है।"
+  },
+  {
+    name: "राजलक्ष्मी",
+    className: "कक्षा 10वीं",
+    month: "अक्टूबर 2026 (दिनांक: 04/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "25 / 50 (50%)",
+    rank: "रैंक #16",
+    attendance: "85%",
+    studyLevel: "औसत से बेहतर",
+    remark: "फार्मूलों को याद करने पर थोड़ा और ध्यान दें।"
+  },
+  {
+    name: "कृष्ण कु० पाण्डेय",
+    className: "कक्षा 10वीं",
+    month: "अक्टूबर 2026 (दिनांक: 04/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "25 / 50 (50%)",
+    rank: "रैंक #17",
+    attendance: "88%",
+    studyLevel: "अच्छा प्रयास",
+    remark: "क्लास में सक्रिय रहते हैं, टेस्ट में समय प्रबंधन सुधारें।"
+  },
+  {
+    name: "सोना + भाग्यश्री",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 11/10/26)",
+    totalFee: "600",
+    paidFee: "600",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "मूल्यांकन जारी",
+    rank: "--",
+    attendance: "90%",
+    studyLevel: "बहुत अच्छा",
+    remark: "दोनों छात्राएं अनुशासित और पढ़ाई में सजग हैं।"
+  },
+  {
+    name: "सूरज कुमार",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
+    totalFee: "1000",
+    paidFee: "1000",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "22 / 50 (44%)",
+    rank: "रैंक #20",
+    attendance: "84%",
+    studyLevel: "औसत",
+    remark: "नियमित अभ्यास से और अच्छे अंक प्राप्त किए जा सकते हैं।"
+  },
+  {
+    name: "कार्तिक",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "7 / 50 (14%)",
+    rank: "रैंक #33",
+    attendance: "76%",
+    studyLevel: "सुधार की आवश्यकता",
+    remark: "कक्षा में नियमित रहें और समय पर गृहकार्य पूरा करें।"
+  },
+  {
+    name: "अमन",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 04/10/26)",
+    totalFee: "400",
+    paidFee: "400",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "4 / 50 (8%)",
+    rank: "रैंक #36",
+    attendance: "72%",
+    studyLevel: "विशेष ध्यान अपेक्षित",
+    remark: "बेसिक गणित और विज्ञान में विशेष मेहनत की जरूरत है।"
+  },
+  {
+    name: "पंकज",
+    className: "कोचिंग बैच",
+    month: "अगस्त 2026 (दिनांक: 28/08/26)",
+    totalFee: "800",
+    paidFee: "800",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "10 / 50 (20%)",
+    rank: "रैंक #28",
+    attendance: "80%",
+    studyLevel: "संतोषजनक",
+    remark: "रोजाना रिवीजन करने की आदत डालें।"
+  },
+  {
+    name: "रौनक",
+    className: "कक्षा 10वीं",
+    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "45 / 50 (90%)",
+    rank: "रैंक #3 (टॉपर 🏆)",
+    attendance: "95%",
+    studyLevel: "उत्कृष्ट (Outstanding)",
+    remark: "मेधावी छात्र। कठिन सवालों को तेजी से हल करते हैं।"
+  },
+  {
+    name: "अभिषेक",
+    className: "कोचिंग बैच",
+    month: "सितंबर 2026 (दिनांक: 18/09/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "15 / 50 (30%)",
+    rank: "रैंक #25",
+    attendance: "82%",
+    studyLevel: "मध्यम",
+    remark: "क्लास में एकाग्रता बनाए रखें।"
+  },
+  {
+    name: "प्रियांशु",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 03/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "28 / 50 (56%)",
+    rank: "रैंक #13",
+    attendance: "89%",
+    studyLevel: "अच्छा (Good)",
+    remark: "टेस्ट में अच्छा प्रदर्शन है, नियमित बने रहें।"
+  },
+  {
+    name: "आँचल",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "3 / 50 (6%)",
+    rank: "रैंक #37",
+    attendance: "70%",
+    studyLevel: "सुधार अपेक्षित",
+    remark: "कक्षा में रोज आएं और बेसिक कॉन्सेप्ट दोहराएं।"
+  },
+  {
+    name: "सूरज ठाकुर",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
+    totalFee: "600",
+    paidFee: "600",
+    dueFee: "0",
+    status: "जमा है (400 + 200)",
+    testScore: "12 / 50 (24%)",
+    rank: "रैंक #26",
+    attendance: "82%",
+    studyLevel: "संतोषजनक",
+    remark: "लगातार अभ्यास से सुधार संभव है।"
+  },
+  {
+    name: "सूरज यादव",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "3 / 50 (6%)",
+    rank: "रैंक #38",
+    attendance: "72%",
+    studyLevel: "ध्यान देने योग्य",
+    remark: "टेस्ट में सभी प्रश्न हल करने का प्रयास करें।"
+  },
+  {
+    name: "प्रियंका",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "मूल्यांकन जारी",
+    rank: "--",
+    attendance: "85%",
+    studyLevel: "अच्छा",
+    remark: "पढ़ाई के प्रति गंभीर और शांत स्वभाव है।"
+  },
+  {
+    name: "राधा",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "21 / 50 (42%)",
+    rank: "रैंक #21",
+    attendance: "86%",
+    studyLevel: "संतोषजनक",
+    remark: "आत्मविश्वास के साथ प्रश्नों को हल करें।"
+  },
+  {
+    name: "शिवम",
+    className: "कोचिंग बैच",
+    month: "सितंबर 2026 (दिनांक: 11/09/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "मूल्यांकन जारी",
+    rank: "--",
+    attendance: "80%",
+    studyLevel: "मध्यम",
+    remark: "पढ़ाई का समय बढ़ाने की सलाह है।"
+  },
+  {
+    name: "राहुल",
+    className: "कक्षा 8वीं",
+    month: "अक्टूबर 2026 (दिनांक: 21/10/26)",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "8 / 50 (16%)",
+    rank: "रैंक #32",
+    attendance: "78%",
+    studyLevel: "सुधार जारी",
+    remark: "समय पर क्लास आएं और टेस्ट की तैयारी करें।"
+  },
+  {
+    name: "शिवनारायण",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "मूल्यांकन जारी",
+    rank: "--",
+    attendance: "84%",
+    studyLevel: "संतोषजनक",
+    remark: "क्लास में सक्रिय रहते हैं।"
+  },
+  {
+    name: "प्रीतम",
+    className: "कोचिंग बैच",
+    month: "अक्टूबर 2026",
+    totalFee: "200",
+    paidFee: "200",
+    dueFee: "0",
+    status: "जमा है (Paid)",
+    testScore: "मूल्यांकन जारी",
+    rank: "--",
+    attendance: "82%",
+    studyLevel: "संतोषजनक",
+    remark: "नियमित अभ्यास से और अच्छा करेंगे।"
+  }
+];
+
+function findStudentReport() {
+  const query = document.getElementById("studentSearchQuery").value.trim().toLowerCase();
+  const box = document.getElementById("studentReportBox");
+  const err = document.getElementById("repErrorMsg");
+
+  if (!query) {
+    alert("कृपया विद्यार्थी का नाम लिखें!");
+    return;
+  }
+
+  const student = studentPortalData.find(s => s.name.toLowerCase().includes(query));
+
+  if (student) {
+    document.getElementById("repName").textContent = `विद्यार्थी: ${student.name}`;
+    document.getElementById("repClass").textContent = student.className;
+    
+    const badge = document.getElementById("repBadge");
+    badge.textContent = student.status;
+    if (student.dueFee === "0") {
+      badge.style.background = "#dcfce7";
+      badge.style.color = "#166534";
+    } else {
+      badge.style.background = "#fee2e2";
+      badge.style.color = "#991b1b";
+    }
+
+    // Fee Details
+    document.getElementById("repFeeMonth").textContent = student.month;
+    document.getElementById("repFeeTotal").textContent = student.totalFee;
+    document.getElementById("repFeePaid").textContent = student.paidFee;
+    document.getElementById("repFeeDue").textContent = student.dueFee;
+    document.getElementById("repFeeStatusText").textContent = student.status;
+
+    // Performance Details
+    document.getElementById("repTestScore").textContent = student.testScore;
+    document.getElementById("repRank").textContent = student.rank;
+    document.getElementById("repAttendance").textContent = student.attendance;
+    document.getElementById("repStudyLevel").textContent = student.studyLevel;
+    document.getElementById("repTeacherRemark").textContent = `"${student.remark}"`;
+
+    // WhatsApp Message
+    const msg = `नमस्ते विकास सर, मैं ${student.name} (${student.className}) का रिपोर्ट कार्ड व फीस स्टेटस देख रहा/रही हूँ। मुझे इस संबंध में बात करनी है।`;
+    document.getElementById("repWhatsappLink").href = `https://wa.me/917856902817?text=${encodeURIComponent(msg)}`;
+
+    box.style.display = "block";
+    err.style.display = "none";
+  } else {
+    box.style.display = "none";
+    err.style.display = "block";
+  }
+}
+
+// Quotes
 const quotesList = [
   { q: "कड़ी मेहनत का कोई विकल्प नहीं होता, आपकी आज की मेहनत ही आपका कल तय करेगी।", a: "प्रेरक विचार" },
   { q: "शिक्षा वह सबसे शक्तिशाली हथियार है जिसका उपयोग आप दुनिया को बदलने के लिए कर सकते हैं।", a: "नेल्सन मंडेला" },
   { q: "उठो, जागो और तब तक मत रुको जब तक लक्ष्य की प्राप्ति न हो जाए।", a: "स्वामी विवेकानंद" },
-  { q: "सपने वो नहीं जो हम सोते हुए देखते हैं, सपने वो हैं जो हमें सोने नहीं देते।", a: "डॉ. ए.पी.जे. अब्दुल कलाम" },
-  { q: "सफलता एक दिन में नहीं मिलती, लेकिन निरंतर प्रयास करने से एक दिन ज़रूर मिलती है।", a: "सुविचार" },
-  { q: "जिसने अपनी पढ़ाई में अनुशासन बना लिया, उसे सफल होने से कोई नहीं रोक सकता।", a: "विकास सर" }
+  { q: "सपने वो नहीं जो हम सोते हुए देखते हैं, सपने वो हैं जो हमें सोने नहीं देते।", a: "डॉ. ए.पी.जे. अब्दुल कलाम" }
 ];
-
-let quoteIdx = 0;
+let qIdx = 0;
 function changeQuote() {
-  quoteIdx = (quoteIdx + 1) % quotesList.length;
-  document.getElementById("quote-display").textContent = `"${quotesList[quoteIdx].q}"`;
-  document.getElementById("quote-author").textContent = `— ${quotesList[quoteIdx].a}`;
+  qIdx = (qIdx + 1) % quotesList.length;
+  document.getElementById("quote-display").textContent = `"${quotesList[qIdx].q}"`;
+  document.getElementById("quote-author").textContent = `— ${quotesList[qIdx].a}`;
 }
 
-// Study Material
-const studyData = {
-  "10_math": [
-    "<b>वास्तविक संख्याएँ:</b> यूक्लिड विभाजन प्रमेयिका a = bq + r, जहाँ 0 ≤ r < b। HCF × LCM = दो संख्याओं का गुणनफल।",
-    "<b>द्विघात बहुपद:</b> मानक रूप ax² + bx + c = 0। शून्यकों का योग (α + β) = -b/a, शून्यकों का गुणनफल (αβ) = c/a।",
-    "<b>द्विघात समीकरण:</b> विविक्तकर D = b² - 4ac। यदि D > 0 तो दो भिन्न मूल, D = 0 तो दो बराबर मूल, D < 0 तो कोई वास्तविक मूल नहीं।",
-    "<b>त्रिकोणमिति:</b> sin²θ + cos²θ = 1, 1 + tan²θ = sec²θ, 1 + cot²θ = cosec²θ।"
-  ],
-  "10_science": [
-    "<b>रासायनिक अभिक्रियाएँ:</b> संयोजन, वियोजन, विस्थापन एवं द्विविस्थापन। संक्षारण रोकने हेतु जस्तीकरण किया जाता है।",
-    "<b>अम्ल एवं क्षार:</b> शुद्ध जल का pH मान 7 होता है। बेकिंग सोडा का रासायनिक सूत्र NaHCO₃ तथा विरंजक चूर्ण का सूत्र CaOCl₂ है।",
-    "<b>जैव प्रक्रम:</b> पादपों में जाइलम जल का वहन करता है और फ्लोएम भोजन का।"
-  ],
-  "10_sst": [
-    "<b>इतिहास:</b> 'यंग इटली' की स्थापना जोसेफ मेत्सिनी ने की थी। 13 अप्रैल 1919 को जलियांवाला बाग हत्याकांड हुआ।",
-    "<b>भूगोल:</b> काली मिट्टी को 'रेगुर मिट्टी' कहते हैं, जो कपास की खेती के लिए सबसे उपयुक्त मानी जाती है।"
-  ],
-  "9_math": [
-    "<b>संख्या पद्धति:</b> 0 एक परिमेय संख्या है क्योंकि इसे 0/1 लिखा जा सकता है।",
-    "<b>हीरोन का सूत्र:</b> त्रिभुज का क्षेत्रफल = √[s(s-a)(s-b)(s-c)], जहाँ s = (a+b+c)/2 है।"
-  ],
-  "9_science": [
-    "<b>पदार्थ:</b> ठोस से सीधे गैस बनने की प्रक्रिया उर्ध्वपातन (Sublimation) कहलाती है।",
-    "<b>कोशिका:</b> कोशिका की खोज रॉबर्ट हुक ने की। माइटोकॉन्ड्रिया को कोशिका का 'पावरहाउस' कहते हैं।"
-  ],
-  "8_math": [
-    "<b>परिमेय संख्याएँ:</b> योज्य तत्समक 0 और गुणात्मक तत्समक 1 होता है।",
-    "<b>घातांक:</b> किसी भी गैर-शून्य संख्या की घात 0 होने पर उसका मान 1 होता है (a⁰ = 1)।"
-  ],
-  "7_math": [
-    "<b>पूर्णांक:</b> दो ऋणात्मक पूर्णांकों का गुणनफल सदैव धनात्मक होता है।",
-    "<b>भिन्न:</b> 2/3 का व्युत्क्रम 3/2 होता है।"
-  ],
-  "11_arts_sst": [
-    "<b>इतिहास:</b> मेसोपोटामिया की सभ्यता दजला और फरात नदियों के बीच विकसित हुई थी।",
-    "<b>भूगोल:</b> 'भूगोल' शब्द का सर्वप्रथम प्रयोग इरैटोस्थनीज ने किया। पृथ्वी की आंतरिक कोर निफे (NiFe) से बनी है।"
-  ]
-};
-
-function loadStudyMaterial() {
-  const cls = document.getElementById("smClassSelect").value;
-  const sub = document.getElementById("smSubjectSelect").value;
-  const output = document.getElementById("study-content-area");
-
-  if (!cls || !sub) {
-    output.innerHTML = "<p style='text-align:center; color:var(--danger); font-size:13px;'>कृपया कक्षा और विषय दोनों का चयन करें।</p>";
-    return;
-  }
-
-  const notes = studyData[`${cls}_${sub}`];
-  if (!notes) {
-    output.innerHTML = "<p style='text-align:center; color:var(--text-muted); font-size:13px;'>इस विषय का संक्षिप्त रिवीजन नोट्स शीघ्र अपडेट किया जा रहा है।</p>";
-    return;
-  }
-
-  output.innerHTML = notes.map((item, i) => `
-    <div class="study-item">
-      <b>महत्वपूर्ण बिन्दु ${i+1}:</b> ${item}
-    </div>
-  `).join("");
-}
-
-// 50 QUESTIONS PER CLASS (ALL EXTRA SUBJECT TAGS REMOVED CLEANLY)
+// 50 Questions per Class
 const fullQuizData = {
   "11": [
     { q: "मेसोपोटामिया की सभ्यता किन दो नदियों के बीच विकसित हुई थी?", o: ["दजला और फरात", "नील और अमेजन", "सिंधु और गंगा", "ह्वांगहो और यांग्त्सी"], a: 0 },
@@ -679,7 +1369,7 @@ const fullQuizData = {
     { q: "'भूगोल' (Geography) शब्द का सर्वप्रथम प्रयोग किसने किया था?", o: ["इरैटोस्थनीज", "हिकेटियस", "हेरोडोटस", "अलेक्जेंडर वॉन हम्बोल्ट"], a: 0 },
     { q: "ब्रह्मांड की उत्पत्ति से संबंधित 'बिग बैंग थ्योरी' का प्रतिपादन किसने किया?", o: ["जॉर्ज लेमैत्रे", "एडविन हबल", "अल्फ्रेड वेगनर", "कांट"], a: 0 },
     { q: "पृथ्वी की सबसे भीतरी परत (क्रोड) मुख्यतः किन तत्वों से बनी है?", o: ["निकल और लोहा (NiFe)", "सिलिका और एल्युमिना", "सिलिका और मैग्नीशियम", "लोहा और तांबा"], a: 0 },
-    { q: "महाद्वीपीय विस्थापन सिद्धांत (Continental Drift Theory) किसने दिया था?", o: ["अल्फ्रेड वेगनर (1912)", "हैरी हेस", "आर्थर होम्स", "स्ट्रैबो"], a: 0 },
+    { q: "महाद्वीपीय विस्थापन सिद्धांत किसने दिया था?", o: ["अल्फ्रेड वेगनर (1912)", "हैरी हेस", "आर्थर होम्स", "स्ट्रैबो"], a: 0 },
     { q: "भूकंप की तीव्रता मापने के लिए किस पैमाने का उपयोग किया जाता है?", o: ["रिक्टर पैमाना (Richter Scale)", "मर्केली पैमाना", "बैरोमीटर", "थर्मामीटर"], a: 0 },
     { q: "वायुमंडल की कौन सी परत रेडियो संचार में सहायता करती है?", o: ["आयनमंडल (Ionosphere)", "क्षोभमंडल", "समतापमंडल", "मध्यमंडल"], a: 0 },
     { q: "वायुमंडल में नाइट्रोजन गैस की प्रतिशत मात्रा कितनी है?", o: ["लगभग 78%", "21%", "0.03%", "0.93%"], a: 0 },
@@ -714,7 +1404,6 @@ const fullQuizData = {
     { q: "What tribe did Aram and Mourad belong to, known for their honesty?", o: ["Garoghlanian tribe", "Assyrian tribe", "Kurdish tribe", "Bedouin tribe"], a: 0 },
     { q: "Identify the correct passive voice: 'She writes a letter.'", o: ["A letter is written by her.", "A letter was written by her.", "A letter is being written.", "A letter has been written."], a: 0 }
   ],
-
   "10": [
     { q: "√5 किस प्रकार की संख्या है?", o: ["अपरिमेय संख्या", "परिमेय संख्या", "पूर्णांक", "प्राकृत संख्या"], a: 0 },
     { q: "दो संख्याओं का गुणनफल 1600 तथा HCF = 5 है, तो उनका LCM क्या होगा?", o: ["320", "160", "800", "400"], a: 0 },
@@ -767,7 +1456,6 @@ const fullQuizData = {
     { q: "विश्व व्यापार संगठन (WTO) की स्थापना किस वर्ष हुई थी?", o: ["1995", "1990", "2000", "1985"], a: 0 },
     { q: "उपभोक्ता संरक्षण अधिनियम (COPRA) भारत में कब लागू किया गया?", o: ["1986", "1991", "2005", "1980"], a: 0 }
   ],
-
   "9": [
     { q: "क्या शून्य एक परिमेय संख्या है?", o: ["हाँ", "नहीं", "कहा नहीं जा सकता", "अपरिभाषित"], a: 0 },
     { q: "1/(√7 - √6) के हर का परिमेयकरण करने पर प्राप्त मान क्या होगा?", o: ["√7 + √6", "√7 - √6", "1", "13"], a: 0 },
@@ -820,7 +1508,6 @@ const fullQuizData = {
     { q: "पालमपुर गाँव की मुख्य आर्थिक गतिविधि क्या थी?", o: ["कृषि", "डेयरी", "दुकानदारी", "लघु उद्योग"], a: 0 },
     { q: "भारत में हरित क्रांति का मुख्य प्रभाव किन फसलों पर पड़ा?", o: ["गेहूँ और चावल", "दालें और तिलहन", "कपास और जूट", "मक्का और बाजरा"], a: 0 }
   ],
-
   "8": [
     { q: "-7/19 का योज्य प्रतिलोम क्या होगा?", o: ["7/19", "-19/7", "19/7", "0"], a: 0 },
     { q: "-13 का गुणात्मक प्रतिलोम क्या होगा?", o: ["-1/13", "13", "1/13", "1"], a: 0 },
@@ -873,7 +1560,6 @@ const fullQuizData = {
     { q: "लोकसभा में सदस्यों की अधिकतम संख्या कितनी हो सकती है?", o: ["552", "250", "545", "500"], a: 0 },
     { q: "संसद के दो सत्रों के बीच अधिकतम कितने माह का अंतर हो सकता है?", o: ["6 माह", "3 माह", "12 माह", "9 माह"], a: 0 }
   ],
-
   "7": [
     { q: "दो ऋणात्मक पूर्णांकों का गुणनफल सदैव कैसा होता है?", o: ["धनात्मक", "ऋणात्मक", "शून्य", "अपरिभाषित"], a: 0 },
     { q: "(-1) × (-1) × (-1) × (-1) का मान क्या होगा?", o: ["1", "-1", "0", "4"], a: 0 },
@@ -976,15 +1662,6 @@ function loadClassQuiz(cls, elem) {
     if (targetBtn) targetBtn.classList.add('active');
   }
 
-  const titleMap = {
-    "11": "कक्षा 11वीं (इतिहास, भूगोल, हिंदी, अंग्रेजी - 50 प्रश्न)",
-    "10": "कक्षा 10वीं बोर्ड स्पेशल (50 प्रश्न)",
-    "9": "कक्षा 9वीं वार्षिक परीक्षा स्पेशल (50 प्रश्न)",
-    "8": "कक्षा 8वीं बोर्ड स्पेशल (50 प्रश्न)",
-    "7": "कक्षा 7वीं JCERT स्पेशल (50 प्रश्न)"
-  };
-  document.getElementById("quiz-title-tag").textContent = titleMap[cls] || "ऑनलाइन टेस्ट";
-
   const holder = document.getElementById("questions-holder");
   holder.innerHTML = "";
 
@@ -993,7 +1670,7 @@ function loadClassQuiz(cls, elem) {
       let qDiv = document.createElement("div");
       qDiv.className = "q-box";
       qDiv.innerHTML = `
-        <div class="q-text">प्र. ${idx + 1}: ${item.q}</div>
+        <div style="font-size:14.5px; font-weight:600; color:var(--primary-dark); margin-bottom:10px;">प्र. ${idx + 1}: ${item.q}</div>
         ${item.o.map((opt, optIdx) => `
           <label class="opt-row">
             <input type="radio" name="ans_${idx}" value="${optIdx}">
@@ -1013,7 +1690,7 @@ window.addEventListener("DOMContentLoaded", () => {
   loadClassQuiz("11", null);
 });
 
-// Anti-Cheating Features
+// Anti-Cheating
 document.addEventListener('contextmenu', e => e.preventDefault());
 document.addEventListener('copy', e => e.preventDefault());
 document.addEventListener('cut', e => e.preventDefault());
@@ -1033,12 +1710,12 @@ document.addEventListener("visibilitychange", function() {
   }
 });
 
-// Result Calculation
+// Calculate Result
 function calculateAndShowResult() {
-  const nameInput = document.getElementById("studentNameInput").value.trim();
+  const nameInput = document.getElementById("testStudentName").value.trim();
   if (!nameInput) {
     alert("कृपया टेस्ट सबमिट करने से पहले ऊपर अपना पूरा नाम लिखें!");
-    document.getElementById("studentNameInput").focus();
+    document.getElementById("testStudentName").focus();
     return;
   }
 
