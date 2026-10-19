@@ -55,8 +55,8 @@ header {
 }
 
 .teacher-avatar {
-  width: 82px;
-  height: 82px;
+  width: 84px;
+  height: 84px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent);
@@ -77,6 +77,46 @@ header .teacher-badge {
   border-radius: 20px;
   font-size: 13px;
   margin-top: 4px;
+}
+
+/* Scrolling Marquee Notice Bar */
+.marquee-wrapper {
+  background: #081a30;
+  color: #fef08a;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 2px solid var(--accent);
+  font-size: 13.5px;
+  font-weight: 600;
+  height: 38px;
+}
+
+.marquee-tag {
+  background: var(--accent);
+  color: #0b2545;
+  padding: 0 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: scrollNotice 25s linear infinite;
+}
+
+.marquee-content span {
+  margin-right: 50px;
+}
+
+@keyframes scrollNotice {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
 /* Navigation Tabs */
@@ -269,7 +309,6 @@ nav {
   margin-bottom: 6px;
 }
 
-/* PDF Download Grid */
 .pdf-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -278,7 +317,7 @@ nav {
 
 .pdf-card {
   background: white;
-  border: 1px solid #e2e8f0;
+  border: 1.5px solid #e2e8f0;
   border-radius: 10px;
   padding: 18px;
   display: flex;
@@ -360,6 +399,64 @@ nav {
 .opt-row:hover { background: #eff6ff; }
 .opt-row input { margin-right: 8px; }
 
+/* Certificate Box Styling */
+.cert-card-wrap {
+  display: none;
+  background: #ffffff;
+  border: 6px double #d97706;
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  margin-top: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.cert-header {
+  color: #123b70;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.cert-sub {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 15px;
+}
+
+.cert-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #d97706;
+  border-bottom: 2px dashed #d97706;
+  display: inline-block;
+  padding: 2px 20px;
+  margin: 10px 0;
+}
+
+.cert-desc {
+  font-size: 14px;
+  color: #1e293b;
+  margin: 10px 0;
+}
+
+.cert-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 25px;
+  padding: 0 15px;
+}
+
+.cert-sign {
+  font-family: 'Hind', cursive;
+  font-size: 14px;
+  color: #123b70;
+  border-top: 1px solid #94a3b8;
+  padding-top: 4px;
+}
+
 .table-wrap {
   overflow-x: auto;
   background: white;
@@ -406,6 +503,12 @@ footer {
   font-size: 13px;
   margin-top: 30px;
 }
+
+@media print {
+  body * { visibility: hidden; }
+  #cert-printable, #cert-printable * { visibility: visible; }
+  #cert-printable { position: absolute; left: 0; top: 0; width: 100%; }
+}
 </style>
 </head>
 
@@ -419,6 +522,16 @@ footer {
     <div class="teacher-badge">शिक्षक एवं मार्गदर्शक: विकास सर | गोड्डा (झारखंड)</div>
   </div>
 </header>
+
+<!-- चलती हुई सूचना पट्टी -->
+<div class="marquee-wrapper">
+  <div class="marquee-tag">📢 ताज़ा सूचना:</div>
+  <div class="marquee-content">
+    <span>🔥 "सफलता कोई दुर्घटना नहीं है, यह निरंतर अभ्यास, अनुशासन और कड़ी मेहनत का फल है।"</span>
+    <span>📝 सभी छात्र समय पर 50 प्रश्नों का ऑनलाइन टेस्ट दें और तुरंत अपना सर्टिफिकेट व रिजल्ट प्राप्त करें।</span>
+    <span>📞 नया सत्र एवं कोचिंग संबंधित किसी भी पूछताछ के लिए संपर्क करें: <b>+91 7856902817</b></span>
+  </div>
+</div>
 
 <!-- Navigation Tabs -->
 <nav>
@@ -437,7 +550,7 @@ footer {
     <div class="card" style="padding:0; overflow:hidden; text-align:center;">
       <img src="https://lh3.googleusercontent.com/d/1amcQBNVzzN7zybA4Q3hRBynCj1DqyBKk" alt="VIM Classes Banner" style="width:100%; max-height:340px; object-fit:cover; display:block;">
       <div style="padding:20px;">
-        <h2 style="color:var(--primary); font-size:20px;">कक्षा 7वीं से 11वीं (आर्ट्स) डिजिटल पोर्टल</h2>
+        <h2 style="color:var(--primary); font-size:20px;">7वीं से 11वीं (आर्ट्स) डिजिटल पोर्टल</h2>
         <p style="color:var(--text-muted); font-size:13.5px; margin:6px 0 14px;">
           नियमित साप्ताहिक टेस्ट, चैप्टरवाइज स्टडी मटेरियल, पारदर्शी फीस एवं डिजिटल रिपोर्ट कार्ड।
         </p>
@@ -466,11 +579,11 @@ footer {
     
     <div class="card" style="text-align:center;">
       <p style="font-size:14px; color:var(--text-muted); margin-bottom:14px;">
-        अभिभावक एवं विद्यार्थी अपना <b>पूरा नाम</b> दर्ज करके फीस और पढ़ाई की स्थिति देखें:
+        अभिभावक एवं विद्यार्थी अपना <b>रोल नंबर</b> या <b>पूरा नाम</b> दर्ज करके फीस और पढ़ाई की स्थिति देखें:
       </p>
 
       <div class="search-box-wrap">
-        <input type="text" id="studentSearchQuery" placeholder="जैसे: अंकिता आर्या, नित्यानंद, सिद्धार्थ, स्वीटी">
+        <input type="text" id="studentSearchQuery" placeholder="रोल नंबर (101 या VIM-101) या नाम दर्ज करें">
         <button class="btn" onclick="findStudentReport()">रिपोर्ट देखें 🔍</button>
       </div>
 
@@ -514,7 +627,7 @@ footer {
       </div>
 
       <p id="repErrorMsg" style="display:none; color:var(--danger); font-size:13.5px; font-weight:600; margin-top:14px;">
-        ❌ इस नाम का कोई रिकॉर्ड नहीं मिला। कृपया सही नाम लिखकर दोबारा प्रयास करें।
+        ❌ इस नाम या रोल नंबर का कोई रिकॉर्ड नहीं मिला। कृपया दोबारा सही दर्ज करें।
       </p>
     </div>
   </div>
@@ -530,11 +643,11 @@ footer {
       </div>
 
       <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:15px;">
-        <button class="class-btn active" data-cls="11" onclick="loadClassQuiz('11', this)">कक्षा 11वीं (आर्ट्स)</button>
-        <button class="class-btn" data-cls="10" onclick="loadClassQuiz('10', this)">कक्षा 10वीं</button>
-        <button class="class-btn" data-cls="9" onclick="loadClassQuiz('9', this)">कक्षा 9वीं</button>
-        <button class="class-btn" data-cls="8" onclick="loadClassQuiz('8', this)">कक्षा 8वीं</button>
-        <button class="class-btn" data-cls="7" onclick="loadClassQuiz('7', this)">कक्षा 7वीं</button>
+        <button class="class-btn active" data-cls="11" onclick="loadClassQuiz('11', this)">11वीं (आर्ट्स)</button>
+        <button class="class-btn" data-cls="10" onclick="loadClassQuiz('10', this)">10वीं</button>
+        <button class="class-btn" data-cls="9" onclick="loadClassQuiz('9', this)">9वीं</button>
+        <button class="class-btn" data-cls="8" onclick="loadClassQuiz('8', this)">8वीं</button>
+        <button class="class-btn" data-cls="7" onclick="loadClassQuiz('7', this)">7वीं</button>
       </div>
 
       <div class="timer-container">
@@ -550,7 +663,7 @@ footer {
       </form>
     </div>
 
-    <!-- Result Display -->
+    <!-- Result Display & Certificate -->
     <div id="result-display-area" class="card" style="display:none; text-align:center; border-top:4px solid var(--gold);">
       <h3 style="color:var(--primary);">🎯 टेस्ट परिणाम (Result Card)</h3>
       <div style="width:90px; height:90px; line-height:90px; border-radius:50%; background:#eff6ff; border:3px solid var(--primary); font-size:24px; font-weight:700; color:var(--primary); margin:12px auto;" id="score-text">0/50</div>
@@ -558,69 +671,90 @@ footer {
       <div id="percentage-text" style="font-size:15px; font-weight:700; color:var(--success); margin:4px 0;"></div>
       <div id="grade-text" style="font-size:13px; color:var(--text-muted); margin-bottom:12px;"></div>
 
-      <button type="button" class="btn" style="background:#16803d; width:100%; max-width:320px;" onclick="sendResultToWhatsApp()">
-        📲 विकास सर को रिजल्ट WhatsApp करें
-      </button>
+      <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:15px;">
+        <button type="button" class="btn" style="background:#16803d;" onclick="sendResultToWhatsApp()">
+          📲 विकास सर को रिजल्ट WhatsApp करें
+        </button>
+        <button type="button" id="cert-btn-toggle" class="btn" style="background:var(--gold); display:none;" onclick="printCertificate()">
+          📜 सर्टिफिकेट डाउनलोड / प्रिंट करें 🖨️
+        </button>
+      </div>
 
-      <div id="answers-breakdown" style="text-align:left; margin-top:16px; max-height:280px; overflow-y:auto; border-top:1px solid #e2e8f0; padding-top:10px;"></div>
+      <!-- Printable Certificate Box -->
+      <div id="cert-printable" class="cert-card-wrap">
+        <div class="cert-header">🎓 VIM CLASSES BELBATHAN 🎓</div>
+        <div class="cert-sub">कुशवाहा टोला, बेलबथान, गोड्डा (झारखंड) | ई-प्रशस्ति पत्र</div>
+        <div style="font-size: 14px; color: #1e293b;">प्रमाणित किया जाता है कि विद्यार्थी</div>
+        <div class="cert-name" id="cert-student-name">विद्यार्थी का नाम</div>
+        <div class="cert-desc">
+          ने <b><span id="cert-class-name">10वीं</span></b> के ऑनलाइन 50 वस्तुनिष्ठ टेस्ट में भाग लेकर 
+          <b><span id="cert-score-val">0/50</span> (<span id="cert-percent-val">0%</span>)</b> उत्कृष्ट अंक अर्जित किए।
+        </div>
+        <div class="cert-footer">
+          <div style="font-size:12px; color:#64748b; text-align:left;">
+            दिनांक: <span id="cert-date-val"></span><br>
+            स्थिति: सफल (Passed)
+          </div>
+          <div class="cert-sign">
+            <b>विकास सर</b><br>
+            (संस्थापक एवं शिक्षक)
+          </div>
+        </div>
+      </div>
+
+      <div id="answers-breakdown" style="text-align:left; margin-top:20px; max-height:280px; overflow-y:auto; border-top:1px solid #e2e8f0; padding-top:10px;"></div>
     </div>
   </div>
 
-  <!-- ================= TAB 4: PDF व स्टडी मटेरियल (सीधे PDF लिंक के साथ) ================= -->
+  <!-- ================= TAB 4: PDF व स्टडी मटेरियल ================= -->
   <div id="tab-study-pdf" class="tab-content">
     <h2 class="section-title">📚 महत्वपूर्ण PDF एवं स्टडी नोट्स</h2>
     
     <div class="pdf-grid">
-      <!-- 1. JAC Board Class 10 Maths 50 VVI Questions (सीधे PDF खुलेगी) -->
       <div class="pdf-card">
         <div class="pdf-info">
-          <h4>📐 कक्षा 10वीं गणित 50 VVI प्रश्न (PDF)</h4>
+          <h4>📐 10वीं गणित 50 VVI प्रश्न (PDF)</h4>
           <p>जैक बोर्ड परीक्षा स्पेशल 50 महत्वपूर्ण प्रश्न एवं हल</p>
         </div>
         <a href="https://drive.google.com/file/d/1PQxBd4ud8Zf0f23aDaAbxtSKWSOHFVP2/view" target="_blank" class="btn" style="padding:7px 14px; font-size:12.5px;">देखें / डाउनलोड 📥</a>
       </div>
 
-      <!-- 2. कक्षा 9वीं वार्षिक परीक्षा - गणित 50 VVI प्रश्न (सीधे PDF खुलेगी) -->
       <div class="pdf-card">
         <div class="pdf-info">
-          <h4>📖 कक्षा 9वीं वार्षिक परीक्षा गणित (PDF)</h4>
-          <p>50 अति महत्वपूर्ण प्रश्न (VVI Questions Bank) 2025-26</p>
+          <h4>📖 9वीं वार्षिक परीक्षा गणित (PDF)</h4>
+          <p>50 अति महत्वपूर्ण प्रश्न (VVI Questions Bank)</p>
         </div>
         <a href="https://drive.google.com/file/d/18uYCQyLBLOuNK8zZSi7ZZ-ECdhCaRSQv/view" target="_blank" class="btn" style="padding:7px 14px; font-size:12.5px;">देखें / डाउनलोड 📥</a>
       </div>
 
-      <!-- 3. JAC 8th Math Model Paper -->
       <div class="pdf-card">
         <div class="pdf-info">
-          <h4>📘 कक्षा 8वीं गणित मॉडल प्रश्नपत्र (JAC)</h4>
+          <h4>📘 8वीं गणित मॉडल प्रश्नपत्र (JAC)</h4>
           <p>50 बहुविकल्पीय प्रश्न (MCQ Model Paper 2025)</p>
         </div>
         <a href="https://drive.google.com/file/d/1BIcZTLJXKwhoa7FTRDx-AOa28FVmVBjP/view" target="_blank" class="btn" style="padding:7px 14px; font-size:12.5px;">देखें / डाउनलोड 📥</a>
       </div>
 
-      <!-- 4. 50 प्रश्नों वाली ओएमआर शीट -->
       <div class="pdf-card">
         <div class="pdf-info">
           <h4>📝 50-प्रश्नों वाली ओएमआर शीट (Blank OMR)</h4>
-          <p>घर पर ऑफलाइन टेस्ट अभ्यास हेतु प्रिंटेबल शीट (PDF)</p>
+          <p>घर पर टेस्ट अभ्यास हेतु प्रिंटेबल शीट (PDF)</p>
         </div>
         <a href="https://drive.google.com/file/d/1PQxBd4ud8Zf0f23aDaAbxtSKWSOHFVP2/view" target="_blank" class="btn" style="padding:7px 14px; font-size:12.5px;">देखें / डाउनलोड 📥</a>
       </div>
 
-      <!-- 5. कक्षा 11वीं इतिहास एवं भूगोल नोट्स -->
       <div class="pdf-card">
         <div class="pdf-info">
-          <h4>🌍 कक्षा 11वीं इतिहास एवं भूगोल VVI नोट्स</h4>
+          <h4>🌍 11वीं इतिहास एवं भूगोल VVI नोट्स</h4>
           <p>मेसोपोटामिया, रोमन साम्राज्य, भौतिक भूगोल मुख्य बिंदु</p>
         </div>
         <a href="https://drive.google.com/file/d/1PQxBd4ud8Zf0f23aDaAbxtSKWSOHFVP2/view" target="_blank" class="btn" style="padding:7px 14px; font-size:12.5px;">देखें / डाउनलोड 📥</a>
       </div>
 
-      <!-- 6. कक्षा 7वीं JCERT प्रश्न बैंक -->
       <div class="pdf-card">
         <div class="pdf-info">
-          <h4>📖 कक्षा 7वीं JCERT गणित व विज्ञान नोट्स</h4>
-          <p>पूर्णांक, भिन्न, पोषण, दिल्ली सल्तनत मुख्य अभ्यास प्रश्न</p>
+          <h4>📖 7वीं JCERT गणित व विज्ञान नोट्स</h4>
+          <p>पूर्णांक, भिन्न, पोषण, दिल्ली सल्तनत मुख्य प्रश्न</p>
         </div>
         <a href="https://drive.google.com/file/d/1BIcZTLJXKwhoa7FTRDx-AOa28FVmVBjP/view" target="_blank" class="btn" style="padding:7px 14px; font-size:12.5px;">देखें / डाउनलोड 📥</a>
       </div>
@@ -718,6 +852,29 @@ footer {
 </footer>
 
 <script>
+// Web Audio API Sound Generator (No External File Needed)
+function playVictorySound() {
+  try {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const notes = [261.63, 329.63, 392.00, 523.25]; // C4, E4, G4, C5
+    notes.forEach((freq, idx) => {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(freq, audioCtx.currentTime + idx * 0.12);
+      gain.gain.setValueAtTime(0.2, audioCtx.currentTime + idx * 0.12);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + idx * 0.12 + 0.3);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start(audioCtx.currentTime + idx * 0.12);
+      osc.stop(audioCtx.currentTime + idx * 0.12 + 0.3);
+    });
+  } catch (e) {
+    console.log("Audio not supported");
+  }
+}
+
+// Tab Switching
 function switchMainTab(tabId, btn) {
   document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.nav-tab-btn').forEach(el => el.classList.remove('active'));
@@ -729,554 +886,44 @@ function switchMainTab(tabId, btn) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Student Database (All Due Fees Set Accurately)
+// Student Database With Roll Numbers
 const studentPortalData = [
-  {
-    name: "नित्यानंद",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
-    totalFee: "400",
-    paidFee: "0",
-    dueFee: "400",
-    status: "बकाया (Due)",
-    testScore: "16 / 50 (32%)",
-    rank: "रैंक #22",
-    attendance: "84%",
-    studyLevel: "औसत (Average)",
-    remark: "पढ़ाई पर थोड़ा और ध्यान देने की आवश्यकता है।"
-  },
-  {
-    name: "अभिनन्दन",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
-    totalFee: "400",
-    paidFee: "0",
-    dueFee: "400",
-    status: "बकाया (Due)",
-    testScore: "10 / 50 (20%)",
-    rank: "रैंक #29",
-    attendance: "82%",
-    studyLevel: "सुधार अपेक्षित",
-    remark: "नियमित अभ्यास करें और क्लास में डाउट्स पूछें।"
-  },
-  {
-    name: "सिद्धार्थ",
-    className: "कक्षा 10वीं",
-    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
-    totalFee: "400",
-    paidFee: "0",
-    dueFee: "400",
-    status: "बकाया (Due)",
-    testScore: "42 / 50 (84%)",
-    rank: "रैंक #5",
-    attendance: "94%",
-    studyLevel: "बहुत अच्छा (Excellent)",
-    remark: "मेहनती छात्र हैं, बोर्ड परीक्षा की तैयारी अच्छी चल रही है।"
-  },
-  {
-    name: "स्वीटी कुमारी",
-    className: "कक्षा 10वीं",
-    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
-    totalFee: "400",
-    paidFee: "0",
-    dueFee: "400",
-    status: "बकाया (Due)",
-    testScore: "46 / 50 (92%)",
-    rank: "रैंक #2 (टॉपर 🏆)",
-    attendance: "96%",
-    studyLevel: "उत्कृष्ट (Outstanding)",
-    remark: "शानदार प्रदर्शन, लिखावट और तैयारी बहुत अच्छी है।"
-  },
-  {
-    name: "नंदनी",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
-    totalFee: "400",
-    paidFee: "0",
-    dueFee: "400",
-    status: "बकाया (Due)",
-    testScore: "3 / 50 (6%)",
-    rank: "रैंक #39",
-    attendance: "75%",
-    studyLevel: "मेहनत की आवश्यकता",
-    remark: "रोजाना रिवीजन करने और समय पर होमवर्क करने की जरूरत है।"
-  },
-  {
-    name: "सुमन",
-    className: "कक्षा 10वीं",
-    month: "अक्टूबर 2026 (दिनांक: 12/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "38 / 50 (76%)",
-    rank: "रैंक #8",
-    attendance: "90%",
-    studyLevel: "बहुत अच्छा (Good)",
-    remark: "पढ़ाई में अच्छा ध्यान है, टेस्ट में नियमित प्रगति कर रहे हैं।"
-  },
-  {
-    name: "उज्ज्वल",
-    className: "कक्षा 10वीं",
-    month: "सितंबर 2026 (दिनांक: 01/09/26)",
-    totalFee: "3000",
-    paidFee: "0",
-    dueFee: "3000",
-    status: "बकाया (2000 + 1000 कर्ज)",
-    testScore: "मूल्यांकन जारी",
-    rank: "--",
-    attendance: "75%",
-    studyLevel: "औसत (Average)",
-    remark: "कृपया बकाया फीस का समय पर भुगतान करें।"
-  },
-  {
-    name: "बिल्लु",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "मूल्यांकन जारी",
-    rank: "--",
-    attendance: "85%",
-    studyLevel: "अच्छा (Good)",
-    remark: "क्लास में नियमित उपस्थित रहते हैं।"
-  },
-  {
-    name: "लक्ष्मी",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 07/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "10 / 50 (20%)",
-    rank: "रैंक #27",
-    attendance: "80%",
-    studyLevel: "मेहनत की आवश्यकता",
-    remark: "गणित के बेसिक सवालों का अधिक अभ्यास करें।"
-  },
-  {
-    name: "सिद्धि",
-    className: "कोचिंग बैच",
-    month: "सितंबर 2026 (दिनांक: 23/09/26)",
-    totalFee: "400",
-    paidFee: "0",
-    dueFee: "400",
-    status: "बकाया (Due)",
-    testScore: "15 / 50 (30%)",
-    rank: "रैंक #23",
-    attendance: "85%",
-    studyLevel: "सुधार जारी",
-    remark: "टेस्ट में स्कोर बढ़ाने के लिए रिवीजन आवश्यक है।"
-  },
-  {
-    name: "सूरज राय",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
-    totalFee: "900",
-    paidFee: "0",
-    dueFee: "900",
-    status: "बकाया (Due)",
-    testScore: "15 / 50 (30%)",
-    rank: "रैंक #24",
-    attendance: "88%",
-    studyLevel: "संतोषजनक",
-    remark: "पढ़ाई में समय बढ़ाएं, मेहनत से रैंक बेहतर होगी।"
-  },
-  {
-    name: "आयुष",
-    className: "कक्षा 10वीं",
-    month: "अक्टूबर 2026 (दिनांक: 25/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "32 / 50 (64%)",
-    rank: "रैंक #9",
-    attendance: "88%",
-    studyLevel: "अच्छा (Good)",
-    remark: "अच्छा प्रदर्शन है, थोड़ी और लगन से टॉप 5 में आ सकते हैं।"
-  },
-  {
-    name: "पियूष",
-    className: "कक्षा 10वीं",
-    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
-    totalFee: "400",
-    paidFee: "0",
-    dueFee: "400",
-    status: "बकाया (Due)",
-    testScore: "43 / 50 (86%)",
-    rank: "रैंक #4",
-    attendance: "92%",
-    studyLevel: "उत्कृष्ट (Very Good)",
-    remark: "पढ़ने में होशियार हैं, बोर्ड परीक्षा की तैयारी बहुत अच्छी चल रही है।"
-  },
-  {
-    name: "अशोक",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
-    totalFee: "400",
-    paidFee: "0",
-    dueFee: "400",
-    status: "बकाया (Due)",
-    testScore: "10 / 50 (20%)",
-    rank: "रैंक #30",
-    attendance: "80%",
-    studyLevel: "मेहनत की आवश्यकता",
-    remark: "क्लास के बाद डाउट्स ज़रूर पूछा करें।"
-  },
-  {
-    name: "आर्या",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "6 / 50 (12%)",
-    rank: "रैंक #34",
-    attendance: "78%",
-    studyLevel: "ध्यान देने योग्य",
-    remark: "प्रतिदिन घर पर 2 घंटे का अतिरिक्त अभ्यास करें।"
-  },
-  {
-    name: "अंशु",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "मूल्यांकन जारी",
-    rank: "--",
-    attendance: "88%",
-    studyLevel: "अच्छा",
-    remark: "समय पर क्लास में उपस्थिति रहती है।"
-  },
-  {
-    name: "राधिका",
-    className: "कक्षा 10वीं",
-    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "40 / 50 (80%)",
-    rank: "रैंक #6",
-    attendance: "92%",
-    studyLevel: "बहुत अच्छा (Excellent)",
-    remark: "शानदार मेहनत, उत्तर पुस्तिका में लिखावट बहुत अच्छी है।"
-  },
-  {
-    name: "मोदी",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
-    totalFee: "400",
-    paidFee: "0",
-    dueFee: "400",
-    status: "बकाया (Due)",
-    testScore: "मूल्यांकन जारी",
-    rank: "--",
-    attendance: "85%",
-    studyLevel: "संतोषजनक",
-    remark: "नियमित टेस्ट में भाग लें।"
-  },
-  {
-    name: "दुलार",
-    className: "कक्षा 10वीं",
-    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
-    totalFee: "400",
-    paidFee: "0",
-    dueFee: "400",
-    status: "बकाया (Due)",
-    testScore: "30 / 50 (60%)",
-    rank: "रैंक #11",
-    attendance: "86%",
-    studyLevel: "अच्छा (Good)",
-    remark: "गणित में लगातार अच्छा सुधार हो रहा है।"
-  },
-  {
-    name: "अंकिता आर्या",
-    className: "कक्षा 10वीं",
-    month: "अक्टूबर 2026 (दिनांक: 12/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "48 / 50 (96%)",
-    rank: "रैंक #1 (टॉपर 🏆)",
-    attendance: "98% (नियमित)",
-    studyLevel: "सर्वश्रेष्ठ (Outstanding)",
-    remark: "कोचिंग की टॉपर छात्रा। अवधारणाएँ स्पष्ट हैं और तैयारी बहुत मजबूत है।"
-  },
-  {
-    name: "राजलक्ष्मी",
-    className: "कक्षा 10वीं",
-    month: "अक्टूबर 2026 (दिनांक: 04/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "25 / 50 (50%)",
-    rank: "रैंक #16",
-    attendance: "85%",
-    studyLevel: "औसत से बेहतर",
-    remark: "फार्मूलों को याद करने पर थोड़ा और ध्यान दें।"
-  },
-  {
-    name: "कृष्ण कु० पाण्डेय",
-    className: "कक्षा 10वीं",
-    month: "अक्टूबर 2026 (दिनांक: 04/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "25 / 50 (50%)",
-    rank: "रैंक #17",
-    attendance: "88%",
-    studyLevel: "अच्छा प्रयास",
-    remark: "क्लास में सक्रिय रहते हैं, टेस्ट में समय प्रबंधन सुधारें।"
-  },
-  {
-    name: "सोना + भाग्यश्री",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 11/10/26)",
-    totalFee: "600",
-    paidFee: "0",
-    dueFee: "600",
-    status: "बकाया (Due)",
-    testScore: "मूल्यांकन जारी",
-    rank: "--",
-    attendance: "90%",
-    studyLevel: "बहुत अच्छा",
-    remark: "दोनों छात्राएं अनुशासित और पढ़ाई में सजग हैं।"
-  },
-  {
-    name: "सूरज कुमार",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
-    totalFee: "1000",
-    paidFee: "0",
-    dueFee: "1000",
-    status: "बकाया (Due)",
-    testScore: "22 / 50 (44%)",
-    rank: "रैंक #20",
-    attendance: "84%",
-    studyLevel: "औसत",
-    remark: "नियमित अभ्यास से और अच्छे अंक प्राप्त किए जा सकते हैं।"
-  },
-  {
-    name: "कार्तिक",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "7 / 50 (14%)",
-    rank: "रैंक #33",
-    attendance: "76%",
-    studyLevel: "सुधार की आवश्यकता",
-    remark: "कक्षा में नियमित रहें और समय पर गृहकार्य पूरा करें।"
-  },
-  {
-    name: "अमन",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 04/10/26)",
-    totalFee: "400",
-    paidFee: "0",
-    dueFee: "400",
-    status: "बकाया (Due)",
-    testScore: "4 / 50 (8%)",
-    rank: "रैंक #36",
-    attendance: "72%",
-    studyLevel: "विशेष ध्यान अपेक्षित",
-    remark: "बेसिक गणित और विज्ञान में विशेष मेहनत की जरूरत है।"
-  },
-  {
-    name: "पंकज",
-    className: "कोचिंग बैच",
-    month: "अगस्त 2026 (दिनांक: 28/08/26)",
-    totalFee: "800",
-    paidFee: "0",
-    dueFee: "800",
-    status: "बकाया (Due)",
-    testScore: "10 / 50 (20%)",
-    rank: "रैंक #28",
-    attendance: "80%",
-    studyLevel: "संतोषजनक",
-    remark: "रोजाना रिवीजन करने की आदत डालें।"
-  },
-  {
-    name: "रौनक",
-    className: "कक्षा 10वीं",
-    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "45 / 50 (90%)",
-    rank: "रैंक #3 (टॉपर 🏆)",
-    attendance: "95%",
-    studyLevel: "उत्कृष्ट (Outstanding)",
-    remark: "मेधावी छात्र। कठिन सवालों को तेजी से हल करते हैं।"
-  },
-  {
-    name: "अभिषेक",
-    className: "कोचिंग बैच",
-    month: "सितंबर 2026 (दिनांक: 18/09/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "15 / 50 (30%)",
-    rank: "रैंक #25",
-    attendance: "82%",
-    studyLevel: "मध्यम",
-    remark: "क्लास में एकाग्रता बनाए रखें।"
-  },
-  {
-    name: "प्रियांशु",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 03/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "28 / 50 (56%)",
-    rank: "रैंक #13",
-    attendance: "89%",
-    studyLevel: "अच्छा (Good)",
-    remark: "टेस्ट में अच्छा प्रदर्शन है, नियमित बने रहें।"
-  },
-  {
-    name: "आँचल",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 24/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "3 / 50 (6%)",
-    rank: "रैंक #37",
-    attendance: "70%",
-    studyLevel: "सुधार अपेक्षित",
-    remark: "कक्षा में रोज आएं और बेसिक कॉन्सेप्ट दोहराएं।"
-  },
-  {
-    name: "सूरज ठाकुर",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
-    totalFee: "600",
-    paidFee: "0",
-    dueFee: "600",
-    status: "बकाया (Due)",
-    testScore: "12 / 50 (24%)",
-    rank: "रैंक #26",
-    attendance: "82%",
-    studyLevel: "संतोषजनक",
-    remark: "लगातार अभ्यास से सुधार संभव है।"
-  },
-  {
-    name: "सूरज यादव",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "3 / 50 (6%)",
-    rank: "रैंक #38",
-    attendance: "72%",
-    studyLevel: "ध्यान देने योग्य",
-    remark: "टेस्ट में सभी प्रश्न हल करने का प्रयास करें।"
-  },
-  {
-    name: "प्रियंका",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "मूल्यांकन जारी",
-    rank: "--",
-    attendance: "85%",
-    studyLevel: "अच्छा",
-    remark: "पढ़ाई के प्रति गंभीर और शांत स्वभाव है।"
-  },
-  {
-    name: "राधा",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026 (दिनांक: 01/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "21 / 50 (42%)",
-    rank: "रैंक #21",
-    attendance: "86%",
-    studyLevel: "संतोषजनक",
-    remark: "आत्मविश्वास के साथ प्रश्नों को हल करें।"
-  },
-  {
-    name: "शिवम",
-    className: "कोचिंग बैच",
-    month: "सितंबर 2026 (दिनांक: 11/09/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "मूल्यांकन जारी",
-    rank: "--",
-    attendance: "80%",
-    studyLevel: "मध्यम",
-    remark: "पढ़ाई का समय बढ़ाने की सलाह है।"
-  },
-  {
-    name: "राहुल",
-    className: "कक्षा 8वीं",
-    month: "अक्टूबर 2026 (दिनांक: 21/10/26)",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "8 / 50 (16%)",
-    rank: "रैंक #32",
-    attendance: "78%",
-    studyLevel: "सुधार जारी",
-    remark: "समय पर क्लास आएं और टेस्ट की तैयारी करें।"
-  },
-  {
-    name: "शिवनारायण",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "मूल्यांकन जारी",
-    rank: "--",
-    attendance: "84%",
-    studyLevel: "संतोषजनक",
-    remark: "क्लास में सक्रिय रहते हैं।"
-  },
-  {
-    name: "प्रीतम",
-    className: "कोचिंग बैच",
-    month: "अक्टूबर 2026",
-    totalFee: "200",
-    paidFee: "0",
-    dueFee: "200",
-    status: "बकाया (Due)",
-    testScore: "मूल्यांकन जारी",
-    rank: "--",
-    attendance: "82%",
-    studyLevel: "संतोषजनक",
-    remark: "नियमित अभ्यास से और अच्छा करेंगे।"
-  }
+  { rollNo: "VIM-101", name: "अंकिता आर्या", className: "10वीं", month: "अक्टूबर 2026 (12/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "48 / 50 (96%)", rank: "रैंक #1 (टॉपर 🏆)", attendance: "98%", studyLevel: "सर्वश्रेष्ठ (Outstanding)", remark: "कोचिंग की टॉपर छात्रा। अवधारणाएँ स्पष्ट हैं और तैयारी बहुत मजबूत है।" },
+  { rollNo: "VIM-102", name: "स्वीटी कुमारी", className: "10वीं", month: "अक्टूबर 2026 (24/10/26)", totalFee: "400", paidFee: "0", dueFee: "400", status: "बकाया (Due)", testScore: "46 / 50 (92%)", rank: "रैंक #2 (टॉपर 🏆)", attendance: "96%", studyLevel: "उत्कृष्ट (Outstanding)", remark: "शानदार प्रदर्शन, लिखावट और तैयारी बहुत अच्छी है।" },
+  { rollNo: "VIM-103", name: "रौनक कुमार", className: "10वीं", month: "अक्टूबर 2026 (01/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "45 / 50 (90%)", rank: "रैंक #3 (टॉपर 🏆)", attendance: "95%", studyLevel: "उत्कृष्ट (Outstanding)", remark: "मेधावी छात्र। कठिन सवालों को तेजी से हल करते हैं।" },
+  { rollNo: "VIM-104", name: "पीयूष कुमार", className: "10वीं", month: "अक्टूबर 2026 (01/10/26)", totalFee: "400", paidFee: "0", dueFee: "400", status: "बकाया (Due)", testScore: "43 / 50 (86%)", rank: "रैंक #4", attendance: "92%", studyLevel: "उत्कृष्ट (Very Good)", remark: "पढ़ने में होशियार हैं, बोर्ड परीक्षा की तैयारी बहुत अच्छी चल रही है।" },
+  { rollNo: "VIM-105", name: "सिद्धार्थ कुमार", className: "10वीं", month: "अक्टूबर 2026 (24/10/26)", totalFee: "400", paidFee: "0", dueFee: "400", status: "बकाया (Due)", testScore: "42 / 50 (84%)", rank: "रैंक #5", attendance: "94%", studyLevel: "बहुत अच्छा (Excellent)", remark: "मेहनती छात्र हैं, बोर्ड परीक्षा की तैयारी अच्छी चल रही है।" },
+  { rollNo: "VIM-106", name: "राधिका कुमारी", className: "10वीं", month: "अक्टूबर 2026 (01/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "40 / 50 (80%)", rank: "रैंक #6", attendance: "92%", studyLevel: "बहुत अच्छा (Excellent)", remark: "शानदार मेहनत, उत्तर पुस्तिका में लिखावट बहुत अच्छी है।" },
+  { rollNo: "VIM-107", name: "सुमन कुमार", className: "10वीं", month: "अक्टूबर 2026 (12/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "38 / 50 (76%)", rank: "रैंक #8", attendance: "90%", studyLevel: "बहुत अच्छा (Good)", remark: "पढ़ाई में अच्छा ध्यान है, टेस्ट में नियमित प्रगति कर रहे हैं।" },
+  { rollNo: "VIM-108", name: "आयुष कुमार", className: "10वीं", month: "अक्टूबर 2026 (25/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "32 / 50 (64%)", rank: "रैंक #9", attendance: "88%", studyLevel: "अच्छा (Good)", remark: "अच्छा प्रदर्शन है, थोड़ी और लगन से टॉप 5 में आ सकते हैं।" },
+  { rollNo: "VIM-109", name: "दुलार", className: "10वीं", month: "अक्टूबर 2026 (01/10/26)", totalFee: "400", paidFee: "0", dueFee: "400", status: "बकाया (Due)", testScore: "30 / 50 (60%)", rank: "रैंक #11", attendance: "86%", studyLevel: "अच्छा (Good)", remark: "गणित में लगातार अच्छा सुधार हो रहा है।" },
+  { rollNo: "VIM-110", name: "राजलक्ष्मी", className: "10वीं", month: "अक्टूबर 2026 (04/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "25 / 50 (50%)", rank: "रैंक #16", attendance: "85%", studyLevel: "औसत से बेहतर", remark: "फार्मूलों को याद करने पर थोड़ा और ध्यान दें।" },
+  { rollNo: "VIM-111", name: "कृष्ण कु० पाण्डेय", className: "10वीं", month: "अक्टूबर 2026 (04/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "25 / 50 (50%)", rank: "रैंक #17", attendance: "88%", studyLevel: "अच्छा प्रयास", remark: "क्लास में सक्रिय रहते हैं, टेस्ट में समय प्रबंधन सुधारें।" },
+  { rollNo: "VIM-112", name: "उज्ज्वल", className: "10वीं", month: "सितंबर 2026 (01/09/26)", totalFee: "3000", paidFee: "0", dueFee: "3000", status: "बकाया (2000 + 1000 कर्ज)", testScore: "मूल्यांकन जारी", rank: "--", attendance: "75%", studyLevel: "औसत (Average)", remark: "कृपया बकाया फीस का समय पर भुगतान करें।" },
+  { rollNo: "VIM-113", name: "नित्यानंद कुमार", className: "कोचिंग बैच", month: "अक्टूबर 2026 (24/10/26)", totalFee: "400", paidFee: "0", dueFee: "400", status: "बकाया (Due)", testScore: "16 / 50 (32%)", rank: "रैंक #22", attendance: "84%", studyLevel: "औसत (Average)", remark: "पढ़ाई पर थोड़ा और ध्यान देने की आवश्यकता है।" },
+  { rollNo: "VIM-114", name: "अभिनन्दन कुमार", className: "कोचिंग बैच", month: "अक्टूबर 2026 (24/10/26)", totalFee: "400", paidFee: "0", dueFee: "400", status: "बकाया (Due)", testScore: "10 / 50 (20%)", rank: "रैंक #29", attendance: "82%", studyLevel: "सुधार अपेक्षित", remark: "नियमित अभ्यास करें और क्लास में डाउट्स पूछें।" },
+  { rollNo: "VIM-115", name: "नंदनी कुमारी", className: "कोचिंग बैच", month: "अक्टूबर 2026 (24/10/26)", totalFee: "400", paidFee: "0", dueFee: "400", status: "बकाया (Due)", testScore: "3 / 50 (6%)", rank: "रैंक #39", attendance: "75%", studyLevel: "मेहनत की आवश्यकता", remark: "रोजाना रिवीजन करने और समय पर होमवर्क करने की जरूरत है।" },
+  { rollNo: "VIM-116", name: "सिद्धि कुमारी", className: "कोचिंग बैच", month: "सितंबर 2026 (23/09/26)", totalFee: "400", paidFee: "0", dueFee: "400", status: "बकाया (Due)", testScore: "15 / 50 (30%)", rank: "रैंक #23", attendance: "85%", studyLevel: "सुधार जारी", remark: "टेस्ट में स्कोर बढ़ाने के लिए रिवीजन आवश्यक है।" },
+  { rollNo: "VIM-117", name: "सूरज राय", className: "कोचिंग बैच", month: "अक्टूबर 2026 (24/10/26)", totalFee: "900", paidFee: "0", dueFee: "900", status: "बकाया (Due)", testScore: "15 / 50 (30%)", rank: "रैंक #24", attendance: "88%", studyLevel: "संतोषजनक", remark: "पढ़ाई में समय बढ़ाएं, मेहनत से रैंक बेहतर होगी।" },
+  { rollNo: "VIM-118", name: "सूरज कुमार", className: "कोचिंग बैच", month: "अक्टूबर 2026 (24/10/26)", totalFee: "1000", paidFee: "0", dueFee: "1000", status: "बकाया (Due)", testScore: "22 / 50 (44%)", rank: "रैंक #20", attendance: "84%", studyLevel: "औसत", remark: "नियमित अभ्यास से और अच्छे अंक प्राप्त किए जा सकते हैं।" },
+  { rollNo: "VIM-119", name: "सूरज ठाकुर", className: "कोचिंग बैच", month: "अक्टूबर 2026 (01/10/26)", totalFee: "600", paidFee: "0", dueFee: "600", status: "बकाया (Due)", testScore: "12 / 50 (24%)", rank: "रैंक #26", attendance: "82%", studyLevel: "संतोषजनक", remark: "लगातार अभ्यास से सुधार संभव है।" },
+  { rollNo: "VIM-120", name: "सूरज यादव", className: "कोचिंग बैच", month: "अक्टूबर 2026", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "3 / 50 (6%)", rank: "रैंक #38", attendance: "72%", studyLevel: "ध्यान देने योग्य", remark: "टेस्ट में सभी प्रश्न हल करने का प्रयास करें।" },
+  { rollNo: "VIM-121", name: "बिल्लु", className: "कोचिंग बैच", month: "अक्टूबर 2026 (01/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "मूल्यांकन जारी", rank: "--", attendance: "85%", studyLevel: "अच्छा (Good)", remark: "क्लास में नियमित उपस्थित रहते हैं।" },
+  { rollNo: "VIM-122", name: "लक्ष्मी कुमारी", className: "कोचिंग बैच", month: "अक्टूबर 2026 (07/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "10 / 50 (20%)", rank: "रैंक #27", attendance: "80%", studyLevel: "मेहनत की आवश्यकता", remark: "गणित के बेसिक सवालों का अधिक अभ्यास करें।" },
+  { rollNo: "VIM-123", name: "अशोक ठाकुर", className: "कोचिंग बैच", month: "अक्टूबर 2026 (24/10/26)", totalFee: "400", paidFee: "0", dueFee: "400", status: "बकाया (Due)", testScore: "10 / 50 (20%)", rank: "रैंक #30", attendance: "80%", studyLevel: "मेहनत की आवश्यकता", remark: "क्लास के बाद डाउट्स ज़रूर पूछा करें।" },
+  { rollNo: "VIM-124", name: "आर्या कुमारी", className: "कोचिंग बैच", month: "अक्टूबर 2026 (01/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "6 / 50 (12%)", rank: "रैंक #34", attendance: "78%", studyLevel: "ध्यान देने योग्य", remark: "प्रतिदिन घर पर 2 घंटे का अतिरिक्त अभ्यास करें।" },
+  { rollNo: "VIM-125", name: "अंशु", className: "कोचिंग बैच", month: "अक्टूबर 2026 (01/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "मूल्यांकन जारी", rank: "--", attendance: "88%", studyLevel: "अच्छा", remark: "समय पर क्लास में उपस्थिति रहती है।" },
+  { rollNo: "VIM-126", name: "मोदी", className: "कोचिंग बैच", month: "अक्टूबर 2026 (01/10/26)", totalFee: "400", paidFee: "0", dueFee: "400", status: "बकाया (Due)", testScore: "मूल्यांकन जारी", rank: "--", attendance: "85%", studyLevel: "संतोषजनक", remark: "नियमित टेस्ट में भाग लें।" },
+  { rollNo: "VIM-127", name: "सोना + भाग्यश्री", className: "कोचिंग बैच", month: "अक्टूबर 2026 (11/10/26)", totalFee: "600", paidFee: "0", dueFee: "600", status: "बकाया (Due)", testScore: "मूल्यांकन जारी", rank: "--", attendance: "90%", studyLevel: "बहुत अच्छा", remark: "दोनों छात्राएं अनुशासित और पढ़ाई में सजग हैं।" },
+  { rollNo: "VIM-128", name: "कार्तिक कुमार", className: "कोचिंग बैच", month: "अक्टूबर 2026 (24/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "7 / 50 (14%)", rank: "रैंक #33", attendance: "76%", studyLevel: "सुधार की आवश्यकता", remark: "कक्षा में नियमित रहें और समय पर गृहकार्य पूरा करें।" },
+  { rollNo: "VIM-129", name: "अमन कुमार", className: "कोचिंग बैच", month: "अक्टूबर 2026 (04/10/26)", totalFee: "400", paidFee: "0", dueFee: "400", status: "बकाया (Due)", testScore: "4 / 50 (8%)", rank: "रैंक #36", attendance: "72%", studyLevel: "विशेष ध्यान अपेक्षित", remark: "बेसिक गणित और विज्ञान में विशेष मेहनत की जरूरत है।" },
+  { rollNo: "VIM-130", name: "पंकज राय", className: "कोचिंग बैच", month: "अगस्त 2026 (28/08/26)", totalFee: "800", paidFee: "0", dueFee: "800", status: "बकाया (Due)", testScore: "10 / 50 (20%)", rank: "रैंक #28", attendance: "80%", studyLevel: "संतोषजनक", remark: "रोजाना रिवीजन करने की आदत डालें।" },
+  { rollNo: "VIM-131", name: "अभिषेक कुमार", className: "कोचिंग बैच", month: "सितंबर 2026 (18/09/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "15 / 50 (30%)", rank: "रैंक #25", attendance: "82%", studyLevel: "मध्यम", remark: "क्लास में एकाग्रता बनाए रखें।" },
+  { rollNo: "VIM-132", name: "प्रियांशु कुमार", className: "कोचिंग बैच", month: "अक्टूबर 2026 (03/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "28 / 50 (56%)", rank: "रैंक #13", attendance: "89%", studyLevel: "अच्छा (Good)", remark: "टेस्ट में अच्छा प्रदर्शन है, नियमित बने रहें।" },
+  { rollNo: "VIM-133", name: "आँचल कुमारी", className: "कोचिंग बैच", month: "अक्टूबर 2026 (24/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "3 / 50 (6%)", rank: "रैंक #37", attendance: "70%", studyLevel: "सुधार अपेक्षित", remark: "कक्षा में रोज आएं और बेसिक कॉन्सेप्ट दोहराएं।" },
+  { rollNo: "VIM-134", name: "प्रियंका", className: "कोचिंग बैच", month: "अक्टूबर 2026 (01/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "मूल्यांकन जारी", rank: "--", attendance: "85%", studyLevel: "अच्छा", remark: "पढ़ाई के प्रति गंभीर और शांत स्वभाव है।" },
+  { rollNo: "VIM-135", name: "राधा कुमारी", className: "कोचिंग बैच", month: "अक्टूबर 2026 (01/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "21 / 50 (42%)", rank: "रैंक #21", attendance: "86%", studyLevel: "संतोषजनक", remark: "आत्मविश्वास के साथ प्रश्नों को हल करें।" },
+  { rollNo: "VIM-136", name: "राहुल कुमार", className: "8वीं", month: "अक्टूबर 2026 (21/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "8 / 50 (16%)", rank: "रैंक #32", attendance: "78%", studyLevel: "सुधार जारी", remark: "समय पर क्लास आएं और टेस्ट की तैयारी करें।" }
 ];
 
 function findStudentReport() {
@@ -1285,14 +932,17 @@ function findStudentReport() {
   const err = document.getElementById("repErrorMsg");
 
   if (!query) {
-    alert("कृपया विद्यार्थी का नाम लिखें!");
+    alert("कृपया विद्यार्थी का रोल नंबर या नाम दर्ज करें!");
     return;
   }
 
-  const student = studentPortalData.find(s => s.name.toLowerCase().includes(query));
+  const student = studentPortalData.find(s => 
+    s.rollNo.toLowerCase().includes(query) || 
+    s.name.toLowerCase().includes(query)
+  );
 
   if (student) {
-    document.getElementById("repName").textContent = `विद्यार्थी: ${student.name}`;
+    document.getElementById("repName").textContent = `विद्यार्थी: ${student.name} (रोल नं: ${student.rollNo})`;
     document.getElementById("repClass").textContent = student.className;
     
     const badge = document.getElementById("repBadge");
@@ -1315,7 +965,7 @@ function findStudentReport() {
     document.getElementById("repTeacherRemark").textContent = `"${student.remark}"`;
 
     // WhatsApp Message
-    const msg = `नमस्ते विकास सर, मैं ${student.name} (${student.className}) का रिपोर्ट कार्ड व फीस स्टेटस देख रहा/रही हूँ। मुझे इस संबंध में बात करनी है।`;
+    const msg = `नमस्ते विकास सर, मैं ${student.name} (रोल नं: ${student.rollNo}, ${student.className}) का रिपोर्ट कार्ड व फीस स्टेटस देख रहा/रही हूँ। मुझे इस संबंध में बात करनी है।`;
     document.getElementById("repWhatsappLink").href = `https://wa.me/917856902817?text=${encodeURIComponent(msg)}`;
 
     box.style.display = "block";
@@ -1741,7 +1391,7 @@ function calculateAndShowResult() {
   studentFinalPercent = `${percent}%`;
 
   document.getElementById("score-text").textContent = studentFinalScore;
-  document.getElementById("student-res-name").textContent = `परीक्षार्थी: ${studentSubmittedName} (कक्षा ${currentClass}वीं)`;
+  document.getElementById("student-res-name").textContent = `परीक्षार्थी: ${studentSubmittedName} (${currentClass})`;
   document.getElementById("percentage-text").textContent = `कुल प्राप्तांक प्रतिशत: ${studentFinalPercent}`;
 
   let gradeMsg = "";
@@ -1753,16 +1403,35 @@ function calculateAndShowResult() {
   document.getElementById("grade-text").textContent = gradeMsg;
   document.getElementById("answers-breakdown").innerHTML = reviewHtml;
 
+  // Sound & Certificate Generator
+  if (percent >= 50) {
+    playVictorySound();
+    document.getElementById("cert-btn-toggle").style.display = "inline-block";
+    document.getElementById("cert-student-name").textContent = studentSubmittedName;
+    document.getElementById("cert-class-name").textContent = currentClass;
+    document.getElementById("cert-score-val").textContent = studentFinalScore;
+    document.getElementById("cert-percent-val").textContent = studentFinalPercent;
+    document.getElementById("cert-date-val").textContent = new Date().toLocaleDateString('hi-IN');
+    document.getElementById("cert-printable").style.display = "block";
+  } else {
+    document.getElementById("cert-btn-toggle").style.display = "none";
+    document.getElementById("cert-printable").style.display = "none";
+  }
+
   const resultArea = document.getElementById("result-display-area");
   resultArea.style.display = "block";
   resultArea.scrollIntoView({ behavior: 'smooth' });
+}
+
+function printCertificate() {
+  window.print();
 }
 
 function sendResultToWhatsApp() {
   const teacherNumber = "917856902817";
   const msg = `*VIM CLASSES - ऑनलाइन टेस्ट रिजल्ट*%0A` +
               `👤 परीक्षार्थी: ${studentSubmittedName}%0A` +
-              `📚 कक्षा: ${currentClass}वीं%0A` +
+              `📚 कक्षा/वर्ग: ${currentClass}%0A` +
               `🎯 प्राप्तांक: ${studentFinalScore}%0A` +
               `📊 प्रतिशत: ${studentFinalPercent}%0A` +
               `--------------------------------%0A` +
