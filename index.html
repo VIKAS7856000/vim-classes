@@ -35,6 +35,7 @@ body {
   background: var(--bg);
   color: var(--text-main);
   line-height: 1.6;
+  padding-bottom: 50px;
 }
 
 /* Header */
@@ -79,7 +80,7 @@ header .teacher-badge {
   margin-top: 4px;
 }
 
-/* Scrolling Marquee Notice Bar */
+/* Scrolling Marquee */
 .marquee-wrapper {
   background: #081a30;
   color: #fef08a;
@@ -219,6 +220,91 @@ nav {
 
 .btn:hover { filter: brightness(1.1); }
 
+/* Countdown Clock */
+.countdown-box {
+  background: linear-gradient(135deg, #123b70, #091d36);
+  color: white;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.time-segment {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 14px;
+  border-radius: 8px;
+  min-width: 60px;
+}
+
+.time-val {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.time-lbl {
+  font-size: 11px;
+  color: #cbd5e1;
+}
+
+/* Flashcards */
+.flashcard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 15px;
+}
+
+.flashcard {
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flashcard:hover {
+  background: #eff6ff;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Floating Action Button */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  z-index: 999;
+  text-decoration: none;
+}
+
+/* Topper Poster */
 .topper-banner-wrap {
   background: white;
   border-radius: 12px;
@@ -309,6 +395,36 @@ nav {
   margin-bottom: 6px;
 }
 
+/* Printable Fee Receipt Styling */
+.receipt-wrap {
+  display: none;
+  background: #fff;
+  border: 2px dashed #123b70;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.receipt-header {
+  text-align: center;
+  border-bottom: 1.5px solid #123b70;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.receipt-table {
+  width: 100%;
+  margin: 12px 0;
+  font-size: 13.5px;
+}
+
+.receipt-table td {
+  padding: 6px 4px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* PDF Download Grid */
 .pdf-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -399,7 +515,7 @@ nav {
 .opt-row:hover { background: #eff6ff; }
 .opt-row input { margin-right: 8px; }
 
-/* Certificate Box Styling */
+/* Certificate Box */
 .cert-card-wrap {
   display: none;
   background: #ffffff;
@@ -409,7 +525,6 @@ nav {
   text-align: center;
   margin-top: 25px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  position: relative;
 }
 
 .cert-header {
@@ -506,13 +621,16 @@ footer {
 
 @media print {
   body * { visibility: hidden; }
-  #cert-printable, #cert-printable * { visibility: visible; }
-  #cert-printable { position: absolute; left: 0; top: 0; width: 100%; }
+  #cert-printable, #cert-printable *, #fee-receipt-printable, #fee-receipt-printable * { visibility: visible; }
+  #cert-printable, #fee-receipt-printable { position: absolute; left: 0; top: 0; width: 100%; display: block !important; }
 }
 </style>
 </head>
 
 <body>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/917856902817" class="floating-whatsapp" target="_blank" title="WhatsApp पर बात करें">💬</a>
 
 <!-- Header With Teacher Photo -->
 <header>
@@ -541,16 +659,30 @@ footer {
   <button class="nav-tab-btn" onclick="switchMainTab('tab-study-pdf', this)">📚 PDF व नोट्स</button>
   <button class="nav-tab-btn" onclick="switchMainTab('tab-results', this)">🏆 टॉपर्स लिस्ट</button>
   <button class="nav-tab-btn" onclick="switchMainTab('tab-gallery', this)">📸 गैलरी</button>
+  <button class="nav-tab-btn" onclick="switchMainTab('tab-admission', this)">✍️ प्रवेश पूछताछ</button>
 </nav>
 
 <div class="page-container">
 
   <!-- ================= TAB 1: होम ================= -->
   <div id="tab-home" class="tab-content active">
+    
+    <!-- JAC Board 10th Exam Countdown -->
+    <div class="countdown-box">
+      <div style="font-size: 15px; font-weight: 600;">⏳ JAC Board 10वीं परीक्षा उल्टी गिनती:</div>
+      <div class="countdown-timer">
+        <div class="time-segment"><div class="time-val" id="cd-days">00</div><div class="time-lbl">दिन</div></div>
+        <div class="time-segment"><div class="time-val" id="cd-hours">00</div><div class="time-lbl">घंटे</div></div>
+        <div class="time-segment"><div class="time-val" id="cd-mins">00</div><div class="time-lbl">मिनट</div></div>
+        <div class="time-segment"><div class="time-val" id="cd-secs">00</div><div class="time-lbl">सेकंड</div></div>
+      </div>
+    </div>
+
+    <!-- Banner -->
     <div class="card" style="padding:0; overflow:hidden; text-align:center;">
       <img src="https://lh3.googleusercontent.com/d/1amcQBNVzzN7zybA4Q3hRBynCj1DqyBKk" alt="VIM Classes Banner" style="width:100%; max-height:340px; object-fit:cover; display:block;">
       <div style="padding:20px;">
-        <h2 style="color:var(--primary); font-size:20px;">7वीं से 11वीं (आर्ट्स) डिजिटल पोर्टल</h2>
+        <h2 style="color:var(--primary); font-size:20px;">7वीं से 11वीं (आर्ट्स) डिजिटल कोचिंग पोर्टल</h2>
         <p style="color:var(--text-muted); font-size:13.5px; margin:6px 0 14px;">
           नियमित साप्ताहिक टेस्ट, चैप्टरवाइज स्टडी मटेरियल, पारदर्शी फीस एवं डिजिटल रिपोर्ट कार्ड।
         </p>
@@ -619,10 +751,32 @@ footer {
           </div>
         </div>
 
-        <div style="margin-top:16px; text-align:center;">
+        <div style="margin-top:16px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
           <a id="repWhatsappLink" href="#" target="_blank" class="btn" style="background:#16803d; font-size:13px;">
             📲 शिक्षक (विकास सर) से WhatsApp पर बात करें
           </a>
+          <button type="button" class="btn" style="background:var(--primary); font-size:13px;" onclick="printFeeReceipt()">
+            🖨️ डिजिटल फीस रसीद प्रिंट करें
+          </button>
+        </div>
+
+        <!-- Printable Fee Slip Box -->
+        <div id="fee-receipt-printable" class="receipt-wrap">
+          <div class="receipt-header">
+            <h3 style="color:var(--primary); font-size:18px;">VIM CLASSES BELBATHAN</h3>
+            <p style="font-size:12px; color:var(--text-muted);">कुशवाहा टोला, बेलबथान, गोड्डा (झारखंड) | फोन: +91 7856902817</p>
+            <div style="font-size:14px; font-weight:700; margin-top:4px;">फीस विवरण एवं प्राप्ति रसीद</div>
+          </div>
+          <table class="receipt-table">
+            <tr><td><b>विद्यार्थी का नाम:</b></td><td id="rcpt-name"></td><td><b>रोल नंबर:</b></td><td id="rcpt-roll"></td></tr>
+            <tr><td><b>कक्षा:</b></td><td id="rcpt-class"></td><td><b>सत्र / महीना:</b></td><td id="rcpt-month"></td></tr>
+            <tr><td><b>कुल निर्धारित फीस:</b></td><td>₹<span id="rcpt-total"></span></td><td><b>जमा राशि:</b></td><td>₹<span id="rcpt-paid"></span></td></tr>
+            <tr><td><b>बकाया राशि (Due):</b></td><td style="color:var(--danger); font-weight:700;">₹<span id="rcpt-due"></span></td><td><b>भुगतान स्थिति:</b></td><td id="rcpt-status"></td></tr>
+          </table>
+          <div style="display:flex; justify-content:space-between; margin-top:20px; font-size:12px;">
+            <div>जारी करने की तिथि: <span id="rcpt-date"></span></div>
+            <div style="text-align:right;"><b>हस्ताक्षर: विकास सर</b><br>(VIM CLASSES)</div>
+          </div>
         </div>
       </div>
 
@@ -706,7 +860,7 @@ footer {
     </div>
   </div>
 
-  <!-- ================= TAB 4: PDF व स्टडी मटेरियल ================= -->
+  <!-- ================= TAB 4: PDF व स्टडी नोट्स ================= -->
   <div id="tab-study-pdf" class="tab-content">
     <h2 class="section-title">📚 महत्वपूर्ण PDF एवं स्टडी नोट्स</h2>
     
@@ -759,13 +913,31 @@ footer {
         <a href="https://drive.google.com/file/d/1BIcZTLJXKwhoa7FTRDx-AOa28FVmVBjP/view" target="_blank" class="btn" style="padding:7px 14px; font-size:12.5px;">देखें / डाउनलोड 📥</a>
       </div>
     </div>
+
+    <!-- Quick Formula Flashcards -->
+    <div style="margin-top: 30px;">
+      <h3 style="color:var(--primary); font-size:17px; margin-bottom:8px;">⚡ त्वरित फॉर्मूला फ़्लैशकार्ड (क्लिक करके उत्तर देखें):</h3>
+      <div class="flashcard-grid">
+        <div class="flashcard" onclick="flipCard(this, 'द्विघात समीकरण का विविक्तकर (D)?', 'D = b² - 4ac')">
+          <div style="font-weight:700; color:var(--primary);">द्विघात समीकरण का विविक्तकर (D)?</div>
+          <div style="font-size:12px; color:var(--text-muted); margin-top:4px;">(टच करें)</div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this, 'त्रिकोणमिति सर्वसमिका?', 'sin²θ + cos²θ = 1')">
+          <div style="font-weight:700; color:var(--primary);">त्रिकोणमिति सर्वसमिका?</div>
+          <div style="font-size:12px; color:var(--text-muted); margin-top:4px;">(टच करें)</div>
+        </div>
+        <div class="flashcard" onclick="flipCard(this, 'वृत्त का क्षेत्रफल सूत्र?', 'क्षेत्रफल = πr²')">
+          <div style="font-weight:700; color:var(--primary);">वृत्त का क्षेत्रफल सूत्र?</div>
+          <div style="font-size:12px; color:var(--text-muted); margin-top:4px;">(टच करें)</div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- ================= TAB 5: टॉपर्स लिस्ट ================= -->
   <div id="tab-results" class="tab-content">
     <h2 class="section-title">🏆 50 अंक टेस्ट मेरिट लिस्ट व सम्मान</h2>
     
-    <!-- टेस्ट टॉपर अवार्ड पोस्टर कार्ड -->
     <div class="topper-banner-wrap">
       <div style="background:linear-gradient(135deg, var(--primary), var(--primary-dark)); color:white; padding:12px;">
         <h3 style="font-size:16px;">🎖️ TOPPER AWARD — मेधावी छात्र सम्मान (पुरस्कार ₹50)</h3>
@@ -774,16 +946,10 @@ footer {
       <img src="https://lh3.googleusercontent.com/d/1Yt6MeV_6SGS4J8JT54QiK439Zwd10oUF" alt="Topper Award Poster" class="topper-poster-img">
     </div>
 
-    <!-- Complete 41 Students Rank Table -->
     <div class="table-wrap">
       <table>
         <thead>
-          <tr>
-            <th>रैंक</th>
-            <th>छात्र / छात्रा का नाम</th>
-            <th>प्राप्त अंक</th>
-            <th>प्रतिशत</th>
-          </tr>
+          <tr><th>रैंक</th><th>छात्र / छात्रा का नाम</th><th>प्राप्त अंक</th><th>प्रतिशत</th></tr>
         </thead>
         <tbody>
           <tr><td><b>1</b></td><td>अंकिता आर्या</td><td>48</td><td>96.0%</td></tr>
@@ -844,6 +1010,43 @@ footer {
     </div>
   </div>
 
+  <!-- ================= TAB 7: प्रवेश पूछताछ फॉर्म ================= -->
+  <div id="tab-admission" class="tab-content">
+    <h2 class="section-title">✍️ नए सत्र हेतु प्रवेश पूछताछ (Admission)</h2>
+    <div class="card" style="max-width: 500px; margin: auto;">
+      <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 14px; text-align: center;">
+        कोचिंग से जुड़ने के लिए विद्यार्थी या अभिभावक नीचे दिया गया फॉर्म भरें:
+      </p>
+      <form onsubmit="sendAdmissionEnquiry(event)">
+        <div style="margin-bottom: 12px;">
+          <label style="font-size: 13px; font-weight: 700; color: var(--primary);">विद्यार्थी का नाम:</label>
+          <input type="text" id="adm-name" required placeholder="पूरा नाम लिखें" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; margin-top: 4px;">
+        </div>
+        <div style="margin-bottom: 12px;">
+          <label style="font-size: 13px; font-weight: 700; color: var(--primary);">कक्षा (Class):</label>
+          <select id="adm-class" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; margin-top: 4px;">
+            <option value="7वीं">7वीं</option>
+            <option value="8वीं">8वीं</option>
+            <option value="9वीं">9वीं</option>
+            <option value="10वीं">10वीं</option>
+            <option value="11वीं (आर्ट्स)">11वीं (आर्ट्स)</option>
+          </select>
+        </div>
+        <div style="margin-bottom: 12px;">
+          <label style="font-size: 13px; font-weight: 700; color: var(--primary);">अभिभावक का मोबाइल नंबर:</label>
+          <input type="tel" id="adm-phone" required placeholder="10 अंकों का फोन नंबर" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; margin-top: 4px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+          <label style="font-size: 13px; font-weight: 700; color: var(--primary);">गाँव / टोला / पता:</label>
+          <input type="text" id="adm-village" required placeholder="जैसे: बेलबथान, सुंदरमारा आदि" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; margin-top: 4px;">
+        </div>
+        <button type="submit" class="btn" style="width: 100%; background: var(--primary); padding: 12px;">
+          फॉर्म सबमिट करें (Send to WhatsApp) ➔
+        </button>
+      </form>
+    </div>
+  </div>
+
 </div>
 
 <footer>
@@ -852,11 +1055,11 @@ footer {
 </footer>
 
 <script>
-// Web Audio API Sound Generator (No External File Needed)
+// Audio Victory Chime (Inbuilt Web Audio API)
 function playVictorySound() {
   try {
     const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    const notes = [261.63, 329.63, 392.00, 523.25]; // C4, E4, G4, C5
+    const notes = [261.63, 329.63, 392.00, 523.25];
     notes.forEach((freq, idx) => {
       const osc = audioCtx.createOscillator();
       const gain = audioCtx.createGain();
@@ -869,10 +1072,29 @@ function playVictorySound() {
       osc.start(audioCtx.currentTime + idx * 0.12);
       osc.stop(audioCtx.currentTime + idx * 0.12 + 0.3);
     });
-  } catch (e) {
-    console.log("Audio not supported");
+  } catch (e) { console.log("Audio not supported"); }
+}
+
+// JAC 10th Board Exam Countdown (Target: 15 Feb 2027)
+function updateCountdown() {
+  const targetDate = new Date("February 15, 2027 09:00:00").getTime();
+  const now = new Date().getTime();
+  const diff = targetDate - now;
+
+  if (diff > 0) {
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("cd-days").textContent = d < 10 ? "0" + d : d;
+    document.getElementById("cd-hours").textContent = h < 10 ? "0" + h : h;
+    document.getElementById("cd-mins").textContent = m < 10 ? "0" + m : m;
+    document.getElementById("cd-secs").textContent = s < 10 ? "0" + s : s;
   }
 }
+setInterval(updateCountdown, 1000);
+updateCountdown();
 
 // Tab Switching
 function switchMainTab(tabId, btn) {
@@ -884,6 +1106,35 @@ function switchMainTab(tabId, btn) {
   if (btn) btn.classList.add('active');
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Flashcard Toggle
+function flipCard(card, frontText, backText) {
+  const isBack = card.getAttribute("data-flipped") === "true";
+  if (!isBack) {
+    card.innerHTML = `<div style="font-weight:700; color:var(--success); font-size:16px;">${backText}</div><div style="font-size:11px; color:var(--text-muted); margin-top:4px;">(पुनः टच करें)</div>`;
+    card.setAttribute("data-flipped", "true");
+  } else {
+    card.innerHTML = `<div style="font-weight:700; color:var(--primary);">${frontText}</div><div style="font-size:11px; color:var(--text-muted); margin-top:4px;">(टच करें)</div>`;
+    card.setAttribute("data-flipped", "false");
+  }
+}
+
+// Admission Enquiry WhatsApp Handler
+function sendAdmissionEnquiry(e) {
+  e.preventDefault();
+  const name = document.getElementById("adm-name").value.trim();
+  const cls = document.getElementById("adm-class").value;
+  const phone = document.getElementById("adm-phone").value.trim();
+  const village = document.getElementById("adm-village").value.trim();
+
+  const msg = `*VIM CLASSES - नया प्रवेश पूछताछ*%0A` +
+              `👤 विद्यार्थी: ${name}%0A` +
+              `📚 कक्षा: ${cls}%0A` +
+              `📞 फोन: ${phone}%0A` +
+              `🏡 पता: ${village}`;
+
+  window.open(`https://wa.me/917856902817?text=${msg}`, "_blank");
 }
 
 // Student Database With Roll Numbers
@@ -926,6 +1177,8 @@ const studentPortalData = [
   { rollNo: "VIM-136", name: "राहुल कुमार", className: "8वीं", month: "अक्टूबर 2026 (21/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "8 / 50 (16%)", rank: "रैंक #32", attendance: "78%", studyLevel: "सुधार जारी", remark: "समय पर क्लास आएं और टेस्ट की तैयारी करें।" }
 ];
 
+let selectedStudentObj = null;
+
 function findStudentReport() {
   const query = document.getElementById("studentSearchQuery").value.trim().toLowerCase();
   const box = document.getElementById("studentReportBox");
@@ -942,6 +1195,7 @@ function findStudentReport() {
   );
 
   if (student) {
+    selectedStudentObj = student;
     document.getElementById("repName").textContent = `विद्यार्थी: ${student.name} (रोल नं: ${student.rollNo})`;
     document.getElementById("repClass").textContent = student.className;
     
@@ -968,12 +1222,29 @@ function findStudentReport() {
     const msg = `नमस्ते विकास सर, मैं ${student.name} (रोल नं: ${student.rollNo}, ${student.className}) का रिपोर्ट कार्ड व फीस स्टेटस देख रहा/रही हूँ। मुझे इस संबंध में बात करनी है।`;
     document.getElementById("repWhatsappLink").href = `https://wa.me/917856902817?text=${encodeURIComponent(msg)}`;
 
+    // Prepare Receipt Data
+    document.getElementById("rcpt-name").textContent = student.name;
+    document.getElementById("rcpt-roll").textContent = student.rollNo;
+    document.getElementById("rcpt-class").textContent = student.className;
+    document.getElementById("rcpt-month").textContent = student.month;
+    document.getElementById("rcpt-total").textContent = student.totalFee;
+    document.getElementById("rcpt-paid").textContent = student.paidFee;
+    document.getElementById("rcpt-due").textContent = student.dueFee;
+    document.getElementById("rcpt-status").textContent = student.status;
+    document.getElementById("rcpt-date").textContent = new Date().toLocaleDateString('hi-IN');
+    document.getElementById("fee-receipt-printable").style.display = "block";
+
     box.style.display = "block";
     err.style.display = "none";
   } else {
+    selectedStudentObj = null;
     box.style.display = "none";
     err.style.display = "block";
   }
+}
+
+function printFeeReceipt() {
+  window.print();
 }
 
 // Quotes
@@ -1313,7 +1584,7 @@ function loadClassQuiz(cls, elem) {
         ${item.o.map((opt, optIdx) => `
           <label class="opt-row">
             <input type="radio" name="ans_${idx}" value="${optIdx}">
-            (${String.fromCharCode(65 + optIdx)})${opt}
+            (${String.fromCharCode(65 + optIdx)}) ${opt}
           </label>
         `).join("")}
       `;
