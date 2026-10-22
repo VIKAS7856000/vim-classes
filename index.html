@@ -515,7 +515,7 @@ nav {
 .opt-row:hover { background: #eff6ff; }
 .opt-row input { margin-right: 8px; }
 
-/* Certificate Box */
+/* Dynamic Multi-Level Certificate Styling */
 .cert-card-wrap {
   display: none;
   background: #ffffff;
@@ -526,6 +526,10 @@ nav {
   margin-top: 25px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+
+.cert-card-wrap.pass-gold { border-color: #d97706; background: #fffdf5; }
+.cert-card-wrap.pass-silver { border-color: #123b70; background: #f8fafc; }
+.cert-card-wrap.fail-mode { border-color: #dc2626; background: #fff5f5; }
 
 .cert-header {
   color: #123b70;
@@ -646,7 +650,7 @@ footer {
   <div class="marquee-tag">📢 ताज़ा सूचना:</div>
   <div class="marquee-content">
     <span>🔥 "सफलता कोई दुर्घटना नहीं है, यह निरंतर अभ्यास, अनुशासन और कड़ी मेहनत का फल है।"</span>
-    <span>📝 सभी छात्र समय पर 50 प्रश्नों का ऑनलाइन टेस्ट दें और तुरंत अपना सर्टिफिकेट व रिजल्ट प्राप्त करें।</span>
+    <span>📝 सभी छात्र 50 प्रश्नों का ऑनलाइन टेस्ट दें और तुरंत अपना मार्कशीट सह सर्टिफिकेट प्राप्त करें।</span>
     <span>📞 नया सत्र एवं कोचिंग संबंधित किसी भी पूछताछ के लिए संपर्क करें: <b>+91 7856902817</b></span>
   </div>
 </div>
@@ -817,7 +821,7 @@ footer {
       </form>
     </div>
 
-    <!-- Result Display & Certificate -->
+    <!-- Result Display & Multi-Grade Certificate -->
     <div id="result-display-area" class="card" style="display:none; text-align:center; border-top:4px solid var(--gold);">
       <h3 style="color:var(--primary);">🎯 टेस्ट परिणाम (Result Card)</h3>
       <div style="width:90px; height:90px; line-height:90px; border-radius:50%; background:#eff6ff; border:3px solid var(--primary); font-size:24px; font-weight:700; color:var(--primary); margin:12px auto;" id="score-text">0/50</div>
@@ -829,25 +833,25 @@ footer {
         <button type="button" class="btn" style="background:#16803d;" onclick="sendResultToWhatsApp()">
           📲 विकास सर को रिजल्ट WhatsApp करें
         </button>
-        <button type="button" id="cert-btn-toggle" class="btn" style="background:var(--gold); display:none;" onclick="printCertificate()">
-          📜 सर्टिफिकेट डाउनलोड / प्रिंट करें 🖨️
+        <!-- सबको सर्टिफिकेट मिलेगा (100% एक्टिव बटन) -->
+        <button type="button" id="cert-btn-toggle" class="btn" style="background:var(--gold);" onclick="printCertificate()">
+          📜 सर्टिफिकेट / रिपोर्ट कार्ड डाउनलोड करें 🖨️
         </button>
       </div>
 
-      <!-- Printable Certificate Box -->
+      <!-- Printable Certificate Box for Every Student -->
       <div id="cert-printable" class="cert-card-wrap">
-        <div class="cert-header">🎓 VIM CLASSES BELBATHAN 🎓</div>
-        <div class="cert-sub">कुशवाहा टोला, बेलबथान, गोड्डा (झारखंड) | ई-प्रशस्ति पत्र</div>
-        <div style="font-size: 14px; color: #1e293b;">प्रमाणित किया जाता है कि विद्यार्थी</div>
+        <div class="cert-header" id="cert-main-title">🎓 VIM CLASSES BELBATHAN 🎓</div>
+        <div class="cert-sub">कुशवाहा टोला, बेलबथान, गोड्डा (झारखंड) | ई-मूल्यांकन पत्र (Certificate of Assessment)</div>
+        <div style="font-size: 14px; color: #1e293b;">यह प्रमाणित किया जाता है कि विद्यार्थी</div>
         <div class="cert-name" id="cert-student-name">विद्यार्थी का नाम</div>
-        <div class="cert-desc">
-          ने <b><span id="cert-class-name">10वीं</span></b> के ऑनलाइन 50 वस्तुनिष्ठ टेस्ट में भाग लेकर 
-          <b><span id="cert-score-val">0/50</span> (<span id="cert-percent-val">0%</span>)</b> उत्कृष्ट अंक अर्जित किए।
+        <div class="cert-desc" id="cert-dynamic-desc">
+          <!-- जावास्क्रिप्ट द्वारा पास/फेल अनुसार विवरण भरा जाएगा -->
         </div>
         <div class="cert-footer">
           <div style="font-size:12px; color:#64748b; text-align:left;">
             दिनांक: <span id="cert-date-val"></span><br>
-            स्थिति: सफल (Passed)
+            स्थिति: <b id="cert-status-val">सफल</b>
           </div>
           <div class="cert-sign">
             <b>विकास सर</b><br>
@@ -1023,7 +1027,7 @@ footer {
           <input type="text" id="adm-name" required placeholder="पूरा नाम लिखें" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; margin-top: 4px;">
         </div>
         <div style="margin-bottom: 12px;">
-          <label style="font-size: 13px; font-weight: 700; color: var(--primary);">कक्षा (Class):</label>
+          <label style="font-size: 13px; font-weight: 700; color: var(--primary);">कक्षा/वर्ग:</label>
           <select id="adm-class" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; margin-top: 4px;">
             <option value="7वीं">7वीं</option>
             <option value="8वीं">8वीं</option>
@@ -1130,7 +1134,7 @@ function sendAdmissionEnquiry(e) {
 
   const msg = `*VIM CLASSES - नया प्रवेश पूछताछ*%0A` +
               `👤 विद्यार्थी: ${name}%0A` +
-              `📚 कक्षा: ${cls}%0A` +
+              `📚 कक्षा/वर्ग: ${cls}%0A` +
               `📞 फोन: ${phone}%0A` +
               `🏡 पता: ${village}`;
 
@@ -1177,8 +1181,6 @@ const studentPortalData = [
   { rollNo: "VIM-136", name: "राहुल कुमार", className: "8वीं", month: "अक्टूबर 2026 (21/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "8 / 50 (16%)", rank: "रैंक #32", attendance: "78%", studyLevel: "सुधार जारी", remark: "समय पर क्लास आएं और टेस्ट की तैयारी करें।" }
 ];
 
-let selectedStudentObj = null;
-
 function findStudentReport() {
   const query = document.getElementById("studentSearchQuery").value.trim().toLowerCase();
   const box = document.getElementById("studentReportBox");
@@ -1195,7 +1197,6 @@ function findStudentReport() {
   );
 
   if (student) {
-    selectedStudentObj = student;
     document.getElementById("repName").textContent = `विद्यार्थी: ${student.name} (रोल नं: ${student.rollNo})`;
     document.getElementById("repClass").textContent = student.className;
     
@@ -1237,7 +1238,6 @@ function findStudentReport() {
     box.style.display = "block";
     err.style.display = "none";
   } else {
-    selectedStudentObj = null;
     box.style.display = "none";
     err.style.display = "block";
   }
@@ -1666,28 +1666,49 @@ function calculateAndShowResult() {
   document.getElementById("percentage-text").textContent = `कुल प्राप्तांक प्रतिशत: ${studentFinalPercent}`;
 
   let gradeMsg = "";
-  if (percent >= 80) gradeMsg = "🏆 शानदार प्रदर्शन! उत्कृष्ट (Excellent)";
-  else if (percent >= 60) gradeMsg = "👍 बहुत अच्छा प्रयास! (First Division)";
-  else if (percent >= 33) gradeMsg = "पास! थोड़ी और मेहनत की आवश्यकता है।";
-  else gradeMsg = "⚠️ सुधार की आवश्यकता है। पुनः अभ्यास करें!";
-  
+  const certBox = document.getElementById("cert-printable");
+  const certTitle = document.getElementById("cert-main-title");
+  const certDesc = document.getElementById("cert-dynamic-desc");
+  const certStatus = document.getElementById("cert-status-val");
+
+  // Multi-Level Grading & Universal Certificate Generation
+  certBox.className = "cert-card-wrap"; // Reset classes
+
+  if (percent >= 75) {
+    gradeMsg = "🏆 प्रथम श्रेणी सह विशेष योग्यता (Distinction) — उत्कृष्ट!";
+    playVictorySound();
+    certBox.classList.add("pass-gold");
+    certTitle.textContent = "🎖️ VIM CLASSES — विशेष योग्यता सम्मान पत्र 🎖️";
+    certDesc.innerHTML = `ने <b>${currentClass}</b> के ऑनलाइन 50 वस्तुनिष्ठ टेस्ट में भाग लेकर <b>${studentFinalScore} (${studentFinalPercent})</b> अंक प्राप्त किए तथा <b>प्रथम श्रेणी सह विशेष योग्यता (Distinction)</b> अर्जित की।`;
+    certStatus.innerHTML = "<span style='color:var(--success); font-weight:700;'>उत्तीर्ण (Distinction)</span>";
+  } else if (percent >= 60) {
+    gradeMsg = "👍 प्रथम श्रेणी (1st Division) — बहुत अच्छा प्रयास!";
+    playVictorySound();
+    certBox.classList.add("pass-silver");
+    certTitle.textContent = "🎓 VIM CLASSES — ई-प्रशस्ति पत्र 🎓";
+    certDesc.innerHTML = `ने <b>${currentClass}</b> के ऑनलाइन 50 वस्तुनिष्ठ टेस्ट में भाग लेकर <b>${studentFinalScore} (${studentFinalPercent})</b> अंक प्राप्त किए तथा <b>प्रथम श्रेणी (1st Division)</b> में सफलता प्राप्त की।`;
+    certStatus.innerHTML = "<span style='color:var(--success); font-weight:700;'>उत्तीर्ण (1st Division)</span>";
+  } else if (percent >= 33) {
+    gradeMsg = "सफल (Passed) — पास! थोड़ी और मेहनत की आवश्यकता है।";
+    certBox.classList.add("pass-silver");
+    certTitle.textContent = "📋 VIM CLASSES — ई-मूल्यांकन पत्र 📋";
+    certDesc.innerHTML = `ने <b>${currentClass}</b> के ऑनलाइन 50 वस्तुनिष्ठ टेस्ट में भाग लेकर <b>${studentFinalScore} (${studentFinalPercent})</b> अंक अर्जित कर परीक्षा में <b>सफलता (Passed)</b> प्राप्त की।`;
+    certStatus.innerHTML = "<span style='color:var(--gold); font-weight:700;'>उत्तीर्ण (Passed)</span>";
+  } else {
+    gradeMsg = "⚠️ सुधार की आवश्यकता है (33% से कम) — पुनः अभ्यास करें!";
+    certBox.classList.add("fail-mode");
+    certTitle.textContent = "⚠️ VIM CLASSES — ई-मूल्यांकन पत्र (सुधार अपेक्षित) ⚠️";
+    certDesc.innerHTML = `ने <b>${currentClass}</b> के ऑनलाइन 50 वस्तुनिष्ठ टेस्ट में भाग लेकर <b>${studentFinalScore} (${studentFinalPercent})</b> अंक प्राप्त किए। विद्यार्थी को 33% से कम अंक प्राप्त होने के कारण <b>पुनः गहन अध्ययन एवं अभ्यास</b> की सलाह दी जाती है।`;
+    certStatus.innerHTML = "<span style='color:var(--danger); font-weight:700;'>अनुत्तीर्ण (Failed) / सुधार अपेक्षित</span>";
+  }
+
+  // Populate Common Certificate Fields
+  document.getElementById("cert-student-name").textContent = studentSubmittedName;
+  document.getElementById("cert-date-val").textContent = new Date().toLocaleDateString('hi-IN');
+  certBox.style.display = "block";
+
   document.getElementById("grade-text").textContent = gradeMsg;
   document.getElementById("answers-breakdown").innerHTML = reviewHtml;
-
-  // Sound & Certificate Generator
-  if (percent >= 50) {
-    playVictorySound();
-    document.getElementById("cert-btn-toggle").style.display = "inline-block";
-    document.getElementById("cert-student-name").textContent = studentSubmittedName;
-    document.getElementById("cert-class-name").textContent = currentClass;
-    document.getElementById("cert-score-val").textContent = studentFinalScore;
-    document.getElementById("cert-percent-val").textContent = studentFinalPercent;
-    document.getElementById("cert-date-val").textContent = new Date().toLocaleDateString('hi-IN');
-    document.getElementById("cert-printable").style.display = "block";
-  } else {
-    document.getElementById("cert-btn-toggle").style.display = "none";
-    document.getElementById("cert-printable").style.display = "none";
-  }
 
   const resultArea = document.getElementById("result-display-area");
   resultArea.style.display = "block";
