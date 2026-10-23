@@ -38,7 +38,6 @@ body {
   padding-bottom: 50px;
 }
 
-/* Header */
 header {
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: white;
@@ -80,7 +79,6 @@ header .teacher-badge {
   margin-top: 4px;
 }
 
-/* Scrolling Marquee */
 .marquee-wrapper {
   background: #081a30;
   color: #fef08a;
@@ -120,7 +118,6 @@ header .teacher-badge {
   100% { transform: translateX(-100%); }
 }
 
-/* Navigation Tabs */
 nav {
   background: var(--primary-dark);
   position: sticky;
@@ -220,7 +217,6 @@ nav {
 
 .btn:hover { filter: brightness(1.1); }
 
-/* Countdown Clock */
 .countdown-box {
   background: linear-gradient(135deg, #123b70, #091d36);
   color: white;
@@ -257,7 +253,6 @@ nav {
   color: #cbd5e1;
 }
 
-/* Flashcards */
 .flashcard-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -285,7 +280,6 @@ nav {
   transform: translateY(-2px);
 }
 
-/* Floating Action Button */
 .floating-whatsapp {
   position: fixed;
   bottom: 20px;
@@ -304,7 +298,6 @@ nav {
   text-decoration: none;
 }
 
-/* Topper Poster */
 .topper-banner-wrap {
   background: white;
   border-radius: 12px;
@@ -395,7 +388,6 @@ nav {
   margin-bottom: 6px;
 }
 
-/* Printable Fee Receipt Styling */
 .receipt-wrap {
   display: none;
   background: #fff;
@@ -424,7 +416,6 @@ nav {
   border-bottom: 1px solid #f1f5f9;
 }
 
-/* PDF Download Grid */
 .pdf-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -515,7 +506,23 @@ nav {
 .opt-row:hover { background: #eff6ff; }
 .opt-row input { margin-right: 8px; }
 
-/* Dynamic Multi-Level Certificate Styling */
+/* Result Lock Screen Box */
+.whatsapp-lock-card {
+  display: none;
+  background: #f0fdf4;
+  border: 2px dashed #16803d;
+  border-radius: 12px;
+  padding: 24px 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.whatsapp-lock-card h3 {
+  color: #16803d;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
 .cert-card-wrap {
   display: none;
   background: #ffffff;
@@ -633,10 +640,8 @@ footer {
 
 <body>
 
-<!-- Floating WhatsApp Button -->
 <a href="https://wa.me/917856902817" class="floating-whatsapp" target="_blank" title="WhatsApp पर बात करें">💬</a>
 
-<!-- Header With Teacher Photo -->
 <header>
   <div class="teacher-header-box">
     <img src="https://lh3.googleusercontent.com/d/1t8jFOzQMjhMAJD-fwW5ZU-LvLDIDJ1rQ" alt="विकास सर - VIM Classes" class="teacher-avatar">
@@ -645,17 +650,15 @@ footer {
   </div>
 </header>
 
-<!-- चलती हुई सूचना पट्टी -->
 <div class="marquee-wrapper">
   <div class="marquee-tag">📢 ताज़ा सूचना:</div>
   <div class="marquee-content">
     <span>🔥 "सफलता कोई दुर्घटना नहीं है, यह निरंतर अभ्यास, अनुशासन और कड़ी मेहनत का फल है।"</span>
-    <span>📝 सभी छात्र 50 प्रश्नों का ऑनलाइन टेस्ट दें और तुरंत अपना मार्कशीट सह सर्टिफिकेट प्राप्त करें।</span>
+    <span>📝 सभी छात्र 50 प्रश्नों का टेस्ट दें और विकास सर को सीधे WhatsApp भेजकर सर्टिफिकेट प्राप्त करें।</span>
     <span>📞 नया सत्र एवं कोचिंग संबंधित किसी भी पूछताछ के लिए संपर्क करें: <b>+91 7856902817</b></span>
   </div>
 </div>
 
-<!-- Navigation Tabs -->
 <nav>
   <button class="nav-tab-btn active" onclick="switchMainTab('tab-home', this)">🏠 होम</button>
   <button class="nav-tab-btn" onclick="switchMainTab('tab-student-portal', this)">📊 फीस व परफॉर्मेंस</button>
@@ -670,8 +673,6 @@ footer {
 
   <!-- ================= TAB 1: होम ================= -->
   <div id="tab-home" class="tab-content active">
-    
-    <!-- JAC Board 10th Exam Countdown -->
     <div class="countdown-box">
       <div style="font-size: 15px; font-weight: 600;">⏳ JAC Board 10वीं परीक्षा उल्टी गिनती:</div>
       <div class="countdown-timer">
@@ -682,7 +683,6 @@ footer {
       </div>
     </div>
 
-    <!-- Banner -->
     <div class="card" style="padding:0; overflow:hidden; text-align:center;">
       <img src="https://lh3.googleusercontent.com/d/1amcQBNVzzN7zybA4Q3hRBynCj1DqyBKk" alt="VIM Classes Banner" style="width:100%; max-height:340px; object-fit:cover; display:block;">
       <div style="padding:20px;">
@@ -696,7 +696,6 @@ footer {
       </div>
     </div>
 
-    <!-- Motivational Quotes -->
     <div class="quote-card">
       <div style="font-size:22px; color:var(--gold);">❝</div>
       <div id="quote-display" style="font-size:15px; font-weight:600; color:var(--primary-dark); margin:4px 0;">
@@ -709,7 +708,7 @@ footer {
     </div>
   </div>
 
-  <!-- ================= TAB 2: फीस एवं विद्यार्थी परफॉर्मेंस पोर्टल ================= -->
+  <!-- ================= TAB 2: फीस व परफॉर्मेंस ================= -->
   <div id="tab-student-portal" class="tab-content">
     <h2 class="section-title">📊 विद्यार्थी फीस एवं परफॉर्मेंस रिपोर्ट कार्ड</h2>
     
@@ -723,7 +722,6 @@ footer {
         <button class="btn" onclick="findStudentReport()">रिपोर्ट देखें 🔍</button>
       </div>
 
-      <!-- Digital Report Card -->
       <div id="studentReportBox" class="report-card">
         <div class="report-header">
           <div>
@@ -734,7 +732,6 @@ footer {
         </div>
 
         <div class="report-grid">
-          <!-- फीस विवरण -->
           <div class="report-box" style="border-left-color: var(--primary);">
             <h4>💳 फीस की स्थिति (Fee Status)</h4>
             <p><b>महीना / तारीख:</b> <span id="repFeeMonth"></span></p>
@@ -744,7 +741,6 @@ footer {
             <p><b>फीस स्थिति:</b> <span id="repFeeStatusText"></span></p>
           </div>
 
-          <!-- पढ़ाई व परफॉर्मेंस -->
           <div class="report-box" style="border-left-color: var(--gold);">
             <h4>📈 पढ़ाई एवं टेस्ट परफॉर्मेंस</h4>
             <p><b>अंतिम टेस्ट अंक:</b> <span id="repTestScore" style="font-weight:700; color:var(--primary);"></span></p>
@@ -764,7 +760,6 @@ footer {
           </button>
         </div>
 
-        <!-- Printable Fee Slip Box -->
         <div id="fee-receipt-printable" class="receipt-wrap">
           <div class="receipt-header">
             <h3 style="color:var(--primary); font-size:18px;">VIM CLASSES BELBATHAN</h3>
@@ -773,7 +768,7 @@ footer {
           </div>
           <table class="receipt-table">
             <tr><td><b>विद्यार्थी का नाम:</b></td><td id="rcpt-name"></td><td><b>रोल नंबर:</b></td><td id="rcpt-roll"></td></tr>
-            <tr><td><b>कक्षा:</b></td><td id="rcpt-class"></td><td><b>सत्र / महीना:</b></td><td id="rcpt-month"></td></tr>
+            <tr><td><b>कक्षा/वर्ग:</b></td><td id="rcpt-class"></td><td><b>सत्र / महीना:</b></td><td id="rcpt-month"></td></tr>
             <tr><td><b>कुल निर्धारित फीस:</b></td><td>₹<span id="rcpt-total"></span></td><td><b>जमा राशि:</b></td><td>₹<span id="rcpt-paid"></span></td></tr>
             <tr><td><b>बकाया राशि (Due):</b></td><td style="color:var(--danger); font-weight:700;">₹<span id="rcpt-due"></span></td><td><b>भुगतान स्थिति:</b></td><td id="rcpt-status"></td></tr>
           </table>
@@ -792,7 +787,7 @@ footer {
 
   <!-- ================= TAB 3: ऑनलाइन टेस्ट ================= -->
   <div id="tab-online-test" class="tab-content">
-    <h2 class="section-title">📝 ऑनलाइन 50 वस्तुनिष्ठ टेस्ट</h2>
+    <h2 class="section-title">📝 ऑनलाइन 50 वस्तुनिष्ठ टेस्ट (सीरीज-2)</h2>
 
     <div class="card">
       <div style="background:#eff6ff; border:1.5px dashed var(--primary); border-radius:8px; padding:14px; text-align:center; margin-bottom:15px;">
@@ -816,12 +811,24 @@ footer {
       <form id="quiz-form">
         <div id="questions-holder"></div>
         <button type="button" class="btn" style="width:100%; padding:12px; font-size:15px; margin-top:15px;" onclick="calculateAndShowResult()">
-          टेस्ट सबमिट करें और रिजल्ट देखें ➔
+          टेस्ट सबमिट करें ➔
         </button>
       </form>
     </div>
 
-    <!-- Result Display & Multi-Grade Certificate -->
+    <!-- 1. WhatsApp Lock Card (Submitting to Vikas Sir) -->
+    <div id="whatsapp-lock-area" class="whatsapp-lock-card">
+      <div style="font-size: 32px; margin-bottom: 6px;">📲</div>
+      <h3>रिजल्ट व सर्टिफिकेट देखने के लिए विकास सर को सबमिट करें</h3>
+      <p style="font-size: 13.5px; color: #166534; margin-bottom: 16px;">
+        आपका टेस्ट पूरा हो चुका है। अपना मार्कशीट और सर्टिफिकेट अनलॉक करने के लिए नीचे दिए गए हरे बटन पर क्लिक करके <b>विकास सर को WhatsApp पर स्कोर भेजें</b>:
+      </p>
+      <button type="button" class="btn" style="background:#16803d; font-size:15px; padding:12px 24px; box-shadow:0 4px 12px rgba(22,128,61,0.3);" onclick="submitToVikasSirWhatsApp()">
+        📲 विकास सर को WhatsApp भेजें और रिजल्ट देखें ➔
+      </button>
+    </div>
+
+    <!-- 2. Result Display & Certificate (Unlocks After Sending) -->
     <div id="result-display-area" class="card" style="display:none; text-align:center; border-top:4px solid var(--gold);">
       <h3 style="color:var(--primary);">🎯 टेस्ट परिणाम (Result Card)</h3>
       <div style="width:90px; height:90px; line-height:90px; border-radius:50%; background:#eff6ff; border:3px solid var(--primary); font-size:24px; font-weight:700; color:var(--primary); margin:12px auto;" id="score-text">0/50</div>
@@ -830,24 +837,17 @@ footer {
       <div id="grade-text" style="font-size:13px; color:var(--text-muted); margin-bottom:12px;"></div>
 
       <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:15px;">
-        <button type="button" class="btn" style="background:#16803d;" onclick="sendResultToWhatsApp()">
-          📲 विकास सर को रिजल्ट WhatsApp करें
-        </button>
-        <!-- सबको सर्टिफिकेट मिलेगा (100% एक्टिव बटन) -->
         <button type="button" id="cert-btn-toggle" class="btn" style="background:var(--gold);" onclick="printCertificate()">
           📜 सर्टिफिकेट / रिपोर्ट कार्ड डाउनलोड करें 🖨️
         </button>
       </div>
 
-      <!-- Printable Certificate Box for Every Student -->
       <div id="cert-printable" class="cert-card-wrap">
         <div class="cert-header" id="cert-main-title">🎓 VIM CLASSES BELBATHAN 🎓</div>
         <div class="cert-sub">कुशवाहा टोला, बेलबथान, गोड्डा (झारखंड) | ई-मूल्यांकन पत्र (Certificate of Assessment)</div>
         <div style="font-size: 14px; color: #1e293b;">यह प्रमाणित किया जाता है कि विद्यार्थी</div>
         <div class="cert-name" id="cert-student-name">विद्यार्थी का नाम</div>
-        <div class="cert-desc" id="cert-dynamic-desc">
-          <!-- जावास्क्रिप्ट द्वारा पास/फेल अनुसार विवरण भरा जाएगा -->
-        </div>
+        <div class="cert-desc" id="cert-dynamic-desc"></div>
         <div class="cert-footer">
           <div style="font-size:12px; color:#64748b; text-align:left;">
             दिनांक: <span id="cert-date-val"></span><br>
@@ -864,7 +864,7 @@ footer {
     </div>
   </div>
 
-  <!-- ================= TAB 4: PDF व स्टडी नोट्स ================= -->
+  <!-- ================= TAB 4: PDF व नोट्स ================= -->
   <div id="tab-study-pdf" class="tab-content">
     <h2 class="section-title">📚 महत्वपूर्ण PDF एवं स्टडी नोट्स</h2>
     
@@ -918,7 +918,6 @@ footer {
       </div>
     </div>
 
-    <!-- Quick Formula Flashcards -->
     <div style="margin-top: 30px;">
       <h3 style="color:var(--primary); font-size:17px; margin-bottom:8px;">⚡ त्वरित फॉर्मूला फ़्लैशकार्ड (क्लिक करके उत्तर देखें):</h3>
       <div class="flashcard-grid">
@@ -1014,7 +1013,7 @@ footer {
     </div>
   </div>
 
-  <!-- ================= TAB 7: प्रवेश पूछताछ फॉर्म ================= -->
+  <!-- ================= TAB 7: प्रवेश पूछताछ ================= -->
   <div id="tab-admission" class="tab-content">
     <h2 class="section-title">✍️ नए सत्र हेतु प्रवेश पूछताछ (Admission)</h2>
     <div class="card" style="max-width: 500px; margin: auto;">
@@ -1059,7 +1058,6 @@ footer {
 </footer>
 
 <script>
-// Audio Victory Chime (Inbuilt Web Audio API)
 function playVictorySound() {
   try {
     const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -1079,7 +1077,6 @@ function playVictorySound() {
   } catch (e) { console.log("Audio not supported"); }
 }
 
-// JAC 10th Board Exam Countdown (Target: 15 Feb 2027)
 function updateCountdown() {
   const targetDate = new Date("February 15, 2027 09:00:00").getTime();
   const now = new Date().getTime();
@@ -1100,7 +1097,6 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// Tab Switching
 function switchMainTab(tabId, btn) {
   document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.nav-tab-btn').forEach(el => el.classList.remove('active'));
@@ -1112,7 +1108,6 @@ function switchMainTab(tabId, btn) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Flashcard Toggle
 function flipCard(card, frontText, backText) {
   const isBack = card.getAttribute("data-flipped") === "true";
   if (!isBack) {
@@ -1124,7 +1119,6 @@ function flipCard(card, frontText, backText) {
   }
 }
 
-// Admission Enquiry WhatsApp Handler
 function sendAdmissionEnquiry(e) {
   e.preventDefault();
   const name = document.getElementById("adm-name").value.trim();
@@ -1141,7 +1135,17 @@ function sendAdmissionEnquiry(e) {
   window.open(`https://wa.me/917856902817?text=${msg}`, "_blank");
 }
 
-// Student Database With Roll Numbers
+function speakText(text) {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'hi-IN';
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+    window.speechSynthesis.speak(utterance);
+  }
+}
+
 const studentPortalData = [
   { rollNo: "VIM-101", name: "अंकिता आर्या", className: "10वीं", month: "अक्टूबर 2026 (12/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "48 / 50 (96%)", rank: "रैंक #1 (टॉपर 🏆)", attendance: "98%", studyLevel: "सर्वश्रेष्ठ (Outstanding)", remark: "कोचिंग की टॉपर छात्रा। अवधारणाएँ स्पष्ट हैं और तैयारी बहुत मजबूत है।" },
   { rollNo: "VIM-102", name: "स्वीटी कुमारी", className: "10वीं", month: "अक्टूबर 2026 (24/10/26)", totalFee: "400", paidFee: "0", dueFee: "400", status: "बकाया (Due)", testScore: "46 / 50 (92%)", rank: "रैंक #2 (टॉपर 🏆)", attendance: "96%", studyLevel: "उत्कृष्ट (Outstanding)", remark: "शानदार प्रदर्शन, लिखावट और तैयारी बहुत अच्छी है।" },
@@ -1172,7 +1176,7 @@ const studentPortalData = [
   { rollNo: "VIM-127", name: "सोना + भाग्यश्री", className: "कोचिंग बैच", month: "अक्टूबर 2026 (11/10/26)", totalFee: "600", paidFee: "0", dueFee: "600", status: "बकाया (Due)", testScore: "मूल्यांकन जारी", rank: "--", attendance: "90%", studyLevel: "बहुत अच्छा", remark: "दोनों छात्राएं अनुशासित और पढ़ाई में सजग हैं।" },
   { rollNo: "VIM-128", name: "कार्तिक कुमार", className: "कोचिंग बैच", month: "अक्टूबर 2026 (24/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "7 / 50 (14%)", rank: "रैंक #33", attendance: "76%", studyLevel: "सुधार की आवश्यकता", remark: "कक्षा में नियमित रहें और समय पर गृहकार्य पूरा करें।" },
   { rollNo: "VIM-129", name: "अमन कुमार", className: "कोचिंग बैच", month: "अक्टूबर 2026 (04/10/26)", totalFee: "400", paidFee: "0", dueFee: "400", status: "बकाया (Due)", testScore: "4 / 50 (8%)", rank: "रैंक #36", attendance: "72%", studyLevel: "विशेष ध्यान अपेक्षित", remark: "बेसिक गणित और विज्ञान में विशेष मेहनत की जरूरत है।" },
-  { rollNo: "VIM-130", name: "पंकज राय", className: "कोचिंग बैच", month: "अगस्त 2026 (28/08/26)", totalFee: "800", paidFee: "0", dueFee: "800", status: "बकाया (Due)", testScore: "10 / 50 (20%)", rank: "रैंक #28", attendance: "80%", studyLevel: "संतोषजनक", remark: "रोजाना रिवीजन करने की आदत डालें।" },
+  { rollNo: "VIM-130", name: "पंकज राय", className: "अगस्त 2026 (28/08/26)", totalFee: "800", paidFee: "0", dueFee: "800", status: "बकाया (Due)", testScore: "10 / 50 (20%)", rank: "रैंक #28", attendance: "80%", studyLevel: "संतोषजनक", remark: "रोजाना रिवीजन करने की आदत डालें।" },
   { rollNo: "VIM-131", name: "अभिषेक कुमार", className: "कोचिंग बैच", month: "सितंबर 2026 (18/09/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "15 / 50 (30%)", rank: "रैंक #25", attendance: "82%", studyLevel: "मध्यम", remark: "क्लास में एकाग्रता बनाए रखें।" },
   { rollNo: "VIM-132", name: "प्रियांशु कुमार", className: "कोचिंग बैच", month: "अक्टूबर 2026 (03/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "28 / 50 (56%)", rank: "रैंक #13", attendance: "89%", studyLevel: "अच्छा (Good)", remark: "टेस्ट में अच्छा प्रदर्शन है, नियमित बने रहें।" },
   { rollNo: "VIM-133", name: "आँचल कुमारी", className: "कोचिंग बैच", month: "अक्टूबर 2026 (24/10/26)", totalFee: "200", paidFee: "0", dueFee: "200", status: "बकाया (Due)", testScore: "3 / 50 (6%)", rank: "रैंक #37", attendance: "70%", studyLevel: "सुधार अपेक्षित", remark: "कक्षा में रोज आएं और बेसिक कॉन्सेप्ट दोहराएं।" },
@@ -1197,6 +1201,8 @@ function findStudentReport() {
   );
 
   if (student) {
+    speakText(`नमस्ते! विद्यार्थी ${student.name} का रिपोर्ट कार्ड खुल गया है।`);
+
     document.getElementById("repName").textContent = `विद्यार्थी: ${student.name} (रोल नं: ${student.rollNo})`;
     document.getElementById("repClass").textContent = student.className;
     
@@ -1205,25 +1211,21 @@ function findStudentReport() {
     badge.style.background = "#fee2e2";
     badge.style.color = "#991b1b";
 
-    // Fee Details
     document.getElementById("repFeeMonth").textContent = student.month;
     document.getElementById("repFeeTotal").textContent = student.totalFee;
     document.getElementById("repFeePaid").textContent = student.paidFee;
     document.getElementById("repFeeDue").textContent = student.dueFee;
     document.getElementById("repFeeStatusText").textContent = student.status;
 
-    // Performance Details
     document.getElementById("repTestScore").textContent = student.testScore;
     document.getElementById("repRank").textContent = student.rank;
     document.getElementById("repAttendance").textContent = student.attendance;
     document.getElementById("repStudyLevel").textContent = student.studyLevel;
     document.getElementById("repTeacherRemark").textContent = `"${student.remark}"`;
 
-    // WhatsApp Message
     const msg = `नमस्ते विकास सर, मैं ${student.name} (रोल नं: ${student.rollNo}, ${student.className}) का रिपोर्ट कार्ड व फीस स्टेटस देख रहा/रही हूँ। मुझे इस संबंध में बात करनी है।`;
     document.getElementById("repWhatsappLink").href = `https://wa.me/917856902817?text=${encodeURIComponent(msg)}`;
 
-    // Prepare Receipt Data
     document.getElementById("rcpt-name").textContent = student.name;
     document.getElementById("rcpt-roll").textContent = student.rollNo;
     document.getElementById("rcpt-class").textContent = student.className;
@@ -1238,6 +1240,7 @@ function findStudentReport() {
     box.style.display = "block";
     err.style.display = "none";
   } else {
+    speakText("माफ़ कीजिए, इस नाम या रोल नंबर का कोई रिकॉर्ड नहीं मिला।");
     box.style.display = "none";
     err.style.display = "block";
   }
@@ -1247,7 +1250,6 @@ function printFeeReceipt() {
   window.print();
 }
 
-// Quotes
 const quotesList = [
   { q: "कड़ी मेहनत का कोई विकल्प नहीं होता, आपकी आज की मेहनत ही आपका कल तय करेगी।", a: "प्रेरक विचार" },
   { q: "शिक्षा वह सबसे शक्तिशाली हथियार है जिसका उपयोग आप दुनिया को बदलने के लिए कर सकते हैं।", a: "नेल्सन मंडेला" },
@@ -1261,267 +1263,264 @@ function changeQuote() {
   document.getElementById("quote-author").textContent = `— ${quotesList[qIdx].a}`;
 }
 
-// 50 Questions per Class
 const fullQuizData = {
   "11": [
-    { q: "मेसोपोटामिया की सभ्यता किन दो नदियों के बीच विकसित हुई थी?", o: ["दजला और फरात", "नील और अमेजन", "सिंधु और गंगा", "ह्वांगहो और यांग्त्सी"], a: 0 },
-    { q: "मेसोपोटामिया की सबसे प्राचीन ज्ञात लिपि कौन सी थी?", o: ["कीलाकार (Cuneiform)", "चित्रलिपि", "खरोष्ठी", "देवनागरी"], a: 0 },
-    { q: "मेसोपोटामिया में पट्टिकाएँ (Tablets) किस वस्तु की बनी होती थीं?", o: ["चिकनी मिट्टी की", "कांस्य की", "कागज की", "लकड़ी की"], a: 0 },
-    { q: "उरुक, उर और मारी किस प्राचीन सभ्यता के प्रमुख नगर थे?", o: ["मेसोपोटामिया", "हड़प्पा", "मिस्र", "रोमन"], a: 0 },
-    { q: "रोमन साम्राज्य में 'सीनेट' में मुख्यतः किस वर्ग का वर्चस्व था?", o: ["कुलीन एवं अभिजात वर्ग", "दास वर्ग", "व्यापारी वर्ग", "शिल्पकार"], a: 0 },
-    { q: "पैक्स रोमाना (Pax Romana) का क्या अर्थ है?", o: ["रोमन शांति का युग", "रोमन गृहयुद्ध", "रोमन कानून", "रोमन कर व्यवस्था"], a: 0 },
-    { q: "चंगेज खान का प्रारंभिक नाम क्या था?", o: ["तेमुजिन", "बाबर", "ओगोदेई", "कुबलई खान"], a: 0 },
-    { q: "मंगोल साम्राज्य में 'उलुस' शब्द का क्या अर्थ था?", o: ["कबीलाई क्षेत्र / भूभाग", "सैन्य छावनी", "डाक प्रणाली", "व्यापारिक कर"], a: 0 },
-    { q: "मंगोलों की त्वरित संचार एवं हरकारा पद्धति का नाम क्या था?", o: ["कूरियर / उलघ", "यासा", "कुबलई", "तमुगा"], a: 0 },
-    { q: "सामंती समाज में 'नाइट' (Knight) किसे कहा जाता था?", o: ["घुड़सवार योद्धाओं को", "पादरी वर्ग को", "कृषि दासों को", "व्यापारियों को"], a: 0 },
-    { q: "यूरोप में पुनर्जागरण (Renaissance) का आरंभ सर्वप्रथम किस देश से हुआ?", o: ["इटली", "इंग्लैंड", "फ्रांस", "जर्मनी"], a: 0 },
-    { q: "'द लास्ट सपर' और 'मोनालिसा' चित्रों के प्रसिद्ध चित्रकार कौन थे?", o: ["लियोनार्डो दा विंची", "माइकल एंजेलो", "राफेल", "दान्ते"], a: 0 },
-    { q: "औद्योगिक क्रांति की शुरुआत 18वीं शताब्दी में सर्वप्रथम कहाँ हुई थी?", o: ["ब्रिटेन (इंग्लैंड)", "अमेरिका", "जर्मनी", "फ्रांस"], a: 0 },
-    { q: "'भूगोल' (Geography) शब्द का सर्वप्रथम प्रयोग किसने किया था?", o: ["इरैटोस्थनीज", "हिकेटियस", "हेरोडोटस", "अलेक्जेंडर वॉन हम्बोल्ट"], a: 0 },
-    { q: "ब्रह्मांड की उत्पत्ति से संबंधित 'बिग बैंग थ्योरी' का प्रतिपादन किसने किया?", o: ["जॉर्ज लेमैत्रे", "एडविन हबल", "अल्फ्रेड वेगनर", "कांट"], a: 0 },
-    { q: "पृथ्वी की सबसे भीतरी परत (क्रोड) मुख्यतः किन तत्वों से बनी है?", o: ["निकल और लोहा (NiFe)", "सिलिका और एल्युमिना", "सिलिका और मैग्नीशियम", "लोहा और तांबा"], a: 0 },
-    { q: "महाद्वीपीय विस्थापन सिद्धांत किसने दिया था?", o: ["अल्फ्रेड वेगनर (1912)", "हैरी हेस", "आर्थर होम्स", "स्ट्रैबो"], a: 0 },
-    { q: "भूकंप की तीव्रता मापने के लिए किस पैमाने का उपयोग किया जाता है?", o: ["रिक्टर पैमाना (Richter Scale)", "मर्केली पैमाना", "बैरोमीटर", "थर्मामीटर"], a: 0 },
-    { q: "वायुमंडल की कौन सी परत रेडियो संचार में सहायता करती है?", o: ["आयनमंडल (Ionosphere)", "क्षोभमंडल", "समतापमंडल", "मध्यमंडल"], a: 0 },
-    { q: "वायुमंडल में नाइट्रोजन गैस की प्रतिशत मात्रा कितनी है?", o: ["लगभग 78%", "21%", "0.03%", "0.93%"], a: 0 },
-    { q: "पृथ्वी के वायुमंडल की सबसे निचली परत कौन सी है, जहाँ मौसम संबंधी घटनाएँ घटती हैं?", o: ["क्षोभमंडल (Troposphere)", "समतापमंडल", "मध्यमंडल", "बहिर्मंडल"], a: 0 },
-    { q: "ओजोन परत मुख्यतः किस मंडल में पाई जाती है?", o: ["समतापमंडल (Stratosphere)", "क्षोभमंडल", "आयनमंडल", "मध्यमंडल"], a: 0 },
-    { q: "भारत का कुल भौगोलिक क्षेत्रफल कितना है?", o: ["32.8 लाख वर्ग किमी", "28.5 लाख वर्ग किमी", "40.2 लाख वर्ग किमी", "30.1 लाख वर्ग किमी"], a: 0 },
-    { q: "भारत की मानक समय रेखा (82°30' पूर्वी देशांतर) किस शहर से गुजरती है?", o: ["मिर्जापुर (प्रयागराज)", "पटना", "कोलकाता", "दिल्ली"], a: 0 },
-    { q: "भारत और श्रीलंका को अलग करने वाली जलसंधि कौन सी है?", o: ["पाक जलडमरूमध्य (Palk Strait)", "मलक्का जलसंधि", "बेरिंग जलसंधि", "जिब्राल्टर"], a: 0 },
-    { q: "मुंशी प्रेमचंद की सुप्रसिद्ध कहानी 'ईदगाह' का प्रमुख बाल पात्र कौन है?", o: ["हामिद", "मोहसिन", "नूरे", "सम्मी"], a: 0 },
-    { q: "हामिद ने मेले में मिले तीन पैसों से अपनी दादी अमीना के लिए क्या खरीदा?", o: ["चिमटा", "खिलौना", "रेवड़ी", "मिठाई"], a: 0 },
-    { q: "'दोपहर का भोजन' कहानी किस सामाजिक वर्ग की आर्थिक विषमता को दर्शाती है?", o: ["निम्न-मध्यमवर्गीय परिवार", "उच्च वर्ग", "जमींदार वर्ग", "उद्योगपति"], a: 0 },
-    { q: "'दोपहर का भोजन' कहानी के प्रमुख पात्र मुंशी चंद्रिका प्रसाद की पत्नी का क्या नाम है?", o: ["सिद्धेश्वरी", "अमीना", "पार्वती", "जानकी"], a: 0 },
-    { q: "'टॉर्च बेचने वाले' व्यंग्य रचना के लेखक कौन हैं?", o: ["हरिशंकर परसाई", "प्रेमचंद", "अमरकांत", "दिनकर"], a: 0 },
-    { q: "कबीरदास जी किस भक्ति काव्यधारा के शीर्ष कवि माने जाते हैं?", o: ["ज्ञानाश्रयी निर्गुण शाखा", "सगुण रामभक्ति", "कृष्णभक्ति", "सूफी काव्य"], a: 0 },
-    { q: "'अरे इन दोहुन राह न पाई' पद में कबीर ने किन दो धर्मों के बाह्याडंबर पर चोट की है?", o: ["हिंदू और मुस्लिम", "जैन और बौद्ध", "सिख और ईसाई", "पारसी और यहूदी"], a: 0 },
-    { q: "सूरदास के काव्य की भाषा कौन सी है?", o: ["ब्रजभाषा", "अवधी", "खड़ी बोली", "मैथिली"], a: 0 },
-    { q: "सूरदास के 'भ्रमरगीत' प्रसंग में गोपियों को निर्गुण ज्ञान का उपदेश देने कौन आया था?", o: ["उद्धव", "अक्रूर", "बलराम", "सुदामा"], a: 0 },
-    { q: "'संध्या के बाद' कविता के रचयिता प्रकृति के सुकुमार कवि कौन हैं?", o: ["सुमित्रानंदन पंत", "सूर्यकांत त्रिपाठी निराला", "महादेवी वर्मा", "प्रसाद"], a: 0 },
-    { q: "महादेवी वर्मा की प्रसिद्ध कविता 'जाग तुझको दूर जाना' किस भावना से ओत-प्रोत है?", o: ["जागृति एवं राष्ट्रभक्ति", "शृंगार भावना", "विरह व्यथा", "हास्य रस"], a: 0 },
-    { q: "हिंदी वर्णमाला में 'ज्ञ' वर्ण किन दो वर्णों के मेल से बना है?", o: ["ज् + ञ", "ग् + य", "ग् + ज्ञ", "द् + य"], a: 0 },
-    { q: "'जो सब कुछ जानता हो' वाक्यांश के लिए एक शब्द क्या होगा?", o: ["सर्वज्ञ", "अल्पज्ञ", "विज्ञ", "बहुज्ञ"], a: 0 },
-    { q: "Who is the author of 'The Portrait of a Lady'?", o: ["Khushwant Singh", "R.K. Narayan", "Mulk Raj Anand", "Vikram Seth"], a: 0 },
-    { q: "In 'The Portrait of a Lady', what did grandmother feed sparrows in the afternoon?", o: ["Little bits of bread", "Chapatis", "Grains", "Sweets"], a: 0 },
-    { q: "What was the name of the author's ship in 'We're Not Afraid to Die...'?", o: ["Wavewalker", "Sea Queen", "Titanic", "Mayflower"], a: 0 },
-    { q: "The voyagers in 'We're Not Afraid to Die...' sought refuge in which tiny island?", o: ["Ile Amsterdam", "Hawaii", "Maldives", "Mauritius"], a: 0 },
-    { q: "Who wrote the reflective poem 'A Photograph'?", o: ["Shirley Toulson", "Ted Hughes", "Walt Whitman", "Markus Natten"], a: 0 },
-    { q: "In the poem 'A Photograph', what does the cardboard show?", o: ["The poet's mother and two cousins", "The poet alone", "The grandmother", "A scenic beach"], a: 0 },
-    { q: "In 'The Laburnum Top', which bird comes to feed its young ones?", o: ["Goldfinch", "Sparrow", "Cuckoo", "Robin"], a: 0 },
-    { q: "Who wrote the poem 'The Voice of the Rain'?", o: ["Walt Whitman", "Ted Hughes", "Robert Frost", "William Wordsworth"], a: 0 },
-    { q: "According to the rain in 'The Voice of the Rain', it is the:", o: ["Poem of Earth", "Song of Sky", "Tear of Cloud", "Gift of Ocean"], a: 0 },
-    { q: "Who is the author of the story 'The Summer of the Beautiful White Horse'?", o: ["William Saroyan", "Marga Minco", "J.B. Priestley", "Khushwant Singh"], a: 0 },
-    { q: "What tribe did Aram and Mourad belong to, known for their honesty?", o: ["Garoghlanian tribe", "Assyrian tribe", "Kurdish tribe", "Bedouin tribe"], a: 0 },
-    { q: "Identify the correct passive voice: 'She writes a letter.'", o: ["A letter is written by her.", "A letter was written by her.", "A letter is being written.", "A letter has been written."], a: 0 }
+    { q: "मेसोपोटामिया की सभ्यता किन दो मुख्य नदियों की घाटी में विकसित हुई थी?", o: ["नील और कांगो", "दजला और फरात", "सिंधु और झेलम", "ह्वांगहो और यांग्त्सी"], a: 1 },
+    { q: "मेसोपोटामिया में मंदिर के चारों ओर बसे नगरों को क्या कहा जाता था?", o: ["व्यापारिक नगर", "सैनिक छावनी", "मंदिर नगर (Temple Towns)", "कबीलाई बस्ती"], a: 2 },
+    { q: "मेसोपोटामिया में लेखन कला की शुरुआत सर्वप्रथम किस आवश्यकता से हुई?", o: ["हिसाब-किताब और व्यापारिक लेन-देन रखने हेतु", "धार्मिक भजन लिखने हेतु", "राजाज्ञा जारी करने हेतु", "कविताएं लिखने हेतु"], a: 0 },
+    { q: "रोमन साम्राज्य में 'प्रिंसिपेट' शासन व्यवस्था की स्थापना 27 ईसा पूर्व में किसने की?", o: ["जूलियस सीज़र", "ऑगस्टस (Augustus)", "टाइबेरियस", "नीरो"], a: 1 },
+    { q: "रोमन साम्राज्य में दासों के साथ किए जाने वाले व्यवहार पर किस दार्शनिक ने चिंता व्यक्त की थी?", o: ["प्लेटो", "अरस्तू", "सुकरात", "सेनेका (Seneca)"], a: 3 },
+    { q: "मंगोल साम्राज्य का संस्थापक चंगेज खान किस वर्ष मंगोल कबीलों का महानायक घोषित हुआ?", o: ["1190 ईस्वी में", "1206 ईस्वी में", "1227 ईस्वी में", "1240 ईस्वी में"], a: 1 },
+    { q: "चंगेज खान की मृत्यु किस वर्ष हुई थी?", o: ["1206 ईस्वी में", "1250 ईस्वी में", "1227 ईस्वी में", "1198 ईस्वी में"], a: 2 },
+    { q: "मंगोलों की प्रसिद्ध कानूनी संहिता का क्या नाम था?", o: ["यासा (Yasa)", "उलुस", "तमुगा", "कुरिल्ताई"], a: 0 },
+    { q: "मध्यकालीन यूरोपीय समाज में 'प्रथम वर्ग' के अंतर्गत कौन आते थे?", o: ["अभिजात वर्ग", "पादरी वर्ग (Clergy)", "कृषक वर्ग", "व्यापारी वर्ग"], a: 1 },
+    { q: "यूरोप में 'ब्लैक डेथ' (प्लेग महामारी) किस सदी में फैली थी जिसने भारी तबाही मचाई?", o: ["12वीं सदी", "16वीं सदी", "14वीं सदी (1347-1351)", "10वीं सदी"], a: 2 },
+    { q: "गुटेनबर्ग ने यूरोप में सर्वप्रथम किस पुस्तक की छपाई प्रिंटिंग प्रेस से की थी?", o: ["डिवाइन कॉमेडी", "बाइबिल (Bible)", "यूटोपिया", "द प्रिंस"], a: 1 },
+    { q: "भाप के इंजन का आविष्कार कर औद्योगिक क्रांति को गति देने वाले वैज्ञानिक कौन थे?", o: ["रिचर्ड आर्कराइट", "जॉर्ज स्टीफेंसन", "जेम्स वाट", "हम्फ्री डेवी"], a: 2 },
+    { q: "सर्वप्रथम 'भूगोल' शब्द की उत्पत्ति किन दो ग्रीक शब्दों से मिलकर हुई है?", o: ["Geo (पृथ्वी) + Graphos (वर्णन)", "Bio + Logy", "Terra + Scope", "Cosmo + Graph"], a: 0 },
+    { q: "पृथ्वी की त्रिज्या लगभग कितनी किलोमीटर मानी जाती है?", o: ["5000 किमी", "6371 किमी", "7200 किमी", "4500 किमी"], a: 1 },
+    { q: "पृथ्वी के क्रस्ट और मेंटल के बीच की सीमा रेखा क्या कहलाती है?", o: ["गुटेनबर्ग असांतत्य", "लेहमैन रेखा", "मोहोरारोविकिक (Moho) असांतत्य", "सियाल सीमा"], a: 2 },
+    { q: "पैंजिया (Pangaea) के चारों ओर मौजूद विशाल महासागर का वेगनर ने क्या नाम दिया था?", o: ["पैंथालासा (Panthalassa)", "टेथिस", "प्रशांत महासागर", "अटलांटिक"], a: 0 },
+    { q: "भूकंपीय तरंगों में सबसे तीव्र गति से चलने वाली प्राथमिक तरंगें कौन सी हैं?", o: ["S-तरंगें", "P-तरंगें (Primary Waves)", "L-तरंगें", "सरफेस तरंगें"], a: 1 },
+    { q: "वायुमंडल में ऑक्सीजन गैस का प्रतिशत आयतन कितना है?", o: ["78.08%", "0.036%", "लगभग 20.95% (21%)", "0.93%"], a: 2 },
+    { q: "वायुमंडल की किस परत में तापमान ऊँचाई के साथ घटता है और मौसमी हलचलें होती हैं?", o: ["क्षोभमंडल", "समतापमंडल", "मध्यमंडल", "बहिर्मंडल"], a: 0 },
+    { q: "भारत का कुल अक्षांशीय विस्तार मुख्य भूमि पर कितना है?", o: ["6°4' दक्षिण से 35° उत्तर", "8°4' उत्तर से 37°6' उत्तर", "10° उत्तर से 40° उत्तर", "4° उत्तर से 30° उत्तर"], a: 1 },
+    { q: "कर्क रेखा (23°30' N) भारत के कितने राज्यों से होकर गुजरती है?", o: ["7 राज्यों से", "9 राज्यों से", "8 राज्यों से", "6 राज्यों से"], a: 2 },
+    { q: "क्षेत्रफल की दृष्टि से भारत का सबसे बड़ा राज्य कौन सा है?", o: ["राजस्थान", "मध्य प्रदेश", "महाराष्ट्र", "उत्तर प्रदेश"], a: 0 },
+    { q: "भारत की मुख्य भूमि की तटरेखा की कुल लंबाई लगभग कितनी है?", o: ["5000 किमी", "6100 किमी (द्वीपों सहित 7516.6 किमी)", "8000 किमी", "4500 किमी"], a: 1 },
+    { q: "लक्षद्वीप समूह किस सागर में स्थित है?", o: ["बंगाल की खाड़ी में", "हिंद महासागर में", "अरब सागर में", "मन्नार की खाड़ी में"], a: 2 },
+    { q: "प्रेमचंद का जन्म वाराणसी के किस गाँव में हुआ था?", o: ["बेलबथान", "लमही गाँव में", "मंगोलपुरी", "शिवपुर"], a: 1 },
+    { q: "'ईदगाह' कहानी में हामिद के मित्रों के पास क्रमशः कितने पैसे थे?", o: ["महमूद के पास 12 और मोहसिन के पास 15 पैसे", "दोनों के पास 10 पैसे", "महमूद के पास 5 पैसे", "किसी के पास पैसे नहीं थे"], a: 0 },
+    { q: "अमरकांत जी को किस उपन्यास पर साहित्य अकादमी पुरस्कार प्राप्त हुआ था?", o: ["सूखा पत्ता", "आकाश पक्षी", "इन्हीं हथियारों से", "काले-उजले दिन"], a: 2 },
+    { q: "'दोपहर का भोजन' में रामचंद्र किस कार्य की तैयारी या प्रशिक्षण ले रहा था?", o: ["शिक्षक बनने की", "प्रूफ रीडिंग का काम सीखने की", "दुकानदारी की", "ड्राइविंग की"], a: 1 },
+    { q: "हरिशंकर परसाई जी हिंदी साहित्य में मुख्य रूप से किस विधा के सम्राट माने जाते हैं?", o: ["व्यंग्य विधा (Satire)", "एकांकी विधा", "गीत काव्य", "उपन्यास"], a: 0 },
+    { q: "कबीरदास जी के गुरु कौन माने जाते हैं?", o: ["वल्लभाचार्य", "स्वामी रामानंद जी", "रैदास", "तुलसीदास"], a: 1 },
+    { q: "कबीर की वाणी का प्रामाणिक संग्रह किस नाम से प्रसिद्ध है?", o: ["सूरसागर", "विनय पत्रिका", "बीजक (साखी, सबद, रमैनी)", "दोहावली"], a: 2 },
+    { q: "सूरदास के वात्सल्य एवं बाल-लीला वर्णन का मुख्य आधार कौन हैं?", o: ["बालकृष्ण", "श्रीराम", "गोपियाँ", "उद्धव"], a: 0 },
+    { q: "'उधो, तुम हौ अति बड़भागी' पद में कौन सा व्यंग्य छिपा है?", o: ["विद्वान होने की प्रशंसा", "प्रेमहीन होने का उपहास", "मित्रता का आदर", "ज्ञान का सम्मान"], a: 1 },
+    { q: "'संध्या के बाद' कविता में ग्राम्य जीवन के किस समय का सजीव चित्रण है?", o: ["सुबह की भोर का", "दोपहर की धूप का", "शाम के ढलने और रात्रि के आगमन का", "बसंत ऋतु का"], a: 2 },
+    { q: "छायावाद के चार प्रमुख स्तंभों में से एकमात्र कवयित्री कौन हैं?", o: ["महादेवी वर्मा", "सुभद्रा कुमारी चौहान", "मन्नू भंडारी", "कृष्णा सोबती"], a: 0 },
+    { q: "हिंदी व्याकरण में 'य, र, ल, व' किस प्रकार के व्यंजन कहलाते हैं?", o: ["स्पर्श व्यंजन", "अंतःस्थ व्यंजन", "ऊष्म व्यंजन", "संयुक्त व्यंजन"], a: 1 },
+    { q: "जो कभी न मरे, उस शब्द समूह के लिए एक शब्द क्या होगा?", o: ["अजर", "अविनाशी", "अमर", "अमरत्व"], a: 2 },
+    { q: "In 'The Portrait of a Lady', where was the grandfather's portrait hung?", o: ["Above the mantelpiece in the drawing room", "In the bedroom", "In the study room", "In the verandah"], a: 0 },
+    { q: "How did the sparrows express their sorrow when the grandmother died?", o: ["They chirped loudly", "They sat silently without chirping and ignored the bread", "They flew away immediately", "They ate all bread"], a: 1 },
+    { q: "What was the occupation of the narrator in 'We're Not Afraid to Die...'?", o: ["A sea captain", "A teacher", "A 37-year-old businessman", "A doctor"], a: 2 },
+    { q: "Who were the two crewmen taken on board the Wavewalker from Cape Town?", o: ["Larry Vigil and Herb Seigler", "John and Sue", "James and Cook", "Jack and William"], a: 0 },
+    { q: "In the poem 'A Photograph', what does the sea symbolize?", o: ["Destruction", "Eternity and timelessness compared to transient human life", "Joy and fun", "Friendship"], a: 1 },
+    { q: "In 'The Laburnum Top', the tree becomes silent and empty again after:", o: ["The rain stops", "The storm arrives", "The goldfinch launches away into the infinite sky", "The night falls"], a: 2 },
+    { q: "In 'The Voice of the Rain', rain descends to bathe the:", o: ["Droughts, atomies and dust layers of the earth", "Mountains", "Oceans", "Forests"], a: 0 },
+    { q: "What was the hallmark of the Garoghlanian family in 'The Summer of the Beautiful White Horse'?", o: ["Wealth and power", "Trust, honesty and belief in right and wrong", "Cleverness and cheating", "Fast horse riding"], a: 1 },
+    { q: "Who was the real owner of the beautiful white horse?", o: ["Uncle Khosrove", "Aram's father", "John Byro, an Assyrian farmer", "Mourad"], a: 2 },
+    { q: "Change into indirect speech: He said, 'I am working hard.'", o: ["He said that he was working hard.", "He says that he is working hard.", "He told he worked hard.", "He said he works hard."], a: 0 },
+    { q: "Choose the correct preposition: 'She is fond ___ music.'", o: ["in", "of", "with", "for"], a: 1 },
+    { q: "Which part of speech is the word 'Quickly'?", o: ["Adjective", "Noun", "Adverb", "Verb"], a: 2 }
   ],
   "10": [
-    { q: "√5 किस प्रकार की संख्या है?", o: ["अपरिमेय संख्या", "परिमेय संख्या", "पूर्णांक", "प्राकृत संख्या"], a: 0 },
-    { q: "दो संख्याओं का गुणनफल 1600 तथा HCF = 5 है, तो उनका LCM क्या होगा?", o: ["320", "160", "800", "400"], a: 0 },
-    { q: "द्विघात बहुपद ax² + bx + c के शून्यकों का योगफल (α + β) क्या होता है?", o: ["-b/a", "c/a", "b/a", "-c/a"], a: 0 },
-    { q: "रैखिक समीकरण युग्म में यदि a₁/a₂ ≠ b₁/b₂ हो तो हल होंगे:", o: ["एक अद्वितीय हल", "कोई हल नहीं", "अनेक हल", "दो हल"], a: 0 },
-    { q: "द्विघात समीकरण 2x² - 4x + 3 = 0 का विविक्तकर (D) क्या होगा?", o: ["-8", "8", "-16", "24"], a: 0 },
-    { q: "A.P. 2, 7, 12, ... का 10वाँ पद क्या होगा?", o: ["47", "42", "52", "37"], a: 0 },
-    { q: "प्रथम n धन पूर्णांकों का योग ज्ञात करने का सूत्र क्या है?", o: ["n(n+1)/2", "n(n-1)/2", "n²/2", "2n+1"], a: 0 },
-    { q: "सभी वृत्त परस्पर कैसे होते हैं?", o: ["समरूप", "सर्वांगसम", "असमान", "बराबर"], a: 0 },
-    { q: "बिंदु (-3, 4) किस चतुर्थांश में स्थित है?", o: ["द्वितीय चतुर्थांश", "प्रथम चतुर्थांश", "तृतीय चतुर्थांश", "चतुर्थ चतुर्थांश"], a: 0 },
-    { q: "मूल बिंदु (Origin) के निर्देशांक क्या होते हैं?", o: ["(0, 0)", "(1, 1)", "(0, 1)", "(1, 0)"], a: 0 },
-    { q: "बिंदुओं (2, 3) और (4, 1) के बीच की दूरी क्या होगी?", o: ["2√2", "4√2", "8", "2"], a: 0 },
-    { q: "sin² 30° + cos² 30° का मान क्या होगा?", o: ["1", "0", "1/2", "2"], a: 0 },
-    { q: "यदि tan θ = 4/3 हो, तो sin θ का मान क्या होगा?", o: ["4/5", "3/5", "5/4", "3/4"], a: 0 },
-    { q: "tan 45° का मान क्या होता है?", o: ["1", "0", "1/√3", "√3"], a: 0 },
-    { q: "वृत्त की सबसे बड़ी जीवा को क्या कहा जाता है?", o: ["व्यास", "त्रिज्या", "चाप", "स्पर्श रेखा"], a: 0 },
-    { q: "वृत्त के किसी बाह्य बिंदु से खींची जा सकने वाली स्पर्श रेखाओं की अधिकतम संख्या क्या है?", o: ["2", "1", "अनंत", "3"], a: 0 },
-    { q: "त्रिज्या r वाले वृत्त के एक त्रिज्यखंड का क्षेत्रफल क्या होता है (कोण θ हो)?", o: ["(θ/360°) × πr²", "(θ/180°) × πr", "2πr", "πr²"], a: 0 },
-    { q: "एक बेलन के आयतन का सूत्र क्या है?", o: ["πr²h", "2πrh", "4/3 πr³", "1/3 πr²h"], a: 0 },
-    { q: "आंकड़ों का बहुलक, माध्य और माध्यक के बीच आनुभविक संबंध क्या है?", o: ["बहुलक = 3 माध्यक - 2 माध्य", "बहुलक = 2 माध्यक - 3 माध्य", "माध्य = 3 बहुलक - माध्यक", "माध्यक = बहुलक + माध्य"], a: 0 },
-    { q: "एक असंभव घटना की प्रायिकता क्या होती है?", o: ["0", "1", "1/2", "अपरिभाषित"], a: 0 },
-    { q: "लोहे पर जंग लगना किस प्रकार की रासायनिक अभिक्रिया है?", o: ["संक्षारण (उपचयन)", "अपचयन", "विस्थापन", "उदासीनीकरण"], a: 0 },
-    { q: "चिप्स के पैकेट में कौन सी अक्रिय गैस भरी जाती है?", o: ["नाइट्रोजन", "ऑक्सीजन", "हाइड्रोजन", "क्लोरीन"], a: 0 },
-    { q: "शुद्ध जल का pH मान कितना होता है?", o: ["7", "0", "14", "1"], a: 0 },
-    { q: "अम्ल नीले लिटमस पत्र को किस रंग में बदल देता है?", o: ["लाल", "हरा", "पीला", "रंगहीन"], a: 0 },
-    { q: "बेकिंग सोडा (खाने का सोडा) का रासायनिक सूत्र क्या है?", o: ["NaHCO₃", "Na₂CO₃·10H₂O", "NaOH", "CaOCl₂"], a: 0 },
-    { q: "कमरे के ताप पर द्रव अवस्था में पाई जाने वाली धातु कौन सी है?", o: ["पारा (Mercury)", "ब्रोमीन", "सोडियम", "लोहा"], a: 0 },
-    { q: "विद्युत की सबसे अच्छी सुचालक धातु कौन सी है?", o: ["चांदी (Silver)", "तांबा", "सोना", "एल्युमिनियम"], a: 0 },
-    { q: "पादपों में जाइलम का मुख्य कार्य क्या है?", o: ["जल का वहन", "भोजन का वहन", "ऑक्सीजन वहन", "अमीनो अम्ल वहन"], a: 0 },
-    { q: "मानव हृदय में कितने कोष्ठ होते हैं?", o: ["4", "2", "3", "6"], a: 0 },
-    { q: "मानव शरीर की सबसे बड़ी ग्रंथि कौन सी है?", o: ["यकृत (Liver)", "अग्न्याशय", "थायरॉयड", "पीयूष"], a: 0 },
-    { q: "तंत्रिका तंत्र की संरचनात्मक एवं क्रियात्मक इकाई क्या है?", o: ["न्यूरॉन", "नेफ्रॉन", "कोशिका", "डीएनए"], a: 0 },
-    { q: "आनुवंशिकी का जनक किन्हें कहा जाता है?", o: ["ग्रेगर जॉन मेंडल", "चार्ल्स डार्विन", "लामार्क", "रॉबर्ट हुक"], a: 0 },
-    { q: "समतल दर्पण की फोकस दूरी कैसी होती है?", o: ["अनंत", "शून्य", "25 cm", "-25 cm"], a: 0 },
-    { q: "गाड़ियों में पीछे का दृश्य देखने के लिए किस दर्पण का उपयोग होता है?", o: ["उत्तल दर्पण", "अवतल दर्पण", "समतल दर्पण", "उत्तल लेंस"], a: 0 },
-    { q: "मानव नेत्र में किसी वस्तु का प्रतिबिंब कहाँ बनता है?", o: ["रेटिना (दृष्टिपटल) पर", "कॉर्निया पर", "पुतली पर", "परितारिका पर"], a: 0 },
-    { q: "विद्युत धारा मापने वाले यंत्र को क्या कहा जाता है?", o: ["ऐमीटर (Ammeter)", "वोल्टमीटर", "गैल्वेनोमीटर", "ओह्ममीटर"], a: 0 },
-    { q: "विद्युत प्रतिरोध का SI मात्रक क्या है?", o: ["ओम (Ω)", "एम्पीयर", "वोल्ट", "जूल"], a: 0 },
-    { q: "डायनेमो (जनरेटर) यांत्रिक ऊर्जा को किस ऊर्जा में बदलता है?", o: ["विद्युत ऊर्जा में", "ध्वनि ऊर्जा में", "प्रकाश ऊर्जा में", "रासायनिक ऊर्जा में"], a: 0 },
-    { q: "ओजोन परत वायुमंडल के किस हानिकारक विकिरण से रक्षा करती है?", o: ["पराबैंगनी किरणें (UV Rays)", "अवरक्त किरणें", "गामा किरणें", "एक्स-रे"], a: 0 },
-    { q: "यंग इटली की स्थापना किसने की थी?", o: ["मेत्सिनी", "कावूर", "गैरीबाल्डी", "बिस्मार्क"], a: 0 },
-    { q: "जालियांवाला बाग हत्याकांड की घटना कब घटी थी?", o: ["13 अप्रैल 1919", "15 अगस्त 1919", "10 मई 1857", "26 जनवरी 1930"], a: 0 },
-    { q: "हिंद स्वराज नामक प्रसिद्ध पुस्तक किसने लिखी थी?", o: ["महात्मा गांधी", "जवाहरलाल नेहरू", "सुभाष चंद्र बोस", "तिलक"], a: 0 },
-    { q: "काली मिट्टी किस फसल की खेती के लिए सबसे उपयुक्त मानी जाती है?", o: ["कपास", "चावल", "गेहूँ", "चाय"], a: 0 },
-    { q: "सुंदरवन राष्ट्रीय उद्यान भारत के किस राज्य में स्थित है?", o: ["पश्चिम बंगाल", "असम", "ओडिशा", "बिहार"], a: 0 },
-    { q: "भारत का सबसे लंबा बांध कौन सा है?", o: ["हीराकुंड बांध", "भाखड़ा नांगल", "टिहरी बांध", "सरदार सरोवर"], a: 0 },
-    { q: "भारत में किस प्रकार की शासन व्यवस्था अपनाई गई है?", o: ["लोकतांत्रिक एवं संघीय", "राजतंत्रीय", "तानाशाही", "एकात्मक"], a: 0 },
-    { q: "समवर्ती सूची के विषयों पर कानून बनाने का अधिकार किसे है?", o: ["केंद्र एवं राज्य दोनों को", "केवल केंद्र को", "केवल राज्य को", "राष्ट्रपति को"], a: 0 },
-    { q: "भारत में करेंसी नोट जारी करने का अधिकार किसके पास है?", o: ["भारतीय रिज़र्व बैंक (RBI)", "स्टेट बैंक", "वित्त मंत्रालय", "संसद"], a: 0 },
-    { q: "विश्व व्यापार संगठन (WTO) की स्थापना किस वर्ष हुई थी?", o: ["1995", "1990", "2000", "1985"], a: 0 },
-    { q: "उपभोक्ता संरक्षण अधिनियम (COPRA) भारत में कब लागू किया गया?", o: ["1986", "1991", "2005", "1980"], a: 0 }
+    { q: "यूक्लिड विभाजन एल्गोरिथ्म से दो धनात्मक पूर्णांकों 255 और 867 का HCF क्या होगा?", o: ["102", "51", "17", "85"], a: 1 },
+    { q: "संख्या 35/50 का दशमलव प्रसार कैसा होगा?", o: ["शांत (Terminating)", "अशांत आवर्ती", "अशांत अनावर्ती", "अपरिमेय"], a: 0 },
+    { q: "द्विघात बहुपद x² - 3 के शून्यक क्या होंगे?", o: ["3 और -3", "9 और -9", "+√3 और -√3", "+√3 और +√3"], a: 2 },
+    { q: "यदि द्विघात बहुपद के शून्यक 2 और -5 हों, तो वह बहुपद क्या होगा?", o: ["x² - 3x - 10", "x² + 3x - 10", "x² + 7x + 10", "x² - 7x + 10"], a: 1 },
+    { q: "समीकरण युग्म x + 2y = 5 और 3x + 6y = 15 के कितने हल होंगे?", o: ["एक अद्वितीय हल", "कोई हल नहीं", "अपरिमित रूप से अनेक हल (संपाती रेखाएँ)", "दो हल"], a: 2 },
+    { q: "k के किस मान के लिए द्विघात समीकरण 2x² + kx + 8 = 0 के दोनों मूल बराबर होंगे?", o: ["±8", "±4", "±16", "±2"], a: 0 },
+    { q: "द्विघात समीकरण x² - 5x + 6 = 0 के मूल क्या होंगे?", o: ["-2 और -3", "2 और 3", "1 और 6", "-1 और -6"], a: 1 },
+    { q: "A.P. 7, 13, 19, ..., 205 में कुल कितने पद (n) हैं?", o: ["33", "35", "34", "30"], a: 2 },
+    { q: "A.P. 10, 7, 4, ... का प्रथम ऋणात्मक पद कौन सा होगा?", o: ["-2 (5वाँ पद)", "-5", "-1", "-8"], a: 0 },
+    { q: "प्रथम 20 विषम प्राकृत संख्याओं का योग क्या होगा?", o: ["200", "400 (n² सूत्र से)", "210", "190"], a: 1 },
+    { q: "यदि दो त्रिभुज ABC और DEF में AB/DE = BC/FD हो, तो वे समरूप होंगे जब:", o: ["∠A = ∠D", "∠B = ∠E", "∠B = ∠D", "∠A = ∠F"], a: 2 },
+    { q: "बिंदुओं P(-6, 8) की मूल बिंदु (0, 0) से दूरी क्या होगी?", o: ["10 मात्रक", "14 मात्रक", "2√7 मात्रक", "8 मात्रक"], a: 0 },
+    { q: "बिंदुओं A(2, 8) और B(6, 4) को मिलाने वाले रेखाखंड के मध्य बिंदु के निर्देशांक क्या होंगे?", o: ["(8, 12)", "(4, 6)", "(2, 2)", "(4, 4)"], a: 1 },
+    { q: "यदि 15 cot A = 8 हो, तो sin A का मान क्या होगा?", o: ["8/17", "17/15", "15/17", "8/15"], a: 2 },
+    { q: "मान ज्ञात कीजिए: (sin 18° / cos 72°)?", o: ["1", "0", "1/2", "√3"], a: 0 },
+    { q: "यदि sec 4A = cosec (A - 20°) हो, जहाँ 4A न्यूनकोण है, तो A का मान क्या होगा?", o: ["20°", "22°", "30°", "25°"], a: 1 },
+    { q: "भूमि के एक बिंदु से, जो मीनार के पाद से 30m दूरी पर है, शिखर का उन्नयन कोण 30° है। मीनार की ऊँचाई क्या होगी?", o: ["30√3 m", "15 m", "10√3 m", "20 m"], a: 2 },
+    { q: "वृत्त के केंद्र पर किसी चाप द्वारा अंतरित कोण 90° है, तो वह चाप वृत्त का कौन सा भाग होगा?", o: ["एक-चौथाई (1/4)", "आधा (1/2)", "एक-तिहाई (1/3)", "संपूर्ण"], a: 0 },
+    { q: "त्रिज्या 7 cm वाले वृत्त के उस त्रिज्यखंड का क्षेत्रफल निकालें जिसका कोण 90° है?", o: ["77 cm²", "38.5 cm²", "154 cm²", "44 cm²"], a: 1 },
+    { q: "एक लंबवृत्तीय शंकु का कुल पृष्ठीय क्षेत्रफल क्या होता है?", o: ["πrl", "2πrh", "πr(l + r)", "1/3 πr²h"], a: 2 },
+    { q: "यदि किसी वृत्त की त्रिज्या दोगुनी कर दी जाए, तो नए और पुराने वृत्त के क्षेत्रफलों का अनुपात क्या होगा?", o: ["4:1", "2:1", "1:4", "8:1"], a: 0 },
+    { q: "एक पासे को फेंकने पर 4 से बड़ी विषम संख्या आने की प्रायिकता क्या होगी?", o: ["1/2", "1/6 (केवल अंक 5)", "1/3", "2/3"], a: 1 },
+    { q: "ताश की 52 पत्तों की गड्डी से एक पत्ता निकालने पर उसके इक्का (Ace) होने की प्रायिकता क्या है?", o: ["1/52", "4/13", "1/13 (4/52)", "1/4"], a: 2 },
+    { q: "समीकरण Fe + CuSO₄ → FeSO₄ + Cu किस प्रकार की रासायनिक अभिक्रिया का उदाहरण है?", o: ["विस्थापन अभिक्रिया", "संयोजन अभिक्रिया", "द्विविस्थापन", "अपघटन"], a: 0 },
+    { q: "सिल्वर क्लोराइड (AgCl) को सूर्य के प्रकाश में रखने पर उसका रंग कैसा हो जाता है?", o: ["सफेद", "धूसर (Grey)", "पीला", "नीला"], a: 1 },
+    { q: "टार्टरिक अम्ल किस प्राकृतिक स्रोत में पाया जाता है?", o: ["सिरका में", "टमाटर में", "इमली में", "संतरा में"], a: 2 },
+    { q: "प्लास्टर ऑफ पेरिस (POP) का सही रासायनिक सूत्र क्या है?", o: ["CaSO₄·½H₂O", "CaSO₄·2H₂O", "CaSO₄·5H₂O", "CaSO₄"], a: 0 },
+    { q: "धातु के ऑक्साइड सामान्यतः किस प्रकृति के होते हैं?", o: ["अम्लीय प्रकृति के", "क्षारकीय प्रकृति के", "उदासीन", "उभयधर्मी"], a: 1 },
+    { q: "सीसा एवं टिन (Lead and Tin) की मिश्रधातु को क्या कहते हैं?", o: ["कांसा", "पीतल", "सोल्डर (टांका)", "स्टेनलेस स्टील"], a: 2 },
+    { q: "कार्बन के बाहरी कोश में कितने संयोजी इलेक्ट्रॉन होते हैं?", o: ["4", "2", "6", "8"], a: 0 },
+    { q: "मीथेन (CH₄) में सहसंयोजक आबंधों (Covalent bonds) की कुल संख्या कितनी होती है?", o: ["5", "4", "3", "8"], a: 1 },
+    { q: "स्वपोषी पोषण के लिए आवश्यक शर्तें क्या हैं?", o: ["केवल ऑक्सीजन", "केवल ग्लूकोज", "सूर्य का प्रकाश, क्लोरोफिल, CO₂ एवं जल", "नाइट्रोजन"], a: 2 },
+    { q: "मानव में वृक्क (Kidney) किस तंत्र का मुख्य भाग है?", o: ["उत्सर्जन तंत्र (Excretory System)", "श्वसन तंत्र", "परिवहन तंत्र", "पाचन तंत्र"], a: 0 },
+    { q: "इंसुलिन हार्मोन की कमी से कौन सा रोग उत्पन्न होता है?", o: ["घेंघा रोग", "मधुमेह (Diabetes)", "एनीमिया", "रतौंधी"], a: 1 },
+    { q: "पत्तियों का मुरझाना किस पादप हार्मोन के प्रभाव के कारण होता है?", o: ["ऑक्सिन", "जिबरेलिन", "एब्सिसिक अम्ल (Abscisic Acid)", "साइटोकाइनिन"], a: 2 },
+    { q: "अमीबा में प्रजनन मुख्य रूप से किस विधि द्वारा संपन्न होता है?", o: ["द्विखंडन विधि द्वारा", "मुकुलन द्वारा", "पुनरुद्भवन द्वारा", "बीजाणुजनन"], a: 0 },
+    { q: "मानव मादा के जनन तंत्र का भाग कौन सा नहीं है?", o: ["अंडाशय", "शुक्रवाहिका (यह नर जनन तंत्र है)", "गर्भाशय", "डिंबवाहिनी"], a: 1 },
+    { q: "मनुष्य की एक सामान्य कोशिका में गुणसूत्रों के कितने जोड़े पाए जाते हैं?", o: ["22 जोड़े", "24 जोड़े", "23 जोड़े (कुल 46)", "20 जोड़े"], a: 2 },
+    { q: "दाढ़ी बनाने (हजामत) के लिए किस दर्पण का उपयोग उपयुक्त माना जाता है?", o: ["अवतल दर्पण (बड़ा सीधा प्रतिबिंब)", "उत्तल दर्पण", "समतल दर्पण", "बेलनाकार"], a: 0 },
+    { q: "लेंस की क्षमता (Power of Lens) का SI मात्रक क्या होता है?", o: ["मीटर", "डाइऑप्टर (D)", "सेंटीमीटर", "वाट"], a: 1 },
+    { q: "सामान्य दृष्टि के वयस्क के लिए सुस्पष्ट दर्शन की अल्पतम दूरी कितनी होती है?", o: ["25 m", "2.5 cm", "25 cm", "अनंत"], a: 2 },
+    { q: "आकाश का नीला रंग प्रकाश की किस परिघटना के कारण दिखाई देता है?", o: ["प्रकाश का प्रकीर्णन (Scattering)", "परावर्तन", "अपवर्तन", "वर्ण विक्षेपण"], a: 0 },
+    { q: "विभवांतर मापने वाले यंत्र को क्या कहा जाता है?", o: ["ऐमीटर", "वोल्टमीटर (Voltmeter)", "गैल्वेनोमीटर", "ओह्ममीटर"], a: 1 },
+    { q: "1 किलोवाट घंटा (1 kWh) विद्युत ऊर्जा का जूल में मान कितना होता है?", o: ["3.6 × 10⁵ जूल", "1000 जूल", "3.6 × 10⁶ जूल", "3600 जूल"], a: 2 },
+    { q: "विद्युत चुम्बकीय प्रेरण की खोज किस वैज्ञानिक ने की थी?", o: ["माइकल फैराडे", "हंस क्रिश्चियन ओर्स्टेड", "आंद्रे एम्पीयर", "फ्लेमिंग"], a: 0 },
+    { q: "जर्मनी के एकीकरण का मुख्य वास्तुकार या कर्णधार कौन था?", o: ["कैसर विलियम प्रथम", "ओटो वॉन बिस्मार्क", "कावूर", "गैरीबाल्डी"], a: 1 },
+    { q: "गांधीजी ने असहयोग आंदोलन किस हिंसक घटना के बाद स्थगित कर दिया था?", o: ["जलियांवाला बाग कांड", "दांडी मार्च", "चौरी-चौरा कांड (1922)", "काकोरी कांड"], a: 2 },
+    { q: "काजू और चाय की खेती के लिए कौन सी मिट्टी सबसे अधिक उपयुक्त होती है?", o: ["लेटराइट मिट्टी", "काली मिट्टी", "जलोढ़ मिट्टी", "मरुस्थलीय मिट्टी"], a: 0 },
+    { q: "भारत में वन्यजीव संरक्षण अधिनियम किस वर्ष लागू किया गया था?", o: ["1980 में", "1972 में", "1986 में", "1992 में"], a: 1 },
+    { q: "श्रीलंका किस वर्ष एक स्वतंत्र राष्ट्र बना था?", o: ["1947 में", "1950 में", "1948 में", "1956 में"], a: 2 }
   ],
   "9": [
-    { q: "क्या शून्य एक परिमेय संख्या है?", o: ["हाँ", "नहीं", "कहा नहीं जा सकता", "अपरिभाषित"], a: 0 },
-    { q: "1/(√7 - √6) के हर का परिमेयकरण करने पर प्राप्त मान क्या होगा?", o: ["√7 + √6", "√7 - √6", "1", "13"], a: 0 },
-    { q: "(64)^(1/2) का मान क्या होगा?", o: ["8", "16", "32", "4"], a: 0 },
-    { q: "बहुपद 5x³ + 4x² + 7x की घात क्या है?", o: ["3", "2", "1", "0"], a: 0 },
-    { q: "बहुपद p(x) = 2x + 5 का शून्यक क्या होगा?", o: ["-5/2", "5/2", "-2/5", "2/5"], a: 0 },
-    { q: "x² - y² का गुणनखंड सूत्र क्या है?", o: ["(x - y)(x + y)", "(x - y)²", "(x + y)²", "x² + 2xy + y²"], a: 0 },
-    { q: "कार्तीय तल में क्षैतिज रेखा को क्या कहा जाता है?", o: ["x-अक्ष", "y-अक्ष", "मूल बिंदु", "निर्देशांक"], a: 0 },
-    { q: "बिंदु (0, -4) किस अक्ष पर स्थित है?", o: ["y-अक्ष पर", "x-अक्ष पर", "प्रथम चतुर्थांश में", "मूल बिंदु पर"], a: 0 },
-    { q: "समीकरण 2x + 3y = 12 में यदि x = 0 हो तो y का मान क्या होगा?", o: ["4", "3", "6", "12"], a: 0 },
-    { q: "यूक्लिड किस देश के महान गणितज्ञ थे?", o: ["यूनान (Greece)", "भारत", "मिस्र", "रोम"], a: 0 },
-    { q: "एक बिंदु से होकर कितनी रेखाएँ खींची जा सकती हैं?", o: ["अनंत", "केवल 1", "केवल 2", "100"], a: 0 },
-    { q: "यदि दो रेखाएँ परस्पर प्रतिच्छेद करती हैं तो शीर्षाभिमुख कोण कैसे होते हैं?", o: ["बराबर", "असमान", "पूरक", "संपूरक"], a: 0 },
-    { q: "त्रिभुज के तीनों अंतः कोणों का योग कितना होता है?", o: ["180°", "360°", "90°", "270°"], a: 0 },
-    { q: "समबाहु त्रिभुज का प्रत्येक कोण कितने अंश का होता है?", o: ["60°", "45°", "90°", "120°"], a: 0 },
-    { q: "एक चतुर्भुज के चारों अंतः कोणों का योग कितना होता है?", o: ["360°", "180°", "540°", "720°"], a: 0 },
-    { q: "चक्रीय चतुर्भुज के सम्मुख कोणों का योग कितना होता है?", o: ["180°", "360°", "90°", "270°"], a: 0 },
-    { q: "अर्धवृत्त का कोण कैसा होता है?", o: ["समकोण (90°)", "न्यूनकोण", "अधिककोण", "ऋजुकोण"], a: 0 },
-    { q: "हीरोन के सूत्र में त्रिभुज का क्षेत्रफल ज्ञात करने का सूत्र क्या है?", o: ["√[s(s-a)(s-b)(s-c)]", "1/2 × आधार × ऊँचाई", "s(s-a)", "abc/4R"], a: 0 },
-    { q: "एक गोले के पृष्ठीय क्षेत्रफल का सूत्र क्या है?", o: ["4πr²", "2πr²", "3πr²", "4/3 πr³"], a: 0 },
-    { q: "प्रथम 5 प्राकृत संख्याओं का समांतर माध्य क्या होगा?", o: ["3", "2", "4", "5"], a: 0 },
-    { q: "पदार्थ के कणों के बीच क्या होता है?", o: ["रिक्त स्थान एवं आकर्षण बल", "स्थिरता", "विद्युत आवेश", "कोई संबंध नहीं"], a: 0 },
-    { q: "जल का क्वथनांक केल्विन पैमाने पर कितना होता है?", o: ["373 K", "273 K", "100 K", "0 K"], a: 0 },
-    { q: "ठोस से सीधे गैस बनने की प्रक्रिया को क्या कहते हैं?", o: ["उर्ध्वपातन (Sublimation)", "वाष्पीकरण", "संघनन", "गलनांक"], a: 0 },
-    { q: "दूध किस प्रकार का मिश्रण है?", o: ["कोलाइड (इमल्शन)", "समांगी विलयन", "निलंबन", "यौगिक"], a: 0 },
-    { q: "परमाणु के नाभिक में कौन से मूल कण उपस्थित होते हैं?", o: ["प्रोटॉन और न्यूट्रॉन", "केवल इलेक्ट्रॉन", "इलेक्ट्रॉन और प्रोटॉन", "न्यूट्रॉन और इलेक्ट्रॉन"], a: 0 },
-    { q: "ऑक्सीजन का परमाणु द्रव्यमान कितना होता है?", o: ["16 u", "8 u", "32 u", "12 u"], a: 0 },
-    { q: "कोशिका की खोज 1665 में किसने की थी?", o: ["रॉबर्ट हुक", "रॉबर्ट ब्राउन", "ल्यूवेनहॉक", "शलीडेन"], a: 0 },
-    { q: "कोशिका का 'बिजलीघर' किसे कहा जाता है?", o: ["माइटोकॉन्ड्रिया", "राइबोसोम", "लाइसोसोम", "गॉल्जीकाय"], a: 0 },
-    { q: "लाइसोसोम को क्या कहा जाता है?", o: ["आत्मघाती थैली (Suicide Bag)", "प्रोटीन की फैक्ट्री", "रसोईघर", "नियंत्रक केंद्र"], a: 0 },
-    { q: "पौधों में लचीलेपन का गुण किस ऊतक के कारण होता है?", o: ["कॉलेनकाइमा", "पैरेनकाइमा", "स्क्लेरेनकाइमा", "जाइलम"], a: 0 },
-    { q: "रक्त (Blood) किस प्रकार का ऊतक है?", o: ["तरल संयोजी ऊतक", "उपकला ऊतक", "पेशीय ऊतक", "तंत्रिका ऊतक"], a: 0 },
-    { q: "वेग में परिवर्तन की दर को क्या कहते हैं?", o: ["त्वरण (Acceleration)", "चाल", "दूरी", "विस्थापन"], a: 0 },
-    { q: "बल (Force) का SI मात्रक क्या होता है?", o: ["न्यूटन (N)", "जूल", "पास्कल", "वाट"], a: 0 },
-    { q: "न्यूटन के गति का प्रथम नियम किस संकल्पना को व्यक्त करता है?", o: ["जड़त्व (Inertia)", "संवेग", "कार्य", "ऊर्जा"], a: 0 },
-    { q: "सार्वत्रिक गुरुत्वाकर्षण नियतांक (G) का मान कितना होता है?", o: ["6.67 × 10⁻¹¹ N m²/kg²", "9.8 m/s²", "1.6 × 10⁻¹⁹", "3 × 10⁸ m/s"], a: 0 },
-    { q: "कार्य करने की दर को क्या कहा जाता है?", o: ["शक्ति (Power)", "ऊर्जा", "बल", "संवेग"], a: 0 },
-    { q: "ध्वनि तरंगें किस प्रकार की तरंगें होती हैं?", o: ["अनुदैर्ध्य यांत्रिक तरंगें", "अनुप्रस्थ तरंगें", "विद्युत चुंबकीय तरंगें", "स्थिर तरंगें"], a: 0 },
-    { q: "फ्रांसीसी क्रांति किस वर्ष प्रारंभ हुई थी?", o: ["1789", "1776", "1804", "1815"], a: 0 },
-    { q: "फ्रांस का प्रसिद्ध दार्शनिक रूसो ने कौन सी पुस्तक लिखी थी?", o: ["द सोशल कॉन्ट्रैक्ट", "द स्पिरिट ऑफ लॉज", "दास कैपिटल", "मीन कैम्फ"], a: 0 },
-    { q: "रूस की संसद को किस नाम से जाना जाता है?", o: ["ड्यूमा (Duma)", "संसद", "कांग्रेस", "डाइट"], a: 0 },
-    { q: "हिटलर किस देश का तानाशाह था?", o: ["जर्मनी", "इटली", "रूस", "जापान"], a: 0 },
-    { q: "क्षेत्रफल की दृष्टि से विश्व में भारत का कौन सा स्थान है?", o: ["सातवाँ", "पाँचवाँ", "दूसरा", "दसवाँ"], a: 0 },
-    { q: "भारत की मानक याम्योत्तर रेखा कौन सी है?", o: ["82°30' पूर्व", "68°7' पूर्व", "97°25' पूर्व", "23°30' उत्तर"], a: 0 },
-    { q: "विश्व की सबसे ऊँची पर्वत चोटी माउंट एवरेस्ट किस देश में स्थित है?", o: ["नेपाल", "भारत", "चीन", "भूटान"], a: 0 },
-    { q: "नर्मदा नदी का उद्गम स्थल कहाँ है?", o: ["अमरकंटक", "नासिक", "महाबलेश्वर", "गंगोत्री"], a: 0 },
-    { q: "भारत में सबसे कम वर्षा कहाँ होती है?", o: ["लेह (लद्दाख)", "जैसलमेर", "चेरापूंजी", "बीकानेर"], a: 0 },
-    { q: "'लोकतंत्र जनता का, जनता द्वारा और जनता के लिए शासन है' यह कथन किसका है?", o: ["अब्राहम लिंकन", "अरस्तू", "महात्मा गांधी", "जॉर्ज वाशिंगटन"], a: 0 },
-    { q: "दक्षिण अफ्रीका में रंगभेद नीति के खिलाफ लंबा संघर्ष किसने किया?", o: ["नेल्सन मंडेला", "मार्टिन लूथर किंग", "महात्मा गांधी", "डेसमंड टूटू"], a: 0 },
-    { q: "पालमपुर गाँव की मुख्य आर्थिक गतिविधि क्या थी?", o: ["कृषि", "डेयरी", "दुकानदारी", "लघु उद्योग"], a: 0 },
-    { q: "भारत में हरित क्रांति का मुख्य प्रभाव किन फसलों पर पड़ा?", o: ["गेहूँ और चावल", "दालें और तिलहन", "कपास और जूट", "मक्का और बाजरा"], a: 0 }
+    { q: "3 और 4 के ठीक बीच की परिमेय संख्या कौन सी होगी?", o: ["5/2", "7/2 (3.5)", "3/4", "7/4"], a: 1 },
+    { q: "व्यंजक (3 + √3)(3 - √3) का सरलतम मान क्या होगा?", o: ["9", "3", "6 (9 - 3)", "12"], a: 2 },
+    { q: "(125)^(-1/3) का संख्यात्मक मान क्या होगा?", o: ["1/5", "5", "-5", "25"], a: 0 },
+    { q: "बहुपद 2 - x² + x³ में x² का गुणांक (Coefficient) क्या है?", o: ["1", "-1", "2", "0"], a: 1 },
+    { q: "यदि x + 1 बहुपद 2x² + kx का एक गुणनखंड हो, तो k का मान क्या होगा?", o: ["-2", "1", "2", "0"], a: 2 },
+    { q: "सर्वसमिका (a - b)³ का सही विस्तारित रूप क्या है?", o: ["a³ - b³ - 3ab(a - b)", "a³ + b³ - 3ab", "a³ - b³ + 3ab", "a³ - 3a²b"], a: 0 },
+    { q: "बिंदु (-4, -6) कार्तीय तल के किस चतुर्थांश में स्थित है?", o: ["प्रथम", "तृतीय चतुर्थांश", "द्वितीय", "चतुर्थ"], a: 1 },
+    { q: "बिंदु (3, -2) की x-अक्ष से लांबिक दूरी कितनी होगी?", o: ["3 मात्रक", "-2 मात्रक", "2 मात्रक", "5 मात्रक"], a: 2 },
+    { q: "रैखिक समीकरण 2x + 5y = 20 का आलेख y-अक्ष को किस बिंदु पर काटेगा?", o: ["(0, 4)", "(10, 0)", "(4, 0)", "(0, 10)"], a: 0 },
+    { q: "एक ठोस की कितनी विमाएँ (Dimensions) होती हैं?", o: ["2", "3 विमाएँ (लंबाई, चौड़ाई, ऊँचाई)", "1", "0"], a: 1 },
+    { q: "पूरक कोणों के एक युग्म में यदि एक कोण 35° हो, तो दूसरा कोण क्या होगा?", o: ["145°", "65°", "55° (90 - 35)", "45°"], a: 2 },
+    { q: "यदि किसी त्रिभुज के तीनों कोणों का अनुपात 1:2:3 हो, तो सबसे बड़ा कोण क्या होगा?", o: ["90°", "60°", "30°", "120°"], a: 0 },
+    { q: "समद्विबाहु त्रिभुज ABC में AB = AC और ∠B = 50° हो, तो ∠A का मान क्या होगा?", o: ["50°", "80°", "100°", "65°"], a: 1 },
+    { q: "एक समांतर चतुर्भुज के सम्मुख कोण कैसे होते हैं?", o: ["पूरक", "असमान", "समान (बराबर)", "समकोण"], a: 2 },
+    { q: "आयत के विकर्णों के बीच परस्पर क्या संबंध होता है?", o: ["वे लंबाई में बराबर होते हैं और समद्विभाजित करते हैं", "वे लंबवत होते हैं", "वे असमान होते हैं", "कोई संबंध नहीं"], a: 0 },
+    { q: "वृत्त के केंद्र से 8 cm लंबी जीवा पर डाले गए लंब की लंबाई 3 cm है। वृत्त की त्रिज्या क्या होगी?", o: ["4 cm", "5 cm (पाइथागोरस से)", "6 cm", "7 cm"], a: 1 },
+    { q: "चक्रीय चतुर्भुज ABCD में यदि ∠A = 70° हो, तो सम्मुख कोण ∠C का मान क्या होगा?", o: ["70°", "90°", "110° (180 - 70)", "120°"], a: 2 },
+    { q: "एक त्रिभुज की भुजाएँ 6 cm, 8 cm और 10 cm हैं। इसका क्षेत्रफल क्या होगा?", o: ["24 cm²", "48 cm²", "30 cm²", "40 cm²"], a: 0 },
+    { q: "एक शंकु की त्रिज्या 7 cm और तिर्यक ऊँचाई 10 cm है। इसका वक्र पृष्ठ क्षेत्रफल क्या होगा?", o: ["140 cm²", "220 cm²", "440 cm²", "70 cm²"], a: 1 },
+    { q: "7 cm त्रिज्या वाले एक अर्धगोले का कुल पृष्ठीय क्षेत्रफल क्या होगा?", o: ["308 cm²", "154 cm²", "462 cm² (3πr²)", "616 cm²"], a: 2 },
+    { q: "आंकड़ों 5, 9, 7, 5, 8, 5, 6, 5 का बहुलक क्या होगा?", o: ["5", "8", "7", "9"], a: 0 },
+    { q: "एक सिक्के को 100 बार उछालने पर 55 बार चित (Head) आता है। पट (Tail) आने की प्रायिकता क्या है?", o: ["0.55", "45/100 = 0.45", "0.50", "1.0"], a: 1 },
+    { q: "गर्मियों में घड़े (मटके) का जल किस प्रक्रिया के कारण शीतल रहता है?", o: ["संघनन", "उर्ध्वपातन", "वाष्पीकरण (Evaporation)", "विसरण"], a: 2 },
+    { q: "बर्फ का गलनांक (Melting Point) केल्विन पैमाने पर कितना होता है?", o: ["273.15 K (0°C)", "373 K", "100 K", "0 K"], a: 0 },
+    { q: "टिंडल प्रभाव (Tyndall Effect) प्रकाश की किस परिघटना का उदाहरण है?", o: ["परावर्तन", "कोलाइडल कणों द्वारा प्रकाश का प्रकीर्णन", "अपवर्तन", "अवशोषण"], a: 1 },
+    { q: "सोडियम (Na) का सही इलेक्ट्रॉनिक विन्यास क्या है?", o: ["2, 8, 2", "2, 8", "2, 8, 1", "2, 8, 3"], a: 2 },
+    { q: "जल के एक अणु (H₂O) में हाइड्रोजन और ऑक्सीजन के द्रव्यमानों का अनुपात क्या होता है?", o: ["1:8", "1:2", "8:1", "2:1"], a: 0 },
+    { q: "कार्बन का परमाणु क्रमांक 6 है। इसके एक मोल में परमाणुओं की संख्या कितनी होगी?", o: ["6 × 10²³", "6.022 × 10²³ (आवोगाद्रो संख्या)", "12 × 10²³", "1.6 × 10⁻¹⁹"], a: 1 },
+    { q: "पादप कोशिका की कोशिका भित्ति (Cell Wall) मुख्य रूप से किसकी बनी होती है?", o: ["प्रोटीन की", "लिपिड की", "सेलूलोज़ की", "स्टार्च की"], a: 2 },
+    { q: "पादपों में रसोईघर या प्रकाश संश्लेषण का केंद्र कौन सा कोशिकांग है?", o: ["हरितलवक (Chloroplast)", "माइटोकॉन्ड्रिया", "गॉल्जीकाय", "लाइसोसोम"], a: 0 },
+    { q: "नारियल का रेशेदार छिलका किस ऊतक का बना होता है?", o: ["पैरेनकाइमा", "स्क्लेरेनकाइमा (दृढ़ोतक)", "कॉलेनकाइमा", "जाइलम"], a: 1 },
+    { q: "हृदय की पेशियाँ किस प्रकार की पेशियाँ होती हैं?", o: ["ऐच्छिक पेशियाँ", "कंकाल पेशियाँ", "अनैच्छिक एवं रेखित पेशियाँ", "चिकनी पेशियाँ"], a: 2 },
+    { q: "किसी गतिशील वस्तु द्वारा तय की गई दूरी और विस्थापन में क्या संबंध होता है?", o: ["दूरी ≥ विस्थापन", "दूरी < विस्थापन", "दूरी हमेशा बराबर होती है", "कोई संबंध नहीं"], a: 0 },
+    { q: "एकसमान वृत्तीय गति में वस्तु की चाल कैसी रहती है?", o: ["चाल बदलती है", "चाल अचर रहती है लेकिन दिशा बदलती है", "वेग स्थिर रहता है", "त्वरण शून्य रहता है"], a: 1 },
+    { q: "संवेग (Momentum) का SI मात्रक क्या होता है?", o: ["N m", "Joule", "kg m/s", "kg m/s²"], a: 2 },
+    { q: "रॉकेट का प्रक्षेपण न्यूटन के गति के किस नियम पर आधारित है?", o: ["तृतीय गति नियम (क्रिया-प्रतिक्रिया)", "प्रथम नियम", "द्वितीय नियम", "गुरुत्वाकर्षण नियम"], a: 0 },
+    { q: "पृथ्वी की सतह पर 60 kg द्रव्यमान वाली वस्तु का भार चंद्रमा पर कितना होगा?", o: ["600 N", "लगभग 100 N (भार = mg/6)", "60 N", "360 N"], a: 1 },
+    { q: "गतिज ऊर्जा का सूत्र क्या होता है?", o: ["mgh", "mv", "½ mv²", "F × s"], a: 2 },
+    { q: "सामान्य मानव कर्ण के लिए श्रव्यता की आवृत्ति परास कितनी होती है?", o: ["20 Hz से 20,000 Hz", "10 Hz से 10,000 Hz", "20,000 Hz से अधिक", "5 Hz से 500 Hz"], a: 0 },
+    { q: "1789 की क्रांति के समय फ्रांस की राजगद्दी पर कौन सा राजा आसीन था?", o: ["लुई चौदहवाँ", "लुई सोलहवाँ (Louis XVI)", "नेपोलियन", "लुई पंद्रहवाँ"], a: 1 },
+    { q: "फ्रांस में 'गिलोटिन' क्या था?", o: ["एक कर प्रणाली", "सैनिक छावनी", "सिर काटने वाला यंत्र", "न्यायालय"], a: 2 },
+    { q: "कार्ल मार्क्स ने अपनी प्रसिद्ध पुस्तक 'दास कैपिटल' में किस व्यवस्था का विरोध किया?", o: ["पूंजीवादी व्यवस्था का", "समाजवाद का", "साम्यवाद का", "लोकतंत्र का"], a: 0 },
+    { q: "नात्सी दल (Nazi Party) का सर्वोच्च नेता कौन था?", o: ["मुसोलिनी", "एडॉल्फ हिटलर", "बिस्मार्क", "गोएबल्स"], a: 1 },
+    { q: "भारत का सबसे पूर्वी देशांतर कौन सा है?", o: ["68°7' पूर्व", "82°30' पूर्व", "97°25' पूर्व", "77°6' पूर्व"], a: 2 },
+    { q: "उत्तराखंड, उत्तर प्रदेश, बिहार, पश्चिम बंगाल और सिक्किम की सीमाएँ किस देश को छूती हैं?", o: ["नेपाल को", "चीन को", "भूटान को", "म्यांमार को"], a: 0 },
+    { q: "प्रायद्वीपीय भारत की सबसे लंबी नदी कौन सी है जिसे 'दक्षिण गंगा' भी कहते हैं?", o: ["कृष्णा नदी", "गोदावरी नदी", "कावेरी नदी", "महानदी"], a: 1 },
+    { q: "भारत में मानसून का आगमन सामान्यतः किस महीने की शुरुआत में होता है?", o: ["मई में", "जुलाई में", "जून के प्रथम सप्ताह में", "अगस्त में"], a: 2 },
+    { q: "भारतीय संविधान का प्रारूप तैयार करने वाली प्रारूप समिति के अध्यक्ष कौन थे?", o: ["डॉ. भीमराव अम्बेडकर", "डॉ. राजेंद्र प्रसाद", "जवाहरलाल नेहरू", "सरदार पटेल"], a: 0 },
+    { q: "भारत में लोकसभा चुनाव लड़ने के लिए उम्मीदवार की न्यूनतम आयु कितनी होनी चाहिए?", o: ["18 वर्ष", "25 वर्ष", "21 वर्ष", "30 वर्ष"], a: 1 },
+    { q: "पालमपुर गाँव में सिंचाई का सबसे मुख्य साधन क्या था?", o: ["नहरें", "कुएँ", "बिजली से चलने वाले नलकूप (ट्यूबवेल)", "तालाब"], a: 2 }
   ],
   "8": [
-    { q: "-7/19 का योज्य प्रतिलोम क्या होगा?", o: ["7/19", "-19/7", "19/7", "0"], a: 0 },
-    { q: "-13 का गुणात्मक प्रतिलोम क्या होगा?", o: ["-1/13", "13", "1/13", "1"], a: 0 },
-    { q: "समीकरण 2x - 3 = 7 में x का मान क्या होगा?", o: ["5", "2", "4", "10"], a: 0 },
-    { q: "दो संख्याओं का अनुपात 5:3 है और उनका अंतर 18 है। बड़ी संख्या क्या होगी?", o: ["45", "27", "36", "54"], a: 0 },
-    { q: "एक सम बहुभुज की भुजाओं की संख्या क्या होगी यदि प्रत्येक बाह्य कोण 45° हो?", o: ["8", "6", "10", "12"], a: 0 },
-    { q: "चतुर्भुज के चारों अंतः कोणों का योग कितना होता है?", o: ["360°", "180°", "540°", "720°"], a: 0 },
-    { q: "वर्ग संख्या 25 का वर्गमूल क्या होगा?", o: ["5", "10", "15", "2.5"], a: 0 },
-    { q: "729 का वर्गमूल अभाज्य गुणनखंड विधि से क्या होगा?", o: ["27", "23", "29", "17"], a: 0 },
-    { q: "संख्या 64 का घनमूल क्या होगा?", o: ["4", "8", "16", "2"], a: 0 },
-    { q: "वह सबसे छोटी संख्या जिससे 252 को गुणा करने पर यह पूर्ण वर्ग बन जाए?", o: ["7", "2", "3", "5"], a: 0 },
-    { q: "840 रु. अंकित मूल्य वाली वस्तु 714 रु. में बेची जाती है, तो बट्टा क्या है?", o: ["126 रु.", "100 रु.", "140 रु.", "84 रु."], a: 0 },
-    { q: "बिक्री कर (GST) हमेशा किस मूल्य पर लगाया जाता है?", o: ["विक्रय मूल्य पर", "क्रय मूल्य पर", "अंकित मूल्य पर", "लागत मूल्य पर"], a: 0 },
-    { q: "चक्रवृद्धि ब्याज सूत्र A = P(1 + r/100)ⁿ में n क्या दर्शाता है?", o: ["समय (वर्षों में)", "दर", "मूलधन", "साधारण ब्याज"], a: 0 },
-    { q: "व्यंजक (2x + 5) और (4x - 3) का गुणनफल क्या होगा?", o: ["8x² + 14x - 15", "8x² - 15", "8x² + 20x - 15", "6x + 2"], a: 0 },
-    { q: "सर्वसमिका (a + b)² का विस्तारित रूप क्या होता है?", o: ["a² + 2ab + b²", "a² + b²", "a² - 2ab + b²", "2a + 2b"], a: 0 },
-    { q: "ऑयलर सूत्र F + V - E का मान किसी बहुफलक के लिए क्या होता है?", o: ["2", "0", "1", "4"], a: 0 },
-    { q: "एक घनाभ में कुल कितने फलक होते हैं?", o: ["6", "8", "12", "4"], a: 0 },
-    { q: "समचतुर्भुज का क्षेत्रफल ज्ञात करने का सूत्र क्या है?", o: ["1/2 × d₁ × d₂", "आधार × ऊँचाई", "भुजा²", "2(l+b)"], a: 0 },
-    { q: "एक बेलन के कुल पृष्ठीय क्षेत्रफल का सूत्र क्या है?", o: ["2πr(r + h)", "2πrh", "πr²h", "πrl"], a: 0 },
-    { q: "घातांक नियम के अनुसार (aᵐ)ⁿ का मान क्या होगा?", o: ["aᵐⁿ", "aᵐ⁺ⁿ", "aᵐ⁻ⁿ", "aᵐ/ⁿ"], a: 0 },
-    { q: "(3⁰ + 4⁻¹ + 5⁻¹)⁰ का मान क्या होगा?", o: ["1", "0", "12", "3"], a: 0 },
-    { q: "0.000085 का मानक वैज्ञानिक रूप क्या होगा?", o: ["8.5 × 10⁻⁵", "85 × 10⁻⁶", "8.5 × 10⁵", "0.85 × 10⁻⁴"], a: 0 },
-    { q: "7x - 42 का उभयनिष्ठ गुणनखंड करने पर क्या प्राप्त होगा?", o: ["7(x - 6)", "x - 6", "7(x - 42)", "7x(1 - 6)"], a: 0 },
-    { q: "x² + 8x + 16 का गुणनखंड क्या होगा?", o: ["(x + 4)²", "(x - 4)²", "(x + 8)(x + 2)", "(x + 16)"], a: 0 },
-    { q: "28x⁴ ÷ 56x का मान क्या होगा?", o: ["1/2 x³", "2x³", "1/2 x⁴", "x³"], a: 0 },
-    { q: "सजीवों की मूल संरचनात्मक इकाई क्या है?", o: ["कोशिका (Cell)", "ऊतक", "अंग", "रक्त"], a: 0 },
-    { q: "कोशिका में आनुवंशिक गुणों का वाहक कौन होता है?", o: ["जीन (क्रोमोसोम)", "राइबोसोम", "रसधानी", "कोशिका भित्ति"], a: 0 },
-    { q: "दूध को दही में बदलने वाला जीवाणु कौन सा है?", o: ["लैक्टोबैसिलस", "यीस्ट", "अमीबा", "राइजोबियम"], a: 0 },
-    { q: "मलेरिया रोग फैलाने वाले मादा एनोफिलीज़ मच्छर का वाहक कौन है?", o: ["प्रोटोजोआ (प्लाज्मोडियम)", "विषाणु", "जीवाणु", "कवक"], a: 0 },
-    { q: "धातुएँ सामान्यतः ऊष्मा एवं विद्युत की क्या होती हैं?", o: ["सुचालक", "कुचालक", "अर्धचालक", "अक्रिय"], a: 0 },
-    { q: "कौन सी अधातु कमरे के तापमान पर द्रव अवस्था में रहती है?", o: ["ब्रोमीन", "पारा", "आयोडीन", "सल्फर"], a: 0 },
-    { q: "सोने और चाँदी को पिघलाने के लिए सुनार ज्वाला के किस क्षेत्र का प्रयोग करता है?", o: ["सबसे बाहरी अदीप्त क्षेत्र (नीला)", "मध्य क्षेत्र", "आंतरिक काला क्षेत्र", "दीप्त पीला क्षेत्र"], a: 0 },
-    { q: "दहन के लिए कौन सी गैस परम आवश्यक है?", o: ["ऑक्सीजन", "नाइट्रोजन", "कार्बन डाइऑक्साइड", "हाइड्रोजन"], a: 0 },
-    { q: "किशोरावस्था की सामान्य आयु सीमा क्या मानी जाती है?", o: ["11 वर्ष से 19 वर्ष", "5 से 10 वर्ष", "20 से 30 वर्ष", "1 से 5 वर्ष"], a: 0 },
-    { q: "बल का प्रभाव किस पर निर्भर करता है?", o: ["परिमाण और दिशा दोनों पर", "केवल परिमाण पर", "केवल द्रव्यमान पर", "रंग पर"], a: 0 },
-    { q: "घर्षण बल हमेशा गति की दिशा के किस ओर कार्य करता है?", o: ["विपरीत दिशा में", "समान दिशा में", "लंबवत दिशा में", "किसी भी दिशा में"], a: 0 },
-    { q: "ध्वनि किस माध्यम में गमन नहीं कर सकती?", o: ["निर्वात में (Vacuum)", "हवा में", "लोहे में", "पानी में"], a: 0 },
-    { q: "आवृत्ति का मात्रक क्या है?", o: ["हर्ट्ज (Hz)", "डेसिबल", "मीटर", "सेकंड"], a: 0 },
-    { q: "भूकंप की तीव्रता मापने का पैमाना क्या कहलाता है?", o: ["रिक्टर पैमाना (Richter Scale)", "थर्मामीटर", "बैरोमीटर", "लैक्टोमीटर"], a: 0 },
-    { q: "आपतन कोण हमेशा किसके बराबर होता है?", o: ["परावर्तन कोण के", "अपवर्तन कोण के", "90° के", "शून्य के"], a: 0 },
-    { q: "हमारे सौरमंडल का सबसे बड़ा ग्रह कौन सा है?", o: ["बृहस्पति (Jupiter)", "शनि", "पृथ्वी", "मंगल"], a: 0 },
-    { q: "बक्सर का प्रसिद्ध युद्ध किस वर्ष लड़ा गया था?", o: ["1764", "1757", "1857", "1761"], a: 0 },
-    { q: "प्लासी के युद्ध के समय बंगाल का नवाब कौन था?", o: ["सिराजुद्दौला", "मीर जाफर", "मीर कासिम", "अलीवर्दी खान"], a: 0 },
-    { q: "1857 के सिपाही विद्रोह की शुरुआत सर्वप्रथम कहाँ से हुई थी?", o: ["मेरठ", "झांसी", "दिल्ली", "कानपुर"], a: 0 },
-    { q: "रैयतवाड़ी व्यवस्था मुख्य रूप से भारत के किस भाग में लागू की गई थी?", o: ["मद्रास और बंबई (दक्षिण भारत)", "बंगाल और बिहार", "पंजाब", "अवध"], a: 0 },
-    { q: "झारखंड में उलगुलान विद्रोह का नेतृत्व किसने किया था?", o: ["बिरसा मुंडा", "सिद्धो-कान्हू", "तिलका मांझी", "जतरा भगत"], a: 0 },
-    { q: "संसाधनों का सतर्कतापूर्वक उपयोग करना क्या कहलाता है?", o: ["सतत पोषणीय विकास / संरक्षण", "अंधाधुंध दोहन", "अपव्यय", "पुनर्चक्रण"], a: 0 },
-    { q: "भारतीय संविधान का जनक किसे कहा जाता है?", o: ["डॉ. भीमराव अम्बेडकर", "महात्मा गांधी", "डॉ. राजेंद्र प्रसाद", "जवाहरलाल नेहरू"], a: 0 },
-    { q: "लोकसभा में सदस्यों की अधिकतम संख्या कितनी हो सकती है?", o: ["552", "250", "545", "500"], a: 0 },
-    { q: "संसद के दो सत्रों के बीच अधिकतम कितने माह का अंतर हो सकता है?", o: ["6 माह", "3 माह", "12 माह", "9 माह"], a: 0 }
+    { q: "परिमेय संख्या -5/9 का योज्य प्रतिलोम (Additive Inverse) क्या होगा?", o: ["-9/5", "5/9", "9/5", "1"], a: 1 },
+    { q: "परिमेय संख्या 8/21 का गुणात्मक प्रतिलोम क्या होगा?", o: ["-21/8", "1", "21/8", "0"], a: 2 },
+    { q: "समीकरण 3x - 5 = 16 में चर x का मान क्या होगा?", o: ["7", "6", "8", "9"], a: 0 },
+    { q: "समीकरण 5t - 3 = 3t - 5 में t का मान क्या होगा?", o: ["1", "-1", "2", "-2"], a: 1 },
+    { q: "एक सम षट्भुज (Regular Hexagon) के सभी अंतः कोणों का कुल योग कितना होता है?", o: ["540°", "360°", "720° (n-2)×180° सूत्र से", "180°"], a: 2 },
+    { q: "एक सम बहुभुज के प्रत्येक बाह्य कोण का माप क्या होगा यदि उसमें 8 भुजाएँ हों?", o: ["45° (360°/8)", "60°", "40°", "90°"], a: 0 },
+    { q: "संख्या 144 का वर्गमूल क्या होगा?", o: ["14", "12", "16", "24"], a: 1 },
+    { q: "अभाज्य गुणनखंड विधि से 1024 का वर्गमूल क्या होगा?", o: ["28", "36", "32", "42"], a: 2 },
+    { q: "संख्या 1331 का घनमूल (Cube Root) क्या होगा?", o: ["11", "13", "17", "21"], a: 0 },
+    { q: "वह सबसे छोटी संख्या जिससे 128 को भाग देने पर भागफल एक पूर्ण घन बन जाए?", o: ["4", "2 (128/2 = 64)", "8", "16"], a: 1 },
+    { q: "एक वस्तु का अंकित मूल्य 500 रु. है और वह 10% बट्टे पर बेची जाती है। विक्रय मूल्य क्या होगा?", o: ["400 रु.", "480 रु.", "450 रु.", "490 रु."], a: 2 },
+    { q: "एक वस्तु 1000 रु. में खरीदकर 1200 रु. में बेची गई। लाभ प्रतिशत क्या होगा?", o: ["20%", "25%", "15%", "10%"], a: 0 },
+    { q: "मूलधन 2000 रु. पर 5% वार्षिक दर से 2 वर्ष का साधारण ब्याज क्या होगा?", o: ["100 रु.", "200 रु.", "400 रु.", "250 रु."], a: 1 },
+    { q: "व्यंजक (x + 3)(x + 5) का गुणनफल क्या होगा?", o: ["x² + 15", "x² + 8x", "x² + 8x + 15", "x² + 2x + 15"], a: 2 },
+    { q: "सर्वसमिका (a - b)² का सही मान क्या होता है?", o: ["a² - 2ab + b²", "a² + 2ab + b²", "a² - b²", "a² + b²"], a: 0 },
+    { q: "ऑयलर के सूत्र F + V = E + 2 में यदि फलक F=6 और शीर्ष V=8 हों, तो किनारे E कितने होंगे?", o: ["10", "12 (घनाभ)", "14", "16"], a: 1 },
+    { q: "एक लंबवृत्तीय बेलन के वक्र पृष्ठीय क्षेत्रफल का सूत्र क्या है?", o: ["πr²h", "2πr(r+h)", "2πrh", "πrl"], a: 2 },
+    { q: "एक समलंब चतुर्भुज की समांतर भुजाएँ 8 cm और 6 cm हैं तथा ऊँचाई 4 cm है। क्षेत्रफल क्या होगा?", o: ["28 cm² (½×14×4)", "56 cm²", "32 cm²", "24 cm²"], a: 0 },
+    { q: "घातांक नियम के अनुसार aᵐ ÷ aⁿ का मान क्या होता है?", o: ["aᵐ⁺ⁿ", "aᵐ⁻ⁿ", "aᵐⁿ", "aⁿ⁻ᵐ"], a: 1 },
+    { q: "(5⁻¹) × (2⁻¹) का मान क्या होगा?", o: ["10", "1/7", "1/10", "-10"], a: 2 },
+    { q: "0.000035 का मानक वैज्ञानिक रूप क्या होगा?", o: ["3.5 × 10⁻⁵", "35 × 10⁻⁶", "3.5 × 10⁵", "0.35 × 10⁻⁴"], a: 0 },
+    { q: "व्यंजक 12a²b + 15ab² में सार्व गुणनखंड (Common Factor) क्या है?", o: ["ab", "3ab", "3a", "15ab"], a: 1 },
+    { q: "गुणनखंड कीजिए: y² - 49?", o: ["(y - 7)²", "(y + 7)²", "(y - 7)(y + 7)", "y - 49"], a: 2 },
+    { q: "भाग दीजिए: 10x² - 25x को 5 से?", o: ["2x - 5", "2x² - 5x", "5x - 5", "2x² - 25"], a: 0 },
+    { q: "कार्तीय तल में बिंदु (4, 0) किस अक्ष पर स्थित होगा?", o: ["y-अक्ष पर", "x-अक्ष पर", "मूल बिंदु पर", "दूसरे चतुर्थांश में"], a: 1 },
+    { q: "कोशिका में प्रोटीन संश्लेषण का कार्य कौन सा कोशिकांग करता है?", o: ["माइटोकॉन्ड्रिया", "लाइसोसोम", "राइबोसोम (Ribosome)", "रसधानी"], a: 2 },
+    { q: "संसार का सबसे छोटा ज्ञात एककोशिकीय जीव कौन सा है?", o: ["माइकोप्लाज्मा (PPLO)", "अमीबा", "पैरामीशियम", "जीवाणु"], a: 0 },
+    { q: "ब्रेड या जलेबी बनाने में किण्वन (Fermentation) हेतु किसका उपयोग होता है?", o: ["राइजोबियम", "यीस्ट (Yeast - कवक)", "शैवाल", "प्रोटोजोआ"], a: 1 },
+    { q: "पेनिसिलिन (Penicillin) नामक प्रथम प्रतिजैविक (एंटीबायोटिक) की खोज किसने की थी?", o: ["एडवर्ड जेनर", "लुई पाश्चर", "अलेक्जेंडर फ्लेमिंग", "रॉबर्ट कोच"], a: 2 },
+    { q: "किस धातु को मिट्टी के तेल (केरोसिन) में डुबोकर सुरक्षित रखा जाता है?", o: ["सोडियम और पोटैशियम", "लोहा", "तांबा", "चांदी"], a: 0 },
+    { q: "कोयले के भंजक आसवन से प्राप्त होने वाला कठोर, सरंध्र एवं काला पदार्थ क्या कहलाता है?", o: ["कोलतार", "कोक (Coke)", "कोयला गैस", "पेट्रोलियम"], a: 1 },
+    { q: "LPG (तरलीकृत पेट्रोलियम गैस) का मुख्य घटक क्या होता है?", o: ["मीथेन", "प्रोपेन", "ब्यूटेन (Butane)", "ईथेन"], a: 2 },
+    { q: "किसी दहनशील पदार्थ का वह न्यूनतम तापमान जिस पर वह जलना शुरू करता है, क्या कहलाता है?", o: ["ज्वलन ताप (Ignition Temperature)", "गलनांक", "क्वथनांक", "ऊष्मांक"], a: 0 },
+    { q: "महिलाओं में मादा जनन हार्मोन कौन सा होता है?", o: ["टेस्टोस्टेरोन", "एस्ट्रोजन एवं प्रोजेस्टेरोन", "इंसुलिन", "थायरोक्सिन"], a: 1 },
+    { q: "दाब (Pressure) का सूत्र क्या होता है?", o: ["बल × क्षेत्रफल", "द्रव्यमान × त्वरण", "बल / क्षेत्रफल (F/A)", "कार्य / समय"], a: 2 },
+    { q: "कैरम बोर्ड पर महीन पाउडर छिड़कने से घर्षण बल पर क्या प्रभाव पड़ता है?", o: ["घर्षण कम हो जाता है", "घर्षण बढ़ जाता है", "घर्षण समाप्त हो जाता है", "कोई प्रभाव नहीं"], a: 0 },
+    { q: "ध्वनि की प्रबलता (Loudness) ध्वनि तरंग के किस गुण पर निर्भर करती है?", o: ["आवृत्ति पर", "आयाम (Amplitude) पर", "चाल पर", "तरंगदैर्ध्य पर"], a: 1 },
+    { q: "एलईडी (LED) का पूरा नाम क्या होता है?", o: ["Low Energy Device", "Light Energy Detector", "Light Emitting Diode", "Long Emission Diode"], a: 2 },
+    { q: "आसमान में बादलों के बीच तड़ित (बिजली) गिरने से सुरक्षा हेतु भवनों पर क्या लगाया जाता है?", o: ["तड़ित चालक (Lightning Conductor)", "थर्मामीटर", "इंसुलेटर", "फ्यूज"], a: 0 },
+    { q: "श्वेत प्रकाश का प्रिज्म से गुजरने पर 7 रंगों में विभाजित होना क्या कहलाता है?", o: ["परावर्तन", "वर्ण विक्षेपण (Dispersion)", "अपवर्तन", "प्रकीर्णन"], a: 1 },
+    { q: "रात के समय आकाश में हमेशा उत्तर दिशा में स्थिर दिखने वाला तारा कौन सा है?", o: ["सीरियस", "सूर्य", "ध्रुव तारा (Pole Star)", "ओरियन"], a: 2 },
+    { q: "ईस्ट इंडिया कंपनी को बंगाल की दीवानी मुगल बादशाह शाह आलम द्वितीय ने किस वर्ष सौंपी थी?", o: ["1765 में", "1757 में", "1764 में", "1857 में"], a: 0 },
+    { q: "भारत में सिविल सेवा और पुलिस व्यवस्था का जनक किस गवर्नर जनरल को माना जाता है?", o: ["लॉर्ड डलहौजी", "लॉर्ड कॉर्नवालिस", "लॉर्ड वेलेस्ली", "वारेन हेस्टिंग्स"], a: 1 },
+    { q: "1857 के विद्रोह के दौरान बिहार में क्रांतिकारियों का नेतृत्व किसने किया था?", o: ["नाना साहेब", "मंगत पांडे", "कुंवर सिंह", "बहादुर शाह"], a: 2 },
+    { q: "संथाल विद्रोह (1855) का नेतृत्व किन दो सगे भाइयों ने किया था?", o: ["सिद्धो और कान्हू", "बिरसा मुंडा और गया मुंडा", "तिलका मांझी", "भगीरथ मांझी"], a: 0 },
+    { q: "कोयले और पेट्रोलियम को किस प्रकार का संसाधन माना जाता है?", o: ["नवीकरणीय", "अनवीकरणीय संसाधन (Non-renewable)", "सतत", "जैविक"], a: 1 },
+    { q: "पृथ्वी के कुल धरातल का लगभग कितना प्रतिशत भाग जल से आच्छादित है?", o: ["50%", "29%", "लगभग 71%", "90%"], a: 2 },
+    { q: "भारतीय संविधान सभा के स्थायी अध्यक्ष के रूप में कौन निर्वाचित हुए थे?", o: ["डॉ. राजेंद्र प्रसाद", "डॉ. बी.आर. अम्बेडकर", "जवाहरलाल नेहरू", "सरदार पटेल"], a: 0 },
+    { q: "संसद का उच्च सदन (Upper House) किसे कहा जाता है?", o: ["लोकसभा को", "राज्यसभा को", "विधानसभा को", "राष्ट्रपति भवन को"], a: 1 },
+    { q: "भारत के सर्वोच्च न्यायालय (Supreme Court) के मुख्य न्यायाधीश की नियुक्ति कौन करता है?", o: ["प्रधानमंत्री", "संसद", "राष्ट्रपति", "गृहमंत्री"], a: 2 }
   ],
   "7": [
-    { q: "दो ऋणात्मक पूर्णांकों का गुणनफल सदैव कैसा होता है?", o: ["धनात्मक", "ऋणात्मक", "शून्य", "अपरिभाषित"], a: 0 },
-    { q: "(-1) × (-1) × (-1) × (-1) का मान क्या होगा?", o: ["1", "-1", "0", "4"], a: 0 },
-    { q: "पूर्णांकों के लिए योज्य तत्समक (Additive Identity) क्या है?", o: ["0 (शून्य)", "1", "-1", "परिभाषित नहीं"], a: 0 },
-    { q: "3/4 का व्युत्क्रम (Reciprocal) क्या होगा?", o: ["4/3", "-3/4", "-4/3", "1"], a: 0 },
-    { q: "0.2 × 0.3 का गुणनफल क्या होगा?", o: ["0.06", "0.6", "0.006", "6.0"], a: 0 },
-    { q: "प्रथम पाँच पूर्ण संख्याओं (0, 1, 2, 3, 4) का समांतर माध्य क्या होगा?", o: ["2", "2.5", "3", "1.5"], a: 0 },
-    { q: "आंकड़ों 2, 4, 6, 4, 8, 4, 10 का बहुलक (Mode) क्या होगा?", o: ["4", "2", "6", "8"], a: 0 },
-    { q: "समीकरण 3n + 7 = 25 में चर n का सही मान क्या होगा?", o: ["6", "5", "7", "4"], a: 0 },
-    { q: "ऐसे दो कोण जिनका योग 90° हो, क्या कहलाते हैं?", o: ["पूरक कोण (Complementary)", "संपूरक कोण", "आसन्न कोण", "शीर्षाभिमुख कोण"], a: 0 },
-    { q: "संपूरक कोणों (Supplementary Angles) का योग कितना होता है?", o: ["180°", "90°", "360°", "45°"], a: 0 },
-    { q: "एक समकोण त्रिभुज में समकोण के सामने वाली सबसे लंबी भुजा क्या कहलाती है?", o: ["कर्ण (Hypotenuse)", "आधार", "लंब", "माध्यिका"], a: 0 },
-    { q: "25% को भिन्न के रूप में बदलने पर क्या प्राप्त होगा?", o: ["1/4", "1/2", "1/5", "3/4"], a: 0 },
-    { q: "एक वृत्त की परिधि ज्ञात करने का सही सूत्र क्या है?", o: ["2πr", "πr²", "4πr", "πd²"], a: 0 },
-    { q: "आयत का क्षेत्रफल ज्ञात करने का सूत्र क्या है?", o: ["लंबाई × चौड़ाई", "2 × (लंबाई + चौड़ाई)", "भुजा²", "आधार × ऊँचाई"], a: 0 },
-    { q: "10³ का मान क्या होगा?", o: ["1000", "100", "30", "10000"], a: 0 },
-    { q: "पादपों में भोजन निर्माण का मुख्य केंद्र (रसोईघर) किसे कहा जाता है?", o: ["पत्तियाँ", "तना", "जड़", "फूल"], a: 0 },
-    { q: "पत्तियों में उपस्थित हरे रंग के वर्णक को क्या कहते हैं?", o: ["क्लोरोफिल", "हीमोग्लोबिन", "कैरोटीन", "जैनथोफिल"], a: 0 },
-    { q: "अमरबेल (Cuscuta) किस प्रकार के पोषण का उदाहरण है?", o: ["परजीवी पोषण", "स्वपोषी", "मृतजीवी", "सहजीवी"], a: 0 },
-    { q: "घटपर्णी (Pitcher plant) कीटों का भक्षण किस तत्व की पूर्ति के लिए करता है?", o: ["नाइट्रोजन", "कार्बन", "फास्फोरस", "ऑक्सीजन"], a: 0 },
-    { q: "मानव शरीर की सबसे बड़ी ग्रंथि कौन सी है?", o: ["यकृत (Liver)", "अग्न्याशय", "थायरॉयड", "लार ग्रंथि"], a: 0 },
-    { q: "आमाशय में भोजन के पाचन के लिए कौन सा अम्ल स्रावित होता है?", o: ["हाइड्रोक्लोरिक अम्ल (HCl)", "सल्फ्यूरिक अम्ल", "एसिटिक अम्ल", "नाइट्रिक अम्ल"], a: 0 },
-    { q: "स्वस्थ मानव शरीर का सामान्य तापमान डॉक्टरी थर्मामीटर पर कितना होता है?", o: ["37°C (98.6°F)", "35°C", "40°C", "100°C"], a: 0 },
-    { q: "ऊष्मा के स्थानांतरण की किस विधि में किसी माध्यम की आवश्यकता नहीं होती?", o: ["विकिरण (Radiation)", "चालन", "संवहन", "वाष्पीकरण"], a: 0 },
-    { q: "सिरके में कौन सा कार्बनिक अम्ल पाया जाता है?", o: ["एसिटिक अम्ल", "साइट्रिक अम्ल", "टार्टरिक अम्ल", "ऑक्सालिक अम्ल"], a: 0 },
-    { q: "चींटी के डंक में कौन सा अम्ल उपस्थित होता है?", o: ["फॉर्मिक अम्ल (मेथेनॉइक अम्ल)", "एसिटिक अम्ल", "लैक्टिक अम्ल", "साइट्रिक अम्ल"], a: 0 },
-    { q: "लाल लिटमस पत्र को नीला करने वाला विलयन कैसा होता है?", o: ["क्षारकीय (Basic)", "अम्लीय", "उदासीन", "लवण"], a: 0 },
-    { q: "जंग लगना किस प्रकार का परिवर्तन है?", o: ["रासायनिक परिवर्तन", "भौतिक परिवर्तन", "उत्क्रमणीय परिवर्तन", "जैविक परिवर्तन"], a: 0 },
-    { q: "पादपों में जल और खनिजों का संवहन किस संवहनी ऊतक द्वारा होता है?", o: ["जाइलम (Xylem)", "फ्लोएम", "रंध्र", "मूलरोम"], a: 0 },
-    { q: "पादपों में पत्तियों द्वारा निर्मित भोजन का वहन कौन करता है?", o: ["फ्लोएम (Phloem)", "जाइलम", "रंध्र", "शिरा"], a: 0 },
-    { q: "मानव रक्त का लाल रंग किस वर्णक की उपस्थिति के कारण होता है?", o: ["हीमोग्लोबिन", "क्लोरोफिल", "प्लाज्मा", "प्लेटलेट्स"], a: 0 },
-    { q: "चाल (Speed) का मूल मात्रक (SI मात्रक) क्या है?", o: ["मीटर/सेकंड (m/s)", "किमी/घंटा", "मीटर/मिनट", "सेकंड/मीटर"], a: 0 },
-    { q: "विद्युत हीटर किस सिद्धांत पर कार्य करता है?", o: ["विद्युत धारा के तापीय प्रभाव पर", "चुंबकीय प्रभाव पर", "रासायनिक प्रभाव पर", "प्रकाश प्रभाव पर"], a: 0 },
-    { q: "समतल दर्पण द्वारा किसी वस्तु का बना प्रतिबिंब कैसा होता है?", o: ["सीधा और आभासी", "उल्टा और वास्तविक", "बड़ा और वास्तविक", "धुंधला"], a: 0 },
-    { q: "दिल्ली सल्तनत के किस शासक ने सर्वप्रथम 'कुव्वत-उल-इस्लाम' मस्जिद बनवाई?", o: ["कुतुबुद्दीन ऐबक", "इल्तुतमिश", "बलबन", "अलाउद्दीन खिलजी"], a: 0 },
-    { q: "दिल्ली सल्तनत की एकमात्र महिला मुस्लिम शासिका कौन थीं?", o: ["रजिया सुल्तान", "चांद बीबी", "नूरजहाँ", "गुलबदन बेगम"], a: 0 },
-    { q: "पानीपत का प्रथम युद्ध (1526) किनके मध्य लड़ा गया था?", o: ["बाबर और इब्राहिम लोदी", "अकबर और हेमू", "हुमायूँ और शेरशाह", "बाबर और राणा सांगा"], a: 0 },
-    { q: "आईन-ए-अकबरी और अकबरनामा के लेखक कौन हैं?", o: ["अबुल फजल", "बीरबल", "फैजी", "टोडरमल"], a: 0 },
-    { q: "सिखों के दसवें गुरु कौन थे?", o: ["गुरु गोविंद सिंह जी", "गुरु नानक देव जी", "गुरु अर्जुन देव जी", "गुरु तेग बहादुर जी"], a: 0 },
-    { q: "झारखंड के किस क्षेत्र को मध्यकाल में 'कुकरा' या 'खोखरा' देश कहा जाता था?", o: ["छोटानागपुर क्षेत्र", "संथाल परगना", "पलामू", "कोल्हान"], a: 0 },
-    { q: "पृथ्वी की सबसे ऊपरी और सबसे पतली ठोस परत को क्या कहते हैं?", o: ["पर्पटी (Crust)", "मेंटल", "क्रोड", "सियाल"], a: 0 },
-    { q: "द्रवित मैग्मा के ठंडे होकर जमने से किस चट्टान का निर्माण होता है?", o: ["आग्नेय शैल (Igneous Rocks)", "अवसादी शैल", "कायांतरित शैल", "बलुआ पत्थर"], a: 0 },
-    { q: "विश्व पर्यावरण दिवस प्रत्येक वर्ष किस तिथि को मनाया जाता है?", o: ["5 जून", "22 अप्रैल", "1 मई", "15 अगस्त"], a: 0 },
-    { q: "वायुमंडल की कौन सी परत हवाई जहाज उड़ाने के लिए सबसे आदर्श मानी जाती है?", o: ["समतापमंडल (Stratosphere)", "क्षोभमंडल", "मध्यमंडल", "तापमंडल"], a: 0 },
-    { q: "महासागरीय जल का दिन में दो बार नियम से उठना और गिरना क्या कहलाता है?", o: ["ज्वार-भाटा (Tide)", "तरंग", "धारा", "सुनामी"], a: 0 },
-    { q: "विश्व की सबसे लंबी नदी कौन सी है?", o: ["नील नदी (अफ्रीका)", "अमेजन", "गंगा", "मिसिसिपी"], a: 0 },
-    { q: "झारखंड का प्रसिद्ध 'हुंडरू जलप्रपात' किस नदी पर स्थित है?", o: ["स्वर्णरेखा नदी", "दामोदर नदी", "मयूराक्षी नदी", "कोयल नदी"], a: 0 },
-    { q: "भारत में वोट देने (मताधिकार) की न्यूनतम कानूनी आयु क्या है?", o: ["18 वर्ष", "21 वर्ष", "25 वर्ष", "16 वर्ष"], a: 0 },
-    { q: "किसी राज्य के मुख्यमंत्री की नियुक्ति संविधान के अनुसार कौन करता है?", o: ["राज्यपाल", "राष्ट्रपति", "मुख्य न्यायाधीश", "विधानसभा अध्यक्ष"], a: 0 },
-    { q: "भारत में सभी नागरिकों को समान अधिकार देने वाला मूल स्तंभ क्या है?", o: ["भारतीय संविधान", "संसद", "न्यायालय", "मंत्रिमंडल"], a: 0 },
-    { q: "सरकारी अस्पतालों और प्राथमिक स्वास्थ्य केंद्रों (PHC) का संचालन किसके द्वारा होता है?", o: ["सरकार द्वारा", "निजी ट्रस्ट द्वारा", "ग्राम पंचायत द्वारा", "विदेशी संस्थाओं द्वारा"], a: 0 }
+    { q: "(-25) × 4 का गुणनफल क्या होगा?", o: ["100", "-100", "-21", "-29"], a: 1 },
+    { q: "(-36) ÷ (-4) का मान क्या होगा?", o: ["-9", "144", "9", "-144"], a: 2 },
+    { q: "किसी पूर्णांक 'a' के लिए a × 1 का मान क्या होता है?", o: ["a (1 गुणात्मक तत्समक है)", "1", "0", "-a"], a: 0 },
+    { q: "2/5 और 3/5 का योगफल क्या होगा?", o: ["5/10", "5/5 = 1", "6/25", "1/5"], a: 1 },
+    { q: "1.2 × 1.2 का गुणनफल क्या होगा?", o: ["14.4", "0.144", "1.44", "144"], a: 2 },
+    { q: "प्रथम 6 सम संख्याओं (2, 4, 6, 8, 10, 12) का औसत (माध्य) क्या होगा?", o: ["7", "6", "8", "5"], a: 0 },
+    { q: "आंकड़ों 3, 5, 7, 9, 11 का माध्यक (Median) क्या होगा?", o: ["5", "7", "9", "35"], a: 1 },
+    { q: "समीकरण 4x + 8 = 20 में x का मान क्या होगा?", o: ["4", "5", "3", "2"], a: 2 },
+    { q: "यदि दो कोण शीर्षाभिमुख हों और उनमें से एक कोण 65° का हो, तो दूसरा कोण क्या होगा?", o: ["65°", "115°", "90°", "25°"], a: 0 },
+    { q: "एक रैखिक युग्म (Linear Pair) बनाने वाले दो आसन्न कोणों का योग कितना होता है?", o: ["90°", "180°", "360°", "270°"], a: 1 },
+    { q: "एक त्रिभुज में अधिक से अधिक कितने समकोण हो सकते हैं?", o: ["2", "3", "केवल 1", "0"], a: 2 },
+    { q: "समबाहु त्रिभुज के प्रत्येक अंतः कोण का मान कितना होता है?", o: ["60°", "90°", "45°", "120°"], a: 0 },
+    { q: "3/4 को प्रतिशत में बदलने पर क्या मान प्राप्त होगा?", o: ["50%", "75%", "25%", "80%"], a: 1 },
+    { q: "एक आयताकार मैदान की लंबाई 10 m और चौड़ाई 7 m है। इसका परिमाप क्या होगा?", o: ["70 m", "17 m", "34 m (2×(10+7))", "24 m"], a: 2 },
+    { q: "घातांक रूप में 2⁴ का संख्यात्मक मान क्या होगा?", o: ["16", "8", "6", "32"], a: 0 },
+    { q: "प्रकाश संश्लेषण प्रक्रिया में पौधे सूर्य की ऊर्जा को किस रूप में संचित करते हैं?", o: ["यांत्रिक ऊर्जा", "रासायनिक ऊर्जा (स्टार्च/मंड)", "ऊष्मीय ऊर्जा", "विद्युत ऊर्जा"], a: 1 },
+    { q: "मानव शरीर में भोजन का संपूर्ण पाचन और पोषक तत्वों का अवशोषण कहाँ होता है?", o: ["आमाशय में", "बड़ी आंत में", "छोटी आंत (क्षुद्रांत्र) में", "मुख में"], a: 2 },
+    { q: "दांतों की सुरक्षा के लिए इनेमल (Enamel) शरीर का सबसे कठोर पदार्थ है, यह किससे बना है?", o: ["कैल्शियम फॉस्फेट से", "कैल्शियम कार्बोनेट से", "लोहा से", "मैग्नीशियम से"], a: 0 },
+    { q: "भेड़ के बालों से ऊन प्राप्त करने की प्रक्रिया को क्या कहा जाता है?", o: ["सफाई", "ऊन की कटाई (Shearing)", "कताई", "बुनाई"], a: 1 },
+    { q: "रेशम कीट पालन के व्यवसाय को वैज्ञानिक रूप से क्या कहा जाता है?", o: ["एपीकल्चर", "पिसीकल्चर", "सेरीकल्चर (Sericulture)", "हॉर्टिकल्चर"], a: 2 },
+    { q: "डॉक्टरी थर्मामीटर का तापमान मापने का परिसर कितना होता है?", o: ["35°C से 42°C", "0°C से 100°C", "-10°C से 110°C", "30°C से 50°C"], a: 0 },
+    { q: "ठोस पदार्थों में ऊष्मा का स्थानांतरण मुख्य रूप से किस विधि द्वारा होता है?", o: ["संवहन विधि", "चालन विधि (Conduction)", "विकिरण विधि", "वाष्पन"], a: 1 },
+    { q: "नीबू के रस में कौन सा अम्ल पाया जाता है?", o: ["टार्टरिक अम्ल", "एसिटिक अम्ल", "साइट्रिक अम्ल (Citric Acid)", "ऑक्सालिक अम्ल"], a: 2 },
+    { q: "दही में मुख्य रूप से कौन सा प्राकृतिक अम्ल उपस्थित होता है?", o: ["लैक्टिक अम्ल (Lactic Acid)", "एसिटिक अम्ल", "फॉर्मिक अम्ल", "सल्फ्यूरिक अम्ल"], a: 0 },
+    { q: "अम्ल और क्षारक के बीच होने वाली अभिक्रिया से लवण और जल बनते हैं, इसे क्या कहते हैं?", o: ["अपघटन", "उदासीनीकरण अभिक्रिया", "संयोजन", "विस्थापन"], a: 1 },
+    { q: "लोहे के तवे या पाइप को जंग से बचाने के लिए जिंक (जस्ता) की परत चढ़ाना क्या कहलाता है?", o: ["पेंटिंग", "पॉलिश", "यशदलेपन / जस्तीकरण (Galvanization)", "इलेक्ट्रोप्लेटिंग"], a: 2 },
+    { q: "मिट्टी की ऊपरी उपजाऊ परत का हवा या जल द्वारा बह जाना क्या कहलाता है?", o: ["मृदा अपरदन (Soil Erosion)", "मृदा निर्माण", "ह्यूमस", "अपक्षय"], a: 0 },
+    { q: "कॉकरोच (तिलचट्टा) श्वसन के लिए शरीर के किन अंगों का उपयोग करता है?", o: ["फेफड़े", "श्वास रंध्र (Spiracles) और श्वास नली", "त्वचा", "गलफड़े"], a: 1 },
+    { q: "मानव हृदय में अशुद्ध (कार्बन डाइऑक्साइड युक्त) रक्त किस भाग में आता है?", o: ["बाएँ आलिंद में", "बाएँ निलय में", "दाएँ आलिंद में", "महाधमनी में"], a: 2 },
+    { q: "पौधों में पके हुए परागकणों का वर्तिकाग्र (Stigma) पर स्थानांतरण क्या कहलाता है?", o: ["परागण (Pollination)", "निषेचन", "अंकुरण", "मुकुलन"], a: 0 },
+    { q: "किसी सरल लोलक (Simple Pendulum) द्वारा एक दोलन पूरा करने में लिया गया समय क्या कहलाता है?", o: ["आवृत्ति", "आवर्तकाल (Time Period)", "आयाम", "चाल"], a: 1 },
+    { q: "विद्युत फ्यूज का तार किस प्रकार के पदार्थ से बनाया जाता है?", o: ["उच्च गलनांक वाले लोहे से", "तांबे की मोटी छड़ से", "कम गलनांक वाले मिश्रधातु तार से", "चांदी से"], a: 2 },
+    { q: "गाड़ियों की हेडलाइट में परावर्तक के रूप में किस दर्पण का उपयोग होता है?", o: ["अवतल दर्पण का", "उत्तल दर्पण का", "समतल दर्पण का", "उत्तल लेंस का"], a: 0 },
+    { q: "मध्यकाल में भारत आने वाले प्रसिद्ध मोरक्को यात्री इब्नबतूता किसके शासनकाल में आए थे?", o: ["अलाउद्दीन खिलजी", "मोहम्मद बिन तुगलक के", "अकबर", "बलबन"], a: 1 },
+    { q: "चौहान वंश का सबसे प्रतापी शासक कौन था जिसने तराइन का युद्ध लड़ा?", o: ["जयचंद", "विग्रहराज", "पृथ्वीराज तृतीय (चौहान)", "अर्णोराज"], a: 2 },
+    { q: "दिल्ली में प्रसिद्ध कुतुबमीनार की नींव किसने रखी थी?", o: ["कुतुबुद्दीन ऐबक ने", "इल्तुतमिश ने", "बलबन ने", "फिरोजशाह तुगलक"], a: 0 },
+    { q: "मुगल काल में मनसबदारी व्यवस्था की शुरुआत किस सम्राट ने की थी?", o: ["बाबर ने", "अकबर ने", "जहाँगीर ने", "शाहजहाँ ने"], a: 1 },
+    { q: "सुलह-ए-कुल (सार्वभौमिक शांति) की नीति का प्रतिपादन किसने किया था?", o: ["बाबर ने", "हुमायूँ ने", "अकबर ने", "औरंगजेब ने"], a: 2 },
+    { q: "झारखंड का ऐतिहासिक जगन्नाथपुर मंदिर (धुर्वा, रांची) का निर्माण किसने करवाया था?", o: ["ठाकुर एनी नाथ शाहदेव (1691)", "राजा मेदिनी राय", "फणि मुकुट राय", "दुर्जन शाल"], a: 0 },
+    { q: "पृथ्वी के वायुमंडल में मौसम संबंधी सभी परिवर्तन किस मंडल में होते हैं?", o: ["समतापमंडल में", "क्षोभमंडल में", "मध्यमंडल में", "बहिर्मंडल में"], a: 1 },
+    { q: "रेगिस्तानी क्षेत्रों में वायु के निक्षेपण से बनने वाले रेत के टीलों को क्या कहते हैं?", o: ["छत्रक शैल", "लोयस", "बालू का टिब्बा (Sand Dunes)", "डेल्टा"], a: 2 },
+    { q: "विश्व जल दिवस प्रतिवर्ष किस तिथि को मनाया जाता है?", o: ["22 मार्च को", "22 अप्रैल को", "5 जून को", "16 सितंबर को"], a: 0 },
+    { q: "भूमध्यरेखीय वर्षा वनों को ब्राजील में किस नाम से जाना जाता है?", o: ["सवाना", "सेल्वास (Selvas)", "स्टेपी", "प्रेयरी"], a: 1 },
+    { q: "झारखंड राज्य का राजकीय वृक्ष कौन सा है?", o: ["बरगद", "पीपल", "साल (सखुआ)", "आम"], a: 2 },
+    { q: "भारतीय संविधान का कौन सा अनुच्छेद अस्पृश्यता (छुआछूत) का उन्मूलन करता है?", o: ["अनुच्छेद 17", "अनुच्छेद 14", "अनुच्छेद 19", "अनुच्छेद 21"], a: 0 },
+    { q: "राज्य की विधानसभा में जनता द्वारा चुने गए प्रतिनिधियों को क्या कहते हैं?", o: ["सांसद (MP)", "विधायक (MLA)", "पार्षद", "मुखिया"], a: 1 },
+    { q: "भारत में किसी राज्य का वास्तविक कार्यकारी प्रमुख कौन होता है?", o: ["राज्यपाल", "विधानसभा अध्यक्ष", "मुख्यमंत्री", "मुख्य सचिव"], a: 2 },
+    { q: "प्रजातंत्र (लोकतंत्र) में जनसंचार माध्यमों (Media) की सबसे मुख्य भूमिका क्या है?", o: ["सटीक व निष्पक्ष समाचार एवं जानकारी जनता तक पहुँचाना", "सरकार का प्रचार करना", "विज्ञापनों से कमाई करना", "मनोरंजन करना"], a: 0 },
+    { q: "साप्ताहिक बाजारों में वस्तुओं के दाम अपेक्षाकृत सस्ते क्यों होते हैं?", o: ["क्योंकि सामान खराब होता है", "क्योंकि उन्हें दुकानों का पक्का किराया और बिजली बिल नहीं देना पड़ता", "क्योंकि वे टैक्स नहीं देते", "क्योंकि सरकार सब्सिडी देती है"], a: 1 }
   ]
 };
 
@@ -1592,6 +1591,7 @@ function loadClassQuiz(cls, elem) {
     });
   }
 
+  document.getElementById("whatsapp-lock-area").style.display = "none";
   document.getElementById("result-display-area").style.display = "none";
   startTimer();
 }
@@ -1600,7 +1600,6 @@ window.addEventListener("DOMContentLoaded", () => {
   loadClassQuiz("11", null);
 });
 
-// Anti-Cheating
 document.addEventListener('contextmenu', e => e.preventDefault());
 document.addEventListener('copy', e => e.preventDefault());
 document.addEventListener('cut', e => e.preventDefault());
@@ -1671,8 +1670,7 @@ function calculateAndShowResult() {
   const certDesc = document.getElementById("cert-dynamic-desc");
   const certStatus = document.getElementById("cert-status-val");
 
-  // Multi-Level Grading & Universal Certificate Generation
-  certBox.className = "cert-card-wrap"; // Reset classes
+  certBox.className = "cert-card-wrap";
 
   if (percent >= 75) {
     gradeMsg = "🏆 प्रथम श्रेणी सह विशेष योग्यता (Distinction) — उत्कृष्ट!";
@@ -1702,7 +1700,6 @@ function calculateAndShowResult() {
     certStatus.innerHTML = "<span style='color:var(--danger); font-weight:700;'>अनुत्तीर्ण (Failed) / सुधार अपेक्षित</span>";
   }
 
-  // Populate Common Certificate Fields
   document.getElementById("cert-student-name").textContent = studentSubmittedName;
   document.getElementById("cert-date-val").textContent = new Date().toLocaleDateString('hi-IN');
   certBox.style.display = "block";
@@ -1710,16 +1707,15 @@ function calculateAndShowResult() {
   document.getElementById("grade-text").textContent = gradeMsg;
   document.getElementById("answers-breakdown").innerHTML = reviewHtml;
 
-  const resultArea = document.getElementById("result-display-area");
-  resultArea.style.display = "block";
-  resultArea.scrollIntoView({ behavior: 'smooth' });
+  // Show Lock screen first
+  const lockArea = document.getElementById("whatsapp-lock-area");
+  lockArea.style.display = "block";
+  lockArea.scrollIntoView({ behavior: 'smooth' });
+
+  speakText(`टेस्ट पूरा हुआ। अपना रिजल्ट देखने के लिए विकास सर को व्हाट्सएप पर स्कोर भेजें।`);
 }
 
-function printCertificate() {
-  window.print();
-}
-
-function sendResultToWhatsApp() {
+function submitToVikasSirWhatsApp() {
   const teacherNumber = "917856902817";
   const msg = `*VIM CLASSES - ऑनलाइन टेस्ट रिजल्ट*%0A` +
               `👤 परीक्षार्थी: ${studentSubmittedName}%0A` +
@@ -1728,8 +1724,20 @@ function sendResultToWhatsApp() {
               `📊 प्रतिशत: ${studentFinalPercent}%0A` +
               `--------------------------------%0A` +
               `शिक्षक: विकास सर (बेलबथान)`;
-  
+
   window.open(`https://wa.me/${teacherNumber}?text=${msg}`, "_blank");
+
+  // Unlock full result & certificate on screen
+  document.getElementById("whatsapp-lock-area").style.display = "none";
+  const resultArea = document.getElementById("result-display-area");
+  resultArea.style.display = "block";
+  resultArea.scrollIntoView({ behavior: 'smooth' });
+
+  speakText(`धन्यवाद ${studentSubmittedName} जी! आपका परिणाम और सर्टिफिकेट अनलॉक हो चुका है।`);
+}
+
+function printCertificate() {
+  window.print();
 }
 </script>
 
